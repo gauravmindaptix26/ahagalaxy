@@ -1,12 +1,13 @@
 /* Galaxy Advertisers premium experience layer */
 :root {
-  --galaxy-bg: #070807;
-  --galaxy-panel: rgba(12, 14, 14, 0.82);
+  --galaxy-bg: #050607;
+  --galaxy-panel: rgba(9, 13, 15, 0.84);
   --galaxy-line: rgba(255, 255, 255, 0.14);
-  --galaxy-muted: #b5bfbd;
-  --galaxy-amber: #ff8a1d;
-  --galaxy-cyan: #25d4ff;
-  --galaxy-green: #7ee36d;
+  --galaxy-muted: #b8c7c8;
+  --galaxy-amber: #ffb23f;
+  --galaxy-cyan: #00d6ff;
+  --galaxy-green: #68f0a0;
+  --galaxy-red: #ff4d6d;
 }
 
 html {
@@ -15,10 +16,12 @@ html {
 
 body {
   background:
+    radial-gradient(circle at 16% 8%, rgba(0, 214, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(255, 178, 63, 0.12), transparent 24%),
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(180deg, rgba(255, 255, 255, 0.026) 1px, transparent 1px),
-    #070807;
-  background-size: 92px 92px;
+    #050607;
+  background-size: 100% 100%, 100% 100%, 92px 92px, 92px 92px;
 }
 
 .primary-navbar {
@@ -32,11 +35,105 @@ body {
   backdrop-filter: blur(18px);
 }
 
+.header,
+.primary-navbar {
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 10020 !important;
+}
+
+.primary-navbar {
+  transform: translateY(0);
+}
+
+.primary-navbar.galaxy-nav-hidden {
+  transform: translateY(-115%) !important;
+}
+
+.primary-navbar.galaxy-nav-visible {
+  transform: translateY(0) !important;
+}
+
 .primary-navbar .navbar__logo img,
 .offcanvas-menu .logo img,
 .mobile-menu .logo img,
 .footer-two .logo img {
   filter: drop-shadow(0 12px 26px rgba(255, 116, 37, 0.22));
+}
+
+.secondary--navbar {
+  padding: 18px 0;
+}
+
+.secondary--navbar .navbar {
+  gap: 28px;
+}
+
+.secondary--navbar .galaxy-desktop-menu {
+  flex: 1;
+}
+
+.secondary--navbar .galaxy-desktop-menu > ul {
+  justify-content: center;
+  gap: 6px;
+}
+
+.secondary--navbar .galaxy-desktop-menu .navbar__item > a,
+.secondary--navbar .galaxy-desktop-menu .navbar__item > button {
+  width: auto;
+  padding: 16px 18px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.secondary--navbar .galaxy-desktop-menu .navbar__item > a:hover,
+.secondary--navbar .galaxy-desktop-menu .navbar__item > button:hover {
+  color: #050607;
+  background: var(--galaxy-amber);
+}
+
+.secondary--navbar .galaxy-desktop-menu .navbar__sub-menu {
+  background: rgba(8, 12, 14, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+.secondary--navbar .galaxy-desktop-menu .navbar__sub-menu::before {
+  background: rgba(8, 12, 14, 0.96);
+}
+
+.secondary--navbar .galaxy-desktop-menu .navbar__sub-menu a {
+  color: #fff;
+}
+
+.secondary--navbar .open-offcanvas-nav {
+  width: auto;
+  min-width: 104px;
+  height: 62px;
+  padding: 0 22px;
+  gap: 10px;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.secondary--navbar .open-offcanvas-nav::before {
+  position: static;
+  transform: none;
+  width: 10px;
+  height: 10px;
+  background: var(--galaxy-amber);
+  box-shadow: 0 0 18px rgba(255, 178, 63, 0.75);
+}
+
+.secondary--navbar .open-offcanvas-nav::after {
+  content: "Menu";
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .btn {
@@ -77,6 +174,24 @@ body {
   background: linear-gradient(180deg, transparent, var(--galaxy-bg));
   pointer-events: none;
   z-index: -2;
+}
+
+.banner .lines .line,
+.portfolio .lines .line,
+.offer .lines .line,
+.sponsor .lines .line {
+  background: linear-gradient(180deg, transparent, rgba(0, 214, 255, 0.35), transparent);
+  opacity: 0.6;
+}
+
+.galaxy-scanline {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.13;
+  background: repeating-linear-gradient(180deg, transparent 0 10px, rgba(255, 255, 255, 0.18) 11px, transparent 12px);
+  mix-blend-mode: screen;
 }
 
 .banner__content {
@@ -155,6 +270,29 @@ body {
   padding-top: 90px;
 }
 
+.galaxy-impact::before,
+.agency::before,
+.offer::before,
+.service-details::before,
+.contact-m::before {
+  content: "";
+  position: absolute;
+  inset: 8% auto auto -12%;
+  width: 36vw;
+  height: 36vw;
+  min-width: 320px;
+  min-height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 214, 255, 0.12), transparent 68%);
+  pointer-events: none;
+}
+
+.offer::before,
+.contact-m::before {
+  inset: auto -12% 6% auto;
+  background: radial-gradient(circle, rgba(255, 178, 63, 0.13), transparent 68%);
+}
+
 .galaxy-impact__intro {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.55fr);
@@ -221,6 +359,7 @@ body {
   overflow: hidden;
   border: 1px solid var(--galaxy-line);
   background: var(--galaxy-panel);
+  transform-style: preserve-3d;
 }
 
 .galaxy-impact-card::before {
@@ -277,6 +416,39 @@ body {
   color: #ecf4f1;
 }
 
+.galaxy-impact-card__content > * {
+  transform: translateZ(28px);
+}
+
+.galaxy-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 28px 0;
+  border-top: 1px solid var(--galaxy-line);
+  border-bottom: 1px solid var(--galaxy-line);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.galaxy-marquee__track {
+  display: flex;
+  width: max-content;
+  gap: 26px;
+  white-space: nowrap;
+}
+
+.galaxy-marquee__track span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(2rem, 5vw, 5rem);
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.galaxy-marquee__track em {
+  color: var(--galaxy-amber);
+  font-style: normal;
+}
+
 .galaxy-livebar {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -325,8 +497,14 @@ body {
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
 }
 
+.agency__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
 .portfolio__single {
   overflow: hidden;
+  transform-style: preserve-3d;
 }
 
 .portfolio__single img {
@@ -340,14 +518,59 @@ body {
   color: #090909;
 }
 
+.portfolio__single::after,
+.service-details .poster::after,
+.agency__thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.18) 42%, transparent 64%);
+  transform: translateX(-120%);
+  pointer-events: none;
+}
+
+.portfolio__single:hover::after,
+.service-details .poster:hover::after,
+.agency__thumb:hover::after {
+  animation: galaxyShine 0.9s ease;
+}
+
+@keyframes galaxyShine {
+  to {
+    transform: translateX(120%);
+  }
+}
+
 .offer {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0)),
-    #101211;
+    radial-gradient(circle at 18% 10%, rgba(255, 178, 63, 0.14), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0)),
+    #081014;
 }
 
 .offer__cta-single {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+  padding-inline: 18px;
+}
+
+.offer__cta-single::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0;
+  background: linear-gradient(90deg, rgba(255, 178, 63, 0.16), transparent);
+  transition: width 0.45s ease;
+}
+
+.offer__cta-single:hover::before {
+  width: 100%;
+}
+
+.offer__cta-single > * {
+  position: relative;
+  z-index: 1;
 }
 
 .offer__cta-single h2 a {
@@ -418,6 +641,17 @@ body {
   color: #eef4f2;
 }
 
+.cmn-banner .container,
+.banner .container,
+.galaxy-impact .container,
+.agency .container,
+.offer .container,
+.service-details .container,
+.contact-m .container {
+  position: relative;
+  z-index: 2;
+}
+
 .galaxy-service-strip {
   position: relative;
   padding: 84px 0 30px;
@@ -468,6 +702,17 @@ body {
   position: relative;
 }
 
+.service-details .poster {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-details .details-group {
+  padding: 32px;
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.035), transparent);
+}
+
 .service-details .details-group h2,
 .service-details .details-group h3 {
   margin-bottom: 18px;
@@ -500,8 +745,20 @@ body {
 
 .footer-two {
   background:
-    linear-gradient(180deg, transparent, rgba(255, 138, 29, 0.08)),
-    #080908;
+    radial-gradient(circle at 80% 10%, rgba(0, 214, 255, 0.12), transparent 30%),
+    linear-gradient(180deg, transparent, rgba(255, 178, 63, 0.08)),
+    #050607;
+}
+
+.galaxy-page-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  z-index: 10001;
+  background: linear-gradient(90deg, var(--galaxy-cyan), var(--galaxy-amber), var(--galaxy-red));
+  box-shadow: 0 0 22px rgba(0, 214, 255, 0.6);
 }
 
 .galaxy-float {
@@ -542,6 +799,25 @@ body {
 }
 
 @media only screen and (max-width: 1199.98px) {
+  .primary-navbar .galaxy-desktop-menu {
+    display: block !important;
+  }
+
+  .secondary--navbar .navbar {
+    flex-wrap: nowrap;
+  }
+
+  .secondary--navbar .galaxy-desktop-menu > ul {
+    justify-content: flex-end;
+    gap: 2px;
+  }
+
+  .secondary--navbar .galaxy-desktop-menu .navbar__item > a,
+  .secondary--navbar .galaxy-desktop-menu .navbar__item > button {
+    padding: 13px 12px;
+    font-size: 13px;
+  }
+
   .banner__content h1 {
     font-size: 3.6rem !important;
   }
@@ -557,6 +833,14 @@ body {
 }
 
 @media only screen and (max-width: 991.98px) {
+  .primary-navbar .galaxy-desktop-menu {
+    display: none !important;
+  }
+
+  .secondary--navbar .navbar {
+    gap: 16px;
+  }
+
   .banner {
     min-height: auto;
     padding: 160px 0 90px;

@@ -31,6 +31,55 @@
       document.body.appendChild(float);
     }
 
+    var nav = document.querySelector(".primary-navbar");
+    if (nav) {
+      var lastScroll = window.pageYOffset || document.documentElement.scrollTop || 0;
+      var ticking = false;
+      var setNavState = function () {
+        var current = window.pageYOffset || document.documentElement.scrollTop || 0;
+        var menuOpen = document.querySelector(".show-offcanvas-menu, .show-menu");
+        if (current < 120 || current < lastScroll || menuOpen) {
+          nav.classList.remove("galaxy-nav-hidden");
+          nav.classList.add("galaxy-nav-visible");
+        } else if (current > lastScroll && current > window.innerHeight * 0.45) {
+          nav.classList.add("galaxy-nav-hidden");
+          nav.classList.remove("galaxy-nav-visible");
+        }
+        lastScroll = Math.max(current, 0);
+        ticking = false;
+      };
+      window.addEventListener("scroll", function () {
+        if (!ticking) {
+          window.requestAnimationFrame(setNavState);
+          ticking = true;
+        }
+      }, { passive: true });
+      setNavState();
+    }
+
+    if (!document.querySelector(".galaxy-page-progress")) {
+      var progress = document.createElement("div");
+      progress.className = "galaxy-page-progress";
+      document.body.appendChild(progress);
+    }
+
+    if (!document.querySelector(".galaxy-scanline")) {
+      var scanline = document.createElement("div");
+      scanline.className = "galaxy-scanline";
+      document.body.appendChild(scanline);
+    }
+
+    if (document.querySelector(".portfolio") && !document.querySelector(".galaxy-marquee")) {
+      var marquee = document.createElement("section");
+      marquee.className = "galaxy-marquee";
+      marquee.innerHTML =
+        '<div class="galaxy-marquee__track">' +
+        '<span>Unipole <em>/</em></span><span>Glow Sign <em>/</em></span><span>In-Shop Branding <em>/</em></span><span>Display Boards <em>/</em></span><span>OOH Strategy <em>/</em></span>' +
+        '<span>Unipole <em>/</em></span><span>Glow Sign <em>/</em></span><span>In-Shop Branding <em>/</em></span><span>Display Boards <em>/</em></span><span>OOH Strategy <em>/</em></span>' +
+        '</div>';
+      document.querySelector(".portfolio").insertAdjacentElement("beforebegin", marquee);
+    }
+
     if (document.querySelector(".service-single-banner") && !document.querySelector(".galaxy-service-strip")) {
       var title = document.querySelector(".service-single-banner .title");
       var serviceTitle = title ? title.textContent.trim() : "Outdoor Advertising";
@@ -68,6 +117,24 @@
       transformOrigin: "center center"
     });
 
+    gsap.to(".galaxy-page-progress", {
+      width: "100%",
+      ease: "none",
+      scrollTrigger: hasScrollTrigger ? {
+        trigger: document.body,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 0.3
+      } : undefined
+    });
+
+    gsap.to(".galaxy-scanline", {
+      y: 80,
+      repeat: -1,
+      duration: 3.4,
+      ease: "none"
+    });
+
     gsap.from(".primary-navbar", {
       y: -24,
       opacity: 0,
@@ -99,11 +166,26 @@
     }
 
     if (hasScrollTrigger) {
+      if (document.querySelector(".galaxy-marquee__track")) {
+        gsap.to(".galaxy-marquee__track", {
+          xPercent: -35,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".galaxy-marquee",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+          }
+        });
+      }
+
       gsap.utils.toArray(".galaxy-impact-card, .contact-m__single, .mission-s__single, .service-details .details-group, .galaxy-service-panel").forEach(function (el, index) {
         gsap.from(el, {
+          x: index % 2 === 0 ? -90 : 90,
           y: 58,
           opacity: 0,
           rotateX: 5,
+          rotateZ: index % 2 === 0 ? -1.5 : 1.5,
           duration: 0.9,
           delay: (index % 4) * 0.04,
           ease: "power3.out",
@@ -115,15 +197,48 @@
         });
       });
 
-      gsap.utils.toArray(".portfolio__single img, .service-details .poster img, .award__thumb img").forEach(function (img) {
+      gsap.utils.toArray(".portfolio__single img, .service-details .poster img, .award__thumb img, .agency__thumb img, .offer__cta-single").forEach(function (img, index) {
         gsap.to(img, {
-          scale: 1.08,
+          yPercent: index % 2 === 0 ? -10 : 10,
+          scale: img.tagName && img.tagName.toLowerCase() === "img" ? 1.08 : 1,
           ease: "none",
           scrollTrigger: {
             trigger: img,
             start: "top bottom",
             end: "bottom top",
             scrub: true
+          }
+        });
+      });
+
+      gsap.utils.toArray(".section__header, .section__content, .footer-two__left, .footer-two__right, .cta-two-wrapper").forEach(function (block, index) {
+        gsap.from(block, {
+          y: 70,
+          opacity: 0,
+          filter: "blur(8px)",
+          duration: 1,
+          delay: (index % 3) * 0.05,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: block,
+            start: "top 86%",
+            once: true
+          }
+        });
+      });
+
+      gsap.utils.toArray(".portfolio__single").forEach(function (card, index) {
+        gsap.from(card, {
+          x: index % 2 === 0 ? -120 : 120,
+          y: 90,
+          opacity: 0,
+          rotate: index % 2 === 0 ? -3 : 3,
+          duration: 1.05,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 92%",
+            once: true
           }
         });
       });
