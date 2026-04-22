@@ -1418,7 +1418,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       --av-red: #ff3d1f;
       position: relative;
       overflow: hidden;
-      padding: 92px 0 112px;
+      padding: 58px 0 82px;
       color: #fff;
       background:
          radial-gradient(circle at 50% 0%, rgba(255,61,31,0.16), transparent 22%),
@@ -1428,7 +1428,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    .avista-works__counter {
       position: absolute;
       left: 50%;
-      top: 34px;
+      top: 16px;
       transform: translateX(-50%);
       color: rgba(255,255,255,0.055);
       font-size: clamp(5rem, 14vw, 13rem);
@@ -1442,8 +1442,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       position: relative;
       z-index: 2;
       text-align: center;
-      max-width: 760px;
-      margin: 0 auto 48px;
+      max-width: 980px;
+      margin: 0 auto 32px;
    }
 
    .avista-works__head span {
@@ -1455,8 +1455,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    .avista-works__head h2 {
       margin: 10px 0 0;
       color: #fff;
-      font-size: clamp(2rem, 4vw, 4rem);
-      line-height: 0.98;
+      font-size: clamp(2.35rem, 4.7vw, 5.15rem);
+      line-height: 0.92;
       letter-spacing: -0.04em;
       font-weight: 1000;
       text-transform: uppercase;
@@ -1521,10 +1521,805 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       transform: scale(1.08);
    }
 
+   .galaxy-showcase {
+      --showcase-orange: #ff5a2b;
+      position: relative;
+      overflow: hidden;
+      padding: 74px 0 92px;
+      background:
+         linear-gradient(180deg, rgba(255, 90, 43, 0.08), transparent 18%),
+         #060606;
+   }
+
+   .galaxy-showcase::before {
+      content: "WORK";
+      position: absolute;
+      top: 24px;
+      right: max(18px, calc(50% - 720px));
+      color: rgba(255, 255, 255, 0.045);
+      font-size: clamp(4.8rem, 16vw, 12rem);
+      line-height: 0.9;
+      font-weight: 1000;
+      letter-spacing: -0.08em;
+      pointer-events: none;
+   }
+
+   .galaxy-showcase .container {
+      position: relative;
+      z-index: 2;
+   }
+
+   .galaxy-showcase__intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.16fr) minmax(320px, 0.84fr);
+      gap: 42px;
+      align-items: end;
+      margin-bottom: 34px;
+   }
+
+   .galaxy-showcase__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      color: var(--showcase-orange);
+      background: rgba(255, 255, 255, 0.04);
+      font-size: 12px;
+      font-weight: 1000;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-showcase__eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--showcase-orange);
+   }
+
+   .galaxy-showcase h2 {
+      margin: 18px 0 0 !important;
+      color: #fff !important;
+      font-size: clamp(2.7rem, 5vw, 5.5rem) !important;
+      line-height: 0.92 !important;
+      font-weight: 1000;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      max-width: 880px;
+   }
+
+   .showcase-line {
+      display: block;
+   }
+
+   .galaxy-showcase__summary {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-self: start;
+   }
+
+   .galaxy-showcase__summary .primary-text {
+      margin: 0;
+      max-width: 520px;
+      color: rgba(255, 255, 255, 0.7) !important;
+      font-size: 18px;
+      line-height: 1.65;
+      font-weight: 600;
+   }
+
+   .galaxy-showcase__chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+   }
+
+   .galaxy-showcase__chips span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+   }
+
+   .galaxy-showcase__btn {
+      width: max-content;
+      min-height: 52px;
+      padding: 0 22px;
+      border: 1px solid rgba(255, 90, 43, 0.52);
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(255, 90, 43, 0.24), rgba(255, 90, 43, 0.06));
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      box-shadow: 0 16px 34px rgba(255, 90, 43, 0.18);
+   }
+
+   .galaxy-showcase__btn:hover {
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px rgba(255, 90, 43, 0.26);
+   }
+
+   .galaxy-showcase__grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+   }
+
+   .galaxy-showcase-card,
+   .galaxy-showcase-cta {
+      position: relative;
+      overflow: hidden;
+      min-height: 360px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      background: #111;
+      box-shadow: 0 30px 75px rgba(0, 0, 0, 0.3);
+      transform-style: preserve-3d;
+   }
+
+   .galaxy-showcase-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      filter: saturate(1.05) contrast(1.03);
+      transition: transform 0.55s ease, filter 0.55s ease;
+   }
+
+   .galaxy-showcase-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+         linear-gradient(180deg, rgba(5, 5, 5, 0.06), rgba(5, 5, 5, 0.72) 76%),
+         linear-gradient(0deg, rgba(5, 5, 5, 0.88), transparent 38%);
+   }
+
+   .galaxy-showcase-card__content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      padding: 18px 18px 20px;
+   }
+
+   .galaxy-showcase-card__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+   }
+
+   .galaxy-showcase-card__meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      backdrop-filter: blur(10px);
+   }
+
+   .galaxy-showcase-card h3 {
+      margin: 0;
+      color: #fff;
+      font-size: 24px;
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+   }
+
+   .galaxy-showcase-card:hover img {
+      transform: scale(1.08);
+      filter: saturate(1.12) contrast(1.05);
+   }
+
+   .galaxy-showcase-cta {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 26px;
+      background:
+         linear-gradient(180deg, rgba(255, 90, 43, 0.12), transparent 38%),
+         linear-gradient(180deg, #141414 0%, #090909 100%);
+   }
+
+   .galaxy-showcase-cta::before,
+   .galaxy-showcase-cta::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      opacity: 0.18;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.92) 1px, transparent 1px);
+      background-size: 12px 12px;
+      pointer-events: none;
+   }
+
+   .galaxy-showcase-cta::before {
+      top: 28px;
+      right: 28px;
+   }
+
+   .galaxy-showcase-cta::after {
+      left: 22px;
+      bottom: 110px;
+   }
+
+   .galaxy-showcase-cta__eyebrow {
+      margin-bottom: 12px;
+      color: var(--showcase-orange);
+      font-size: 12px;
+      font-weight: 1000;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-showcase-cta h3 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: #fff;
+      font-size: 34px;
+      line-height: 0.96;
+      font-weight: 1000;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      max-width: 260px;
+   }
+
+   .galaxy-showcase-cta__list {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 24px;
+   }
+
+   .galaxy-showcase-cta__list li {
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 700;
+   }
+
+   .galaxy-showcase-cta__list li::before {
+      content: "+";
+      margin-right: 8px;
+      color: var(--showcase-orange);
+      font-weight: 1000;
+   }
+
+   .galaxy-rollout {
+      --rollout-orange: #ff5a2b;
+      position: relative;
+      overflow: hidden;
+      padding: 86px 0 94px;
+      background:
+         radial-gradient(circle at 86% 10%, rgba(255, 90, 43, 0.14), transparent 26%),
+         linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 22%),
+         #070707;
+   }
+
+   .galaxy-rollout::before {
+      content: "FLOW";
+      position: absolute;
+      top: 24px;
+      right: max(18px, calc(50% - 720px));
+      color: rgba(255, 255, 255, 0.045);
+      font-size: clamp(4.8rem, 16vw, 12rem);
+      line-height: 0.9;
+      font-weight: 1000;
+      letter-spacing: -0.08em;
+      pointer-events: none;
+   }
+
+   .galaxy-rollout .container {
+      position: relative;
+      z-index: 2;
+   }
+
+   .galaxy-rollout__intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 34px;
+   }
+
+   .galaxy-rollout__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      color: var(--rollout-orange);
+      background: rgba(255, 255, 255, 0.04);
+      font-size: 12px;
+      font-weight: 1000;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-rollout__eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--rollout-orange);
+      box-shadow: 0 0 14px rgba(255, 90, 43, 0.7);
+   }
+
+   .galaxy-rollout h2 {
+      margin: 18px 0 0 !important;
+      color: #fff !important;
+      font-size: clamp(2.8rem, 5.1vw, 5.8rem) !important;
+      line-height: 0.92 !important;
+      font-weight: 1000;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      max-width: 860px;
+   }
+
+   .rollout-line {
+      display: block;
+   }
+
+   .galaxy-rollout__summary {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-self: start;
+   }
+
+   .galaxy-rollout__summary .primary-text {
+      margin: 0;
+      max-width: 500px;
+      color: rgba(255, 255, 255, 0.7) !important;
+      font-size: 18px;
+      line-height: 1.62;
+      font-weight: 600;
+   }
+
+   .galaxy-rollout__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+   }
+
+   .galaxy-rollout__tags span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.03);
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+   }
+
+   .galaxy-rollout__layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+      gap: 22px;
+      align-items: stretch;
+   }
+
+   .galaxy-rollout__roadmap,
+   .galaxy-rollout__visual {
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      background:
+         linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 24%),
+         #0d0d0d;
+      box-shadow: 0 30px 75px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+   }
+
+   .galaxy-rollout__roadmap {
+      padding: 28px 24px 28px 88px;
+   }
+
+   .galaxy-rollout__track {
+      position: absolute;
+      left: 42px;
+      top: 34px;
+      bottom: 34px;
+      width: 2px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+      transform-origin: top;
+   }
+
+   .galaxy-rollout__track::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 12px;
+      height: 84px;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255, 90, 43, 0), rgba(255, 90, 43, 0.95), rgba(255, 90, 43, 0));
+      filter: blur(1px);
+      animation: rolloutBeam 3.8s linear infinite;
+   }
+
+   .galaxy-rollout__step {
+      position: relative;
+      padding: 2px 0 22px;
+   }
+
+   .galaxy-rollout__step:last-child {
+      padding-bottom: 0;
+   }
+
+   .galaxy-rollout__node {
+      position: absolute;
+      left: -58px;
+      top: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: #121212;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--rollout-orange);
+      font-size: 12px;
+      box-shadow: 0 0 0 8px rgba(255, 90, 43, 0.04);
+   }
+
+   .galaxy-rollout__step-id {
+      display: block;
+      margin-bottom: 8px;
+      color: rgba(255, 255, 255, 0.42);
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-rollout__step h3 {
+      margin: 0;
+      color: #fff;
+      font-size: 24px;
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+   }
+
+   .galaxy-rollout__step p {
+      margin: 10px 0 0;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 15px;
+      line-height: 1.55;
+      font-weight: 600;
+      max-width: 360px;
+   }
+
+   .galaxy-rollout__step:hover .galaxy-rollout__node {
+      background: rgba(255, 90, 43, 0.12);
+      box-shadow: 0 0 0 10px rgba(255, 90, 43, 0.07);
+   }
+
+   .galaxy-rollout__visual {
+      min-height: 520px;
+      padding: 20px;
+   }
+
+   .galaxy-rollout__screen {
+      position: absolute;
+      inset: 24px 24px 24px 24px;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #121212;
+   }
+
+   .galaxy-rollout__screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.06) contrast(1.04);
+   }
+
+   .galaxy-rollout__screen::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+         linear-gradient(180deg, rgba(5, 5, 5, 0.14), rgba(5, 5, 5, 0.8)),
+         linear-gradient(90deg, rgba(255, 90, 43, 0.14), transparent 40%);
+      z-index: 1;
+   }
+
+   .galaxy-rollout__scan {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
+      mix-blend-mode: screen;
+      transform: translateY(-100%);
+      animation: rolloutScan 4.6s linear infinite;
+   }
+
+   .galaxy-rollout__screen-copy {
+      position: absolute;
+      left: 24px;
+      bottom: 22px;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+   }
+
+   .galaxy-rollout__screen-copy span {
+      color: var(--rollout-orange);
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-rollout__screen-copy strong {
+      color: #fff;
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      line-height: 0.96;
+      font-weight: 1000;
+      letter-spacing: -0.04em;
+      max-width: 360px;
+      text-transform: uppercase;
+   }
+
+   .galaxy-rollout__float {
+      position: absolute;
+      z-index: 4;
+      min-height: 56px;
+      padding: 0 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(10, 10, 10, 0.74);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.22);
+      animation: rolloutFloat 4.2s ease-in-out infinite;
+   }
+
+   .galaxy-rollout__float i {
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 90, 43, 0.16);
+      color: var(--rollout-orange);
+      font-size: 12px;
+   }
+
+   .galaxy-rollout__float strong {
+      display: block;
+      color: #fff;
+      font-size: 13px;
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-rollout__float span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 11px;
+      line-height: 1.1;
+      font-weight: 700;
+      text-transform: uppercase;
+   }
+
+   .galaxy-rollout__float--one {
+      top: 26px;
+      right: 28px;
+   }
+
+   .galaxy-rollout__float--two {
+      left: 28px;
+      bottom: 34px;
+      animation-delay: -1.4s;
+   }
+
+   .galaxy-rollout__float--three {
+      right: 32px;
+      bottom: 128px;
+      animation-delay: -2.4s;
+   }
+
+   .galaxy-rollout__pulse {
+      position: absolute;
+      z-index: 3;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--rollout-orange);
+      box-shadow: 0 0 0 0 rgba(255, 90, 43, 0.48);
+      animation: rolloutPulse 2.2s infinite;
+   }
+
+   .galaxy-rollout__pulse--one {
+      top: 24%;
+      left: 34%;
+   }
+
+   .galaxy-rollout__pulse--two {
+      top: 48%;
+      left: 63%;
+      animation-delay: -0.8s;
+   }
+
+   .galaxy-rollout__pulse--three {
+      top: 68%;
+      left: 42%;
+      animation-delay: -1.3s;
+   }
+
+   @keyframes rolloutBeam {
+      0% { transform: translate(-50%, -12px); opacity: 0; }
+      12% { opacity: 1; }
+      88% { opacity: 1; }
+      100% { transform: translate(-50%, calc(100% + 12px)); opacity: 0; }
+   }
+
+   @keyframes rolloutScan {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+   }
+
+   @keyframes rolloutFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+   }
+
+   @keyframes rolloutPulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 90, 43, 0.44); }
+      70% { box-shadow: 0 0 0 18px rgba(255, 90, 43, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 90, 43, 0); }
+   }
+
+   @media (max-width: 991px) {
+      .galaxy-showcase {
+         padding: 58px 0 74px;
+      }
+
+      .galaxy-showcase__intro {
+         grid-template-columns: 1fr;
+         gap: 24px;
+      }
+
+      .galaxy-showcase__grid {
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .galaxy-rollout {
+         padding: 64px 0 74px;
+      }
+
+      .galaxy-rollout__intro,
+      .galaxy-rollout__layout {
+         grid-template-columns: 1fr;
+         gap: 24px;
+      }
+   }
+
+   @media (max-width: 767px) {
+      .galaxy-showcase::before {
+         top: 12px;
+         right: 12px;
+      }
+
+      .galaxy-showcase__grid {
+         grid-template-columns: 1fr;
+      }
+
+      .galaxy-showcase-card,
+      .galaxy-showcase-card img,
+      .galaxy-showcase-cta {
+         min-height: 320px;
+      }
+
+      .galaxy-showcase-cta h3 {
+         font-size: 28px;
+      }
+
+      .galaxy-rollout::before {
+         top: 12px;
+         right: 12px;
+      }
+
+      .galaxy-rollout__roadmap {
+         padding: 24px 18px 24px 72px;
+      }
+
+      .galaxy-rollout__track {
+         left: 34px;
+      }
+
+      .galaxy-rollout__node {
+         left: -46px;
+      }
+
+      .galaxy-rollout__visual {
+         min-height: 420px;
+      }
+
+      .galaxy-rollout__screen {
+         inset: 18px;
+      }
+
+      .galaxy-rollout__float {
+         min-height: 50px;
+         padding: 0 12px;
+      }
+
+      .galaxy-rollout__float strong {
+         font-size: 12px;
+      }
+
+      .galaxy-rollout__screen-copy strong {
+         font-size: 1.8rem;
+         max-width: 220px;
+      }
+   }
+
    @media (max-width: 991px) {
       .avista-home__grid,
       .avista-works__grid {
          grid-template-columns: 1fr;
+      }
+
+      .avista-works {
+         padding: 52px 0 70px;
+      }
+
+      .avista-works__head {
+         max-width: 720px;
+         margin-bottom: 28px;
+      }
+
+      .avista-works__head h2 {
+         font-size: clamp(2.2rem, 8vw, 4rem);
       }
 
       .avista-home__stage {
@@ -1565,6 +2360,561 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .avista-home__service-row {
          grid-template-columns: 1fr;
       }
+
+      .avista-works {
+         padding: 44px 0 58px;
+      }
+
+      .avista-works__head h2 {
+         font-size: clamp(2rem, 12vw, 3.2rem);
+         line-height: 0.96;
+      }
+   }
+
+   .header .navbar__options {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+   }
+
+   .nav-quote-btn {
+      height: 48px;
+      padding: 0 24px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ff3d1f 0%, #ff7a1f 100%);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 16px 36px rgba(255, 61, 31, 0.28);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+   }
+
+   .nav-quote-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 46px rgba(255, 61, 31, 0.38);
+   }
+
+   .login-popup {
+      background: rgba(3, 3, 3, 0.74) !important;
+      backdrop-filter: blur(18px);
+      transition: none !important;
+   }
+
+   .login-popup.show {
+      visibility: visible !important;
+      opacity: 1 !important;
+   }
+
+   .login-popup .box {
+      width: min(920px, calc(100% - 36px)) !important;
+      min-height: 560px;
+      display: grid !important;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
+      background: #0b0b0b !important;
+      box-shadow: 0 36px 100px rgba(0, 0, 0, 0.55);
+      opacity: 0;
+      margin-left: 0 !important;
+      transform: translate(-50%, -50%) scale(0.94) !important;
+      transition: none !important;
+   }
+
+   .popup-visual {
+      position: relative;
+      min-height: 560px;
+      overflow: hidden;
+      background: #111;
+   }
+
+   .popup-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+         linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.72)),
+         radial-gradient(circle at 20% 20%, rgba(255, 61, 31, 0.38), transparent 38%);
+   }
+
+   .popup-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      object-fit: cover;
+      transform: scale(1.08);
+      filter: saturate(1.1) contrast(1.06);
+   }
+
+   .popup-visual__tag,
+   .popup-visual__copy {
+      position: absolute;
+      z-index: 2;
+      left: 28px;
+      right: 28px;
+   }
+
+   .popup-visual__tag {
+      top: 28px;
+      width: max-content;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255, 61, 31, 0.9);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+   }
+
+   .popup-visual__copy {
+      bottom: 30px;
+      color: #fff;
+   }
+
+   .popup-visual__copy strong {
+      display: block;
+      max-width: 320px;
+      font-size: 36px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+   }
+
+   .popup-visual__copy small {
+      display: block;
+      max-width: 330px;
+      margin-top: 12px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 14px;
+      line-height: 1.55;
+   }
+
+   .login-popup .box .form {
+      flex: initial !important;
+      max-width: none !important;
+      padding: 48px 44px !important;
+      background:
+         linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+         #0b0b0b;
+   }
+
+   .popup-kicker {
+      display: inline-flex;
+      margin-bottom: 14px;
+      color: #ff3d1f;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+   }
+
+   .login-popup .box .form h1 {
+      color: #fff !important;
+      font-size: clamp(2rem, 4vw, 3.4rem) !important;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      margin: 0 0 28px !important;
+   }
+
+   .login-popup .box .form .form-control {
+      width: 100%;
+      height: 48px !important;
+      margin-bottom: 14px !important;
+      padding: 0 16px;
+      border: 1px solid rgba(255, 255, 255, 0.14) !important;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff !important;
+      font-size: 14px !important;
+   }
+
+   .login-popup .box .form .form-control::placeholder {
+      color: rgba(255, 255, 255, 0.56);
+   }
+
+   .login-popup .box .form select.form-control {
+      color: rgba(255, 255, 255, 0.72) !important;
+   }
+
+   .login-popup .box .form select.form-control option {
+      color: #111;
+   }
+
+   .login-popup .box .form .popup-message {
+      min-height: 96px;
+      padding-top: 14px;
+      resize: vertical;
+   }
+
+   .login-popup .box .form .btn {
+      width: 100%;
+      height: 52px !important;
+      margin-top: 10px !important;
+      border: 0 !important;
+      border-radius: 999px !important;
+      background: linear-gradient(135deg, #ff3d1f, #ff8a1f) !important;
+      color: #fff !important;
+      font-size: 14px !important;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 18px 42px rgba(255, 61, 31, 0.28);
+   }
+
+   .login-popup .box .form .close {
+      position: absolute !important;
+      top: 18px !important;
+      right: 18px !important;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 4;
+   }
+
+   @media (max-width: 991px) {
+      .nav-quote-btn {
+         display: none;
+      }
+
+      .login-popup .box {
+         grid-template-columns: 1fr;
+         min-height: auto;
+      }
+
+      .popup-visual {
+         min-height: 230px;
+      }
+
+      .popup-visual img {
+         min-height: 230px;
+      }
+
+      .popup-visual__copy strong {
+         font-size: 28px;
+      }
+   }
+
+   @media (max-width: 575px) {
+      .login-popup .box .form {
+         padding: 34px 22px 26px !important;
+      }
+
+      .popup-visual {
+         display: none;
+      }
+
+      .login-popup .box .form h1 {
+         font-size: 32px !important;
+      }
+   }
+
+   .galaxy-impact.section {
+      --impact-red: #ff3d1f;
+      --impact-orange: #ff8a1f;
+      --grid-x: 0px;
+      --grid-y: 0px;
+      --media-drift: 0px;
+      position: relative;
+      overflow: hidden;
+      padding: 62px 0 76px !important;
+      color: #fff;
+      background:
+         radial-gradient(circle at 12% 10%, rgba(255, 61, 31, 0.2), transparent 20%),
+         radial-gradient(circle at 88% 12%, rgba(255, 138, 31, 0.14), transparent 24%),
+         linear-gradient(180deg, #050505 0%, #080808 62%, #030303 100%) !important;
+      isolation: isolate;
+   }
+
+   .galaxy-impact.section::before {
+      content: "MEDIA";
+      position: absolute;
+      top: -32px;
+      right: -20px;
+      z-index: -1;
+      color: rgba(255, 255, 255, 0.035);
+      font-size: clamp(7rem, 20vw, 18rem);
+      line-height: 0.8;
+      font-weight: 1000;
+      letter-spacing: -0.08em;
+      text-transform: uppercase;
+      transform: translate3d(var(--media-drift), 0, 0);
+      will-change: transform;
+   }
+
+   .galaxy-impact.section::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+         linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+         linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(180deg, transparent, #000 12%, #000 82%, transparent);
+      pointer-events: none;
+   }
+
+   .galaxy-impact__intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.32fr) minmax(300px, 0.68fr);
+      gap: 44px;
+      align-items: end;
+      margin-bottom: 18px;
+   }
+
+   .galaxy-impact__eyebrow {
+      width: max-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      color: var(--impact-orange) !important;
+      background: rgba(255, 255, 255, 0.04);
+      font-size: 13px;
+      font-weight: 1000;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(16px);
+   }
+
+   .galaxy-impact__eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #5dff9b;
+      box-shadow: 0 0 18px rgba(93, 255, 155, 0.72);
+   }
+
+   .galaxy-impact__intro h2 {
+      margin: 24px 0 0 !important;
+      color: #fff !important;
+      font-size: clamp(3rem, 5.1vw, 6rem) !important;
+      line-height: 0.92 !important;
+      font-weight: 1000;
+      letter-spacing: -0.055em;
+      text-transform: uppercase;
+      max-width: 980px;
+   }
+
+   .impact-line {
+      display: block;
+   }
+
+   .galaxy-impact__intro .primary-text {
+      max-width: 520px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.7) !important;
+      font-size: 19px;
+      line-height: 1.62;
+      font-weight: 600;
+   }
+
+   .galaxy-impact__meta {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-self: start;
+   }
+
+   .galaxy-livebar {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+   }
+
+   .galaxy-livebar__item {
+      --shine-x: -120%;
+      position: relative;
+      min-height: 82px;
+      padding: 18px 22px;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      backdrop-filter: none;
+   }
+
+   .galaxy-livebar__item::after {
+      content: none;
+   }
+
+   .galaxy-livebar__item strong {
+      display: block;
+      color: #fff;
+      font-size: 32px;
+      line-height: 0.95;
+      font-weight: 1000;
+      letter-spacing: -0.03em;
+   }
+
+   .galaxy-livebar__item span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(255, 255, 255, 0.66);
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 700;
+   }
+
+   .galaxy-impact__grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 0 !important;
+      transform: translate3d(var(--grid-x), var(--grid-y), 0);
+      will-change: transform;
+   }
+
+   .galaxy-impact-card {
+      position: relative;
+      min-height: 430px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      background: #111;
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.28);
+      transform-style: preserve-3d;
+      will-change: transform;
+   }
+
+   .galaxy-impact-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+         linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.74)),
+         radial-gradient(circle at 20% 16%, rgba(255, 61, 31, 0.3), transparent 34%);
+      transition: opacity 0.35s ease;
+   }
+
+   .galaxy-impact-card::after {
+      content: "";
+      position: absolute;
+      inset: -35%;
+      z-index: 2;
+      background: linear-gradient(110deg, transparent 42%, rgba(255, 255, 255, 0.34), transparent 58%);
+      transform: translateX(-85%) rotate(10deg);
+      opacity: 0;
+      pointer-events: none;
+   }
+
+   .galaxy-impact-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      object-fit: cover;
+      filter: saturate(1.08) contrast(1.06) brightness(0.82);
+      transform: scale(1.06);
+      transition: transform 0.7s ease, filter 0.7s ease;
+   }
+
+   .galaxy-impact-card__content {
+      position: absolute;
+      inset: auto 0 0;
+      z-index: 3;
+      display: flex;
+      min-height: 190px;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 26px;
+   }
+
+   .galaxy-impact-card__content span {
+      color: #18d7ff !important;
+      font-size: 13px;
+      font-weight: 1000;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-impact-card__content h3 {
+      max-width: 320px;
+      margin: 0 0 8px;
+      color: #fff;
+      font-size: clamp(1.55rem, 1.8vw, 2.3rem);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+   }
+
+   .galaxy-impact-card__content p {
+      max-width: 320px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 15px;
+      line-height: 1.55;
+      font-weight: 600;
+   }
+
+   .galaxy-impact-card:hover {
+      border-color: rgba(255, 61, 31, 0.55);
+   }
+
+   .galaxy-impact-card:hover img {
+      transform: scale(1.13);
+      filter: saturate(1.18) contrast(1.08) brightness(0.96);
+   }
+
+   .galaxy-impact-card:hover::after {
+      animation: impactCardShine 0.9s ease forwards;
+      opacity: 1;
+   }
+
+   @keyframes impactCardShine {
+      to {
+         transform: translateX(85%) rotate(10deg);
+      }
+   }
+
+   @media (max-width: 1199px) {
+      .galaxy-impact__intro {
+         grid-template-columns: 1fr;
+         gap: 22px;
+      }
+
+      .galaxy-impact__grid {
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+   }
+
+   @media (max-width: 767px) {
+      .galaxy-impact.section {
+         padding: 46px 0 54px !important;
+      }
+
+      .galaxy-impact__intro h2 {
+         font-size: clamp(2.45rem, 13vw, 4rem) !important;
+      }
+
+      .galaxy-livebar,
+      .galaxy-impact__grid {
+         grid-template-columns: 1fr;
+      }
+
+      .galaxy-impact-card,
+      .galaxy-impact-card img {
+         min-height: 360px;
+      }
    }
 </style>
 </head>
@@ -1572,14 +2922,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <body>
 
 <!-- Popup Window -->
-<div class="login-popup">
-  <div class="box">
-    <div class="form">
-      <div class="close">
-        <i class="fa-solid fa-xmark" style="color:black; font-size:22px;"></i>
+<div class="login-popup" aria-hidden="true">
+  <div class="box" role="dialog" aria-modal="true" aria-labelledby="quote-popup-title">
+    <div class="popup-visual">
+      <img src="assets/images/unipole/Rishikul Traffic Lights (5).jpg" alt="Outdoor billboard advertisement on traffic route">
+      <span class="popup-visual__tag">OOH Campaign</span>
+      <div class="popup-visual__copy">
+        <strong>Make your brand visible.</strong>
+        <small>Unipole, hoarding, glow sign and in-shop branding across premium locations.</small>
       </div>
+    </div>
+    <div class="form">
+      <button type="button" class="close" aria-label="Close quote form">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
 
-      <h1>Contact Us</h1>
+      <h1 id="quote-popup-title">Contact-Us</h1>
 
       <!-- Web3Forms -->
       <form action="https://api.web3forms.com/submit" method="POST">
@@ -1601,7 +2959,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div class="form-group">
           <select name="service" class="form-control" required>
-            <option value="">- Choose Service -</option>
+            <option value="">Choose Service</option>
             <option value="Unipole Advertisement">Unipole Advertisement</option>
             <option value="In Shop Branding">In Shop Branding</option>
             <option value="Flex Board Advertisement">Flex Board Advertisement</option>
@@ -1610,7 +2968,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </select>
         </div>
 
-        <button type="submit" class="btn">Get Quote</button>
+        <div class="form-group">
+          <textarea name="message" placeholder="Tell us your location, budget or campaign idea" class="form-control popup-message"></textarea>
+        </div>
+
+        <button type="submit" class="btn">Get Quote <i class="fa-solid fa-arrow-right"></i></button>
       </form>
 
     </div>
@@ -1676,6 +3038,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </ul>
                         </div>
                         <div class="navbar__options">
+                           <button class="nav-quote-btn js-open-popup" type="button" aria-label="open quote form">
+                              Get Quote <i class="fa-solid fa-arrow-right"></i>
+                           </button>
                            <button class="open-offcanvas-nav d-flex" aria-label="toggle mobile menu"
                               title="open offcanvas menu"></button>
                         </div>
@@ -1750,7 +3115,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                </div>
                <div class="offcanvas-menu__options nav-fade">
                   <div class="offcanvas__mobile-options d-flex">
-                     <a href="contact-us.html" class="btn btn--secondary">Let's Talk</a>
+                     <a href="contact-us.html" class="btn btn--secondary js-open-popup">Let's Talk</a>
                   </div>
                </div>
                <div class="offcanvas-menu__social social nav-fade">
@@ -1825,7 +3190,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div class="container">
                      <div class="avista-works__head">
                         <span>Creative High-Impact Work</span>
-                        <h2>Campaigns that look premium on real streets.</h2>
+                        <h2>Campaigns that look premium<br>on real streets.</h2>
                      </div>
                      <div class="avista-works__grid">
                         <article class="avista-work-card">
@@ -1849,24 +3214,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      <div class="galaxy-impact__intro">
                         <div>
                            <span class="galaxy-impact__eyebrow">Market Coverage</span>
-                           <h2 class="title-anim">Outdoor campaigns designed like high-impact media launches.</h2>
+                           <h2 class="title-anim">Outdoor campaigns designed<br>like high-impact media launches.</h2>
                         </div>
-                        <div>
+                        <div class="galaxy-impact__meta">
+                           <div class="galaxy-livebar">
+                              <div class="galaxy-livebar__item">
+                                 <strong>25+</strong>
+                                 <span>Years in outdoor advertising</span>
+                              </div>
+                              <div class="galaxy-livebar__item">
+                                 <strong>500+</strong>
+                                 <span>Campaigns and brand executions</span>
+                              </div>
+                              <div class="galaxy-livebar__item">
+                                 <strong>3</strong>
+                                 <span>Core regions: Uttarakhand, West UP, Punjab</span>
+                              </div>
+                           </div>
                            <p class="primary-text">From route mapping to creative production and installation, Galaxy Advertisers builds street-level visibility for brands that need real-world attention.</p>
-                        </div>
-                     </div>
-                     <div class="galaxy-livebar">
-                        <div class="galaxy-livebar__item">
-                           <strong>25+</strong>
-                           <span>Years in outdoor advertising</span>
-                        </div>
-                        <div class="galaxy-livebar__item">
-                           <strong>500+</strong>
-                           <span>Campaigns and brand executions</span>
-                        </div>
-                        <div class="galaxy-livebar__item">
-                           <strong>3</strong>
-                           <span>Core regions: Uttarakhand, West UP, Punjab</span>
                         </div>
                      </div>
                      <div class="galaxy-impact__grid section__content-cta">
@@ -1980,197 +3345,182 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                </section>
                <!-- ==== / agency end ==== -->
                <!-- ==== portfolio start ==== -->
-               <section class="section portfolio pb-0 fade-wrapper position-relative">
-                  <div class="portfolio__text-slider">
-                     <div class="portfolio__text-slider-single">
-                        <h2 class="h1">
-                           <a href="#">
-                              digital portfolio
-                              <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                           </a>
-                        </h2>
-                     </div>
-                     <div class="portfolio__text-slider-single">
-                        <h2 class="h1">
-                           <a href="#">
-                              digital portfolio
-                              <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                           </a>
-                        </h2>
-                     </div>
-                     <div class="portfolio__text-slider-single">
-                        <h2 class="h1">
-                           <a href="#">
-                              digital portfolio
-                              <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                           </a>
-                        </h2>
-                     </div>
-                     <div class="portfolio__text-slider-single">
-                        <h2 class="h1">
-                           <a href="#">
-                              digital portfolio
-                              <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                           </a>
-                        </h2>
-                     </div>
-                     <div class="portfolio__text-slider-single">
-                        <h2 class="h1">
-                           <a href="#">
-                              digital portfolio
-                              <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                           </a>
-                        </h2>
-                     </div>
-                     <div class="portfolio__text-slider-single">
-                        <h2 class="h1">
-                           <a href="#">
-                              digital portfolio
-                              <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                           </a>
-                        </h2>
-                     </div>
-                     <div class="portfolio__text-slider-single">
-                        <h2 class="h1">
-                           <a href="#">
-                              digital portfolio
-                              <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                           </a>
-                        </h2>
-                     </div>
-                  </div>
-                  <div class="container-fluid">
-                     <div class="row gaper">
-                        <div class="col-12 col-sm-6 col-xl-3">
-                           <div class="portfolio__single portfolio__single-active topy-tilt fade-top">
-                              <a href="#">
-                                 <img src="assets/images/clients/portfolio/3.jpg" alt="Image">
-                              </a>
-                              <div class="portfolio__single-content">
-                                 <a href="#">
-                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                 </a>
-                                  <!-- <h4>
-                                    <a href="portfolio.html">Digital Marketing</a>
-                                 </h4> -->
-                              </div>
-                           </div>
+               <section class="galaxy-showcase section fade-wrapper">
+                  <div class="container">
+                     <div class="galaxy-showcase__intro">
+                        <div>
+                           <span class="galaxy-showcase__eyebrow">Selected Portfolio</span>
+                           <h2 class="title-anim">Outdoor work with strong recall.</h2>
                         </div>
-                        <div class="col-12 col-sm-6 col-xl-3">
-                           <div class="portfolio__single topy-tilt fade-top">
-                              <a href="portfolio.html">
-                                 <img src="assets/images/clients/portfolio/1.jpg" alt="Image">
-                              </a>
-                              <div class="portfolio__single-content">
-                                 <a href="#">
-                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                 </a>
-                                  <!-- <h4>
-                                    <a href="portfolio.html">Digital Marketing</a>
-                                 </h4> -->
-                              </div>
+                        <div class="galaxy-showcase__summary">
+                           <p class="primary-text">A tighter selection of city hoardings, highway unipoles and retail installations that shows how Galaxy Advertisers balances visibility, route logic and on-ground execution.</p>
+                           <div class="galaxy-showcase__chips">
+                              <span>City Hoardings</span>
+                              <span>Highway Unipoles</span>
+                              <span>Retail Signage</span>
+                              <span>Brand Launches</span>
                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-3">
-                           <div class="portfolio__single topy-tilt fade-top">
-                              <a href="#">
-                                 <img src="assets/images/clients/portfolio/2.jpg" alt="Image">
-                              </a>
-                              <div class="portfolio__single-content">
-                                 <a href="portfolio.html">
-                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                 </a>
-                                  <!-- <h4>
-                                    <a href="portfolio.html">Digital Marketing</a>
-                                 </h4> -->
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-3">
-                           <div class="portfolio__single topy-tilt fade-top">
-                              <a href="#">
-                                 <img src="assets/images/clients/portfolio/kei.jpg" alt="Image">
-                              </a>
-                              <div class="portfolio__single-content">
-                                 <a href="portfolio.html">
-                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                 </a>
-                                  <!-- <h4>
-                                    <a href="portfolio.html">Digital Marketing</a>
-                                 </h4> -->
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-3">
-                           <div class="portfolio__single topy-tilt fade-top">
-                              <a href="#">
-                                 <img src="assets/images/clients/portfolio/Picture111-543x472.jpg" alt="Image">
-                              </a>
-                              <div class="portfolio__single-content">
-                                 <a href="portfolio.html">
-                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                 </a>
-                                 <!-- <h4>
-                                    <a href="portfolio.html">Digital Marketing</a>
-                                 </h4> -->
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-3">
-                           <div class="portfolio__single topy-tilt fade-top">
-                              <a href="#">
-                                 <img src="assets/images/clients/portfolio/bonjour-2.jpg" alt="Image">
-                              </a>
-                              <div class="portfolio__single-content">
-                                 <a href="portfolio.html">
-                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                 </a>
-                                  <!-- <h4>
-                                    <a href="portfolio.html">Digital Marketing</a>
-                                 </h4> -->
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-3">
-                           <div class="portfolio__single-alt-wrapper fade-top">
-                              <div class="portfolio__single-alt topy-tilt">
-                                 <h4>
-                                    <a href="#">View All Work</a>
-                                 </h4>
-                                 <a href="#" class="arr">
-                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                 </a>
-                                 <img src="assets/images/portfolio/dot.png" alt="Image" class="dot-one">
-                                 <img src="assets/images/portfolio/dot.png" alt="Image" class="dot-two">
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-xl-3">
-                           <div class="portfolio__single topy-tilt fade-top">
-                              <a href="#">
-                                 <img src="assets/images/clients/portfolio/bk-2.jpg" alt="Image">
-                              </a>
-                              <div class="portfolio__single-content">
-                                 <a href="#">
-                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                 </a>
-                                  <!-- <h4>
-                                    <a href="portfolio.html">Digital Marketing</a>
-                                 </h4> -->
-                              </div>
-                           </div>
+                           <a href="contact-us.html" class="galaxy-showcase__btn">Request Campaign Options <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                      </div>
-                  </div>
-                  <div class="lines d-none d-lg-flex">
-                     <div class="line"></div>
-                     <div class="line"></div>
-                     <div class="line"></div>
-                     <div class="line"></div>
-                     <div class="line"></div>
+                     <div class="galaxy-showcase__grid">
+                        <article class="galaxy-showcase-card">
+                           <img src="assets/images/clients/portfolio/Hero.jpg" alt="Baleno outdoor hoarding campaign">
+                           <div class="galaxy-showcase-card__content">
+                              <div class="galaxy-showcase-card__meta">
+                                 <span>Auto Launch</span>
+                                 <span>City Hoarding</span>
+                              </div>
+                              <h3>Large-format creative built for premium frontage and quick brand recall.</h3>
+                           </div>
+                        </article>
+                        <article class="galaxy-showcase-card">
+                           <img src="assets/images/clients/portfolio/123.png" alt="Motherhood University admission campaign">
+                           <div class="galaxy-showcase-card__content">
+                              <div class="galaxy-showcase-card__meta">
+                                 <span>Education</span>
+                                 <span>Response Campaign</span>
+                              </div>
+                              <h3>Dense admission messaging organized for fast read time in traffic.</h3>
+                           </div>
+                        </article>
+                        <article class="galaxy-showcase-card">
+                           <img src="assets/images/clients/portfolio/cucet.png" alt="CUCET billboard advertising creative">
+                           <div class="galaxy-showcase-card__content">
+                              <div class="galaxy-showcase-card__meta">
+                                 <span>University</span>
+                                 <span>Lead Generation</span>
+                              </div>
+                              <h3>High-contrast layouts that keep exam and admission offers visible at distance.</h3>
+                           </div>
+                        </article>
+                        <article class="galaxy-showcase-card">
+                           <img src="assets/images/clients/portfolio/kei.jpg" alt="KEI product outdoor campaign">
+                           <div class="galaxy-showcase-card__content">
+                              <div class="galaxy-showcase-card__meta">
+                                 <span>Product Branding</span>
+                                 <span>Retail Recall</span>
+                              </div>
+                              <h3>Strong product-led visuals designed for fast recognition on busy routes.</h3>
+                           </div>
+                        </article>
+                        <article class="galaxy-showcase-card">
+                           <img src="assets/images/clients/portfolio/Picture11-1-543x472.jpg" alt="Interior wall branding for Aditya">
+                           <div class="galaxy-showcase-card__content">
+                              <div class="galaxy-showcase-card__meta">
+                                 <span>Indoor Branding</span>
+                                 <span>Corporate Space</span>
+                              </div>
+                              <h3>Interior media surfaces that carry the same brand strength inside the location.</h3>
+                           </div>
+                        </article>
+                        <article class="galaxy-showcase-card">
+                           <img src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Highway unipole advertising site in Haridwar">
+                           <div class="galaxy-showcase-card__content">
+                              <div class="galaxy-showcase-card__meta">
+                                 <span>Prime Route</span>
+                                 <span>Unipole Media</span>
+                              </div>
+                              <h3>On-ground placements chosen for traffic flow, visibility angle and repeat exposure.</h3>
+                           </div>
+                        </article>
+                        <article class="galaxy-showcase-cta">
+                           <span class="galaxy-showcase-cta__eyebrow">Media Planning</span>
+                           <h3>Need a sharper mix for your next outdoor launch?</h3>
+                           <ul class="galaxy-showcase-cta__list">
+                              <li>Site recommendations by route and audience</li>
+                              <li>Creative formats for hoardings, glow sign and retail display</li>
+                              <li>Faster rollout support across Uttarakhand, West UP and Punjab</li>
+                           </ul>
+                           <a href="contact-us.html" class="galaxy-showcase__btn">Talk To Galaxy <i class="fa-solid fa-arrow-right"></i></a>
+                        </article>
+                        <article class="galaxy-showcase-card">
+                           <img src="assets/images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg" alt="Outdoor billboard at Shivalik Nagar Chowk">
+                           <div class="galaxy-showcase-card__content">
+                              <div class="galaxy-showcase-card__meta">
+                                 <span>Roadside Visibility</span>
+                                 <span>High Recall</span>
+                              </div>
+                              <h3>Street-level media that keeps brands present inside the everyday commute.</h3>
+                           </div>
+                        </article>
+                     </div>
                   </div>
                </section>
                <!-- ==== / portfolio end ==== -->
+               <section class="galaxy-rollout section fade-wrapper">
+                  <div class="container">
+                     <div class="galaxy-rollout__intro">
+                        <div>
+                           <span class="galaxy-rollout__eyebrow">Campaign Rollout</span>
+                           <h2 class="title-anim">From route study to live outdoor launch.</h2>
+                        </div>
+                        <div class="galaxy-rollout__summary">
+                           <p class="primary-text">Galaxy plans, produces and installs outdoor campaigns with fast on-ground coordination across prime city and highway routes.</p>
+                           <div class="galaxy-rollout__tags">
+                              <span>Site Survey</span>
+                              <span>Creative Fit</span>
+                              <span>Fabrication</span>
+                              <span>Live Install</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="galaxy-rollout__layout">
+                        <div class="galaxy-rollout__roadmap">
+                           <span class="galaxy-rollout__track"></span>
+                           <article class="galaxy-rollout__step">
+                              <span class="galaxy-rollout__node"><i class="fa-solid fa-location-dot"></i></span>
+                              <span class="galaxy-rollout__step-id">01 / Route Scan</span>
+                              <h3>Traffic-first site selection.</h3>
+                              <p>Prime routes, visibility angle and local audience fit are mapped before booking.</p>
+                           </article>
+                           <article class="galaxy-rollout__step">
+                              <span class="galaxy-rollout__node"><i class="fa-solid fa-pen-ruler"></i></span>
+                              <span class="galaxy-rollout__step-id">02 / Creative Fit</span>
+                              <h3>Message matched to format.</h3>
+                              <p>Layouts are tuned for hoarding, unipole, glow sign and retail display readability.</p>
+                           </article>
+                           <article class="galaxy-rollout__step">
+                              <span class="galaxy-rollout__node"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                              <span class="galaxy-rollout__step-id">03 / Production</span>
+                              <h3>Fabrication and print control.</h3>
+                              <p>Panels, flex and structures are prepared with practical execution timelines.</p>
+                           </article>
+                           <article class="galaxy-rollout__step">
+                              <span class="galaxy-rollout__node"><i class="fa-solid fa-bolt"></i></span>
+                              <span class="galaxy-rollout__step-id">04 / Go Live</span>
+                              <h3>Install, proof and support.</h3>
+                              <p>Deployment teams activate the site and share live execution updates from the field.</p>
+                           </article>
+                        </div>
+                        <div class="galaxy-rollout__visual">
+                           <div class="galaxy-rollout__screen">
+                              <img src="assets/images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg" alt="Outdoor billboard installation on a high traffic route">
+                              <span class="galaxy-rollout__scan"></span>
+                              <div class="galaxy-rollout__screen-copy">
+                                 <span>Live Install</span>
+                                 <strong>Shivalik Nagar route coverage.</strong>
+                              </div>
+                           </div>
+                           <div class="galaxy-rollout__float galaxy-rollout__float--one">
+                              <i class="fa-solid fa-clock"></i>
+                              <div><strong>48 hr</strong><span>Fast launch</span></div>
+                           </div>
+                           <div class="galaxy-rollout__float galaxy-rollout__float--two">
+                              <i class="fa-solid fa-map"></i>
+                              <div><strong>Prime routes</strong><span>Mapped first</span></div>
+                           </div>
+                           <div class="galaxy-rollout__float galaxy-rollout__float--three">
+                              <i class="fa-solid fa-camera"></i>
+                              <div><strong>Proofing</strong><span>Live updates</span></div>
+                           </div>
+                           <span class="galaxy-rollout__pulse galaxy-rollout__pulse--one"></span>
+                           <span class="galaxy-rollout__pulse galaxy-rollout__pulse--two"></span>
+                           <span class="galaxy-rollout__pulse galaxy-rollout__pulse--three"></span>
+                        </div>
+                     </div>
+                  </div>
+               </section>
                <!-- ==== offer start ==== -->
                <section class="section offer fade-wrapper light">
                   <div class="container">
@@ -2764,6 +4114,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    <script src="assets/vendor/images-loaded/imagesloaded.pkgd.min.js"></script>
    <!-- isotope js -->
    <script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>
+   <!-- gsap js -->
+   <script src="assets/vendor/gsap/gsap.min.js"></script>
    <!-- chroma js -->
    <script src="assets/vendor/gsap/chroma.min.js"></script>
    <!-- splittext js -->
@@ -2774,8 +4126,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    <script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script>
    <!-- scrolltrigger js -->
    <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
-   <!-- gsap js -->
-   <script src="assets/vendor/gsap/gsap.min.js"></script>
    <!-- vanilla tilt js -->
    <script src="assets/vendor/vanilla-tilt/tilt.jquery.js"></script>
    <!-- ==== / js dependencies end ==== -->
@@ -2899,6 +4249,392 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                scrollTrigger: { trigger: ".avista-home", start: "top top", end: "bottom top", scrub: 0.9 }
             });
          }
+      })();
+   </script>
+   <script id="galaxy-impact-gsap">
+      (function () {
+         var section = document.querySelector(".galaxy-impact");
+         if (!section || !window.gsap) return;
+
+         var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+         if (reduceMotion) return;
+
+         if (window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+         }
+
+         var heading = section.querySelector(".galaxy-impact__intro h2");
+         var headingTargets = heading;
+
+         if (window.SplitText && heading) {
+            var split = new SplitText(heading, { type: "lines", linesClass: "impact-line" });
+            headingTargets = split.lines;
+            gsap.set(split.lines, { overflow: "hidden" });
+         }
+
+         var introTl = gsap.timeline({
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: section,
+               start: "top 72%",
+               once: true
+            } : null,
+            defaults: { ease: "power4.out" }
+         });
+
+         introTl
+            .from(".galaxy-impact__eyebrow", { y: 22, autoAlpha: 0, duration: 0.55 })
+            .from(headingTargets, { yPercent: 105, autoAlpha: 0, duration: 0.9, stagger: 0.08 }, "-=0.18")
+            .from(".galaxy-impact__intro .primary-text", { x: 44, autoAlpha: 0, duration: 0.75 }, "-=0.55")
+            .from(".galaxy-livebar__item", { y: 42, autoAlpha: 0, duration: 0.72, stagger: 0.08 }, "-=0.32");
+
+         document.querySelectorAll(".galaxy-livebar__item strong").forEach(function (item) {
+            var raw = item.textContent.trim();
+            var suffix = raw.replace(/[0-9]/g, "");
+            var end = parseInt(raw, 10);
+            if (!end) return;
+
+            var counter = { value: 0 };
+            gsap.to(counter, {
+               value: end,
+               duration: 1.6,
+               ease: "power3.out",
+               scrollTrigger: window.ScrollTrigger ? {
+                  trigger: item,
+                  start: "top 82%",
+                  once: true
+               } : null,
+               onUpdate: function () {
+                  item.textContent = Math.round(counter.value) + suffix;
+               }
+            });
+         });
+
+         gsap.from(".galaxy-impact-card", {
+            y: 44,
+            rotateX: 6,
+            autoAlpha: 0,
+            duration: 0.82,
+            stagger: 0.1,
+            ease: "power3.out",
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: ".galaxy-impact__grid",
+               start: "top 88%",
+               once: true
+            } : null
+         });
+
+         gsap.fromTo(".galaxy-impact-card img",
+            { scale: 1.18, yPercent: -4 },
+            {
+               scale: 1.06,
+               yPercent: 5,
+               ease: "none",
+               scrollTrigger: window.ScrollTrigger ? {
+                  trigger: ".galaxy-impact__grid",
+                  start: "top bottom",
+                  end: "bottom top",
+                  scrub: 0.9
+               } : null
+            }
+         );
+
+         gsap.to(".galaxy-livebar__item", {
+            y: function (index) { return index % 2 ? 5 : -5; },
+            duration: 2.8,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            stagger: 0.16
+         });
+
+         gsap.to(".galaxy-livebar__item", {
+            "--shine-x": "120%",
+            duration: 1.45,
+            repeat: -1,
+            repeatDelay: 2.1,
+            ease: "power2.inOut",
+            stagger: 0.22
+         });
+
+         gsap.to(section, {
+            "--media-drift": "22px",
+            duration: 5.2,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+         });
+
+         section.addEventListener("mousemove", function (event) {
+            var box = section.getBoundingClientRect();
+            var x = (event.clientX - box.left) / box.width - 0.5;
+            var y = (event.clientY - box.top) / box.height - 0.5;
+
+            gsap.to(section, {
+               "--grid-x": (x * 10) + "px",
+               "--grid-y": (y * 8) + "px",
+               duration: 0.55,
+               ease: "power2.out"
+            });
+         });
+
+         section.querySelectorAll(".galaxy-impact-card").forEach(function (card) {
+            card.addEventListener("mousemove", function (event) {
+               var box = card.getBoundingClientRect();
+               var x = (event.clientX - box.left) / box.width - 0.5;
+               var y = (event.clientY - box.top) / box.height - 0.5;
+
+               gsap.to(card, {
+                  rotateY: x * 7,
+                  rotateX: y * -7,
+                  y: -8,
+                  duration: 0.45,
+                  ease: "power2.out"
+               });
+               gsap.to(card.querySelector("img"), {
+                  x: x * 18,
+                  y: y * 14,
+                  duration: 0.45,
+                  ease: "power2.out"
+               });
+               gsap.to(card.querySelector(".galaxy-impact-card__content"), {
+                  x: x * -10,
+                  y: y * -8,
+                  duration: 0.45,
+                  ease: "power2.out"
+               });
+            });
+
+            card.addEventListener("mouseleave", function () {
+               gsap.to(card, { rotateY: 0, rotateX: 0, y: 0, duration: 0.55, ease: "power3.out" });
+               gsap.to(card.querySelector("img"), { x: 0, y: 0, duration: 0.55, ease: "power3.out" });
+               gsap.to(card.querySelector(".galaxy-impact-card__content"), { x: 0, y: 0, duration: 0.55, ease: "power3.out" });
+            });
+         });
+      })();
+   </script>
+   <script id="galaxy-showcase-gsap">
+      (function () {
+         var section = document.querySelector(".galaxy-showcase");
+         if (!section || !window.gsap) return;
+
+         var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+         if (reduceMotion) return;
+
+         if (window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+         }
+
+         var heading = section.querySelector(".galaxy-showcase__intro h2");
+         var headingTargets = heading;
+
+         if (window.SplitText && heading) {
+            var split = new SplitText(heading, { type: "lines", linesClass: "showcase-line" });
+            headingTargets = split.lines;
+            gsap.set(split.lines, { overflow: "hidden" });
+         }
+
+         var introTl = gsap.timeline({
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: section,
+               start: "top 72%",
+               once: true
+            } : null,
+            defaults: { ease: "power4.out" }
+         });
+
+         introTl
+            .from(".galaxy-showcase__eyebrow", { y: 20, autoAlpha: 0, duration: 0.55 })
+            .from(headingTargets, { yPercent: 105, autoAlpha: 0, duration: 0.9, stagger: 0.08 }, "-=0.18")
+            .from(".galaxy-showcase__summary .primary-text", { x: 36, autoAlpha: 0, duration: 0.72 }, "-=0.5")
+            .from(".galaxy-showcase__chips span", { y: 16, autoAlpha: 0, duration: 0.5, stagger: 0.06 }, "-=0.38")
+            .from(".galaxy-showcase__summary .galaxy-showcase__btn", { y: 18, autoAlpha: 0, duration: 0.5 }, "-=0.3");
+
+         gsap.from(".galaxy-showcase-card, .galaxy-showcase-cta", {
+            y: 44,
+            scale: 0.97,
+            autoAlpha: 0,
+            duration: 0.82,
+            stagger: 0.08,
+            ease: "power3.out",
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: ".galaxy-showcase__grid",
+               start: "top 84%",
+               once: true
+            } : null
+         });
+
+         gsap.utils.toArray(".galaxy-showcase-card img").forEach(function (img) {
+            gsap.fromTo(img,
+               { scale: 1.16, yPercent: -4 },
+               {
+                  scale: 1.04,
+                  yPercent: 6,
+                  ease: "none",
+                  scrollTrigger: window.ScrollTrigger ? {
+                     trigger: img.closest(".galaxy-showcase-card"),
+                     start: "top bottom",
+                     end: "bottom top",
+                     scrub: 0.85
+                  } : null
+               }
+            );
+         });
+
+         if (window.innerWidth < 992) return;
+
+         section.querySelectorAll(".galaxy-showcase-card, .galaxy-showcase-cta").forEach(function (card) {
+            card.addEventListener("mousemove", function (event) {
+               var box = card.getBoundingClientRect();
+               var x = (event.clientX - box.left) / box.width - 0.5;
+               var y = (event.clientY - box.top) / box.height - 0.5;
+               var image = card.querySelector("img");
+               var content = card.querySelector(".galaxy-showcase-card__content");
+
+               gsap.to(card, {
+                  rotateY: x * 6,
+                  rotateX: y * -6,
+                  y: -8,
+                  duration: 0.42,
+                  ease: "power2.out"
+               });
+
+               if (image) {
+                  gsap.to(image, {
+                     x: x * 16,
+                     y: y * 14,
+                     duration: 0.42,
+                     ease: "power2.out"
+                  });
+               }
+
+               if (content) {
+                  gsap.to(content, {
+                     x: x * -10,
+                     y: y * -8,
+                     duration: 0.42,
+                     ease: "power2.out"
+                  });
+               }
+            });
+
+            card.addEventListener("mouseleave", function () {
+               var image = card.querySelector("img");
+               var content = card.querySelector(".galaxy-showcase-card__content");
+
+               gsap.to(card, { rotateY: 0, rotateX: 0, y: 0, duration: 0.5, ease: "power3.out" });
+               if (image) {
+                  gsap.to(image, { x: 0, y: 0, duration: 0.5, ease: "power3.out" });
+               }
+               if (content) {
+                  gsap.to(content, { x: 0, y: 0, duration: 0.5, ease: "power3.out" });
+               }
+            });
+         });
+      })();
+   </script>
+   <script id="galaxy-rollout-gsap">
+      (function () {
+         var section = document.querySelector(".galaxy-rollout");
+         if (!section || !window.gsap) return;
+
+         var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+         if (reduceMotion) return;
+
+         if (window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+         }
+
+         var heading = section.querySelector(".galaxy-rollout__intro h2");
+         var headingTargets = heading;
+
+         if (window.SplitText && heading) {
+            var split = new SplitText(heading, { type: "lines", linesClass: "rollout-line" });
+            headingTargets = split.lines;
+            gsap.set(split.lines, { overflow: "hidden" });
+         }
+
+         var introTl = gsap.timeline({
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: section,
+               start: "top 72%",
+               once: true
+            } : null,
+            defaults: { ease: "power4.out" }
+         });
+
+         introTl
+            .from(".galaxy-rollout__eyebrow", { y: 20, autoAlpha: 0, duration: 0.55 })
+            .from(headingTargets, { yPercent: 105, autoAlpha: 0, duration: 0.88, stagger: 0.08 }, "-=0.18")
+            .from(".galaxy-rollout__summary .primary-text", { x: 40, autoAlpha: 0, duration: 0.72 }, "-=0.5")
+            .from(".galaxy-rollout__tags span", { y: 16, autoAlpha: 0, duration: 0.48, stagger: 0.06 }, "-=0.35");
+
+         gsap.from(".galaxy-rollout__track", {
+            scaleY: 0,
+            duration: 1.2,
+            ease: "power3.out",
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: ".galaxy-rollout__roadmap",
+               start: "top 80%",
+               once: true
+            } : null
+         });
+
+         gsap.from(".galaxy-rollout__step", {
+            x: -24,
+            autoAlpha: 0,
+            duration: 0.72,
+            stagger: 0.12,
+            ease: "power3.out",
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: ".galaxy-rollout__roadmap",
+               start: "top 82%",
+               once: true
+            } : null
+         });
+
+         gsap.from(".galaxy-rollout__visual", {
+            x: 48,
+            autoAlpha: 0,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: ".galaxy-rollout__layout",
+               start: "top 82%",
+               once: true
+            } : null
+         });
+
+         gsap.from(".galaxy-rollout__float", {
+            y: 20,
+            autoAlpha: 0,
+            duration: 0.65,
+            stagger: 0.1,
+            ease: "power3.out",
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: ".galaxy-rollout__visual",
+               start: "top 78%",
+               once: true
+            } : null
+         });
+
+         gsap.fromTo(".galaxy-rollout__screen img",
+            { scale: 1.18, yPercent: -4 },
+            {
+               scale: 1.04,
+               yPercent: 4,
+               ease: "none",
+               scrollTrigger: window.ScrollTrigger ? {
+                  trigger: ".galaxy-rollout__visual",
+                  start: "top bottom",
+                  end: "bottom top",
+                  scrub: 0.85
+               } : null
+            }
+         );
+
+         gsap.to(".galaxy-rollout__pulse--one", { x: 10, y: -8, duration: 2.8, repeat: -1, yoyo: true, ease: "sine.inOut" });
+         gsap.to(".galaxy-rollout__pulse--two", { x: -12, y: 8, duration: 3.1, repeat: -1, yoyo: true, ease: "sine.inOut" });
+         gsap.to(".galaxy-rollout__pulse--three", { x: 8, y: 10, duration: 2.6, repeat: -1, yoyo: true, ease: "sine.inOut" });
       })();
    </script>
    <script id="home-hero-v3-gsap">
@@ -3219,7 +4955,81 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "url": "https://ahagalaxy.com/"
 }
 </script>
-<script src="popup.js"></script>
+<script id="quote-popup-gsap">
+   (function () {
+      var popup = document.querySelector(".login-popup");
+      if (!popup) return;
+
+      var box = popup.querySelector(".box");
+      var closeBtn = popup.querySelector(".close");
+      var openBtns = document.querySelectorAll(".js-open-popup");
+      var focusInput = popup.querySelector('input[name="name"]');
+      var animatedItems = popup.querySelectorAll(".popup-kicker, .login-popup h1, .login-popup .form-group, .login-popup .btn");
+
+      function openPopup() {
+         popup.classList.add("show");
+         popup.setAttribute("aria-hidden", "false");
+         document.body.style.overflow = "hidden";
+
+         if (window.gsap) {
+            gsap.killTweensOf([popup, box, animatedItems, ".popup-visual img"]);
+            gsap.set(popup, { autoAlpha: 1 });
+            gsap.fromTo(box,
+               { autoAlpha: 0, y: 34, scale: 0.92, rotateX: -8 },
+               { autoAlpha: 1, y: 0, scale: 1, rotateX: 0, duration: 0.72, ease: "power4.out" }
+            );
+            gsap.fromTo(".popup-visual img",
+               { scale: 1.18, x: -18 },
+               { scale: 1.08, x: 0, duration: 1.2, ease: "power4.out" }
+            );
+            gsap.fromTo(animatedItems,
+               { y: 24, autoAlpha: 0 },
+               { y: 0, autoAlpha: 1, duration: 0.58, stagger: 0.055, delay: 0.12, ease: "power3.out" }
+            );
+         }
+
+         setTimeout(function () {
+            if (focusInput) focusInput.focus();
+         }, 520);
+      }
+
+      function closePopup() {
+         function finishClose() {
+            popup.classList.remove("show");
+            popup.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+         }
+
+         if (window.gsap) {
+            gsap.to(box, { autoAlpha: 0, y: 22, scale: 0.96, duration: 0.28, ease: "power2.in" });
+            gsap.to(popup, { autoAlpha: 0, duration: 0.32, delay: 0.05, ease: "power2.in", onComplete: finishClose });
+         } else {
+            finishClose();
+         }
+      }
+
+      openBtns.forEach(function (btn) {
+         btn.addEventListener("click", function (event) {
+            event.preventDefault();
+            openPopup();
+         });
+      });
+
+      if (closeBtn) {
+         closeBtn.addEventListener("click", closePopup);
+      }
+
+      popup.addEventListener("click", function (event) {
+         if (event.target === popup) closePopup();
+      });
+
+      document.addEventListener("keydown", function (event) {
+         if (event.key === "Escape" && popup.classList.contains("show")) {
+            closePopup();
+         }
+      });
+   })();
+</script>
 <script src="https://kit.fontawesome.com/47d5e28e48.js" crossorigin="anonymous"></script>
 
 <!-- Google Tag Manager (noscript) -->

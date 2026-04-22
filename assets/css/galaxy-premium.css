@@ -452,10 +452,10 @@ body {
 .galaxy-livebar {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  overflow: hidden;
-  border: 1px solid var(--galaxy-line);
-  background: var(--galaxy-line);
+  gap: 12px;
+  overflow: visible;
+  border: 0;
+  background: transparent;
 }
 
 .galaxy-livebar__item {

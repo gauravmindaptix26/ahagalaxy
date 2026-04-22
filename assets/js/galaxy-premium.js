@@ -12,9 +12,35 @@
   ready(function () {
     var hasGsap = typeof window.gsap !== "undefined";
     var hasScrollTrigger = typeof window.ScrollTrigger !== "undefined";
+    var hasScrollSmoother = typeof window.ScrollSmoother !== "undefined";
 
     if (hasGsap && hasScrollTrigger) {
       gsap.registerPlugin(ScrollTrigger);
+    }
+
+    if (
+      hasGsap &&
+      hasScrollTrigger &&
+      hasScrollSmoother &&
+      document.querySelector("#smooth-wrapper") &&
+      document.querySelector("#smooth-content") &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      gsap.registerPlugin(ScrollSmoother);
+      if (!ScrollSmoother.get()) {
+        ScrollSmoother.create({
+          wrapper: "#smooth-wrapper",
+          content: "#smooth-content",
+          smooth: 1.25,
+          smoothTouch: 0.12,
+          normalizeScroll: true,
+          ignoreMobileResize: true,
+          effects: false
+        });
+        window.setTimeout(function () {
+          if (window.ScrollTrigger) ScrollTrigger.refresh();
+        }, 180);
+      }
     }
 
     document.querySelectorAll('div[style*="position:fixed"] img[src^="images/"]').forEach(function (img) {
