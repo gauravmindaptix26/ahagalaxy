@@ -53,6 +53,1054 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    <link rel="stylesheet" href="assets/css/main.min.css">
    <link rel="stylesheet" href="assets/css/galaxy-premium.css">
 <link rel="stylesheet" href="popup.css">
+<style>
+   .home-hero-v2 {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      background: #f7f5ef;
+      padding: 156px 0 0;
+      isolation: isolate;
+   }
+
+   .home-hero-v2::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 0 49%;
+      background:
+         radial-gradient(circle at 74% 30%, rgba(255,255,255,0.38), transparent 22%),
+         linear-gradient(135deg, #ffe24c 0%, #f8bd05 42%, #f79805 100%);
+      z-index: -2;
+   }
+
+   .home-hero-v2::after {
+      content: "";
+      position: absolute;
+      width: 760px;
+      height: 760px;
+      right: -130px;
+      bottom: -250px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.22);
+      filter: blur(2px);
+      z-index: -1;
+   }
+
+   .home-hero-v2__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+      align-items: center;
+      min-height: calc(100vh - 156px);
+   }
+
+   .home-hero-v2__copy {
+      max-width: 780px;
+      padding: 42px 52px 70px 0;
+   }
+
+   .home-hero-v2__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #108a3d;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 34px;
+   }
+
+   .home-hero-v2__eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 3px;
+      background: #108a3d;
+      border-radius: 99px;
+   }
+
+   .home-hero-v2 h1 {
+      color: #171717;
+      font-size: clamp(3.5rem, 7.8vw, 8.45rem);
+      line-height: 0.92;
+      letter-spacing: -0.055em;
+      font-weight: 1000;
+      text-transform: uppercase;
+      margin: 0;
+      max-width: 850px;
+   }
+
+   .home-hero-v2 h1 span {
+      display: block;
+   }
+
+   .home-hero-v2__copy p {
+      max-width: 790px;
+      color: #464646;
+      font-size: clamp(1.05rem, 1.55vw, 1.48rem);
+      line-height: 1.55;
+      margin: 40px 0 0;
+   }
+
+   .home-hero-v2__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+      margin-top: 42px;
+   }
+
+   .home-hero-v2__btn {
+      min-width: 230px;
+      min-height: 74px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 30px;
+      border-radius: 999px;
+      color: #111;
+      background: #f6bc05;
+      font-size: 18px;
+      font-weight: 800;
+      box-shadow: 0 24px 55px rgba(246,188,5,0.32);
+      transition: color 0.25s ease, background 0.25s ease;
+   }
+
+   .home-hero-v2__btn:hover {
+      color: #fff;
+      background: #111;
+   }
+
+   .home-hero-v2__ghost {
+      color: #111;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+   }
+
+   .home-hero-v2__trust {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 72px;
+      color: #555;
+      font-size: 18px;
+   }
+
+   .home-hero-v2__trust strong {
+      color: #f2ae00;
+      font-size: 24px;
+   }
+
+   .home-hero-v2__media {
+      position: relative;
+      min-height: 690px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 0 0 34px 34px;
+   }
+
+   .home-hero-v2__panel {
+      position: relative;
+      width: min(96%, 720px);
+      height: 640px;
+      border-radius: 0 0 38px 38px;
+      overflow: visible;
+   }
+
+   .home-hero-v2__visual {
+      position: absolute;
+      left: 50%;
+      bottom: 5px;
+      width: min(96%, 650px);
+      height: 480px;
+      transform: translateX(-50%);
+      border-radius: 38px;
+      overflow: hidden;
+      box-shadow: 0 46px 95px rgba(100,66,0,0.28);
+   }
+
+   .home-hero-v2__visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(255,205,0,0.84), rgba(255,190,0,0.28) 42%, rgba(255,140,0,0.18));
+      mix-blend-mode: multiply;
+   }
+
+   .home-hero-v2__visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.24) contrast(1.06);
+   }
+
+   .home-hero-v2__ad-card {
+      position: absolute;
+      left: 5%;
+      bottom: 72px;
+      width: 52%;
+      min-width: 280px;
+      border-radius: 26px;
+      overflow: hidden;
+      transform: rotate(-4deg);
+      box-shadow: 0 34px 75px rgba(0,0,0,0.24);
+      z-index: 4;
+   }
+
+   .home-hero-v2__ad-card img {
+      width: 100%;
+      display: block;
+   }
+
+   .home-hero-v2__metric,
+   .home-hero-v2__followers,
+   .home-hero-v2__whatsapp {
+      position: absolute;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.88);
+      box-shadow: 0 22px 60px rgba(75,52,0,0.18);
+      backdrop-filter: blur(16px);
+   }
+
+   .home-hero-v2__metric {
+      left: 2%;
+      top: 0;
+      padding: 20px 34px;
+   }
+
+   .home-hero-v2__followers {
+      right: 0;
+      bottom: 18px;
+      padding: 22px 36px;
+   }
+
+   .home-hero-v2__whatsapp {
+      right: 4%;
+      bottom: 128px;
+      padding: 13px 18px;
+      color: #fff;
+      background: #18b84b;
+   }
+
+   .home-hero-v2__metric i,
+   .home-hero-v2__followers i {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background: #f5b400;
+   }
+
+   .home-hero-v2__metric strong,
+   .home-hero-v2__followers strong {
+      display: block;
+      color: #1b1b1b;
+      font-size: 28px;
+      line-height: 1;
+   }
+
+   .home-hero-v2__metric span,
+   .home-hero-v2__followers span {
+      color: #5d5d5d;
+      font-size: 15px;
+      font-weight: 800;
+   }
+
+   .home-hero-v2__icon {
+      position: absolute;
+      z-index: 6;
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 34px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+   }
+
+   .home-hero-v2__icon--insta { left: 6%; top: 46%; background: linear-gradient(135deg,#6a35ff,#ff2c78,#ffb703); }
+   .home-hero-v2__icon--fb { right: 6%; top: 53%; background: #1877f2; }
+   .home-hero-v2__icon--yt { right: 9%; top: 22%; background: #ff0808; }
+   .home-hero-v2__icon--signal { left: 10%; top: 25%; background: #111; }
+
+   .home-hero-v2__tape {
+      position: absolute;
+      inset: 112px 20px 50px;
+      z-index: 1;
+      border: 2px dashed rgba(255,255,255,0.26);
+      border-radius: 42% 58% 49% 51%;
+      transform: rotate(-8deg);
+   }
+
+   @media (max-width: 1199px) {
+      .home-hero-v2__grid {
+         grid-template-columns: 1fr;
+      }
+
+      .home-hero-v2::before {
+         inset: auto 0 0 0;
+         height: 52%;
+      }
+
+      .home-hero-v2__copy {
+         padding-right: 0;
+      }
+   }
+
+   @media (max-width: 767px) {
+      .home-hero-v2 {
+         padding-top: 122px;
+      }
+
+      .home-hero-v2 h1 {
+         letter-spacing: -0.035em;
+      }
+
+      .home-hero-v2__media {
+         min-height: 560px;
+         padding-left: 0;
+      }
+
+      .home-hero-v2__panel {
+         height: 520px;
+      }
+
+      .home-hero-v2__visual {
+         height: 390px;
+      }
+
+      .home-hero-v2__ad-card {
+         width: 78%;
+         left: 2%;
+      }
+
+      .home-hero-v2__icon {
+         width: 58px;
+         height: 58px;
+         font-size: 25px;
+      }
+
+      .home-hero-v2__metric,
+      .home-hero-v2__followers {
+         padding: 15px 18px;
+      }
+
+      .home-hero-v2__trust {
+         margin-top: 42px;
+      }
+   }
+
+   .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+   }
+
+   .header .primary-navbar,
+   .header .secondary--navbar {
+      min-height: 78px !important;
+      padding: 0 !important;
+      background: rgba(255,255,255,0.92) !important;
+      border-bottom: 1px solid rgba(17,17,17,0.08);
+      box-shadow: 0 18px 50px rgba(17,17,17,0.08);
+      backdrop-filter: blur(18px);
+   }
+
+   .header .navbar {
+      min-height: 78px !important;
+      padding: 0 !important;
+   }
+
+   .header .navbar__logo img {
+      width: 112px !important;
+      max-width: 112px !important;
+      opacity: 1 !important;
+   }
+
+   .header .navbar__menu > ul {
+      gap: 38px !important;
+      align-items: center;
+   }
+
+   .header .navbar__item > a,
+   .header .navbar__dropdown-label {
+      color: #121212 !important;
+      font-size: 14px !important;
+      line-height: 1 !important;
+      letter-spacing: 0.08em !important;
+      font-weight: 800 !important;
+      text-transform: uppercase;
+   }
+
+   .header .navbar__item > a:hover,
+   .header .navbar__dropdown-label:hover {
+      color: #d99a00 !important;
+   }
+
+   .header .open-offcanvas-nav {
+      width: 126px !important;
+      height: 50px !important;
+      border-radius: 999px !important;
+      background: #111 !important;
+      color: #fff !important;
+      box-shadow: 0 14px 34px rgba(17,17,17,0.18);
+   }
+
+   .home-hero-v2 {
+      min-height: 100vh;
+      padding-top: 102px;
+      background:
+         linear-gradient(90deg, #f8f6ef 0 51%, transparent 51%),
+         #111827;
+   }
+
+   .home-hero-v2::before {
+      inset: 0 0 0 51%;
+      background:
+         linear-gradient(90deg, rgba(17,24,39,0.9), rgba(17,24,39,0.32) 45%, rgba(217,154,0,0.28)),
+         radial-gradient(circle at 82% 18%, rgba(250,204,21,0.34), transparent 22%),
+         radial-gradient(circle at 98% 88%, rgba(255,255,255,0.16), transparent 28%),
+         url("assets/images/clients/portfolio/ahagalaxy1.jpeg");
+      background-size: cover;
+      background-position: center;
+   }
+
+   .home-hero-v2__grid {
+      grid-template-columns: minmax(0, 0.9fr) minmax(440px, 1.1fr);
+      min-height: calc(100vh - 102px);
+   }
+
+   .home-hero-v2__copy {
+      max-width: 650px;
+      padding: 30px 34px 44px 0;
+   }
+
+   .home-hero-v2__eyebrow {
+      margin-bottom: 22px;
+      font-size: 12px;
+      letter-spacing: 0.24em;
+   }
+
+   .home-hero-v2 h1 {
+      max-width: 670px;
+      font-size: clamp(2.55rem, 4.65vw, 5.45rem);
+      line-height: 1.03;
+      letter-spacing: -0.032em;
+   }
+
+   .home-hero-v2__copy p {
+      max-width: 650px;
+      margin-top: 28px;
+      font-size: clamp(1rem, 1.08vw, 1.18rem);
+      line-height: 1.65;
+      letter-spacing: 0.01em;
+   }
+
+   .home-hero-v2__actions {
+      margin-top: 32px;
+   }
+
+   .home-hero-v2__btn {
+      min-width: 210px;
+      min-height: 58px;
+      font-size: 15px;
+      box-shadow: 0 18px 40px rgba(246,188,5,0.28);
+   }
+
+   .home-hero-v2__ghost {
+      min-height: 58px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.62);
+      box-shadow: inset 0 0 0 1px rgba(17,17,17,0.08);
+      font-size: 15px;
+   }
+
+   .home-hero-v2__trust {
+      margin-top: 42px;
+      font-size: 15px;
+   }
+
+   .home-hero-v2__media {
+      min-height: 600px;
+      align-items: center;
+      padding: 0 0 0 24px;
+   }
+
+   .home-hero-v2__panel {
+      width: min(94%, 760px);
+      height: 560px;
+   }
+
+   .home-hero-v2__visual {
+      right: 0;
+      left: auto;
+      bottom: 86px;
+      width: min(92%, 680px);
+      height: 390px;
+      transform: none;
+      --shine-x: -70%;
+      border-radius: 34px;
+      box-shadow: 0 34px 75px rgba(96,63,0,0.24);
+   }
+
+   .home-hero-v2__visual::before {
+      content: "";
+      position: absolute;
+      inset: -40% -70%;
+      z-index: 2;
+      background: linear-gradient(105deg, transparent 38%, rgba(255,255,255,0.42) 50%, transparent 62%);
+      transform: translateX(var(--shine-x)) rotate(8deg);
+      pointer-events: none;
+   }
+
+   .home-hero-v2__visual::after {
+      background:
+         linear-gradient(135deg, rgba(17,24,39,0.28), rgba(255,255,255,0.04) 42%, rgba(245,180,0,0.20)),
+         linear-gradient(0deg, rgba(0,0,0,0.18), rgba(0,0,0,0));
+   }
+
+   .home-hero-v2__ad-card {
+      left: 2%;
+      bottom: 42px;
+      width: 43%;
+      min-width: 250px;
+      border-radius: 22px;
+      transform: rotate(-6deg);
+      box-shadow: 0 26px 60px rgba(17,17,17,0.20);
+   }
+
+   .home-hero-v2__metric {
+      left: 5%;
+      top: 38px;
+      padding: 15px 24px;
+   }
+
+   .home-hero-v2__followers {
+      right: 3%;
+      bottom: 68px;
+      padding: 17px 28px;
+   }
+
+   .home-hero-v2__metric strong,
+   .home-hero-v2__followers strong {
+      font-size: 23px;
+   }
+
+   .home-hero-v2__metric span,
+   .home-hero-v2__followers span {
+      font-size: 13px;
+   }
+
+   .home-hero-v2__icon {
+      width: 58px;
+      height: 58px;
+      font-size: 25px;
+   }
+
+   .home-hero-v2__icon--signal { left: 10%; top: 28%; }
+   .home-hero-v2__icon--yt { right: 7%; top: 25%; }
+   .home-hero-v2__icon--insta { left: 7%; top: 55%; }
+   .home-hero-v2__icon--fb { right: 5%; top: 62%; }
+
+   .home-hero-v2__whatsapp {
+      right: 3%;
+      bottom: 145px;
+      padding: 12px 16px;
+   }
+
+   .home-hero-v2__tape {
+      inset: 70px 18px 86px;
+      opacity: 0.8;
+      border-color: rgba(255,255,255,0.32);
+   }
+
+   .home-hero-v2__ticker {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 18px;
+      z-index: 3;
+      display: flex;
+      gap: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      color: rgba(255,255,255,0.76);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      pointer-events: none;
+   }
+
+   .home-hero-v2__ticker span {
+      flex: 0 0 auto;
+      padding: 9px 14px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+   }
+
+   .home-hero-v2__tag {
+      position: absolute;
+      z-index: 7;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 15px;
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(17,24,39,0.62);
+      box-shadow: 0 18px 42px rgba(0,0,0,0.24);
+      backdrop-filter: blur(14px);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+   }
+
+   .home-hero-v2__tag i {
+      color: #f7c314;
+   }
+
+   .home-hero-v2__tag--one { left: 22%; top: 18%; }
+   .home-hero-v2__tag--two { right: 8%; top: 43%; }
+   .home-hero-v2__tag--three { left: 14%; bottom: 8%; }
+
+   .home-hero-v2__scanline {
+      position: absolute;
+      left: 9%;
+      right: 4%;
+      bottom: 34%;
+      z-index: 7;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9), transparent);
+      box-shadow: 0 0 18px rgba(255,255,255,0.68);
+      transform-origin: left;
+      pointer-events: none;
+   }
+
+   @media (max-width: 1199px) {
+      .home-hero-v2 {
+         background: #f8f6ef;
+      }
+
+      .home-hero-v2 h1 {
+         font-size: clamp(2.65rem, 7vw, 4.8rem);
+      }
+   }
+
+   @media (max-width: 767px) {
+      .header .navbar {
+         min-height: 70px !important;
+      }
+
+      .header .navbar__logo img {
+         width: 96px !important;
+      }
+
+      .header .open-offcanvas-nav {
+         width: 92px !important;
+         height: 44px !important;
+      }
+
+      .home-hero-v2 {
+         padding-top: 90px;
+      }
+
+      .home-hero-v2__copy {
+         padding: 22px 0 26px;
+      }
+
+      .home-hero-v2 h1 {
+         font-size: clamp(2.2rem, 11vw, 3.6rem);
+         line-height: 1.02;
+      }
+
+      .home-hero-v2__actions {
+         gap: 12px;
+      }
+
+      .home-hero-v2__btn,
+      .home-hero-v2__ghost {
+         width: 100%;
+         justify-content: center;
+      }
+   }
+
+   .home-hero-v3 {
+      --mx: 60%;
+      --my: 34%;
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      padding: 118px 0 0;
+      color: #fff;
+      background:
+         radial-gradient(circle at var(--mx) var(--my), rgba(250,204,21,0.30), transparent 20%),
+         linear-gradient(115deg, rgba(5,8,14,0.88), rgba(9,15,25,0.78) 46%, rgba(7,10,14,0.93)),
+         url("assets/images/clients/portfolio/Haridwar-5.jpg");
+      background-size: cover;
+      background-position: center;
+      isolation: isolate;
+   }
+
+   .home-hero-v3::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+         linear-gradient(90deg, rgba(5,8,14,0.92) 0%, rgba(5,8,14,0.78) 38%, rgba(5,8,14,0.35) 100%),
+         repeating-linear-gradient(90deg, rgba(255,255,255,0.045) 0 1px, transparent 1px 120px);
+   }
+
+   .home-hero-v3::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 34%;
+      pointer-events: none;
+      background: linear-gradient(0deg, rgba(5,8,14,0.92), transparent);
+   }
+
+   .home-hero-v3__grid {
+      min-height: calc(100vh - 118px);
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+      align-items: center;
+      gap: clamp(28px, 4vw, 70px);
+      position: relative;
+      z-index: 2;
+   }
+
+   .home-hero-v3__copy {
+      max-width: 690px;
+      padding-bottom: 80px;
+   }
+
+   .home-hero-v3__kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      color: #ffd44d;
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(14px);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+   }
+
+   .home-hero-v3 h1 {
+      margin: 26px 0 0;
+      color: #fff;
+      font-size: clamp(2.75rem, 5.2vw, 6rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      font-weight: 1000;
+      text-transform: uppercase;
+   }
+
+   .home-hero-v3 h1 span {
+      display: block;
+      overflow: hidden;
+   }
+
+   .home-hero-v3 h1 em {
+      color: #ffd44d;
+      font-style: normal;
+   }
+
+   .home-hero-v3__copy p {
+      max-width: 620px;
+      margin: 28px 0 0;
+      color: rgba(255,255,255,0.76);
+      font-size: clamp(1rem, 1.08vw, 1.18rem);
+      line-height: 1.7;
+   }
+
+   .home-hero-v3__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+   }
+
+   .home-hero-v3__btn {
+      min-height: 58px;
+      padding: 0 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      font-weight: 900;
+      color: #101010;
+      background: #ffd44d;
+      box-shadow: 0 22px 55px rgba(255,212,77,0.28);
+   }
+
+   .home-hero-v3__btn--ghost {
+      color: #fff;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: none;
+   }
+
+   .home-hero-v3__stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 560px;
+      margin-top: 34px;
+   }
+
+   .home-hero-v3__stats div {
+      padding: 18px 16px;
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(14px);
+   }
+
+   .home-hero-v3__stats strong {
+      display: block;
+      color: #ffd44d;
+      font-size: 26px;
+      line-height: 1;
+   }
+
+   .home-hero-v3__stats span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(255,255,255,0.68);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+   }
+
+   .home-hero-v3__stage {
+      position: relative;
+      height: min(620px, calc(100vh - 150px));
+      min-height: 540px;
+   }
+
+   .home-hero-v3__billboard {
+      position: absolute;
+      inset: 52px 0 92px 10%;
+      border-radius: 34px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: #111827;
+      box-shadow: 0 50px 110px rgba(0,0,0,0.42);
+      transform: rotate(-1.6deg);
+   }
+
+   .home-hero-v3__billboard img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.12) contrast(1.06);
+   }
+
+   .home-hero-v3__billboard::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+         linear-gradient(120deg, rgba(5,8,14,0.42), transparent 34%, rgba(255,212,77,0.20)),
+         linear-gradient(0deg, rgba(5,8,14,0.56), transparent 42%);
+   }
+
+   .home-hero-v3__screen-glow {
+      position: absolute;
+      inset: -30%;
+      background: linear-gradient(110deg, transparent 42%, rgba(255,255,255,0.55) 50%, transparent 58%);
+      transform: translateX(-70%) rotate(8deg);
+      mix-blend-mode: screen;
+      pointer-events: none;
+      z-index: 3;
+   }
+
+   .home-hero-v3__mockup {
+      position: absolute;
+      left: 0;
+      bottom: 74px;
+      width: min(52%, 390px);
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: 0 34px 80px rgba(0,0,0,0.38);
+      transform: rotate(5deg);
+      z-index: 5;
+   }
+
+   .home-hero-v3__mockup img {
+      width: 100%;
+      display: block;
+   }
+
+   .home-hero-v3__badge,
+   .home-hero-v3__chip {
+      position: absolute;
+      z-index: 6;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 65px rgba(0,0,0,0.28);
+   }
+
+   .home-hero-v3__badge {
+      right: 4%;
+      top: 24px;
+      padding: 18px 22px;
+      border-radius: 999px;
+   }
+
+   .home-hero-v3__badge i,
+   .home-hero-v3__chip i {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #111;
+      background: #ffd44d;
+   }
+
+   .home-hero-v3__badge strong {
+      display: block;
+      color: #fff;
+      font-size: 22px;
+      line-height: 1;
+   }
+
+   .home-hero-v3__badge span {
+      color: rgba(255,255,255,0.72);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+   }
+
+   .home-hero-v3__chip {
+      padding: 13px 16px;
+      border-radius: 18px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+   }
+
+   .home-hero-v3__chip--one { left: 10%; top: 40px; }
+   .home-hero-v3__chip--two { right: 1%; top: 48%; }
+   .home-hero-v3__chip--three { left: 35%; bottom: 28px; }
+
+   .home-hero-v3__orbit {
+      position: absolute;
+      inset: 26px 8% 52px 4%;
+      border: 1px dashed rgba(255,255,255,0.22);
+      border-radius: 48% 52% 43% 57%;
+      pointer-events: none;
+   }
+
+   .home-hero-v3__marquee {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 4;
+      display: flex;
+      gap: 18px;
+      padding: 18px 0;
+      overflow: hidden;
+      border-top: 1px solid rgba(255,255,255,0.10);
+      background: rgba(5,8,14,0.52);
+      backdrop-filter: blur(18px);
+      white-space: nowrap;
+   }
+
+   .home-hero-v3__marquee span {
+      flex: 0 0 auto;
+      color: rgba(255,255,255,0.78);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+   }
+
+   @media (max-width: 1199px) {
+      .home-hero-v3__grid {
+         grid-template-columns: 1fr;
+      }
+
+      .home-hero-v3__copy {
+         padding-bottom: 20px;
+      }
+
+      .home-hero-v3__stage {
+         height: 560px;
+      }
+   }
+
+   @media (max-width: 767px) {
+      .home-hero-v3 {
+         padding-top: 92px;
+      }
+
+      .home-hero-v3 h1 {
+         font-size: clamp(2.4rem, 12vw, 4rem);
+      }
+
+      .home-hero-v3__stats {
+         grid-template-columns: 1fr;
+      }
+
+      .home-hero-v3__stage {
+         min-height: 470px;
+         height: 500px;
+      }
+
+      .home-hero-v3__billboard {
+         inset: 70px 0 110px 0;
+      }
+
+      .home-hero-v3__mockup {
+         width: 72%;
+         bottom: 56px;
+      }
+
+      .home-hero-v3__chip--two {
+         right: 0;
+         top: 57%;
+      }
+   }
+</style>
 </head>
 
 <body>
@@ -260,70 +1308,73 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <!-- ==== main start ==== -->
             <main>
                <!-- ==== banner start ==== -->
-               <section class="banner">
-                  <div class="container">
-                     <div class="row">
-                        <div class="col-12">
-                           <div class="banner__content">
-                              <h1 class="text-uppercase text-start fw-9 mb-0 title-anim" style="font-size: 79px;">
-                                 Best
-                                 <span class="text-stroke">outdoor</span>
-                                 <span class="interval">
-                                    <i class="icon-arrow-top-right"></i>
-                                    Advertising Agency
-                                 </span>
-                              </h1>
-                              <div class="banner__content-inner">
-                                 <p>Celebrate Visibility and Impact with Galaxy Advertisers, Your Trusted Partner for Unipole Advertising, 
-                                    Flex Boards, Glow Signs, and In-Shop Branding in Uttarakhand, Uttar Pradesh, and Punjab. Elevate your brand's
-                                    presence today!</p>
-                                 <div class="cta section__content-cta">
-                                    <div class="single">
-                                       <h5 class="fw-7">
-                                          25+
-                                       </h5>
-                                       <p class="fw-5">years of experience</p>
-                                    </div>
-                                    <div class="single">
-                                       <h5 class="fw-7">
-                                          500
-                                       </h5>
-                                       <p class="fw-5">completed projects</p>
-                                    </div>
-                                 </div>
-                              </div>
+               <section class="home-hero-v3" id="home">
+                  <div class="container-fluid px-4 px-lg-5">
+                     <div class="home-hero-v3__grid">
+                        <div class="home-hero-v3__copy">
+                           <span class="home-hero-v3__kicker">
+                              <i class="fa-solid fa-bullhorn"></i> Galaxy Advertisers Since 1996
+                           </span>
+                           <h1>
+                              <span><span>Make your</span></span>
+                              <span><span>brand own</span></span>
+                              <span><span>the <em>street</em></span></span>
+                           </h1>
+                           <p>
+                              Premium outdoor advertising, unipoles, hoardings, glow signs, flex boards and
+                              in-shop branding planned for routes where people actually look.
+                           </p>
+                           <div class="home-hero-v3__actions">
+                              <a class="home-hero-v3__btn" href="contact-us.html">
+                                 Book Campaign <i class="fa-solid fa-arrow-right"></i>
+                              </a>
+                              <a class="home-hero-v3__btn home-hero-v3__btn--ghost" href="tel:09837241310">
+                                 <i class="fa-solid fa-phone"></i> Call Expert
+                              </a>
+                           </div>
+                           <div class="home-hero-v3__stats">
+                              <div><strong>25+</strong><span>Years</span></div>
+                              <div><strong>500+</strong><span>Campaigns</span></div>
+                              <div><strong>3</strong><span>Regions</span></div>
+                           </div>
+                        </div>
+
+                        <div class="home-hero-v3__stage">
+                           <span class="home-hero-v3__orbit"></span>
+                           <div class="home-hero-v3__billboard">
+                              <img src="assets/images/clients/portfolio/ahagalaxy1.jpeg" alt="Outdoor advertising billboard campaign">
+                              <span class="home-hero-v3__screen-glow"></span>
+                           </div>
+                           <div class="home-hero-v3__mockup">
+                              <img src="assets/images/clients/Hoarding.png" alt="Hoarding advertisement creative">
+                           </div>
+                           <div class="home-hero-v3__badge">
+                              <i class="fa-solid fa-chart-line"></i>
+                              <div><strong>110%</strong><span>Lead Lift</span></div>
+                           </div>
+                           <div class="home-hero-v3__chip home-hero-v3__chip--one">
+                              <i class="fa-solid fa-location-dot"></i> Prime Routes
+                           </div>
+                           <div class="home-hero-v3__chip home-hero-v3__chip--two">
+                              <i class="fa-solid fa-eye"></i> High Recall
+                           </div>
+                           <div class="home-hero-v3__chip home-hero-v3__chip--three">
+                              <i class="fa-solid fa-bolt"></i> Fast Execution
                            </div>
                         </div>
                      </div>
                   </div>
-                  <img src="assets/images/clients/portfolio/bonjour-2.jpg" alt="Image"
-                     class="banner-one-thumb d-none d-sm-block g-ban-one">
-                  <img src="assets/images/star.png" alt="Image" class="star">
-                  <div class="banner-left-text banner-social-text d-none d-md-flex">
-                     <a href="mailto:galaxyadvertisers1996@gmail.com">mail : galaxyadvertisers1996@gmail.com</a>
-                     <a href="tel:91-9837-241-310">Call : +91 9837 241 310</a>
-                  </div>
-                  <div class="banner-right-text banner-social-text d-none d-md-flex">
-                     <a href="https://www.instagram.com/galaxyadvertisers/" target="_blank">
-                        instagram
-                     </a>
-                     <a href="https://www.linkedin.com/company/galaxy-advertisers-ooh-company" target="_blank">
-                        Linkedin
-                     </a>
-                     <a href="https://www.facebook.com/galaxyadvertiserr" target="_blank">
-                        facebook
-                     </a>
-                  </div>
-                 <!--  <a class="video-frame video-btn" href="https://www.youtube.com/watch?v=RvreULjnzFo" target="_blank">
-                     <img src="assets/images/video-frame.png" alt="Image">
-                     <i class="fa-sharp fa-solid fa-play"></i>
-                  </a>  -->
-                  <div class="lines d-none d-lg-flex">
-                     <div class="line"></div>
-                     <div class="line"></div>
-                     <div class="line"></div>
-                     <div class="line"></div>
-                     <div class="line"></div>
+                  <div class="home-hero-v3__marquee" aria-hidden="true">
+                     <span>Unipole Advertising</span>
+                     <span>Hoardings</span>
+                     <span>Glow Sign</span>
+                     <span>Flex Board</span>
+                     <span>In-Shop Branding</span>
+                     <span>Display Board</span>
+                     <span>Outdoor Campaigns</span>
+                     <span>Uttarakhand</span>
+                     <span>West UP</span>
+                     <span>Punjab</span>
                   </div>
                </section>
                <!-- ==== / banner end ==== -->
@@ -1267,6 +2318,299 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    <!-- main js -->
    <script src="assets/js/main.js"></script>
    <script src="assets/js/galaxy-premium.js"></script>
+   <script id="home-hero-v3-gsap">
+      (function () {
+         var hero = document.querySelector(".home-hero-v3");
+         if (!hero || !window.gsap) return;
+
+         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+         var tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+         tl.from(".home-hero-v3__kicker", { x: -34, opacity: 0, duration: 0.75 })
+            .from(".home-hero-v3 h1 > span > span", {
+               yPercent: 112,
+               rotate: 3,
+               duration: 1.05,
+               stagger: 0.11
+            }, "-=0.35")
+            .from(".home-hero-v3__copy p", { x: -44, opacity: 0, duration: 0.75 }, "-=0.55")
+            .from(".home-hero-v3__actions .home-hero-v3__btn", {
+               y: 28,
+               opacity: 0,
+               duration: 0.7,
+               stagger: 0.1
+            }, "-=0.45")
+            .from(".home-hero-v3__stats div", {
+               y: 30,
+               opacity: 0,
+               duration: 0.65,
+               stagger: 0.09
+            }, "-=0.45")
+            .from(".home-hero-v3__billboard", {
+               x: 110,
+               opacity: 0,
+               rotate: -7,
+               scale: 0.9,
+               duration: 1.12
+            }, "-=1.15")
+            .from(".home-hero-v3__mockup", {
+               x: -80,
+               y: 55,
+               opacity: 0,
+               rotate: 11,
+               duration: 0.95
+            }, "-=0.74")
+            .from(".home-hero-v3__badge, .home-hero-v3__chip", {
+               scale: 0,
+               opacity: 0,
+               duration: 0.66,
+               stagger: 0.08,
+               ease: "back.out(1.8)"
+            }, "-=0.55");
+
+         gsap.to(".home-hero-v3__marquee", {
+            xPercent: -18,
+            duration: 16,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+         });
+
+         gsap.to(".home-hero-v3__screen-glow", {
+            xPercent: 180,
+            duration: 2.2,
+            repeat: -1,
+            repeatDelay: 2.1,
+            ease: "power2.inOut"
+         });
+
+         gsap.to(".home-hero-v3__orbit", {
+            rotate: 360,
+            duration: 28,
+            repeat: -1,
+            ease: "none"
+         });
+
+         gsap.to(".home-hero-v3__chip, .home-hero-v3__badge", {
+            y: function (index) { return index % 2 ? 12 : -12; },
+            duration: 2.8,
+            repeat: -1,
+            yoyo: true,
+            stagger: 0.2,
+            ease: "sine.inOut"
+         });
+
+         gsap.to(".home-hero-v3__mockup", {
+            y: -14,
+            rotate: 2,
+            duration: 3.3,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+         });
+
+         gsap.to(".home-hero-v3__billboard img", {
+            scale: 1.08,
+            duration: 8,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+         });
+
+         hero.addEventListener("mousemove", function (event) {
+            var box = hero.getBoundingClientRect();
+            var px = ((event.clientX - box.left) / box.width) * 100;
+            var py = ((event.clientY - box.top) / box.height) * 100;
+            hero.style.setProperty("--mx", px + "%");
+            hero.style.setProperty("--my", py + "%");
+
+            var x = px / 100 - 0.5;
+            var y = py / 100 - 0.5;
+            gsap.to(".home-hero-v3__stage", { x: x * 12, y: y * 10, duration: 0.45, ease: "power2.out" });
+            gsap.to(".home-hero-v3__mockup", { x: x * -18, y: y * -12, duration: 0.45, ease: "power2.out" });
+            gsap.to(".home-hero-v3__chip", { x: x * 22, y: y * 16, duration: 0.45, ease: "power2.out" });
+         });
+
+         if (window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.to(".home-hero-v3__stage", {
+               y: -54,
+               scrollTrigger: {
+                  trigger: ".home-hero-v3",
+                  start: "top top",
+                  end: "bottom top",
+                  scrub: 0.8
+               }
+            });
+            gsap.to(".home-hero-v3__copy", {
+               y: 42,
+               opacity: 0.72,
+               scrollTrigger: {
+                  trigger: ".home-hero-v3",
+                  start: "top top",
+                  end: "bottom top",
+                  scrub: 0.9
+               }
+            });
+         }
+      })();
+   </script>
+   <script id="home-hero-v2-gsap">
+      (function () {
+         var hero = document.querySelector(".home-hero-v2");
+         if (!hero || !window.gsap) return;
+
+         var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+         if (reduceMotion) return;
+
+         var tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+         tl.from(".home-hero-v2__eyebrow", { y: 24, opacity: 0, duration: 0.7 })
+            .from(".home-hero-v2 h1 span", { y: 46, opacity: 0, duration: 0.92, stagger: 0.09 }, "-=0.35")
+            .from(".home-hero-v2__copy p", { y: 34, opacity: 0, duration: 0.75 }, "-=0.45")
+            .from(".home-hero-v2__actions, .home-hero-v2__trust", { y: 28, opacity: 0, duration: 0.72, stagger: 0.12 }, "-=0.42")
+            .from(".home-hero-v2__visual", { x: 70, scale: 0.95, opacity: 0, duration: 1.05 }, "-=1")
+            .from(".home-hero-v2__ad-card", { x: -54, y: 44, rotate: -10, opacity: 0, duration: 0.95 }, "-=0.7")
+            .from(".home-hero-v2__tag", {
+               x: function (index) { return index === 1 ? 70 : -70; },
+               y: function (index) { return index === 2 ? 38 : -22; },
+               opacity: 0,
+               duration: 0.78,
+               stagger: 0.1,
+               ease: "power3.out"
+            }, "-=0.62")
+            .from(".home-hero-v2__metric, .home-hero-v2__followers, .home-hero-v2__whatsapp, .home-hero-v2__icon", {
+               scale: 0,
+               opacity: 0,
+               duration: 0.72,
+               stagger: 0.08,
+               ease: "back.out(1.8)"
+            }, "-=0.58");
+
+         gsap.from(".home-hero-v2__ticker span", {
+            x: 46,
+            opacity: 0,
+            duration: 0.7,
+            stagger: 0.07,
+            ease: "power3.out"
+         });
+
+         gsap.to(".home-hero-v2__ticker", {
+            xPercent: -18,
+            duration: 14,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+         });
+
+         gsap.fromTo(".home-hero-v2__scanline", {
+            scaleX: 0,
+            opacity: 0
+         }, {
+            scaleX: 1,
+            opacity: 1,
+            duration: 1.1,
+            repeat: -1,
+            yoyo: true,
+            repeatDelay: 1.6,
+            ease: "power2.inOut"
+         });
+
+         gsap.to(".home-hero-v2__visual", {
+            "--shine-x": "160%",
+            duration: 2.8,
+            repeat: -1,
+            repeatDelay: 2.4,
+            ease: "power2.inOut"
+         });
+
+         gsap.to(".home-hero-v2__icon", {
+            y: function (index) { return index % 2 ? -12 : 12; },
+            x: function (index) { return index % 2 ? 8 : -8; },
+            duration: 3.1,
+            repeat: -1,
+            yoyo: true,
+            stagger: 0.22,
+            ease: "sine.inOut"
+         });
+
+         gsap.to(".home-hero-v2__metric, .home-hero-v2__followers, .home-hero-v2__whatsapp", {
+            y: -10,
+            duration: 2.8,
+            repeat: -1,
+            yoyo: true,
+            stagger: 0.28,
+            ease: "sine.inOut"
+         });
+
+         gsap.to(".home-hero-v2__ad-card", {
+            rotate: 2,
+            y: -10,
+            duration: 3.6,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+         });
+
+         gsap.to(".home-hero-v2__visual img", {
+            scale: 1.07,
+            duration: 8,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+         });
+
+         gsap.to(".home-hero-v2__tag", {
+            y: function (index) { return index % 2 ? 10 : -10; },
+            duration: 2.9,
+            repeat: -1,
+            yoyo: true,
+            stagger: 0.22,
+            ease: "sine.inOut"
+         });
+
+         if (window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.to(".home-hero-v2__panel", {
+               y: -34,
+               scale: 0.98,
+               scrollTrigger: {
+                  trigger: ".home-hero-v2",
+                  start: "top top",
+                  end: "bottom top",
+                  scrub: 0.8
+               }
+            });
+            gsap.to(".home-hero-v2__ad-card", {
+               y: -76,
+               rotate: -2,
+               scrollTrigger: {
+                  trigger: ".home-hero-v2",
+                  start: "top top",
+                  end: "bottom top",
+                  scrub: 0.9
+               }
+            });
+            gsap.to(".home-hero-v2__visual img", {
+               yPercent: -7,
+               scrollTrigger: {
+                  trigger: ".home-hero-v2",
+                  start: "top top",
+                  end: "bottom top",
+                  scrub: true
+               }
+            });
+         }
+
+         hero.addEventListener("mousemove", function (event) {
+            var box = hero.getBoundingClientRect();
+            var x = (event.clientX - box.left) / box.width - 0.5;
+            var y = (event.clientY - box.top) / box.height - 0.5;
+            gsap.to(".home-hero-v2__panel", { x: x * 10, y: y * 10, duration: 0.5, ease: "power2.out" });
+            gsap.to(".home-hero-v2__icon", { x: x * -18, y: y * -14, duration: 0.5, ease: "power2.out" });
+            gsap.to(".home-hero-v2__ad-card", { x: x * 12, y: y * 10, duration: 0.5, ease: "power2.out" });
+         });
+      })();
+   </script>
    <!-- Schema Markup -->
    <script type="application/ld+json">
 {
