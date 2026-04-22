@@ -1,0 +1,614 @@
+/* Galaxy Advertisers premium experience layer */
+:root {
+  --galaxy-bg: #070807;
+  --galaxy-panel: rgba(12, 14, 14, 0.82);
+  --galaxy-line: rgba(255, 255, 255, 0.14);
+  --galaxy-muted: #b5bfbd;
+  --galaxy-amber: #ff8a1d;
+  --galaxy-cyan: #25d4ff;
+  --galaxy-green: #7ee36d;
+}
+
+html {
+  background: var(--galaxy-bg);
+}
+
+body {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.026) 1px, transparent 1px),
+    #070807;
+  background-size: 92px 92px;
+}
+
+.primary-navbar {
+  transition: background-color 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
+}
+
+.primary-navbar,
+.navbar-active {
+  background: rgba(7, 8, 7, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+.primary-navbar .navbar__logo img,
+.offcanvas-menu .logo img,
+.mobile-menu .logo img,
+.footer-two .logo img {
+  filter: drop-shadow(0 12px 26px rgba(255, 116, 37, 0.22));
+}
+
+.btn {
+  box-shadow: 0 14px 40px rgba(255, 116, 37, 0.16);
+}
+
+.btn--primary,
+.btn--secondary,
+.btn--tertiary {
+  isolation: isolate;
+}
+
+.banner {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 190px 0 120px;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 8, 7, 0.96) 0%, rgba(7, 8, 7, 0.72) 48%, rgba(7, 8, 7, 0.36) 100%),
+    url("../images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg") center / cover no-repeat;
+  opacity: 0.92;
+  z-index: -4;
+}
+
+.banner::after,
+.cmn-banner::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 36%;
+  background: linear-gradient(180deg, transparent, var(--galaxy-bg));
+  pointer-events: none;
+  z-index: -2;
+}
+
+.banner__content {
+  max-width: 1040px;
+  text-align: left;
+}
+
+.banner__content h1 {
+  max-width: 980px;
+  font-size: 5rem !important;
+  line-height: 1.04;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.banner__content h1 .interval {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.banner__content-inner {
+  max-width: 760px;
+  margin-top: 34px;
+  padding: 28px;
+  border: 1px solid var(--galaxy-line);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.025));
+  backdrop-filter: blur(20px);
+}
+
+.banner__content-inner p {
+  color: #eef4f2;
+}
+
+.banner__content-inner .cta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.banner__content-inner .single {
+  min-height: 120px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.36);
+}
+
+.banner__content-inner .single h5 {
+  font-size: 2rem;
+  color: var(--galaxy-amber);
+}
+
+.banner-one-thumb {
+  width: 380px;
+  height: 520px;
+  right: 8%;
+  left: auto !important;
+  top: 22% !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.58);
+}
+
+.star,
+.dot,
+.dot-large,
+.dot-two,
+.star-two {
+  opacity: 0.45;
+}
+
+.galaxy-impact {
+  position: relative;
+  overflow: hidden;
+  padding-top: 90px;
+}
+
+.galaxy-impact__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.55fr);
+  gap: 46px;
+  align-items: end;
+  margin-bottom: 46px;
+}
+
+.galaxy-kicker,
+.galaxy-impact__eyebrow,
+.galaxy-service-strip__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  margin-bottom: 24px;
+  border: 1px solid var(--galaxy-line);
+  border-radius: 999px;
+  color: var(--galaxy-amber);
+  text-transform: uppercase;
+  font-size: 0.84rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.galaxy-kicker::before,
+.galaxy-impact__eyebrow::before,
+.galaxy-service-strip__eyebrow::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--galaxy-green);
+  border-radius: 50%;
+  box-shadow: 0 0 18px var(--galaxy-green);
+}
+
+.galaxy-impact h2,
+.galaxy-service-strip h2 {
+  font-size: 3.3rem;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.galaxy-impact__intro p,
+.galaxy-service-strip p,
+.service-details p,
+.award p,
+.mission-s p,
+.contact-m p {
+  color: var(--galaxy-muted);
+}
+
+.galaxy-impact__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.galaxy-impact-card {
+  position: relative;
+  min-height: 310px;
+  padding: 26px;
+  overflow: hidden;
+  border: 1px solid var(--galaxy-line);
+  background: var(--galaxy-panel);
+}
+
+.galaxy-impact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(155deg, rgba(255, 138, 29, 0.18), rgba(37, 212, 255, 0.07) 46%, transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.galaxy-impact-card:hover::before {
+  opacity: 1;
+}
+
+.galaxy-impact-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.42;
+  transform: scale(1.02);
+  transition: transform 0.65s ease, opacity 0.65s ease;
+}
+
+.galaxy-impact-card:hover img {
+  opacity: 0.58;
+  transform: scale(1.08);
+}
+
+.galaxy-impact-card__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 258px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.galaxy-impact-card span {
+  color: var(--galaxy-cyan);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.galaxy-impact-card h3 {
+  font-size: 1.55rem;
+  line-height: 1.18;
+}
+
+.galaxy-impact-card p {
+  color: #ecf4f1;
+}
+
+.galaxy-livebar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--galaxy-line);
+  background: var(--galaxy-line);
+}
+
+.galaxy-livebar__item {
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.galaxy-livebar__item strong {
+  display: block;
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1.15;
+}
+
+.galaxy-livebar__item span {
+  display: block;
+  color: var(--galaxy-muted);
+}
+
+.agency,
+.offer,
+.service-details,
+.mission-s,
+.award,
+.contact-m,
+.footer-two {
+  position: relative;
+}
+
+.agency__thumb img,
+.portfolio__single,
+.mission-s__single,
+.contact-m__single,
+.service-details .poster img,
+.contact__map iframe,
+.contact-main__form,
+.cta-two-wrapper {
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
+}
+
+.portfolio__single {
+  overflow: hidden;
+}
+
+.portfolio__single img {
+  min-height: 330px;
+  filter: saturate(1.1) contrast(1.05);
+}
+
+.portfolio__single-content a,
+.portfolio__single-alt {
+  background: rgba(255, 138, 29, 0.92);
+  color: #090909;
+}
+
+.offer {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0)),
+    #101211;
+}
+
+.offer__cta-single {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.offer__cta-single h2 a {
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.offer__cta-single:hover h2 a {
+  color: var(--galaxy-amber);
+  transform: translateX(12px);
+}
+
+.sponsor__slider-item {
+  min-height: 110px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sponsor__slider-item img {
+  max-height: 70px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.72;
+  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sponsor__slider-item:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.cmn-banner {
+  position: relative;
+  overflow: hidden;
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  background-color: #080908;
+}
+
+.cmn-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 8, 7, 0.92), rgba(7, 8, 7, 0.52)),
+    url("../images/clients/portfolio/Prem-Nagar-Ashram-Fcg-Chandra-Charya-Chowk-2-1.jpg") center / cover no-repeat;
+  opacity: 0.9;
+  z-index: -3;
+}
+
+.cmn-banner .title {
+  font-size: 4rem;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.breadcrumb {
+  gap: 12px;
+}
+
+.breadcrumb .breadcrumb-item,
+.breadcrumb a {
+  color: #eef4f2;
+}
+
+.galaxy-service-strip {
+  position: relative;
+  padding: 84px 0 30px;
+  overflow: hidden;
+}
+
+.galaxy-service-strip__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 0.65fr);
+  gap: 34px;
+  align-items: stretch;
+}
+
+.galaxy-service-panel {
+  padding: 30px;
+  border: 1px solid var(--galaxy-line);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.galaxy-service-panel img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.galaxy-service-points {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.galaxy-service-points span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+.galaxy-service-points i {
+  color: var(--galaxy-amber);
+}
+
+.service-details__slider-single,
+.details-group {
+  position: relative;
+}
+
+.service-details .details-group h2,
+.service-details .details-group h3 {
+  margin-bottom: 18px;
+}
+
+.service-details .details-group h2 {
+  color: var(--galaxy-amber);
+  font-size: 2rem;
+  line-height: 1.22;
+}
+
+.service-details .details-group p + h2,
+.service-details .details-group p + h3 {
+  margin-top: 38px;
+}
+
+.contact-main__form,
+.contact-m__single,
+.mission-s__single--alt {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025));
+  backdrop-filter: blur(16px);
+}
+
+.contact-main__form input,
+.contact-main__form textarea,
+.contact-main__form .nice-select {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+}
+
+.footer-two {
+  background:
+    linear-gradient(180deg, transparent, rgba(255, 138, 29, 0.08)),
+    #080908;
+}
+
+.galaxy-float {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 998;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.galaxy-float a {
+  width: 54px;
+  min-width: 54px;
+  height: 54px;
+  justify-content: center;
+  border-radius: 50%;
+  color: #071007;
+  background: var(--galaxy-green);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.32);
+}
+
+.galaxy-float a:first-child {
+  background: var(--galaxy-amber);
+}
+
+.galaxy-cursor-light {
+  position: fixed;
+  width: 220px;
+  height: 220px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 138, 29, 0.13), rgba(37, 212, 255, 0.07) 35%, transparent 70%);
+  mix-blend-mode: screen;
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .banner__content h1 {
+    font-size: 3.6rem !important;
+  }
+
+  .banner-one-thumb {
+    width: 300px;
+    height: 410px;
+  }
+
+  .galaxy-impact__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .banner {
+    min-height: auto;
+    padding: 160px 0 90px;
+  }
+
+  .banner__content h1,
+  .cmn-banner .title,
+  .galaxy-impact h2,
+  .galaxy-service-strip h2 {
+    font-size: 2.7rem !important;
+  }
+
+  .galaxy-impact__intro,
+  .galaxy-service-strip__layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  .banner {
+    padding: 140px 0 70px;
+  }
+
+  .banner__content h1,
+  .cmn-banner .title,
+  .galaxy-impact h2,
+  .galaxy-service-strip h2 {
+    font-size: 2rem !important;
+  }
+
+  .banner__content-inner {
+    padding: 20px;
+  }
+
+  .banner__content-inner .cta,
+  .galaxy-impact__grid,
+  .galaxy-livebar {
+    grid-template-columns: 1fr;
+  }
+
+  .galaxy-impact-card {
+    min-height: 250px;
+  }
+
+  .galaxy-float {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .galaxy-float a {
+    width: 46px;
+    min-width: 46px;
+    height: 46px;
+  }
+}
