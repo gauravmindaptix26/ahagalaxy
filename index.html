@@ -1100,6 +1100,472 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          top: 57%;
       }
    }
+
+   .avista-home {
+      --av-red: #ff3d1f;
+      --av-orange: #ff7a18;
+      --av-dark: #050505;
+      --av-panel: #101010;
+      --mx: 70%;
+      --my: 32%;
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      padding-top: 108px;
+      color: #fff;
+      background:
+         radial-gradient(circle at var(--mx) var(--my), rgba(255,61,31,0.28), transparent 18%),
+         radial-gradient(circle at 12% 18%, rgba(255,122,24,0.16), transparent 22%),
+         linear-gradient(180deg, #090909 0%, #030303 100%);
+      isolation: isolate;
+   }
+
+   .header .primary-navbar,
+   .header .secondary--navbar {
+      background: rgba(5,5,5,0.82) !important;
+      border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.22) !important;
+   }
+
+   .header .navbar__item > a,
+   .header .navbar__dropdown-label {
+      color: rgba(255,255,255,0.84) !important;
+   }
+
+   .header .navbar__item > a:hover,
+   .header .navbar__dropdown-label:hover {
+      color: #ff3d1f !important;
+   }
+
+   .header .open-offcanvas-nav {
+      background: #ff3d1f !important;
+      box-shadow: 0 14px 34px rgba(255,61,31,0.28) !important;
+   }
+
+   .avista-home::before {
+      content: "Galaxy";
+      position: absolute;
+      left: -18px;
+      top: 95px;
+      z-index: 0;
+      color: rgba(255,255,255,0.035);
+      font-size: clamp(6rem, 18vw, 19rem);
+      line-height: 0.78;
+      font-weight: 1000;
+      letter-spacing: -0.08em;
+      text-transform: uppercase;
+      pointer-events: none;
+   }
+
+   .avista-home::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+         linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
+         linear-gradient(180deg, rgba(255,255,255,0.028) 1px, transparent 1px);
+      background-size: 96px 96px;
+      mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 72%, transparent 100%);
+      pointer-events: none;
+   }
+
+   .avista-home__grid {
+      position: relative;
+      z-index: 2;
+      min-height: calc(100vh - 108px);
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.08fr);
+      align-items: center;
+      gap: clamp(26px, 5vw, 86px);
+   }
+
+   .avista-home__copy {
+      max-width: 720px;
+      margin-left: clamp(24px, 4vw, 76px);
+      padding-bottom: 70px;
+   }
+
+   .avista-home__kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--av-red);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+   }
+
+   .avista-home__kicker i {
+      color: #fff;
+      font-size: 8px;
+   }
+
+   .avista-home h1 {
+      margin: 16px 0 0;
+      color: #fff;
+      font-size: clamp(2.8rem, 5.9vw, 6.9rem);
+      line-height: 0.88;
+      letter-spacing: -0.065em;
+      font-weight: 1000;
+      text-transform: uppercase;
+   }
+
+   .avista-home h1 > span {
+      display: block;
+      overflow: hidden;
+   }
+
+   .avista-home h1 span span {
+      display: inline-block;
+   }
+
+   .avista-home h1 em {
+      color: var(--av-red);
+      font-style: normal;
+   }
+
+   .avista-home__copy p {
+      max-width: 600px;
+      margin: 26px 0 0;
+      color: rgba(255,255,255,0.68);
+      font-size: clamp(0.98rem, 1.05vw, 1.16rem);
+      line-height: 1.72;
+   }
+
+   .avista-home__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-top: 34px;
+   }
+
+   .avista-home__btn {
+      min-height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 22px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--av-red);
+      font-size: 14px;
+      font-weight: 900;
+      box-shadow: 0 20px 55px rgba(255,61,31,0.28);
+   }
+
+   .avista-home__btn--ghost {
+      background: transparent;
+      box-shadow: none;
+      border: 1px solid rgba(255,255,255,0.18);
+   }
+
+   .avista-home__stage {
+      position: relative;
+      min-height: 610px;
+   }
+
+   .avista-home__screen {
+      position: absolute;
+      inset: 48px 0 96px 3%;
+      overflow: hidden;
+      border-radius: 4px;
+      background: #111;
+      box-shadow: 0 55px 140px rgba(0,0,0,0.58);
+      transform: perspective(1100px) rotateY(-8deg) rotateX(2deg);
+      transform-origin: center;
+   }
+
+   .avista-home__screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.15) contrast(1.08);
+   }
+
+   .avista-home__screen::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background:
+         linear-gradient(90deg, rgba(5,5,5,0.72), transparent 38%, rgba(255,61,31,0.20)),
+         linear-gradient(0deg, rgba(5,5,5,0.72), transparent 48%);
+   }
+
+   .avista-home__screen::after {
+      content: "A";
+      position: absolute;
+      right: -18px;
+      top: -54px;
+      z-index: 3;
+      color: rgba(255,255,255,0.14);
+      font-size: 300px;
+      font-weight: 1000;
+      line-height: 1;
+   }
+
+   .avista-home__scan {
+      position: absolute;
+      inset: -40% -70%;
+      z-index: 4;
+      background: linear-gradient(105deg, transparent 42%, rgba(255,255,255,0.45), transparent 58%);
+      mix-blend-mode: screen;
+      transform: translateX(-70%) rotate(7deg);
+      pointer-events: none;
+   }
+
+   .avista-home__poster {
+      position: absolute;
+      left: -2%;
+      bottom: 76px;
+      z-index: 5;
+      width: min(50%, 390px);
+      overflow: hidden;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 34px 90px rgba(0,0,0,0.5);
+      transform: rotate(-4deg);
+   }
+
+   .avista-home__poster img {
+      display: block;
+      width: 100%;
+   }
+
+   .avista-home__floating {
+      position: absolute;
+      z-index: 6;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 172px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(15,15,15,0.72);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.42);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+   }
+
+   .avista-home__floating i {
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #fff;
+      background: linear-gradient(135deg, var(--av-red), var(--av-orange));
+   }
+
+   .avista-home__floating--one { left: 8%; top: 26px; }
+   .avista-home__floating--two { right: 2%; top: 46%; }
+   .avista-home__floating--three { left: 32%; bottom: 20px; }
+
+   .avista-home__service-row {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 8;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid rgba(255,255,255,0.10);
+      background: rgba(7,7,7,0.86);
+      backdrop-filter: blur(18px);
+   }
+
+   .avista-home__service {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 86px;
+      padding: 18px 22px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+   }
+
+   .avista-home__service i {
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--av-red);
+   }
+
+   .avista-home__service strong {
+      display: block;
+      color: #fff;
+      font-size: 14px;
+   }
+
+   .avista-home__service span {
+      color: rgba(255,255,255,0.52);
+      font-size: 12px;
+   }
+
+   .avista-works {
+      --av-red: #ff3d1f;
+      position: relative;
+      overflow: hidden;
+      padding: 92px 0 112px;
+      color: #fff;
+      background:
+         radial-gradient(circle at 50% 0%, rgba(255,61,31,0.16), transparent 22%),
+         #050505;
+   }
+
+   .avista-works__counter {
+      position: absolute;
+      left: 50%;
+      top: 34px;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.055);
+      font-size: clamp(5rem, 14vw, 13rem);
+      line-height: 1;
+      font-weight: 1000;
+      letter-spacing: -0.08em;
+      pointer-events: none;
+   }
+
+   .avista-works__head {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 48px;
+   }
+
+   .avista-works__head span {
+      color: var(--av-red);
+      font-size: 13px;
+      font-weight: 900;
+   }
+
+   .avista-works__head h2 {
+      margin: 10px 0 0;
+      color: #fff;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      font-weight: 1000;
+      text-transform: uppercase;
+   }
+
+   .avista-works__grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+   }
+
+   .avista-work-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 360px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: #111;
+      box-shadow: 0 26px 70px rgba(0,0,0,0.34);
+   }
+
+   .avista-work-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      filter: saturate(1.08) contrast(1.04);
+      transition: transform 0.45s ease;
+   }
+
+   .avista-work-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(5,5,5,0.86), transparent 54%);
+   }
+
+   .avista-work-card__content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      padding: 22px;
+   }
+
+   .avista-work-card span {
+      color: var(--av-red);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+   }
+
+   .avista-work-card h3 {
+      color: #fff;
+      margin: 8px 0 0;
+      font-size: 24px;
+      line-height: 1.05;
+   }
+
+   .avista-work-card:hover img {
+      transform: scale(1.08);
+   }
+
+   @media (max-width: 991px) {
+      .avista-home__grid,
+      .avista-works__grid {
+         grid-template-columns: 1fr;
+      }
+
+      .avista-home__stage {
+         min-height: 560px;
+      }
+
+      .avista-home__service-row {
+         position: relative;
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+   }
+
+   @media (max-width: 575px) {
+      .avista-home {
+         padding-top: 92px;
+      }
+
+      .avista-home h1 {
+         font-size: clamp(2.6rem, 14vw, 4.3rem);
+      }
+
+      .avista-home__copy {
+         margin-left: 0;
+      }
+
+      .avista-home__stage {
+         min-height: 500px;
+      }
+
+      .avista-home__screen {
+         inset: 46px 0 118px;
+      }
+
+      .avista-home__poster {
+         width: 72%;
+      }
+
+      .avista-home__service-row {
+         grid-template-columns: 1fr;
+      }
+   }
 </style>
 </head>
 
@@ -1308,73 +1774,73 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <!-- ==== main start ==== -->
             <main>
                <!-- ==== banner start ==== -->
-               <section class="home-hero-v3" id="home">
+               <section class="avista-home" id="home">
                   <div class="container-fluid px-4 px-lg-5">
-                     <div class="home-hero-v3__grid">
-                        <div class="home-hero-v3__copy">
-                           <span class="home-hero-v3__kicker">
-                              <i class="fa-solid fa-bullhorn"></i> Galaxy Advertisers Since 1996
-                           </span>
+                     <div class="avista-home__grid">
+                        <div class="avista-home__copy">
+                           <span class="avista-home__kicker"><i class="fa-solid fa-circle"></i> Outdoor Advertising Agency</span>
                            <h1>
-                              <span><span>Make your</span></span>
-                              <span><span>brand own</span></span>
-                              <span><span>the <em>street</em></span></span>
+                              <span><span>Digital</span></span>
+                              <span><span>Outdoor <em>Media</em></span></span>
+                              <span><span>That Sells</span></span>
                            </h1>
                            <p>
-                              Premium outdoor advertising, unipoles, hoardings, glow signs, flex boards and
-                              in-shop branding planned for routes where people actually look.
+                              Galaxy Advertisers builds high-impact hoarding, unipole, glow sign, flex board and
+                              in-shop branding campaigns across Uttarakhand, West UP and Punjab.
                            </p>
-                           <div class="home-hero-v3__actions">
-                              <a class="home-hero-v3__btn" href="contact-us.html">
-                                 Book Campaign <i class="fa-solid fa-arrow-right"></i>
-                              </a>
-                              <a class="home-hero-v3__btn home-hero-v3__btn--ghost" href="tel:09837241310">
-                                 <i class="fa-solid fa-phone"></i> Call Expert
-                              </a>
-                           </div>
-                           <div class="home-hero-v3__stats">
-                              <div><strong>25+</strong><span>Years</span></div>
-                              <div><strong>500+</strong><span>Campaigns</span></div>
-                              <div><strong>3</strong><span>Regions</span></div>
+                           <div class="avista-home__actions">
+                              <a class="avista-home__btn" href="contact-us.html">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+                              <a class="avista-home__btn avista-home__btn--ghost" href="tel:09837241310"><i class="fa-solid fa-play"></i> View Services</a>
                            </div>
                         </div>
-
-                        <div class="home-hero-v3__stage">
-                           <span class="home-hero-v3__orbit"></span>
-                           <div class="home-hero-v3__billboard">
-                              <img src="assets/images/clients/portfolio/ahagalaxy1.jpeg" alt="Outdoor advertising billboard campaign">
-                              <span class="home-hero-v3__screen-glow"></span>
+                        <div class="avista-home__stage">
+                           <div class="avista-home__screen">
+                              <img src="assets/images/clients/portfolio/ahagalaxy1.jpeg" alt="Premium billboard outdoor advertising">
+                              <span class="avista-home__scan"></span>
                            </div>
-                           <div class="home-hero-v3__mockup">
-                              <img src="assets/images/clients/Hoarding.png" alt="Hoarding advertisement creative">
+                           <div class="avista-home__poster">
+                              <img src="assets/images/clients/Hoarding.png" alt="Outdoor campaign creative">
                            </div>
-                           <div class="home-hero-v3__badge">
-                              <i class="fa-solid fa-chart-line"></i>
-                              <div><strong>110%</strong><span>Lead Lift</span></div>
+                           <div class="avista-home__floating avista-home__floating--one">
+                              <i class="fa-solid fa-chart-line"></i> 110% Lead Lift
                            </div>
-                           <div class="home-hero-v3__chip home-hero-v3__chip--one">
+                           <div class="avista-home__floating avista-home__floating--two">
                               <i class="fa-solid fa-location-dot"></i> Prime Routes
                            </div>
-                           <div class="home-hero-v3__chip home-hero-v3__chip--two">
-                              <i class="fa-solid fa-eye"></i> High Recall
-                           </div>
-                           <div class="home-hero-v3__chip home-hero-v3__chip--three">
-                              <i class="fa-solid fa-bolt"></i> Fast Execution
+                           <div class="avista-home__floating avista-home__floating--three">
+                              <i class="fa-solid fa-bolt"></i> Fast Launch
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="home-hero-v3__marquee" aria-hidden="true">
-                     <span>Unipole Advertising</span>
-                     <span>Hoardings</span>
-                     <span>Glow Sign</span>
-                     <span>Flex Board</span>
-                     <span>In-Shop Branding</span>
-                     <span>Display Board</span>
-                     <span>Outdoor Campaigns</span>
-                     <span>Uttarakhand</span>
-                     <span>West UP</span>
-                     <span>Punjab</span>
+                  <div class="avista-home__service-row">
+                     <div class="avista-home__service"><i class="fa-solid fa-bullhorn"></i><div><strong>Unipole Media</strong><span>Highway and city visibility</span></div></div>
+                     <div class="avista-home__service"><i class="fa-solid fa-lightbulb"></i><div><strong>Glow Sign</strong><span>Night recall branding</span></div></div>
+                     <div class="avista-home__service"><i class="fa-solid fa-store"></i><div><strong>In-Shop Branding</strong><span>Retail attention points</span></div></div>
+                     <div class="avista-home__service"><i class="fa-solid fa-layer-group"></i><div><strong>Flex Board</strong><span>Fast local campaigns</span></div></div>
+                  </div>
+               </section>
+               <section class="avista-works">
+                  <div class="avista-works__counter">12+</div>
+                  <div class="container">
+                     <div class="avista-works__head">
+                        <span>Creative High-Impact Work</span>
+                        <h2>Campaigns that look premium on real streets.</h2>
+                     </div>
+                     <div class="avista-works__grid">
+                        <article class="avista-work-card">
+                           <img src="assets/images/clients/portfolio/Hero.jpg" alt="Outdoor advertising project">
+                           <div class="avista-work-card__content"><span>Hoarding</span><h3>High-recall city boards</h3></div>
+                        </article>
+                        <article class="avista-work-card">
+                           <img src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Haridwar outdoor campaign">
+                           <div class="avista-work-card__content"><span>Unipole</span><h3>Route visibility planning</h3></div>
+                        </article>
+                        <article class="avista-work-card">
+                           <img src="assets/images/clients/portfolio/Rishikesh-4.jpg" alt="Rishikesh campaign">
+                           <div class="avista-work-card__content"><span>Outdoor</span><h3>Branding across traffic zones</h3></div>
+                        </article>
+                     </div>
                   </div>
                </section>
                <!-- ==== / banner end ==== -->
@@ -2318,6 +2784,123 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    <!-- main js -->
    <script src="assets/js/main.js"></script>
    <script src="assets/js/galaxy-premium.js"></script>
+   <script id="avista-home-gsap">
+      (function () {
+         var hero = document.querySelector(".avista-home");
+         if (!hero || !window.gsap) return;
+         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+         var tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+         tl.from(".avista-home__kicker", { x: -28, opacity: 0, duration: 0.65 })
+            .from(".avista-home h1 > span > span", {
+               yPercent: 115,
+               rotate: 2,
+               duration: 1,
+               stagger: 0.09
+            }, "-=0.25")
+            .from(".avista-home__copy p", { x: -42, opacity: 0, duration: 0.75 }, "-=0.55")
+            .from(".avista-home__btn", { y: 26, opacity: 0, duration: 0.6, stagger: 0.08 }, "-=0.4")
+            .from(".avista-home__screen", {
+               x: 120,
+               opacity: 0,
+               rotateY: -20,
+               scale: 0.92,
+               duration: 1.15
+            }, "-=1.05")
+            .from(".avista-home__poster", {
+               x: -80,
+               y: 52,
+               opacity: 0,
+               rotate: -12,
+               duration: 0.9
+            }, "-=0.72")
+            .from(".avista-home__floating", {
+               scale: 0,
+               opacity: 0,
+               duration: 0.58,
+               stagger: 0.08,
+               ease: "back.out(1.9)"
+            }, "-=0.5")
+            .from(".avista-home__service", { y: 34, opacity: 0, duration: 0.65, stagger: 0.07 }, "-=0.45");
+
+         gsap.to(".avista-home__scan", {
+            xPercent: 180,
+            duration: 2.1,
+            repeat: -1,
+            repeatDelay: 1.8,
+            ease: "power2.inOut"
+         });
+
+         gsap.to(".avista-home__floating", {
+            y: function (index) { return index % 2 ? 12 : -12; },
+            duration: 2.7,
+            repeat: -1,
+            yoyo: true,
+            stagger: 0.18,
+            ease: "sine.inOut"
+         });
+
+         gsap.to(".avista-home__poster", {
+            y: -12,
+            rotate: -1,
+            duration: 3.4,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+         });
+
+         gsap.to(".avista-home__screen img", {
+            scale: 1.08,
+            duration: 8,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+         });
+
+         hero.addEventListener("mousemove", function (event) {
+            var box = hero.getBoundingClientRect();
+            var px = ((event.clientX - box.left) / box.width) * 100;
+            var py = ((event.clientY - box.top) / box.height) * 100;
+            var x = px / 100 - 0.5;
+            var y = py / 100 - 0.5;
+            hero.style.setProperty("--mx", px + "%");
+            hero.style.setProperty("--my", py + "%");
+            gsap.to(".avista-home__stage", { x: x * 16, y: y * 10, duration: 0.45, ease: "power2.out" });
+            gsap.to(".avista-home__poster", { x: x * -20, y: y * -12, duration: 0.45, ease: "power2.out" });
+            gsap.to(".avista-home__floating", { x: x * 20, y: y * 16, duration: 0.45, ease: "power2.out" });
+         });
+
+         if (window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.from(".avista-works__head span, .avista-works__head h2", {
+               scrollTrigger: { trigger: ".avista-works", start: "top 72%" },
+               y: 38,
+               opacity: 0,
+               duration: 0.75,
+               stagger: 0.08,
+               ease: "power3.out"
+            });
+            gsap.from(".avista-work-card", {
+               scrollTrigger: { trigger: ".avista-works__grid", start: "top 78%" },
+               y: 72,
+               opacity: 0,
+               rotateX: 8,
+               duration: 0.9,
+               stagger: 0.12,
+               ease: "power3.out"
+            });
+            gsap.to(".avista-home__screen", {
+               y: -58,
+               scrollTrigger: { trigger: ".avista-home", start: "top top", end: "bottom top", scrub: 0.9 }
+            });
+            gsap.to(".avista-home__copy", {
+               y: 42,
+               opacity: 0.68,
+               scrollTrigger: { trigger: ".avista-home", start: "top top", end: "bottom top", scrub: 0.9 }
+            });
+         }
+      })();
+   </script>
    <script id="home-hero-v3-gsap">
       (function () {
          var hero = document.querySelector(".home-hero-v3");
