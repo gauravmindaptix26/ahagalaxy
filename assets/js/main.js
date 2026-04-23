@@ -52,7 +52,7 @@
 	jQuery(document).ready(function() {
 
 		// 01. preloader
-		$("#preloader").fadeOut(800);
+		$("#preloader").fadeOut(200);
 		
 		$(window).on("load", function() {
 			// 02. primary navbar sticky

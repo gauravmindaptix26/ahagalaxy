@@ -95,6 +95,41 @@
       document.body.appendChild(scanline);
     }
 
+    var main = document.querySelector("main");
+    if (main) {
+      [
+        ".avista-works",
+        ".galaxy-rollout",
+        ".offer",
+        ".testimonial",
+        ".blog",
+        ".sponsor",
+        ".next-page"
+      ].forEach(function (selector) {
+        main.querySelectorAll(selector).forEach(function (node) {
+          node.classList.add("is-hidden-home-flow");
+        });
+      });
+
+      [
+        ".avista-home",
+        ".galaxy-services",
+        ".galaxy-logos",
+        ".galaxy-impact",
+        ".galaxy-showcase",
+        ".agency",
+        ".galaxy-testimonials",
+        ".galaxy-faq",
+        ".galaxy-blog",
+        ".galaxy-contact"
+      ].forEach(function (selector) {
+        var section = main.querySelector(selector);
+        if (section) {
+          main.appendChild(section);
+        }
+      });
+    }
+
     if (document.querySelector(".portfolio") && !document.querySelector(".galaxy-marquee")) {
       var marquee = document.createElement("section");
       marquee.className = "galaxy-marquee";

@@ -25,6 +25,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- #favicon -->
    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+   <link rel="preload" as="image" href="assets/images/clients/portfolio/ahagalaxy1.jpeg" fetchpriority="high">
+   <link rel="preconnect" href="https://www.googletagmanager.com">
+   <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
    <!-- #title -->
    <title>Best Outdoor Advertising Agency in Uttarakhand | Galaxy Advertisers</title>
    <!-- #keywords -->
@@ -1392,6 +1395,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       border-right: 1px solid rgba(255,255,255,0.08);
    }
 
+   .avista-home__service--stat {
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      gap: 6px;
+      padding-left: clamp(22px, 4.6vw, 70px);
+   }
+
    .avista-home__service i {
       width: 36px;
       height: 36px;
@@ -1409,9 +1420,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       font-size: 14px;
    }
 
+   .avista-home__service--stat strong {
+      color: #ff7425;
+      font-size: clamp(2rem, 3vw, 3.25rem);
+      line-height: 0.9;
+      font-weight: 1000;
+      letter-spacing: -0.04em;
+   }
+
    .avista-home__service span {
       color: rgba(255,255,255,0.52);
       font-size: 12px;
+   }
+
+   .avista-home__service--stat span {
+      color: rgba(255,255,255,0.58);
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: 800;
    }
 
    .avista-works {
@@ -2218,7 +2244,1244 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       100% { box-shadow: 0 0 0 0 rgba(255, 90, 43, 0); }
    }
 
+   .galaxy-logos {
+      position: relative;
+      overflow: hidden;
+      padding: 84px 0 92px;
+      background:
+         radial-gradient(circle at 15% 0%, rgba(255, 255, 255, 0.04), transparent 24%),
+         linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent 18%),
+         #050505;
+   }
+
+   .galaxy-logos::before {
+      content: "BRANDS";
+      position: absolute;
+      top: 18px;
+      right: max(18px, calc(50% - 720px));
+      color: rgba(255, 255, 255, 0.042);
+      font-size: clamp(4.5rem, 15vw, 11rem);
+      line-height: 0.9;
+      font-weight: 1000;
+      letter-spacing: -0.08em;
+      pointer-events: none;
+   }
+
+   .galaxy-logos .container {
+      position: relative;
+      z-index: 2;
+   }
+
+   .galaxy-logos__intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap: 34px;
+      align-items: end;
+      margin-bottom: 30px;
+   }
+
+   .galaxy-logos__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      color: #ff5a2b;
+      background: rgba(255, 255, 255, 0.04);
+      font-size: 12px;
+      font-weight: 1000;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-logos__eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #ff5a2b;
+      box-shadow: 0 0 14px rgba(255, 90, 43, 0.7);
+   }
+
+   .galaxy-logos h2 {
+      margin: 18px 0 0 !important;
+      color: #fff !important;
+      font-size: clamp(2.7rem, 5vw, 5.4rem) !important;
+      line-height: 0.92 !important;
+      font-weight: 1000;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      max-width: 760px;
+   }
+
+   .logos-line {
+      display: block;
+   }
+
+   .galaxy-logos__intro .primary-text {
+      margin: 0;
+      max-width: 520px;
+      color: rgba(255, 255, 255, 0.68) !important;
+      font-size: 17px;
+      line-height: 1.62;
+      font-weight: 600;
+   }
+
+   .galaxy-logos__grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
+   }
+
+   .galaxy-logo-card {
+      position: relative;
+      min-height: 136px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 22px;
+      background:
+         radial-gradient(circle at top, rgba(255, 255, 255, 0.03), transparent 42%),
+         #090909;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 20px;
+      overflow: hidden;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+   }
+
+   .galaxy-logo-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 90, 43, 0.08), transparent 40%, transparent 60%, rgba(255, 255, 255, 0.03));
+      opacity: 0;
+      transition: opacity 0.35s ease;
+   }
+
+   .galaxy-logo-card img {
+      position: relative;
+      z-index: 1;
+      max-width: min(190px, 90%);
+      max-height: 74px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: none;
+      opacity: 1;
+      transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+   }
+
+   .galaxy-logo-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 90, 43, 0.28);
+      background:
+         radial-gradient(circle at top, rgba(255, 255, 255, 0.045), transparent 42%),
+         #0b0b0b;
+      box-shadow:
+         inset 0 1px 0 rgba(255, 255, 255, 0.05),
+         0 24px 44px rgba(0, 0, 0, 0.24);
+   }
+
+   .galaxy-logo-card:hover::before {
+      opacity: 1;
+   }
+
+   .galaxy-logo-card:hover img {
+      transform: scale(1.05);
+      opacity: 1;
+      filter: none;
+   }
+
+   .galaxy-services,
+   .galaxy-testimonials,
+   .galaxy-faq,
+   .galaxy-blog,
+   .galaxy-contact {
+      position: relative;
+      overflow: hidden;
+   }
+
+   .galaxy-services__intro,
+   .galaxy-testimonials__intro,
+   .galaxy-faq__intro,
+   .galaxy-blog__intro,
+   .galaxy-contact__intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 32px;
+   }
+
+   .galaxy-services__eyebrow,
+   .galaxy-testimonials__eyebrow,
+   .galaxy-faq__eyebrow,
+   .galaxy-blog__eyebrow,
+   .galaxy-contact__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      color: #ff5a2b;
+      font-size: 12px;
+      font-weight: 1000;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-services__eyebrow::before,
+   .galaxy-testimonials__eyebrow::before,
+   .galaxy-faq__eyebrow::before,
+   .galaxy-blog__eyebrow::before,
+   .galaxy-contact__eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #ff5a2b;
+   }
+
+   .galaxy-services h2,
+   .galaxy-testimonials h2,
+   .galaxy-faq h2,
+   .galaxy-blog h2,
+   .galaxy-contact h2 {
+      margin: 18px 0 0 !important;
+      font-size: clamp(2.4rem, 4.6vw, 4.8rem) !important;
+      line-height: 0.94 !important;
+      font-weight: 1000;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-services__intro .primary-text,
+   .galaxy-testimonials__intro .primary-text,
+   .galaxy-faq__intro .primary-text,
+   .galaxy-blog__intro .primary-text,
+   .galaxy-contact__intro .primary-text {
+      margin: 0;
+      max-width: 520px;
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: 600;
+   }
+
+   .galaxy-services.section {
+      --service-x: 50%;
+      --service-y: 30%;
+      padding: 84px 0 92px !important;
+      background:
+         radial-gradient(circle at var(--service-x) var(--service-y), rgba(255,116,37,0.08), transparent 25%),
+         radial-gradient(circle at 9% 16%, rgba(255,184,77,0.12), transparent 24%),
+         linear-gradient(135deg, #ffffff 0%, #fffaf6 52%, #ffffff 100%) !important;
+      color: #111;
+      isolation: isolate;
+   }
+
+   .galaxy-services.section::before {
+      content: "FORMATS";
+      position: absolute;
+      top: 24px;
+      right: max(16px, calc(50% - 700px));
+      z-index: -1;
+      color: rgba(17,17,17,0.055);
+      font-size: clamp(4.2rem, 13vw, 11rem);
+      line-height: 0.8;
+      font-weight: 1000;
+      letter-spacing: -0.08em;
+   }
+
+   .galaxy-services__eyebrow {
+      border-color: rgba(17,17,17,0.12);
+      background: rgba(255,116,37,0.07);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.65);
+   }
+
+   .galaxy-services__intro {
+      align-items: center;
+      margin-bottom: 34px;
+   }
+
+   .galaxy-services__intro h2 {
+      max-width: 760px;
+      color: #111 !important;
+      font-size: clamp(2.05rem, 3.55vw, 4rem) !important;
+      line-height: 0.98 !important;
+   }
+
+   .galaxy-services__intro .primary-text {
+      color: rgba(17,17,17,0.68) !important;
+      font-size: 19px;
+   }
+
+   .galaxy-services__grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      perspective: 1400px;
+   }
+
+   .galaxy-service-card {
+      --mx: 50%;
+      --my: 20%;
+      position: relative;
+      min-height: 430px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.11);
+      border-radius: 30px;
+      padding: 24px;
+      color: #fff;
+      background:
+         radial-gradient(circle at var(--mx) var(--my), rgba(255,116,37,0.20), transparent 26%),
+         linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
+         #0c0c0c;
+      box-shadow: 0 28px 70px rgba(0,0,0,0.28);
+      transform-style: preserve-3d;
+      transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+   }
+
+   .galaxy-service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+         linear-gradient(145deg, rgba(255,116,37,0.18), transparent 36%),
+         linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+         linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: auto, 36px 36px, 36px 36px;
+      opacity: 0.75;
+      pointer-events: none;
+   }
+
+   .galaxy-service-card::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 180px;
+      height: 180px;
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 50%;
+      pointer-events: none;
+   }
+
+   .galaxy-service-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(255,116,37,0.42);
+      box-shadow: 0 36px 90px rgba(0,0,0,0.38);
+   }
+
+   .galaxy-service-card > * {
+      position: relative;
+      z-index: 1;
+   }
+
+   .galaxy-service-card__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 34px;
+   }
+
+   .galaxy-service-card__no {
+      color: rgba(255,255,255,0.28);
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 1000;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-service-card__icon {
+      width: 56px;
+      min-width: 56px;
+      height: 56px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 116, 37, 0.16);
+      color: #ff7425;
+      font-size: 20px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 16px 35px rgba(255,116,37,0.12);
+   }
+
+   .galaxy-service-card h3 {
+      color: #fff;
+      font-size: clamp(1.75rem, 2vw, 2.25rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      margin-bottom: 14px;
+   }
+
+   .galaxy-service-card p {
+      color: rgba(255,255,255,0.68);
+      font-size: 16px;
+      line-height: 1.62;
+      font-weight: 600;
+   }
+
+   .galaxy-service-card ul {
+      display: grid;
+      gap: 8px;
+      margin-top: 16px;
+   }
+
+   .galaxy-service-card li {
+      color: rgba(255,255,255,0.86);
+      font-size: 13px;
+      line-height: 1.4;
+      font-weight: 800;
+   }
+
+   .galaxy-service-card li::before {
+      content: "+";
+      margin-right: 8px;
+      color: #ff7425;
+      font-weight: 1000;
+   }
+
+   .galaxy-service-card__cta {
+      min-height: 42px;
+      width: max-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 26px;
+      padding: 0 14px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255,255,255,0.06);
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 1000;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-service-card__cta:hover {
+      color: #0b0b0b;
+      background: #ff7425;
+      border-color: #ff7425;
+   }
+
+   .galaxy-testimonials__grid {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 0 0 18px;
+      scroll-snap-type: x mandatory;
+      scrollbar-color: #ff7425 rgba(255,255,255,0.1);
+      scrollbar-width: thin;
+   }
+
+   .galaxy-testimonials__grid::-webkit-scrollbar {
+      height: 8px;
+   }
+
+   .galaxy-testimonials__grid::-webkit-scrollbar-track {
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+   }
+
+   .galaxy-testimonials__grid::-webkit-scrollbar-thumb {
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ff7425, #ff5a2b);
+   }
+
+   .galaxy-testimonial-card {
+      flex: 0 0 calc((100% - 36px) / 3);
+      scroll-snap-align: start;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), transparent 30%), #0d0d0d;
+      padding: 30px;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   .galaxy-testimonial-card__head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+   }
+
+   .galaxy-testimonial-card__head img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+   }
+
+   .galaxy-testimonial-card__head strong {
+      display: block;
+      color: #fff;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 900;
+   }
+
+   .galaxy-testimonial-card__head span {
+      display: block;
+      color: rgba(255,255,255,0.58);
+      font-size: 12px;
+      line-height: 1.4;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+   }
+
+   .galaxy-testimonial-card p {
+      color: rgba(255,255,255,0.72);
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 600;
+      margin: 0;
+   }
+
+   .galaxy-faq.section {
+      padding: 76px 0 82px !important;
+      background:
+         radial-gradient(circle at 8% 8%, rgba(255,116,37,0.13), transparent 23%),
+         radial-gradient(circle at 86% 16%, rgba(17,17,17,0.08), transparent 24%),
+         linear-gradient(135deg, #f8f5ee 0%, #efebe2 100%) !important;
+   }
+
+   .galaxy-faq__intro {
+      align-items: center;
+      margin-bottom: 24px;
+   }
+
+   .galaxy-faq__intro h2 {
+      max-width: 780px;
+      font-size: clamp(2.35rem, 4.2vw, 4.45rem) !important;
+      line-height: 0.95 !important;
+   }
+
+   .galaxy-faq__intro .primary-text {
+      color: rgba(11,11,11,0.74) !important;
+      font-size: 19px;
+      line-height: 1.55;
+   }
+
+   .galaxy-faq__wrap {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.78fr) minmax(360px, 1.22fr);
+      gap: 26px;
+      align-items: stretch;
+   }
+
+   .galaxy-faq__panel,
+   .galaxy-contact__panel,
+   .galaxy-contact__form {
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+   }
+
+   .galaxy-faq__panel {
+      position: relative;
+      min-height: 100%;
+      padding: 34px;
+      overflow: hidden;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 26px;
+      background:
+         linear-gradient(135deg, rgba(255,116,37,0.88), rgba(255,90,43,0.58) 36%, rgba(7,7,7,0.96) 37%),
+         #111;
+      box-shadow: 0 28px 60px rgba(32,24,15,0.18);
+   }
+
+   .galaxy-faq__panel::before {
+      content: "";
+      position: absolute;
+      right: -92px;
+      bottom: -92px;
+      width: 220px;
+      height: 220px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50%;
+   }
+
+   .galaxy-faq__panel h3 {
+      position: relative;
+      color: #fff;
+      font-size: clamp(1.75rem, 2.4vw, 2.5rem);
+      line-height: 1.04;
+      margin-bottom: 14px;
+   }
+
+   .galaxy-faq__panel p,
+   .galaxy-faq__panel li {
+      position: relative;
+      color: rgba(255,255,255,0.78);
+      font-size: 16px;
+      line-height: 1.65;
+      font-weight: 600;
+   }
+
+   .galaxy-faq__panel ul {
+      position: relative;
+      display: grid;
+      gap: 12px;
+      margin-top: 26px;
+   }
+
+   .galaxy-faq__panel li::before {
+      content: "";
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      margin-right: 11px;
+      border-radius: 50%;
+      background: #ff7425;
+      box-shadow: 0 0 0 6px rgba(255,116,37,0.15);
+   }
+
+   .galaxy-faq__note {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255,255,255,0.08);
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-faq__note i {
+      color: #ff7425;
+   }
+
+   .galaxy-faq .accordion {
+      display: grid;
+      gap: 14px;
+   }
+
+   .galaxy-faq .accordion-header {
+      max-width: none;
+      margin: 0 !important;
+      font-size: inherit !important;
+      line-height: 1 !important;
+      letter-spacing: normal;
+   }
+
+   .galaxy-faq .accordion-header .accordion-button {
+      text-transform: none;
+   }
+
+   .galaxy-faq .accordion-button::after {
+      width: 38px;
+      height: 38px;
+      margin-left: 18px;
+      border: 1px solid rgba(11,11,11,0.1);
+      border-radius: 50%;
+      background-position: center;
+      background-size: 14px;
+      background-color: #f8f5ee;
+   }
+
+   .galaxy-faq .accordion-button:not(.collapsed)::after {
+      background-color: #ff7425;
+      filter: brightness(0) invert(1);
+   }
+
+   .galaxy-faq .accordion-button:focus-visible {
+      outline: 3px solid rgba(255,116,37,0.3);
+      outline-offset: 3px;
+   }
+
+   .galaxy-faq .accordion-body strong {
+      color: #0b0b0b;
+      font-weight: 1000;
+   }
+
+   .galaxy-faq .accordion-item {
+      border: 1px solid rgba(11,11,11,0.08);
+      border-radius: 22px !important;
+      overflow: hidden;
+      background: #fff;
+      margin-bottom: 0;
+      box-shadow: 0 18px 44px rgba(32,24,15,0.08);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+   }
+
+   .galaxy-faq .accordion-item:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255,116,37,0.25);
+      box-shadow: 0 24px 52px rgba(32,24,15,0.12);
+   }
+
+   .galaxy-faq .accordion-button {
+      color: #0b0b0b;
+      background: #fff;
+      font-size: clamp(1.05rem, 1.35vw, 1.28rem);
+      line-height: 1.35;
+      font-weight: 900;
+      box-shadow: none !important;
+      padding: 25px 28px;
+   }
+
+   .galaxy-faq .accordion-button:not(.collapsed) {
+      background:
+         linear-gradient(90deg, rgba(255,116,37,0.12), rgba(255,255,255,0) 54%),
+         #fff;
+      color: #0b0b0b;
+   }
+
+   .galaxy-faq .accordion-body {
+      color: rgba(11,11,11,0.72);
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 600;
+      padding: 0 28px 26px;
+   }
+
+   .galaxy-blog__grid {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 0 0 18px;
+      scroll-snap-type: x mandatory;
+      scrollbar-color: #ff7425 rgba(255,255,255,0.1);
+      scrollbar-width: thin;
+   }
+
+   .galaxy-blog__grid::-webkit-scrollbar {
+      height: 8px;
+   }
+
+   .galaxy-blog__grid::-webkit-scrollbar-track {
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+   }
+
+   .galaxy-blog__grid::-webkit-scrollbar-thumb {
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ff7425, #ff5a2b);
+   }
+
+   .galaxy-blog__intro h2 {
+      max-width: 680px;
+      font-size: clamp(2rem, 3.2vw, 3.45rem) !important;
+      line-height: 1 !important;
+      letter-spacing: -0.035em;
+   }
+
+   .galaxy-blog-card {
+      flex: 0 0 calc((100% - 36px) / 3);
+      scroll-snap-align: start;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), transparent 30%), #0d0d0d;
+   }
+
+   .galaxy-blog-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+   }
+
+   .galaxy-blog-card__body {
+      padding: 20px;
+   }
+
+   .galaxy-blog-card__meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 32px;
+      padding: 0 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      color: #ff7425;
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 14px;
+   }
+
+   .galaxy-blog-card h3 {
+      color: #fff;
+      font-size: 24px;
+      line-height: 1.08;
+      margin-bottom: 10px;
+   }
+
+   .galaxy-blog-card p {
+      color: rgba(255,255,255,0.68);
+      font-size: 15px;
+      line-height: 1.6;
+      font-weight: 600;
+      margin-bottom: 16px;
+   }
+
+   .galaxy-blog-card a {
+      color: #fff;
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+   }
+
+   .galaxy-contact.section {
+      padding: 78px 0 86px !important;
+      background:
+         radial-gradient(circle at 7% 10%, rgba(255,116,37,0.14), transparent 24%),
+         radial-gradient(circle at 92% 18%, rgba(11,11,11,0.08), transparent 26%),
+         linear-gradient(135deg, #f8f5ee 0%, #ece6dc 100%) !important;
+   }
+
+   .galaxy-contact__intro {
+      align-items: center;
+      margin-bottom: 26px;
+   }
+
+   .galaxy-contact__intro h2 {
+      max-width: 900px;
+      font-size: clamp(2.45rem, 4.2vw, 4.65rem) !important;
+   }
+
+   .galaxy-contact__intro .primary-text {
+      color: rgba(11,11,11,0.74) !important;
+      font-size: 19px;
+   }
+
+   .galaxy-contact__wrap {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.82fr) minmax(380px, 1.18fr);
+      gap: 26px;
+      align-items: stretch;
+   }
+
+   .galaxy-contact__panel,
+   .galaxy-contact__form {
+      border-radius: 28px;
+      opacity: 1 !important;
+      visibility: visible !important;
+   }
+
+   .galaxy-contact__panel {
+      position: relative;
+      min-height: 100%;
+      padding: 34px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.13);
+      color: #fff;
+      background:
+         linear-gradient(135deg, rgba(255,116,37,0.94), rgba(255,90,43,0.45) 34%, rgba(7,7,7,0.96) 35%),
+         #090909;
+      box-shadow: 0 34px 80px rgba(35,25,13,0.18);
+   }
+
+   .galaxy-contact__panel::before,
+   .galaxy-contact__panel::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+   }
+
+   .galaxy-contact__panel::before {
+      right: -90px;
+      top: -90px;
+      width: 220px;
+      height: 220px;
+      border: 1px solid rgba(255,255,255,0.13);
+   }
+
+   .galaxy-contact__panel::after {
+      left: 34px;
+      bottom: 34px;
+      width: 11px;
+      height: 11px;
+      background: #ff7425;
+      box-shadow: 80px -30px 0 rgba(255,255,255,0.18), 150px 20px 0 rgba(255,116,37,0.38);
+   }
+
+   .galaxy-contact__panel h3 {
+      position: relative;
+      color: #fff;
+      font-size: clamp(2rem, 3vw, 3.25rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      margin-bottom: 16px;
+   }
+
+   .galaxy-contact__panel p,
+   .galaxy-contact__panel a,
+   .galaxy-contact__panel li {
+      position: relative;
+      color: rgba(255,255,255,0.76);
+      font-size: 16px;
+      line-height: 1.65;
+      font-weight: 600;
+   }
+
+   .galaxy-contact__panel ul {
+      position: relative;
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+   }
+
+   .galaxy-contact__panel li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+   }
+
+   .galaxy-contact__panel li::before {
+      content: "";
+      width: 9px;
+      min-width: 9px;
+      height: 9px;
+      margin-top: 10px;
+      border-radius: 50%;
+      background: #ff7425;
+      box-shadow: 0 0 0 6px rgba(255,116,37,0.16);
+   }
+
+   .galaxy-contact__route {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 28px;
+   }
+
+   .galaxy-contact__route span {
+      min-height: 82px;
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      color: #fff;
+      background: rgba(255,255,255,0.07);
+      font-size: 12px;
+      line-height: 1.25;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-contact__route strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #ff7425;
+      font-size: 24px;
+      line-height: 1;
+   }
+
+   .galaxy-contact__form {
+      position: relative;
+      padding: 30px;
+      overflow: hidden;
+      border: 1px solid rgba(11,11,11,0.08);
+      background:
+         linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,255,255,0.96)),
+         #fff;
+      box-shadow: 0 30px 72px rgba(35,25,13,0.12);
+   }
+
+   .galaxy-contact__form::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: linear-gradient(90deg, #ff7425, #ff3d1f, #111);
+   }
+
+   .galaxy-contact__form-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 22px;
+   }
+
+   .galaxy-contact__form-head span {
+      color: #ff7425;
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 1000;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-contact__form-head h3 {
+      max-width: 430px;
+      margin-top: 8px;
+      color: #0b0b0b;
+      font-size: clamp(1.65rem, 2.4vw, 2.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+   }
+
+   .galaxy-contact__form-badge {
+      min-width: 78px;
+      min-height: 78px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #fff;
+      background: #0b0b0b;
+      box-shadow: 0 18px 36px rgba(11,11,11,0.16);
+      font-size: 24px;
+   }
+
+   .galaxy-contact__form .group-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+   }
+
+   .galaxy-contact__form .field {
+      margin-bottom: 14px;
+   }
+
+   .galaxy-contact__form input,
+   .galaxy-contact__form select,
+   .galaxy-contact__form textarea {
+      width: 100%;
+      min-height: 64px;
+      border: 1px solid rgba(11,11,11,0.11);
+      border-radius: 18px;
+      background: #f8f6f1;
+      color: #0b0b0b;
+      padding: 0 20px;
+      font-size: 16px;
+      line-height: 1.4;
+      font-weight: 800;
+      transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+   }
+
+   .galaxy-contact__form input:focus,
+   .galaxy-contact__form select:focus,
+   .galaxy-contact__form textarea:focus {
+      border-color: rgba(255,116,37,0.72);
+      background: #fff;
+      box-shadow: 0 16px 34px rgba(255,116,37,0.12);
+      transform: translateY(-2px);
+   }
+
+   .galaxy-contact__form textarea {
+      min-height: 168px;
+      padding-top: 18px;
+   }
+
+   .galaxy-contact__form input::placeholder,
+   .galaxy-contact__form textarea::placeholder {
+      color: rgba(11,11,11,0.46);
+   }
+
+   .galaxy-contact__form .btn {
+      min-width: 220px;
+      min-height: 64px;
+      justify-content: center;
+      color: #0b0b0b !important;
+      background: #ff7425;
+      border-color: #ff7425;
+      box-shadow: 0 18px 42px rgba(255,116,37,0.25);
+   }
+
+   .galaxy-contact__form .btn i {
+      color: inherit !important;
+   }
+
+   .galaxy-contact__form .btn:hover {
+      color: #fff !important;
+      background: #0b0b0b;
+      border-color: #0b0b0b;
+   }
+
+   .is-hidden-home-flow {
+      display: none !important;
+   }
+
+   .alt-surface--dark {
+      background: #050505 !important;
+   }
+
+   .alt-surface--light {
+      background: #f6f4ee !important;
+   }
+
+   .alt-surface--light .lines .line,
+   .alt-surface--light .line span {
+      background-color: rgba(0, 0, 0, 0.08) !important;
+   }
+
+   .alt-surface--light .section__header .title,
+   .alt-surface--light .section__content .title,
+   .alt-surface--light .section__header .sub-title,
+   .alt-surface--light .section__content .sub-title,
+   .alt-surface--light .paragraph p,
+   .alt-surface--light .primary-text,
+   .alt-surface--light .secondary-text,
+   .alt-surface--light .tertiary-text,
+   .alt-surface--light .title-anim,
+   .alt-surface--light .offer__content h2,
+   .alt-surface--light .offer__content p,
+   .alt-surface--light .offer__cta-single h2 a,
+   .alt-surface--light .offer__cta-single .sub-title,
+   .alt-surface--light .agency__content h2,
+   .alt-surface--light .agency__content p,
+   .alt-surface--light .agency__content .primary-text,
+   .alt-surface--light .skill-bar-title p,
+   .alt-surface--light .avista-works__head h2,
+   .alt-surface--light .avista-works__head span,
+   .alt-surface--light .galaxy-rollout__eyebrow,
+   .alt-surface--light .galaxy-rollout__summary .primary-text,
+   .alt-surface--light .galaxy-rollout__tags span {
+      color: #0b0b0b !important;
+   }
+
+   .alt-surface--light .section__header .sub-title,
+   .alt-surface--light .section__content .sub-title,
+   .alt-surface--light .offer__cta-single .sub-title,
+   .alt-surface--light .galaxy-rollout__eyebrow,
+   .alt-surface--light .galaxy-rollout__tags span {
+      border-color: rgba(0, 0, 0, 0.14) !important;
+      background: rgba(0, 0, 0, 0.03) !important;
+   }
+
+   .alt-surface--light .avista-works {
+      background:
+         radial-gradient(circle at 50% 0%, rgba(255, 90, 43, 0.08), transparent 22%),
+         #f6f4ee !important;
+      color: #0b0b0b;
+   }
+
+   .alt-surface--light .avista-works__counter {
+      color: rgba(0, 0, 0, 0.06);
+   }
+
+   .alt-surface--light .agency__content .sub-title i,
+   .alt-surface--light .offer__content .sub-title i,
+   .alt-surface--light .offer__cta-single .sub-title i {
+      color: #0b0b0b !important;
+   }
+
+   .alt-surface--light .offer__cta-single {
+      border-color: rgba(0, 0, 0, 0.12) !important;
+   }
+
+   .alt-surface--light .btn--secondary {
+      color: #0b0b0b;
+      border-color: rgba(0, 0, 0, 0.18) !important;
+   }
+
+   .alt-surface--light .btn--secondary:hover {
+      color: #fff;
+      border-color: #ff7425 !important;
+   }
+
+   .alt-surface--light .btn--primary {
+      color: #ff7425;
+      border-color: #ff7425;
+   }
+
+   .alt-surface--light .galaxy-rollout__roadmap,
+   .alt-surface--light .galaxy-rollout__visual {
+      background:
+         linear-gradient(180deg, rgba(0, 0, 0, 0.03), transparent 24%),
+         #ffffff;
+      border-color: rgba(0, 0, 0, 0.12);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+   }
+
+   .alt-surface--light .galaxy-rollout__track {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.05));
+   }
+
+   .alt-surface--light .galaxy-rollout__node {
+      background: #fff;
+      border-color: rgba(0, 0, 0, 0.12);
+      box-shadow: 0 0 0 8px rgba(255, 90, 43, 0.05);
+   }
+
+   .alt-surface--light .galaxy-rollout__step-id,
+   .alt-surface--light .galaxy-rollout__step p {
+      color: rgba(11, 11, 11, 0.64);
+   }
+
+   .alt-surface--light .galaxy-rollout__step h3 {
+      color: #0b0b0b;
+   }
+
+   .alt-surface--light .galaxy-rollout__screen {
+      border-color: rgba(0, 0, 0, 0.08);
+   }
+
+   .alt-surface--light.sponsor {
+      background: #f6f4ee !important;
+   }
+
+   .alt-surface--light.sponsor .sponsor__slider-item {
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 14px;
+      padding: 18px;
+   }
+
    @media (max-width: 991px) {
+      .galaxy-services__intro,
+      .galaxy-testimonials__intro,
+      .galaxy-faq__intro,
+      .galaxy-blog__intro,
+      .galaxy-contact__intro,
+      .galaxy-faq__wrap,
+      .galaxy-contact__wrap {
+         grid-template-columns: 1fr;
+         gap: 22px;
+      }
+
+      .galaxy-services__grid,
+      .galaxy-testimonials__grid,
+      .galaxy-blog__grid {
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .galaxy-blog-card {
+         flex-basis: calc((100% - 18px) / 2);
+      }
+
+      .galaxy-testimonial-card {
+         flex-basis: calc((100% - 18px) / 2);
+         min-height: 330px;
+      }
+
       .galaxy-showcase {
          padding: 58px 0 74px;
       }
@@ -2241,9 +3504,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          grid-template-columns: 1fr;
          gap: 24px;
       }
+
+      .galaxy-logos {
+         padding: 64px 0 74px;
+      }
+
+      .galaxy-logos__intro {
+         grid-template-columns: 1fr;
+         gap: 22px;
+      }
+
+      .galaxy-logos__grid {
+         grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
    }
 
    @media (max-width: 767px) {
+      .galaxy-services__grid,
+      .galaxy-testimonials__grid,
+      .galaxy-blog__grid,
+      .galaxy-contact__form .group-grid {
+         grid-template-columns: 1fr;
+      }
+
+      .galaxy-blog-card {
+         flex-basis: 86%;
+      }
+
+      .galaxy-testimonial-card {
+         flex-basis: 86%;
+         min-height: 320px;
+         padding: 24px;
+      }
+
       .galaxy-showcase::before {
          top: 12px;
          right: 12px;
@@ -2300,6 +3593,81 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .galaxy-rollout__screen-copy strong {
          font-size: 1.8rem;
          max-width: 220px;
+      }
+
+      .galaxy-logos::before {
+         top: 12px;
+         right: 12px;
+      }
+
+      .galaxy-logos__grid {
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .galaxy-logo-card {
+         min-height: 122px;
+         border-radius: 18px;
+         padding: 16px;
+      }
+
+      .galaxy-logo-card img {
+         max-width: min(150px, 90%);
+         max-height: 56px;
+      }
+
+      .galaxy-faq.section {
+         padding: 54px 0 62px !important;
+      }
+
+      .galaxy-faq__intro {
+         margin-bottom: 20px;
+      }
+
+      .galaxy-faq__panel {
+         padding: 26px 22px;
+         border-radius: 22px;
+      }
+
+      .galaxy-faq .accordion {
+         gap: 10px;
+      }
+
+      .galaxy-faq .accordion-button {
+         padding: 20px 18px;
+      }
+
+      .galaxy-faq .accordion-button::after {
+         width: 32px;
+         height: 32px;
+         margin-left: 12px;
+         background-size: 12px;
+      }
+
+      .galaxy-faq .accordion-body {
+         padding: 0 18px 20px;
+      }
+
+      .galaxy-contact.section {
+         padding: 54px 0 62px !important;
+      }
+
+      .galaxy-contact__panel,
+      .galaxy-contact__form {
+         padding: 24px 20px;
+         border-radius: 22px;
+      }
+
+      .galaxy-contact__route {
+         grid-template-columns: 1fr;
+      }
+
+      .galaxy-contact__form-head {
+         flex-direction: column;
+      }
+
+      .galaxy-contact__form-badge {
+         min-width: 58px;
+         min-height: 58px;
       }
    }
 
@@ -2633,11 +4001,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       --media-drift: 0px;
       position: relative;
       overflow: hidden;
-      padding: 62px 0 76px !important;
+      padding: 54px 0 66px !important;
       color: #fff;
       background:
          radial-gradient(circle at 12% 10%, rgba(255, 61, 31, 0.2), transparent 20%),
          radial-gradient(circle at 88% 12%, rgba(255, 138, 31, 0.14), transparent 24%),
+         linear-gradient(90deg, rgba(0, 196, 255, 0.08), transparent 28%, rgba(255, 116, 37, 0.10) 100%),
          linear-gradient(180deg, #050505 0%, #080808 62%, #030303 100%) !important;
       isolation: isolate;
    }
@@ -2676,7 +4045,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       grid-template-columns: minmax(0, 1.32fr) minmax(300px, 0.68fr);
       gap: 44px;
       align-items: end;
-      margin-bottom: 18px;
+      margin-bottom: 30px;
    }
 
    .galaxy-impact__eyebrow {
@@ -2708,12 +4077,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    .galaxy-impact__intro h2 {
       margin: 24px 0 0 !important;
       color: #fff !important;
-      font-size: clamp(3rem, 5.1vw, 6rem) !important;
+      font-size: clamp(2.2rem, 3.8vw, 4rem) !important;
       line-height: 0.92 !important;
       font-weight: 1000;
       letter-spacing: -0.055em;
       text-transform: uppercase;
-      max-width: 980px;
+      max-width: 620px;
    }
 
    .impact-line {
@@ -2738,7 +4107,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
    .galaxy-livebar {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
       margin: 0;
    }
@@ -2760,7 +4129,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
    .galaxy-livebar__item strong {
       display: block;
-      color: #fff;
+      color: #ff7425;
       font-size: 32px;
       line-height: 0.95;
       font-weight: 1000;
@@ -2770,31 +4139,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    .galaxy-livebar__item span {
       display: block;
       margin-top: 8px;
-      color: rgba(255, 255, 255, 0.66);
+      color: rgba(255, 255, 255, 0.55);
       font-size: 13px;
       line-height: 1.45;
       font-weight: 700;
    }
 
    .galaxy-impact__grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      position: relative;
+      display: flex;
       gap: 18px;
       margin-top: 0 !important;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 8px 0 18px;
+      scroll-snap-type: x mandatory;
+      scrollbar-color: var(--impact-orange) rgba(255,255,255,0.08);
+      scrollbar-width: thin;
       transform: translate3d(var(--grid-x), var(--grid-y), 0);
       will-change: transform;
    }
 
+   .galaxy-impact__grid::-webkit-scrollbar {
+      height: 8px;
+   }
+
+   .galaxy-impact__grid::-webkit-scrollbar-track {
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+   }
+
+   .galaxy-impact__grid::-webkit-scrollbar-thumb {
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--impact-orange), var(--impact-red));
+   }
+
    .galaxy-impact-card {
       position: relative;
+      flex: 0 0 min(74vw, 650px);
       min-height: 430px;
+      aspect-ratio: 1.45;
+      scroll-snap-align: start;
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 24px;
+      border-radius: 30px;
       background: #111;
       box-shadow: 0 26px 70px rgba(0, 0, 0, 0.28);
       transform-style: preserve-3d;
       will-change: transform;
+   }
+
+   .galaxy-impact-card:nth-child(even) {
+      flex-basis: min(62vw, 540px);
+   }
+
+   .galaxy-impact-card:nth-child(3n) {
+      flex-basis: min(68vw, 590px);
    }
 
    .galaxy-impact-card::before {
@@ -2803,7 +4203,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       inset: 0;
       z-index: 1;
       background:
-         linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.74)),
+         linear-gradient(90deg, rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.18) 55%, rgba(0, 0, 0, 0.42)),
+         linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.82)),
          radial-gradient(circle at 20% 16%, rgba(255, 61, 31, 0.3), transparent 34%);
       transition: opacity 0.35s ease;
    }
@@ -2824,6 +4225,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       height: 100%;
       min-height: 430px;
       object-fit: cover;
+      object-position: center center;
       filter: saturate(1.08) contrast(1.06) brightness(0.82);
       transform: scale(1.06);
       transition: transform 0.7s ease, filter 0.7s ease;
@@ -2831,13 +4233,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
    .galaxy-impact-card__content {
       position: absolute;
-      inset: auto 0 0;
+      inset: auto auto 0 0;
       z-index: 3;
       display: flex;
-      min-height: 190px;
+      width: min(88%, 440px);
+      min-height: 210px;
       flex-direction: column;
       justify-content: space-between;
-      padding: 26px;
+      padding: 28px;
    }
 
    .galaxy-impact-card__content span {
@@ -2849,19 +4252,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    }
 
    .galaxy-impact-card__content h3 {
-      max-width: 320px;
+      max-width: 390px;
       margin: 0 0 8px;
       color: #fff;
-      font-size: clamp(1.55rem, 1.8vw, 2.3rem);
+      font-size: clamp(1.9rem, 2.4vw, 3.1rem);
       line-height: 1.02;
       letter-spacing: -0.035em;
    }
 
    .galaxy-impact-card__content p {
-      max-width: 320px;
+      max-width: 390px;
       margin: 0;
       color: rgba(255, 255, 255, 0.75);
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.55;
       font-weight: 600;
    }
@@ -2893,7 +4296,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
 
       .galaxy-impact__grid {
-         grid-template-columns: repeat(2, minmax(0, 1fr));
+         gap: 14px;
+      }
+
+      .galaxy-impact-card,
+      .galaxy-impact-card:nth-child(even),
+      .galaxy-impact-card:nth-child(3n) {
+         flex-basis: min(82vw, 560px);
       }
    }
 
@@ -2912,8 +4321,206 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
 
       .galaxy-impact-card,
+      .galaxy-impact-card:nth-child(even),
+      .galaxy-impact-card:nth-child(3n),
       .galaxy-impact-card img {
-         min-height: 360px;
+         min-height: 390px;
+      }
+
+      .galaxy-impact-card,
+      .galaxy-impact-card:nth-child(even),
+      .galaxy-impact-card:nth-child(3n) {
+         flex-basis: 88%;
+         aspect-ratio: auto;
+      }
+
+      .galaxy-impact-card__content {
+         width: 100%;
+         min-height: 178px;
+         padding: 22px;
+      }
+
+      .galaxy-impact-card__content h3 {
+         font-size: clamp(1.65rem, 8vw, 2.25rem);
+      }
+   }
+
+   .footer-two.footer-cmn.section {
+      position: relative;
+      overflow: hidden;
+      padding: 44px 0 0 !important;
+      background:
+         radial-gradient(circle at 8% 10%, rgba(255,116,37,0.13), transparent 24%),
+         linear-gradient(135deg, #050505 0%, #0b0b0b 54%, #120905 100%) !important;
+   }
+
+   .footer-two.footer-cmn.section::before {
+      content: "GALAXY";
+      position: absolute;
+      right: -24px;
+      bottom: 18px;
+      color: rgba(255,255,255,0.035);
+      font-size: clamp(5rem, 14vw, 12rem);
+      line-height: 0.8;
+      font-weight: 1000;
+      letter-spacing: -0.08em;
+      pointer-events: none;
+   }
+
+   .footer-two .gaper {
+      position: relative;
+      z-index: 1;
+      align-items: center;
+      row-gap: 20px;
+   }
+
+   .footer-two__left {
+      display: grid;
+      gap: 14px;
+   }
+
+   .footer-two__left .logo img {
+      width: 118px !important;
+   }
+
+   .footer-two__left .paragraph p {
+      max-width: 520px;
+      color: rgba(255,255,255,0.66) !important;
+      font-size: 15px;
+      line-height: 1.55;
+   }
+
+   .footer-service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+   }
+
+   .footer-service-tags span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      color: #ff7425;
+      background: rgba(255,255,255,0.04);
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+   }
+
+   .footer-two .section__content-cta,
+   .footer-two .footer__single-meta.section__content-cta {
+      margin-top: 0 !important;
+   }
+
+   .footer-two .folks-text {
+      color: #fff !important;
+      font-size: clamp(1.05rem, 1.65vw, 1.55rem);
+      line-height: 1.15;
+      word-break: break-word;
+   }
+
+   .footer-two__right {
+      display: grid;
+      gap: 16px;
+      justify-items: start;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 24px;
+      background: rgba(255,255,255,0.035);
+      backdrop-filter: blur(14px);
+   }
+
+   .footer-two .social {
+      gap: 10px;
+   }
+
+   .footer-two .social a {
+      width: auto;
+      min-width: 0;
+      height: 38px;
+      padding: 0 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255,255,255,0.05);
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 800;
+   }
+
+   .footer-two .social a:hover {
+      color: #0b0b0b;
+      background: #ff7425;
+   }
+
+   .footer-two .footer__single-meta {
+      display: grid;
+      gap: 10px;
+   }
+
+   .footer-two .footer__single-meta a {
+      align-items: flex-start;
+      gap: 10px;
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      line-height: 1.45;
+   }
+
+   .footer-two .footer__single-meta i {
+      width: 28px;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      color: #ff7425;
+      background: rgba(255,116,37,0.12);
+   }
+
+   .footer-two .footer__copyright {
+      position: relative;
+      z-index: 1;
+      margin-top: 26px;
+      padding: 14px 0 !important;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.28);
+   }
+
+   .footer-two .footer__copyright .gaper {
+      row-gap: 0;
+   }
+
+   .footer-two .footer__copyright-text p {
+      color: rgba(255,255,255,0.58);
+      font-size: 13px;
+      line-height: 1.4;
+   }
+
+   .footer-two .footer__copyright-text a {
+      color: #ff7425;
+      font-size: inherit;
+      line-height: inherit;
+   }
+
+   @media (max-width: 991px) {
+      .footer-two.footer-cmn.section {
+         padding-top: 34px !important;
+      }
+
+      .footer-two__right {
+         padding: 18px;
+      }
+   }
+
+   @media (max-width: 767px) {
+      .footer-two .social a {
+         width: auto;
+         min-width: 42px;
+         height: 42px;
+         padding: 0 13px;
       }
    }
 </style>
@@ -2925,7 +4532,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="login-popup" aria-hidden="true">
   <div class="box" role="dialog" aria-modal="true" aria-labelledby="quote-popup-title">
     <div class="popup-visual">
-      <img src="assets/images/unipole/Rishikul Traffic Lights (5).jpg" alt="Outdoor billboard advertisement on traffic route">
+      <img loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="assets/images/unipole/Rishikul Traffic Lights (5).jpg" alt="Outdoor billboard advertisement on traffic route">
       <span class="popup-visual__tag">OOH Campaign</span>
       <div class="popup-visual__copy">
         <strong>Make your brand visible.</strong>
@@ -3139,7 +4746,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <!-- ==== main start ==== -->
             <main>
                <!-- ==== banner start ==== -->
-               <section class="avista-home" id="home">
+               <section class="avista-home alt-surface--dark" id="home">
                   <div class="container-fluid px-4 px-lg-5">
                      <div class="avista-home__grid">
                         <div class="avista-home__copy">
@@ -3160,11 +4767,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
                         <div class="avista-home__stage">
                            <div class="avista-home__screen">
-                              <img src="assets/images/clients/portfolio/ahagalaxy1.jpeg" alt="Premium billboard outdoor advertising">
+                              <img src="assets/images/clients/portfolio/ahagalaxy1.jpeg" alt="Premium billboard outdoor advertising" decoding="async" fetchpriority="high">
                               <span class="avista-home__scan"></span>
                            </div>
                            <div class="avista-home__poster">
-                              <img src="assets/images/clients/Hoarding.png" alt="Outdoor campaign creative">
+                              <img loading="lazy" decoding="async" src="assets/images/clients/Hoarding.png" alt="Outdoor campaign creative">
                            </div>
                            <div class="avista-home__floating avista-home__floating--one">
                               <i class="fa-solid fa-chart-line"></i> 110% Lead Lift
@@ -3179,13 +4786,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      </div>
                   </div>
                   <div class="avista-home__service-row">
-                     <div class="avista-home__service"><i class="fa-solid fa-bullhorn"></i><div><strong>Unipole Media</strong><span>Highway and city visibility</span></div></div>
-                     <div class="avista-home__service"><i class="fa-solid fa-lightbulb"></i><div><strong>Glow Sign</strong><span>Night recall branding</span></div></div>
-                     <div class="avista-home__service"><i class="fa-solid fa-store"></i><div><strong>In-Shop Branding</strong><span>Retail attention points</span></div></div>
-                     <div class="avista-home__service"><i class="fa-solid fa-layer-group"></i><div><strong>Flex Board</strong><span>Fast local campaigns</span></div></div>
+                     <div class="avista-home__service avista-home__service--stat"><strong>25+</strong><span>Years Of Experience</span></div>
+                     <div class="avista-home__service avista-home__service--stat"><strong>500</strong><span>Completed Projects</span></div>
+                     <div class="avista-home__service avista-home__service--stat"><strong>6+</strong><span>Outdoor Media Formats</span></div>
+                     <div class="avista-home__service avista-home__service--stat"><strong>3</strong><span>Core Service Regions</span></div>
                   </div>
                </section>
-               <section class="avista-works">
+               <section class="avista-works alt-surface--light">
                   <div class="avista-works__counter">12+</div>
                   <div class="container">
                      <div class="avista-works__head">
@@ -3194,41 +4801,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      </div>
                      <div class="avista-works__grid">
                         <article class="avista-work-card">
-                           <img src="assets/images/clients/portfolio/Hero.jpg" alt="Outdoor advertising project">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Hero.jpg" alt="Outdoor advertising project">
                            <div class="avista-work-card__content"><span>Hoarding</span><h3>High-recall city boards</h3></div>
                         </article>
                         <article class="avista-work-card">
-                           <img src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Haridwar outdoor campaign">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Haridwar outdoor campaign">
                            <div class="avista-work-card__content"><span>Unipole</span><h3>Route visibility planning</h3></div>
                         </article>
                         <article class="avista-work-card">
-                           <img src="assets/images/clients/portfolio/Rishikesh-4.jpg" alt="Rishikesh campaign">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Rishikesh-4.jpg" alt="Rishikesh campaign">
                            <div class="avista-work-card__content"><span>Outdoor</span><h3>Branding across traffic zones</h3></div>
                         </article>
                      </div>
                   </div>
                </section>
                <!-- ==== / banner end ==== -->
-               <section class="galaxy-impact section fade-wrapper">
+               <section class="galaxy-impact section fade-wrapper alt-surface--dark">
                   <div class="container">
                      <div class="galaxy-impact__intro">
                         <div>
-                           <span class="galaxy-impact__eyebrow">Market Coverage</span>
-                           <h2 class="title-anim">Outdoor campaigns designed<br>like high-impact media launches.</h2>
+                           <span class="galaxy-impact__eyebrow">Sites We Have</span>
+                           <h2 class="title-anim">Sites across key city routes.</h2>
                         </div>
                         <div class="galaxy-impact__meta">
                            <div class="galaxy-livebar">
                               <div class="galaxy-livebar__item">
                                  <strong>25+</strong>
-                                 <span>Years in outdoor advertising</span>
+                                 <span>Years Of Experience</span>
                               </div>
                               <div class="galaxy-livebar__item">
-                                 <strong>500+</strong>
-                                 <span>Campaigns and brand executions</span>
+                                 <strong>500</strong>
+                                 <span>Completed Projects</span>
+                              </div>
+                              <div class="galaxy-livebar__item">
+                                 <strong>6+</strong>
+                                 <span>Outdoor Media Formats</span>
                               </div>
                               <div class="galaxy-livebar__item">
                                  <strong>3</strong>
-                                 <span>Core regions: Uttarakhand, West UP, Punjab</span>
+                                 <span>Core Service Regions</span>
                               </div>
                            </div>
                            <p class="primary-text">From route mapping to creative production and installation, Galaxy Advertisers builds street-level visibility for brands that need real-world attention.</p>
@@ -3236,7 +4847,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      </div>
                      <div class="galaxy-impact__grid section__content-cta">
                         <article class="galaxy-impact-card fade-top">
-                           <img src="assets/images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg" alt="High traffic unipole campaign">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg" alt="High traffic unipole campaign">
                            <div class="galaxy-impact-card__content">
                               <span>01 / Highways</span>
                               <div>
@@ -3246,7 +4857,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </div>
                         </article>
                         <article class="galaxy-impact-card fade-top">
-                           <img src="assets/images/clients/portfolio/IMG_8513.jpg" alt="Retail branding display">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/IMG_8513.jpg" alt="Retail branding display">
                            <div class="galaxy-impact-card__content">
                               <span>02 / Retail</span>
                               <div>
@@ -3256,7 +4867,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </div>
                         </article>
                         <article class="galaxy-impact-card fade-top">
-                           <img src="assets/images/clients/portfolio/Voltas.jpg" alt="Glow sign advertising">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Voltas.jpg" alt="Glow sign advertising">
                            <div class="galaxy-impact-card__content">
                               <span>03 / Night Recall</span>
                               <div>
@@ -3266,7 +4877,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </div>
                         </article>
                         <article class="galaxy-impact-card fade-top">
-                           <img src="assets/images/clients/portfolio/MC-Donalds.jpg" alt="Display board advertising">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/MC-Donalds.jpg" alt="Display board advertising">
                            <div class="galaxy-impact-card__content">
                               <span>04 / Local Media</span>
                               <div>
@@ -3275,24 +4886,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               </div>
                            </div>
                         </article>
+                        <article class="galaxy-impact-card fade-top">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Rishikesh-4.jpg" alt="Roadside campaign on a city route">
+                           <div class="galaxy-impact-card__content">
+                              <span>05 / City Route</span>
+                              <div>
+                                 <h3>Busy road frontage coverage</h3>
+                                 <p>Placement built for daily movement, repeat exposure and local reach.</p>
+                              </div>
+                           </div>
+                        </article>
+                        <article class="galaxy-impact-card fade-top">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Roadside unipole branding">
+                           <div class="galaxy-impact-card__content">
+                              <span>06 / Arterial Roads</span>
+                              <div>
+                                 <h3>High-visibility roadside formats</h3>
+                                 <p>Large-site media planned around distance viewing and route recall.</p>
+                              </div>
+                           </div>
+                        </article>
+                        <article class="galaxy-impact-card fade-top">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Hero.jpg" alt="Brand hoarding in a busy area">
+                           <div class="galaxy-impact-card__content">
+                              <span>07 / Brand Launch</span>
+                              <div>
+                                 <h3>Launch-led outdoor placement</h3>
+                                 <p>Impact-focused hoardings that support product visibility at street level.</p>
+                              </div>
+                           </div>
+                        </article>
+                        <article class="galaxy-impact-card fade-top">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/TimePhoto_20230711_192014.jpg" alt="Outdoor media installation on a commercial route">
+                           <div class="galaxy-impact-card__content">
+                              <span>08 / Market Access</span>
+                              <div>
+                                 <h3>Commercial zone media presence</h3>
+                                 <p>Execution tailored for market roads, dense traffic pockets and frequent views.</p>
+                              </div>
+                           </div>
+                        </article>
                      </div>
                   </div>
                </section>
                <!-- ==== agency start ==== -->
-               <section class="section agency">
+               <section class="section agency alt-surface--light">
                   <div class="container">
                      <div class="row gaper align-items-center">
                         <div class="col-12 col-lg-6 col-md-6">
                            <div class="agency__thumb">
-                              <img src="assets/images/clients/portfolio/1.jpg" alt="Image" class="thumb-one fade-left"  style="width: fit-content; height: fit-content;">
-                              <img src="assets/images/clients/portfolio/3.jpg" alt="Image" class="thumb-two fade-right" style="width: fit-content; height: fit-content;">
+                              <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/1.jpg" alt="Image" class="thumb-one fade-left"  style="width: fit-content; height: fit-content;">
+                              <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/3.jpg" alt="Image" class="thumb-two fade-right" style="width: fit-content; height: fit-content;">
                            
                            </div>
                         </div>
                         <div class="col-12 col-lg-6 col-md-6">
                            <div class="agency__content section__content">
                               <span class="sub-title">
-                                 WELCOME
+                                 About Us
                                  <i class="fa-solid fa-arrow-right"></i>
                               </span>
                               <h2 class="title title-anim">
@@ -3340,16 +4991,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
                      </div>
                   </div>
-                  <img src="assets/images/star.png" alt="Image" class="star">
-                  <img src="assets/images//agency/dot-large.png" alt="Image" class="dot-large">
+                  <img loading="lazy" decoding="async" src="assets/images/star.png" alt="Image" class="star">
+                  <img loading="lazy" decoding="async" src="assets/images//agency/dot-large.png" alt="Image" class="dot-large">
                </section>
                <!-- ==== / agency end ==== -->
                <!-- ==== portfolio start ==== -->
-               <section class="galaxy-showcase section fade-wrapper">
+               <section class="galaxy-showcase section fade-wrapper alt-surface--dark">
                   <div class="container">
                      <div class="galaxy-showcase__intro">
                         <div>
-                           <span class="galaxy-showcase__eyebrow">Selected Portfolio</span>
+                           <span class="galaxy-showcase__eyebrow">Gallery</span>
                            <h2 class="title-anim">Outdoor work with strong recall.</h2>
                         </div>
                         <div class="galaxy-showcase__summary">
@@ -3365,7 +5016,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      </div>
                      <div class="galaxy-showcase__grid">
                         <article class="galaxy-showcase-card">
-                           <img src="assets/images/clients/portfolio/Hero.jpg" alt="Baleno outdoor hoarding campaign">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Hero.jpg" alt="Baleno outdoor hoarding campaign">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
                                  <span>Auto Launch</span>
@@ -3375,7 +5026,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </div>
                         </article>
                         <article class="galaxy-showcase-card">
-                           <img src="assets/images/clients/portfolio/123.png" alt="Motherhood University admission campaign">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/123.png" alt="Motherhood University admission campaign">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
                                  <span>Education</span>
@@ -3385,7 +5036,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </div>
                         </article>
                         <article class="galaxy-showcase-card">
-                           <img src="assets/images/clients/portfolio/cucet.png" alt="CUCET billboard advertising creative">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/cucet.png" alt="CUCET billboard advertising creative">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
                                  <span>University</span>
@@ -3395,7 +5046,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </div>
                         </article>
                         <article class="galaxy-showcase-card">
-                           <img src="assets/images/clients/portfolio/kei.jpg" alt="KEI product outdoor campaign">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/kei.jpg" alt="KEI product outdoor campaign">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
                                  <span>Product Branding</span>
@@ -3405,7 +5056,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </div>
                         </article>
                         <article class="galaxy-showcase-card">
-                           <img src="assets/images/clients/portfolio/Picture11-1-543x472.jpg" alt="Interior wall branding for Aditya">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Picture11-1-543x472.jpg" alt="Interior wall branding for Aditya">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
                                  <span>Indoor Branding</span>
@@ -3415,7 +5066,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </div>
                         </article>
                         <article class="galaxy-showcase-card">
-                           <img src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Highway unipole advertising site in Haridwar">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Highway unipole advertising site in Haridwar">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
                                  <span>Prime Route</span>
@@ -3435,7 +5086,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            <a href="contact-us.html" class="galaxy-showcase__btn">Talk To Galaxy <i class="fa-solid fa-arrow-right"></i></a>
                         </article>
                         <article class="galaxy-showcase-card">
-                           <img src="assets/images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg" alt="Outdoor billboard at Shivalik Nagar Chowk">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg" alt="Outdoor billboard at Shivalik Nagar Chowk">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
                                  <span>Roadside Visibility</span>
@@ -3448,7 +5099,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   </div>
                </section>
                <!-- ==== / portfolio end ==== -->
-               <section class="galaxy-rollout section fade-wrapper">
+               <section class="galaxy-rollout section fade-wrapper alt-surface--light">
                   <div class="container">
                      <div class="galaxy-rollout__intro">
                         <div>
@@ -3495,7 +5146,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
                         <div class="galaxy-rollout__visual">
                            <div class="galaxy-rollout__screen">
-                              <img src="assets/images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg" alt="Outdoor billboard installation on a high traffic route">
+                              <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg" alt="Outdoor billboard installation on a high traffic route">
                               <span class="galaxy-rollout__scan"></span>
                               <div class="galaxy-rollout__screen-copy">
                                  <span>Live Install</span>
@@ -3521,8 +5172,349 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      </div>
                   </div>
                </section>
+               <section class="galaxy-logos section fade-wrapper alt-surface--dark">
+                  <div class="container">
+                     <div class="galaxy-logos__intro">
+                        <div>
+                           <span class="galaxy-logos__eyebrow">Trusted Brands</span>
+                        </div>
+                        <p class="primary-text">A selection of clients and categories we have supported across outdoor, retail and route-led brand visibility campaigns.</p>
+                     </div>
+                     <div class="galaxy-logos__grid">
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/Panasonic_logo_Blue.svg_.png" alt="Panasonic logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/Paytm_Logo.png" alt="Paytm logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/Skechers.svg_.png" alt="Skechers logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/the-raymond-shop-vector-logo.png" alt="Raymond logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/tanishq-logo-C09892255C-seeklogo.com_.png" alt="Tanishq logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/SOmany1-1.png" alt="Somany logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/oppo-green-logo-transparent-0.png" alt="Oppo logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/voltas_logo_freelogovectors.net_.png" alt="Voltas logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/muthoot_finance.png.png" alt="Muthoot Finance logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/New-Max-Logo-Eng-With-Outline_1.png" alt="New Max logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/whirlpool.png" alt="Whirlpool logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/Jagran-Engage-Logo.png" alt="Jagran Engage logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/RIL-Jewels.webp" alt="RIL Jewels logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/supreme-pipe-logo-2468FF2494-seeklogo.com_.png" alt="Supreme Pipes logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/kalyanjewellers.webp" alt="Kalyan Jewellers logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/png-transparent-samsung-galaxy-gurugram-faridabad-logo-samsung-blue-text-logo.png" alt="Samsung logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/png-transparent-hyundai-motor-company-car-logo-hyundai-starex-hyundai-emblem-text-trademark.png" alt="Hyundai logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/icici_bank_logo_symbol.png" alt="ICICI Bank logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/dell.jpg" alt="Dell logo"></div>
+                        <div class="galaxy-logo-card"><img loading="lazy" decoding="async" src="assets/images/sponsor/tvs-motors-logo-png-0.png" alt="TVS Motors logo"></div>
+                     </div>
+                  </div>
+               </section>
+               <section class="galaxy-services section fade-wrapper alt-surface--light">
+                  <div class="container">
+                     <div class="galaxy-services__intro">
+                        <div>
+                           <span class="galaxy-services__eyebrow">Services</span>
+                           <h2 class="title-anim">Outdoor formats built for visibility and recall.</h2>
+                        </div>
+                        <p class="primary-text">Core OOH services planned around traffic routes, retail presence and fast on-ground execution.</p>
+                     </div>
+                     <div class="galaxy-services__grid">
+                        <article class="galaxy-service-card">
+                           <div class="galaxy-service-card__top">
+                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-bullhorn"></i></span>
+                              <span class="galaxy-service-card__no">01 / Prime</span>
+                           </div>
+                           <div>
+                              <h3>Unipole & Hoardings</h3>
+                              <p>Large-format media for highways, city entries and high-footfall corridors.</p>
+                              <ul>
+                                 <li>Prime route selection</li>
+                                 <li>Creative adaptation</li>
+                                 <li>Installation support</li>
+                              </ul>
+                              <a class="galaxy-service-card__cta" href="unipole-advertisment.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-service-card">
+                           <div class="galaxy-service-card__top">
+                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-lightbulb"></i></span>
+                              <span class="galaxy-service-card__no">02 / Night</span>
+                           </div>
+                           <div>
+                              <h3>Glow Sign</h3>
+                              <p>Night recall branding for storefronts, roadsides and illuminated visibility points.</p>
+                              <ul>
+                                 <li>Brand-led fabrication</li>
+                                 <li>Retail frontage fit</li>
+                                 <li>High after-dark recall</li>
+                              </ul>
+                              <a class="galaxy-service-card__cta" href="glow-sign-advertisment.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-service-card">
+                           <div class="galaxy-service-card__top">
+                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-store"></i></span>
+                              <span class="galaxy-service-card__no">03 / Retail</span>
+                           </div>
+                           <div>
+                              <h3>In-Shop Branding</h3>
+                              <p>Point-of-sale media that improves store presence and customer attention inside the outlet.</p>
+                              <ul>
+                                 <li>Indoor display systems</li>
+                                 <li>Wall and counter media</li>
+                                 <li>Retail conversion support</li>
+                              </ul>
+                              <a class="galaxy-service-card__cta" href="in-shop-branding.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-service-card">
+                           <div class="galaxy-service-card__top">
+                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-layer-group"></i></span>
+                              <span class="galaxy-service-card__no">04 / Local</span>
+                           </div>
+                           <div>
+                              <h3>Flex & Display Boards</h3>
+                              <p>Fast local campaign formats for market clusters, activations and tactical promotions.</p>
+                              <ul>
+                                 <li>Quick production</li>
+                                 <li>Local market rollout</li>
+                                 <li>Budget-friendly formats</li>
+                              </ul>
+                              <a class="galaxy-service-card__cta" href="flex-board-advertisment.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                     </div>
+                  </div>
+               </section>
+               <section class="galaxy-testimonials section fade-wrapper alt-surface--dark">
+                  <div class="container">
+                     <div class="galaxy-testimonials__intro">
+                        <div>
+                           <span class="galaxy-testimonials__eyebrow">Testimonials</span>
+                           <h2 class="title-anim">What clients value after going live with Galaxy.</h2>
+                        </div>
+                        <p class="primary-text">Consistent execution, practical support and route-focused planning keep campaigns smoother on the ground.</p>
+                     </div>
+                     <div class="galaxy-testimonials__grid">
+                        <article class="galaxy-testimonial-card">
+                           <div class="galaxy-testimonial-card__head">
+                              <img loading="lazy" decoding="async" src="assets/images/testimonial/s-thumb.png" alt="Client portrait">
+                              <div><strong>Retail Brand Team</strong><span>Storefront Campaign</span></div>
+                           </div>
+                           <p>Galaxy handled location planning and installation with very little back-and-forth. The rollout was faster than expected and looked clean on site.</p>
+                        </article>
+                        <article class="galaxy-testimonial-card">
+                           <div class="galaxy-testimonial-card__head">
+                              <img loading="lazy" decoding="async" src="assets/images/testimonial/s-thumb-two.png" alt="Client portrait">
+                              <div><strong>Education Campaign</strong><span>Admission Push</span></div>
+                           </div>
+                           <p>Creative placement and route selection helped our messaging stay readable in traffic. The team stayed practical throughout production and go-live.</p>
+                        </article>
+                        <article class="galaxy-testimonial-card">
+                           <div class="galaxy-testimonial-card__head">
+                              <img loading="lazy" decoding="async" src="assets/images/testimonial/s-thumb-three.png" alt="Client portrait">
+                              <div><strong>Regional Marketing</strong><span>Multi-Site Outdoor</span></div>
+                           </div>
+                           <p>From fabrication to live proofing, the coordination felt reliable. We could track progress without chasing different vendors at every step.</p>
+                        </article>
+                        <article class="galaxy-testimonial-card">
+                           <div class="galaxy-testimonial-card__head">
+                              <img loading="lazy" decoding="async" src="assets/images/testimonial/avatar.png" alt="Client portrait">
+                              <div><strong>Jewellery Retailer</strong><span>Market Visibility</span></div>
+                           </div>
+                           <p>The site suggestions were clear and practical. Our campaign got visibility in the right market areas without wasting time on weak locations.</p>
+                        </article>
+                        <article class="galaxy-testimonial-card">
+                           <div class="galaxy-testimonial-card__head">
+                              <img loading="lazy" decoding="async" src="assets/images/testimonial/thumb.png" alt="Client portrait">
+                              <div><strong>FMCG Distributor</strong><span>Route Branding</span></div>
+                           </div>
+                           <p>Galaxy helped us plan around dealer routes and busy retail points. The final placements supported both brand recall and local sales teams.</p>
+                        </article>
+                        <article class="galaxy-testimonial-card">
+                           <div class="galaxy-testimonial-card__head">
+                              <img loading="lazy" decoding="async" src="assets/images/testimonial/s-thumb.png" alt="Client portrait">
+                              <div><strong>Finance Brand</strong><span>Branch Promotion</span></div>
+                           </div>
+                           <p>Execution updates came on time, and the artwork adaptation was handled well across different outdoor sizes. That made approval easier.</p>
+                        </article>
+                        <article class="galaxy-testimonial-card">
+                           <div class="galaxy-testimonial-card__head">
+                              <img loading="lazy" decoding="async" src="assets/images/testimonial/s-thumb-two.png" alt="Client portrait">
+                              <div><strong>Local Business Owner</strong><span>Launch Campaign</span></div>
+                           </div>
+                           <p>For a first campaign, the process was simple. We got guidance on format, location and installation instead of just a list of media options.</p>
+                        </article>
+                     </div>
+                  </div>
+               </section>
+               <section class="galaxy-faq section fade-wrapper alt-surface--light">
+                  <div class="container">
+                     <div class="galaxy-faq__intro">
+                        <div>
+                           <span class="galaxy-faq__eyebrow">FAQs</span>
+                           <h2 class="title-anim">Answers before your campaign goes live.</h2>
+                        </div>
+                        <p class="primary-text">Common questions around locations, execution timelines, creative sizing and campaign support.</p>
+                     </div>
+                     <div class="galaxy-faq__wrap">
+                        <div class="galaxy-faq__panel">
+                           <h3>Planning support built in.</h3>
+                           <p>Galaxy helps brands choose the right surface and route before production starts.</p>
+                           <ul>
+                              <li>City and highway site recommendations</li>
+                              <li>Creative fit by media size</li>
+                              <li>Execution updates after install</li>
+                           </ul>
+                           <span class="galaxy-faq__note"><i class="fa-solid fa-phone"></i> Talk to a media planner</span>
+                        </div>
+                        <div class="accordion" id="galaxyFaq">
+                           <div class="accordion-item">
+                              <h2 class="accordion-header" id="faqOneHead"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">Which locations do you cover?</button></h2>
+                              <div id="faqOne" class="accordion-collapse collapse" aria-labelledby="faqOneHead" data-bs-parent="#galaxyFaq"><div class="accordion-body">We work across <strong>Uttarakhand, West UP and Punjab</strong>, covering highways, city roads, retail streets and high-visibility local points.</div></div>
+                           </div>
+                           <div class="accordion-item">
+                              <h2 class="accordion-header" id="faqTwoHead"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">Do you help with site selection?</button></h2>
+                              <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqTwoHead" data-bs-parent="#galaxyFaq"><div class="accordion-body">Yes. Route logic, traffic exposure and local audience fit are reviewed before recommending a site mix.</div></div>
+                           </div>
+                           <div class="accordion-item">
+                              <h2 class="accordion-header" id="faqThreeHead"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">Can you adapt creative for different formats?</button></h2>
+                              <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqThreeHead" data-bs-parent="#galaxyFaq"><div class="accordion-body">Yes. We align messaging and artwork for hoardings, unipoles, glow sign boards and in-shop branding formats.</div></div>
+                           </div>
+                           <div class="accordion-item">
+                              <h2 class="accordion-header" id="faqFourHead"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">How quickly can a campaign go live?</button></h2>
+                              <div id="faqFour" class="accordion-collapse collapse" aria-labelledby="faqFourHead" data-bs-parent="#galaxyFaq"><div class="accordion-body">Timelines depend on media type and approvals, but local production and installation support helps speed up deployment.</div></div>
+                           </div>
+                           <div class="accordion-item">
+                              <h2 class="accordion-header" id="faqFiveHead"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">Will I get execution updates?</button></h2>
+                              <div id="faqFive" class="accordion-collapse collapse" aria-labelledby="faqFiveHead" data-bs-parent="#galaxyFaq"><div class="accordion-body">Yes. We share live install progress and on-ground proofing so campaign status stays clear after activation.</div></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="galaxy-blog section fade-wrapper alt-surface--dark">
+                  <div class="container">
+                     <div class="galaxy-blog__intro">
+                        <div>
+                           <span class="galaxy-blog__eyebrow">Blogs</span>
+                           <h2 class="title-anim">Outdoor ideas from route, format and visibility planning.</h2>
+                        </div>
+                        <p class="primary-text">Short reads around better media selection, stronger campaign fit and local outdoor execution.</p>
+                     </div>
+                     <div class="galaxy-blog__grid">
+                        <article class="galaxy-blog-card">
+                           <img loading="lazy" decoding="async" src="assets/images/blog/one.png" alt="How to choose billboard locations">
+                           <div class="galaxy-blog-card__body">
+                              <span class="galaxy-blog-card__meta">Location Strategy</span>
+                              <h3>How to choose outdoor sites that actually get seen.</h3>
+                              <p>Route visibility, dwell time and repeat exposure matter more than just size.</p>
+                              <a href="our-story.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-blog-card">
+                           <img loading="lazy" decoding="async" src="assets/images/blog/two.png" alt="Creative sizing for outdoor media">
+                           <div class="galaxy-blog-card__body">
+                              <span class="galaxy-blog-card__meta">Creative Fit</span>
+                              <h3>Why message length changes with every outdoor format.</h3>
+                              <p>Hoardings, glow sign and in-store media need different visual discipline.</p>
+                              <a href="our-story.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-blog-card">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Outdoor rollout planning">
+                           <div class="galaxy-blog-card__body">
+                              <span class="galaxy-blog-card__meta">Execution</span>
+                              <h3>What makes an outdoor rollout smoother on the ground.</h3>
+                              <p>Site readiness, fabrication timing and proofing make the difference after booking.</p>
+                              <a href="our-story.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-blog-card">
+                           <img loading="lazy" decoding="async" src="assets/images/blog/three.png" alt="Retail branding planning">
+                           <div class="galaxy-blog-card__body">
+                              <span class="galaxy-blog-card__meta">Retail Branding</span>
+                              <h3>How in-shop branding supports outdoor visibility.</h3>
+                              <p>Retail touchpoints help customers remember the same message after they reach the market.</p>
+                              <a href="our-story.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-blog-card">
+                           <img loading="lazy" decoding="async" src="assets/images/blog/four.png" alt="Highway media planning">
+                           <div class="galaxy-blog-card__body">
+                              <span class="galaxy-blog-card__meta">Highway Media</span>
+                              <h3>Why highway sites need a different creative approach.</h3>
+                              <p>Fast moving audiences need sharp visuals, shorter copy and stronger brand recall.</p>
+                              <a href="our-story.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-blog-card">
+                           <img loading="lazy" decoding="async" src="assets/images/blog/five.png" alt="Campaign proofing and reporting">
+                           <div class="galaxy-blog-card__body">
+                              <span class="galaxy-blog-card__meta">Proofing</span>
+                              <h3>What proofing adds after your campaign is installed.</h3>
+                              <p>Install photos and status updates keep teams aligned once the campaign goes live.</p>
+                              <a href="our-story.html">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                     </div>
+                  </div>
+               </section>
+               <section class="galaxy-contact section fade-wrapper alt-surface--light">
+                  <div class="container">
+                     <div class="galaxy-contact__intro">
+                        <div>
+                           <span class="galaxy-contact__eyebrow">Form Section</span>
+                           <h2 class="title-anim">Tell us your route, city or campaign plan.</h2>
+                        </div>
+                        <p class="primary-text">Share the media type, budget or target area and Galaxy will suggest practical outdoor options.</p>
+                     </div>
+                     <div class="galaxy-contact__wrap">
+                        <div class="galaxy-contact__panel">
+                           <h3>Plan the route before you print.</h3>
+                           <p>Share the city, audience and media format. Galaxy will map the practical route, size and rollout mix before production starts.</p>
+                           <ul>
+                              <li>Haridwar, Rishikesh, Roorkee and regional routes</li>
+                              <li>Unipole, hoardings, glow sign and in-shop branding</li>
+                              <li>Single-site or multi-location planning support</li>
+                           </ul>
+                           <div class="galaxy-contact__route">
+                              <span><strong>01</strong> Route fit</span>
+                              <span><strong>02</strong> Format plan</span>
+                              <span><strong>03</strong> Go-live support</span>
+                           </div>
+                        </div>
+                        <div class="galaxy-contact__form">
+                           <form action="https://api.web3forms.com/submit" method="POST">
+                              <input type="hidden" name="access_key" value="f4143ea1-3eed-43ee-a25f-e7f593ac250a">
+                              <div class="galaxy-contact__form-head">
+                                 <div>
+                                    <span>Campaign Enquiry</span>
+                                    <h3>Tell us what you want people to notice.</h3>
+                                 </div>
+                                 <i class="galaxy-contact__form-badge fa-solid fa-location-dot"></i>
+                              </div>
+                              <div class="group-grid">
+                                 <div class="field"><input type="text" name="name" placeholder="Name" required></div>
+                                 <div class="field"><input type="tel" name="phone" placeholder="Mobile Number" required></div>
+                              </div>
+                              <div class="group-grid">
+                                 <div class="field"><input type="email" name="email" placeholder="Email" required></div>
+                                 <div class="field">
+                                    <select name="service" required>
+                                       <option value="">Choose Service</option>
+                                       <option value="Unipole Advertisement">Unipole Advertisement</option>
+                                       <option value="In Shop Branding">In Shop Branding</option>
+                                       <option value="Flex Board Advertisement">Flex Board Advertisement</option>
+                                       <option value="Glow Sign Advertisement">Glow Sign Advertisement</option>
+                                       <option value="Display Board Advertisement">Display Board Advertisement</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="field"><textarea name="message" placeholder="Tell us your city, route, brand or campaign idea"></textarea></div>
+                              <button type="submit" class="btn btn--primary">Send Enquiry <i class="fa-solid fa-arrow-right"></i></button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </section>
                <!-- ==== offer start ==== -->
-               <section class="section offer fade-wrapper light">
+               <section class="section offer fade-wrapper light alt-surface--light">
                   <div class="container">
                      <div class="row gaper">
                         <div class="col-12 col-lg-5">
@@ -3608,7 +5600,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
                      </div>
                   </div>
-                  <img src="assets/images/offer/star.png" alt="Image" class="star">
+                  <img loading="lazy" decoding="async" src="assets/images/offer/star.png" alt="Image" class="star">
                   <div class="lines d-none d-lg-flex">
                      <div class="line"></div>
                      <div class="line"></div>
@@ -3619,7 +5611,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                </section>
                <!-- ==== / offer end ==== -->
                <!-- ==== testimonial start ==== --
-               <section class="section testimonial pt-0 position-relative">
+               <section class="section testimonial pt-0 position-relative alt-surface--dark">
                   <div class="testimonial__text-slider">
                      <div class="testimonial__text-slider-single">
                         <h2 class="h1">
@@ -3686,7 +5678,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                  <div class="row gaper align-items-center">
                                     <div class="col-12 col-lg-4 col-xxl-4">
                                        <div class="thumb">
-                                          <img src="assets/images/testimonial/s-thumb.png" alt="Image">
+                                          <img loading="lazy" decoding="async" src="assets/images/testimonial/s-thumb.png" alt="Image">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="44" height="322"
                                              viewBox="0 0 44 322" fill="none" class="d-none d-lg-block">
                                              <path d="M43 -0.000976562V151.999L2 192.999H43V321.999" stroke="#414141" />
@@ -3715,7 +5707,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                  <div class="row gaper align-items-center">
                                     <div class="col-12 col-lg-4 col-xxl-4">
                                        <div class="thumb">
-                                          <img src="assets/images/testimonial/s-thumb-two.png" alt="Image">
+                                          <img loading="lazy" decoding="async" src="assets/images/testimonial/s-thumb-two.png" alt="Image">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="44" height="322"
                                              viewBox="0 0 44 322" fill="none" class="d-none d-lg-block">
                                              <path d="M43 -0.000976562V151.999L2 192.999H43V321.999" stroke="#414141" />
@@ -3744,7 +5736,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                  <div class="row gaper align-items-center">
                                     <div class="col-12 col-lg-4 col-xxl-4">
                                        <div class="thumb">
-                                          <img src="assets/images/testimonial/s-thumb-three.png" alt="Image">
+                                          <img loading="lazy" decoding="async" src="assets/images/testimonial/s-thumb-three.png" alt="Image">
                                           <svg xmlns="http://www.w3.org/2000/svg" width="44" height="322"
                                              viewBox="0 0 44 322" fill="none" class="d-none d-lg-block">
                                              <path d="M43 -0.000976562V151.999L2 192.999H43V321.999" stroke="#414141" />
@@ -3782,7 +5774,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      </div>
                   </div>
                   <div class="other-section">
-                     <img class="other-section-image" src="assets/images/testimonial/s-thumb.png"
+                     <img loading="lazy" decoding="async" class="other-section-image" src="assets/images/testimonial/s-thumb.png"
                         alt="Next Slide Image">
                   </div>
                   <div class="lines d-none d-lg-flex">
@@ -3813,7 +5805,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            <div class="blog__single fade-top">
                               <div class="blog__single-thumb topy-tilt">
                                  <a href="blog-single.html">
-                                    <img src="assets/images/blog/one.png" alt="Image">
+                                    <img loading="lazy" decoding="async" src="assets/images/blog/one.png" alt="Image">
                                  </a>
                               </div>
                               <div class="blog__single-content">
@@ -3834,7 +5826,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            <div class="blog__single fade-top">
                               <div class="blog__single-thumb topy-tilt">
                                  <a href="blog-single.html">
-                                    <img src="assets/images/blog/two.png" alt="Image">
+                                    <img loading="lazy" decoding="async" src="assets/images/blog/two.png" alt="Image">
                                  </a>
                               </div>
                               <div class="blog__single-content">
@@ -3856,46 +5848,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                </section>
                <!-- ==== / blog end ==== -->
                <!-- ==== sponsor start ==== -->
-               <div class="sponsor section pb-0">
+               <div class="sponsor section pb-0 alt-surface--light">
                   <div class="container-fluid">
                      <div class="row justify-content-center">
                         <div class="col-12">
                            <div class="sponsor__slider ">
                               <div class="sponsor__slider-item">
-                                 <img src="assets/images/sponsor/1.jpg" alt="Image">
+                                 <img loading="lazy" decoding="async" src="assets/images/sponsor/1.jpg" alt="Image">
                               </div>
                               <div class="sponsor__slider-item">
-                                 <img src="assets/images/sponsor/john.jpeg" alt="Image">
+                                 <img loading="lazy" decoding="async" src="assets/images/sponsor/john.jpeg" alt="Image">
                               </div>
                               <div class="sponsor__slider-item">
-                                 <img src="assets/images/sponsor/Knorr_Logo_2020.svg_.png" alt="Image">
+                                 <img loading="lazy" decoding="async" src="assets/images/sponsor/Knorr_Logo_2020.svg_.png" alt="Image">
                               </div>
                               <div class="sponsor__slider-item">
-                                 <img src="assets/images/sponsor/29.jpeg" alt="Image">
+                                 <img loading="lazy" decoding="async" src="assets/images/sponsor/29.jpeg" alt="Image">
                               </div>
                               <div class="sponsor__slider-item">
-                                 <img src="assets/images/sponsor/kota-classes-rohtak-logo.png" alt="Image">
+                                 <img loading="lazy" decoding="async" src="assets/images/sponsor/kota-classes-rohtak-logo.png" alt="Image">
                               </div>
                               <div class="sponsor__slider-item">
-                                 <img src="assets/images/sponsor/26.png" alt="Image">
+                                 <img loading="lazy" decoding="async" src="assets/images/sponsor/26.png" alt="Image">
                               </div>
                               <div class="sponsor__slider-item">
-                                 <img src="assets/images/sponsor/SOmany1-1.png" alt="Image">
+                                 <img loading="lazy" decoding="async" src="assets/images/sponsor/SOmany1-1.png" alt="Image">
                               </div>
                               <div class="sponsor__slider-item">
-                                 <img src="assets/images/sponsor/New-Max-Logo-Eng-With-Outline_1.png" alt="Image">
+                                 <img loading="lazy" decoding="async" src="assets/images/sponsor/New-Max-Logo-Eng-With-Outline_1.png" alt="Image">
                               </div>
                               <div class="sponsor__slider-item">
-                                 <img src="assets/images/sponsor/Mountain_Dew-logo-59462AD228-seeklogo.com_.jpg" alt="Image">
+                                 <img loading="lazy" decoding="async" src="assets/images/sponsor/Mountain_Dew-logo-59462AD228-seeklogo.com_.jpg" alt="Image">
                               </div>
                               <div class="sponsor__slider-item">
-                                 <img src="assets/images/sponsor/12.png" alt="Image">
+                                 <img loading="lazy" decoding="async" src="assets/images/sponsor/12.png" alt="Image">
                               </div>
                               <div class="sponsor__slider-item">
-                                 <img src="assets/images/sponsor/21.jpg" alt="Image">
+                                 <img loading="lazy" decoding="async" src="assets/images/sponsor/21.jpg" alt="Image">
                               </div>
                               <div class="sponsor__slider-item">
-                                 <img src="assets/images/sponsor/15.png" alt="Image">
+                                 <img loading="lazy" decoding="async" src="assets/images/sponsor/15.png" alt="Image">
                               </div>
                            </div>
                         </div>
@@ -4007,6 +5999,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            <div class="paragraph">
                               <p>Welcome to top outdoor advertising agency in Uttarakhand. We specialize in helping business most like yours succeed
                                  offline. From unipole advertisment to In Shop Branding.</p>
+                           </div>
+                           <div class="footer-service-tags" aria-label="Galaxy advertising services">
+                              <span>Unipole</span>
+                              <span>Hoardings</span>
+                              <span>Glow Sign</span>
+                              <span>In-Shop Branding</span>
                            </div>
                            <div class="section__content-cta">
                               <h2>
@@ -4637,6 +6635,269 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          gsap.to(".galaxy-rollout__pulse--three", { x: 8, y: 10, duration: 2.6, repeat: -1, yoyo: true, ease: "sine.inOut" });
       })();
    </script>
+   <script id="galaxy-logos-gsap">
+      (function () {
+         var section = document.querySelector(".galaxy-logos");
+         if (!section || !window.gsap) return;
+
+         var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+         if (reduceMotion) return;
+
+         if (window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+         }
+
+         var heading = section.querySelector(".galaxy-logos__intro h2");
+         var headingTargets = [];
+
+         if (window.SplitText && heading) {
+            var split = new SplitText(heading, { type: "lines", linesClass: "logos-line" });
+            headingTargets = split.lines;
+            gsap.set(split.lines, { overflow: "hidden" });
+         } else if (heading) {
+            headingTargets = heading;
+         }
+
+         var introTl = gsap.timeline({
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: section,
+               start: "top 74%",
+               once: true
+            } : null,
+            defaults: { ease: "power4.out" }
+         });
+
+         introTl
+            .from(".galaxy-logos__eyebrow", { y: 18, autoAlpha: 0, duration: 0.5 })
+            .from(".galaxy-logos__intro .primary-text", { x: 36, autoAlpha: 0, duration: 0.7 }, "-=0.45");
+
+         if (headingTargets.length || headingTargets.nodeType === 1) {
+            introTl.from(headingTargets, { yPercent: 105, autoAlpha: 0, duration: 0.85, stagger: 0.08 }, "-=0.15");
+         }
+
+         gsap.from(".galaxy-logo-card", {
+            y: 34,
+            autoAlpha: 0,
+            scale: 0.96,
+            duration: 0.75,
+            stagger: 0.05,
+            ease: "power3.out",
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: ".galaxy-logos__grid",
+               start: "top 84%",
+               once: true
+            } : null
+         });
+
+         gsap.utils.toArray(".galaxy-logo-card").forEach(function (card, index) {
+            gsap.to(card, {
+               y: index % 2 === 0 ? -6 : 6,
+               duration: 2.8 + (index % 5) * 0.18,
+               repeat: -1,
+               yoyo: true,
+               ease: "sine.inOut",
+               delay: index * 0.03
+            });
+         });
+      })();
+   </script>
+   <script id="galaxy-stack-gsap">
+      (function () {
+         if (!window.gsap) return;
+         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+         if (window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+         }
+
+         [
+            { section: ".galaxy-testimonials", eyebrow: ".galaxy-testimonials__eyebrow", text: ".galaxy-testimonials__intro .primary-text", cards: ".galaxy-testimonial-card" },
+            { section: ".galaxy-faq", eyebrow: ".galaxy-faq__eyebrow", text: ".galaxy-faq__intro .primary-text", cards: ".galaxy-faq__panel, .galaxy-faq .accordion-item" },
+            { section: ".galaxy-blog", eyebrow: ".galaxy-blog__eyebrow", text: ".galaxy-blog__intro .primary-text", cards: ".galaxy-blog-card" }
+         ].forEach(function (config) {
+            var section = document.querySelector(config.section);
+            if (!section) return;
+
+            var heading = section.querySelector("h2");
+            var headingTargets = heading;
+
+            if (window.SplitText && heading) {
+               var split = new SplitText(heading, { type: "lines", linesClass: "stack-line" });
+               headingTargets = split.lines;
+               gsap.set(split.lines, { overflow: "hidden" });
+            }
+
+            var tl = gsap.timeline({
+               scrollTrigger: window.ScrollTrigger ? {
+                  trigger: section,
+                  start: "top 74%",
+                  once: true
+               } : null,
+               defaults: { ease: "power4.out" }
+            });
+
+            tl.from(config.eyebrow, { y: 18, autoAlpha: 0, duration: 0.5 })
+              .from(headingTargets, { yPercent: 105, autoAlpha: 0, duration: 0.82, stagger: 0.08 }, "-=0.14")
+              .from(config.text, { x: 34, autoAlpha: 0, duration: 0.66 }, "-=0.45");
+
+            gsap.from(section.querySelectorAll(config.cards), {
+               y: 34,
+               autoAlpha: 0,
+               duration: 0.74,
+               stagger: 0.07,
+               ease: "power3.out",
+               scrollTrigger: window.ScrollTrigger ? {
+                  trigger: section,
+                  start: "top 78%",
+                  once: true
+               } : null
+            });
+         });
+      })();
+   </script>
+   <script id="galaxy-services-gsap">
+      (function () {
+         var section = document.querySelector(".galaxy-services");
+         if (!section || !window.gsap) return;
+         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+         if (window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+         }
+
+         var cards = section.querySelectorAll(".galaxy-service-card");
+
+         gsap.from(cards, {
+            y: 54,
+            rotateX: 8,
+            scale: 0.96,
+            duration: 0.82,
+            stagger: 0.09,
+            ease: "power3.out",
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: ".galaxy-services__grid",
+               start: "top 82%",
+               once: true
+            } : null
+         });
+
+         gsap.from(".galaxy-service-card__icon", {
+            scale: 0,
+            rotate: -18,
+            duration: 0.58,
+            stagger: 0.08,
+            ease: "back.out(1.8)",
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: ".galaxy-services__grid",
+               start: "top 78%",
+               once: true
+            } : null
+         });
+
+         gsap.to(cards, {
+            y: function (index) { return index % 2 ? 8 : -8; },
+            duration: 3.2,
+            repeat: -1,
+            yoyo: true,
+            stagger: 0.18,
+            ease: "sine.inOut"
+         });
+
+         section.addEventListener("mousemove", function (event) {
+            var box = section.getBoundingClientRect();
+            var px = ((event.clientX - box.left) / box.width) * 100;
+            var py = ((event.clientY - box.top) / box.height) * 100;
+            section.style.setProperty("--service-x", px + "%");
+            section.style.setProperty("--service-y", py + "%");
+         });
+
+         cards.forEach(function (card) {
+            card.addEventListener("mousemove", function (event) {
+               var box = card.getBoundingClientRect();
+               var px = ((event.clientX - box.left) / box.width) * 100;
+               var py = ((event.clientY - box.top) / box.height) * 100;
+               var x = px / 100 - 0.5;
+               var y = py / 100 - 0.5;
+
+               card.style.setProperty("--mx", px + "%");
+               card.style.setProperty("--my", py + "%");
+
+               if (window.innerWidth < 992) return;
+               gsap.to(card, {
+                  rotateY: x * 7,
+                  rotateX: y * -7,
+                  y: -12,
+                  duration: 0.42,
+                  ease: "power2.out"
+               });
+            });
+
+            card.addEventListener("mouseleave", function () {
+               gsap.to(card, { rotateY: 0, rotateX: 0, y: 0, duration: 0.55, ease: "power3.out" });
+            });
+         });
+      })();
+   </script>
+   <script id="galaxy-contact-gsap">
+      (function () {
+         var section = document.querySelector(".galaxy-contact");
+         if (!section || !window.gsap) return;
+         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+         if (window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+         }
+
+         var tl = gsap.timeline({
+            scrollTrigger: window.ScrollTrigger ? {
+               trigger: section,
+               start: "top 72%",
+               once: true
+            } : null,
+            defaults: { ease: "power4.out" }
+         });
+
+         tl.from(".galaxy-contact__panel", {
+            x: -56,
+            rotate: -2,
+            duration: 0.82
+         })
+         .from(".galaxy-contact__form", {
+            x: 64,
+            y: 20,
+            rotate: 2,
+            duration: 0.82
+         }, "-=0.66")
+         .from(".galaxy-contact__route span", {
+            y: 24,
+            duration: 0.5,
+            stagger: 0.08
+         }, "-=0.42")
+         .from(".galaxy-contact__form-head, .galaxy-contact__form .field, .galaxy-contact__form .btn", {
+            y: 26,
+            duration: 0.58,
+            stagger: 0.055
+         }, "-=0.48");
+
+         gsap.to(".galaxy-contact__form-badge", {
+            y: -8,
+            rotate: 8,
+            duration: 2.8,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+         });
+
+         section.addEventListener("mousemove", function (event) {
+            if (window.innerWidth < 992) return;
+            var box = section.getBoundingClientRect();
+            var x = (event.clientX - box.left) / box.width - 0.5;
+            var y = (event.clientY - box.top) / box.height - 0.5;
+
+            gsap.to(".galaxy-contact__panel", { x: x * -10, y: y * -8, duration: 0.5, ease: "power2.out" });
+            gsap.to(".galaxy-contact__form", { x: x * 12, y: y * 8, duration: 0.5, ease: "power2.out" });
+         });
+      })();
+   </script>
    <script id="home-hero-v3-gsap">
       (function () {
          var hero = document.querySelector(".home-hero-v3");
@@ -4964,9 +7225,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       var closeBtn = popup.querySelector(".close");
       var openBtns = document.querySelectorAll(".js-open-popup");
       var focusInput = popup.querySelector('input[name="name"]');
+      var popupImage = popup.querySelector(".popup-visual img[data-src]");
       var animatedItems = popup.querySelectorAll(".popup-kicker, .login-popup h1, .login-popup .form-group, .login-popup .btn");
 
       function openPopup() {
+         if (popupImage && popupImage.dataset.src) {
+            popupImage.src = popupImage.dataset.src;
+            popupImage.removeAttribute("data-src");
+         }
+
          popup.classList.add("show");
          popup.setAttribute("aria-hidden", "false");
          document.body.style.overflow = "hidden";
@@ -5030,7 +7297,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       });
    })();
 </script>
-<script src="https://kit.fontawesome.com/47d5e28e48.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/47d5e28e48.js" crossorigin="anonymous" defer></script>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5H69NQ75"

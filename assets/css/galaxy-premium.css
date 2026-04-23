@@ -896,3 +896,14 @@ body {
     height: 46px;
   }
 }
+
+@supports (content-visibility: auto) {
+  main > section:not(:first-child),
+  main > div.sponsor,
+  .agency,
+  .offer,
+  .footer-two {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 760px;
+  }
+}
