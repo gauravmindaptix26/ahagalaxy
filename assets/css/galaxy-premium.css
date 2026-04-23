@@ -78,6 +78,17 @@ body {
   gap: 6px;
 }
 
+.primary-navbar .navbar__menu > ul {
+  gap: 22px;
+  align-items: center;
+}
+
+.primary-navbar .navbar__item > a,
+.primary-navbar .navbar__dropdown-label {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
 .secondary--navbar .galaxy-desktop-menu .navbar__item > a,
 .secondary--navbar .galaxy-desktop-menu .navbar__item > button {
   width: auto;
