@@ -1114,7 +1114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       position: relative;
       min-height: 100vh;
       overflow: hidden;
-      padding-top: 108px;
+      padding-top: 150px;
       color: #fff;
       background:
          radial-gradient(circle at var(--mx) var(--my), rgba(255,61,31,0.28), transparent 18%),
@@ -1130,9 +1130,150 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       box-shadow: 0 18px 50px rgba(0,0,0,0.22) !important;
    }
 
+   .header__topbar {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(90deg, rgba(255,90,43,0.92), rgba(255,122,24,0.84) 42%, rgba(16,16,16,0.96));
+   }
+
+   .header__topbar-inner {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+   }
+
+   .header__topbar-list,
+   .header__topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+   }
+
+   .header__topbar a,
+   .header__topbar span {
+      min-height: 32px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 14px;
+      border-radius: 999px;
+      color: #fff;
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+   }
+
+   .header__topbar a {
+      background: rgba(255,255,255,0.08);
+   }
+
+   .header__topbar span {
+      background: rgba(17,17,17,0.22);
+   }
+
+   .header__topbar a:hover {
+      color: #111;
+      background: #fff2e8;
+   }
+
+   .header__topbar i {
+      font-size: 13px;
+   }
+
+   .header__topbar-btn {
+      color: #111 !important;
+      background: #fff1e6 !important;
+   }
+
+   .header__topbar-btn:hover {
+      background: #fff !important;
+   }
+
+   .header .navbar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+   }
+
+   .header .galaxy-desktop-menu {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: center;
+      margin-left: 0;
+   }
+
+   .header .galaxy-desktop-menu > ul {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 14px !important;
+      width: 100% !important;
+   }
+
+   .header .galaxy-desktop-menu > ul > li {
+      position: relative;
+      flex: 0 0 auto;
+   }
+
    .header .navbar__item > a,
    .header .navbar__dropdown-label {
       color: rgba(255,255,255,0.84) !important;
+      font-size: 12px !important;
+      letter-spacing: 0.035em !important;
+   }
+
+   .header .galaxy-desktop-menu > ul > li > a,
+   .header .galaxy-desktop-menu > ul > li > .navbar__dropdown-label {
+      min-height: auto;
+      padding: 0 8px !important;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+      line-height: 0.96 !important;
+      text-align: center;
+      background: transparent;
+      transition: color 0.25s ease, transform 0.25s ease;
+   }
+
+   .header .galaxy-desktop-menu > ul > li > .navbar__dropdown-label--stacked {
+      width: auto;
+      min-width: 170px;
+      justify-content: center;
+      gap: 0;
+      padding-top: 2px !important;
+      padding-right: 24px !important;
+      padding-bottom: 2px !important;
+      padding-left: 8px !important;
+      position: relative;
+   }
+
+   .header .nav-label-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      text-align: center;
+      line-height: 1.02 !important;
+   }
+
+   .header .nav-label-stack span {
+      display: block;
+      font-size: inherit;
+      line-height: 1.02 !important;
+   }
+
+   .header .navbar__dropdown-label--stacked::after {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      flex: 0 0 auto;
+      margin-left: 0;
    }
 
    .header .navbar__item > a:hover,
@@ -1140,9 +1281,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       color: #ff3d1f !important;
    }
 
+   .header .galaxy-desktop-menu > ul > li:hover > a,
+   .header .galaxy-desktop-menu > ul > li:hover > .navbar__dropdown-label {
+      background: transparent;
+      transform: none;
+   }
+
+   .header .navbar__options {
+      flex: 0 0 auto;
+      margin-left: auto;
+   }
+
    .header .open-offcanvas-nav {
       background: #ff3d1f !important;
       box-shadow: 0 14px 34px rgba(255,61,31,0.28) !important;
+   }
+
+   @media (max-width: 1399px) {
+      .header .galaxy-desktop-menu > ul {
+         gap: 10px !important;
+      }
+
+      .header .galaxy-desktop-menu > ul > li > a,
+      .header .galaxy-desktop-menu > ul > li > .navbar__dropdown-label {
+         padding: 0 6px !important;
+         font-size: 11px !important;
+         letter-spacing: 0.025em !important;
+      }
+
+      .header .galaxy-desktop-menu > ul > li > .navbar__dropdown-label--stacked {
+         min-width: 156px;
+         padding-right: 20px !important;
+      }
+   }
+
+   @media (max-width: 991px) {
+      .header__topbar {
+         display: none;
+      }
+
+      .avista-home {
+         padding-top: 108px;
+      }
    }
 
    .avista-home::before {
@@ -1395,6 +1575,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       border-right: 1px solid rgba(255,255,255,0.08);
    }
 
+   .avista-home__service:last-child {
+      border-right: 0;
+   }
+
    .avista-home__service--stat {
       align-items: flex-start;
       justify-content: center;
@@ -1418,6 +1602,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       display: block;
       color: #fff;
       font-size: 14px;
+   }
+
+   .avista-home__service small {
+      display: block;
+      margin-bottom: 4px;
+      color: rgba(255, 116, 37, 0.92);
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
    }
 
    .avista-home__service--stat strong {
@@ -1683,46 +1878,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    .galaxy-showcase__grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
+      gap: 20px;
+      align-items: stretch;
    }
 
    .galaxy-showcase-card,
    .galaxy-showcase-cta {
       position: relative;
       overflow: hidden;
-      min-height: 360px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 6px;
-      background: #111;
-      box-shadow: 0 30px 75px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      background:
+         linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015)),
+         #0a0a0a;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
       transform-style: preserve-3d;
+      margin: 0;
+   }
+
+   .galaxy-showcase-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 360px;
+      padding: 8px;
+   }
+
+   .galaxy-showcase-card--poster {
+      height: 360px;
+   }
+
+   .galaxy-showcase-card--tall {
+      height: 360px;
+   }
+
+   .galaxy-showcase-card--wide {
+      height: 360px;
    }
 
    .galaxy-showcase-card img {
-      width: 100%;
+      display: block;
+      width: auto;
       height: 100%;
-      min-height: 360px;
+      max-width: none;
+      max-height: none;
       object-fit: cover;
-      filter: saturate(1.05) contrast(1.03);
-      transition: transform 0.55s ease, filter 0.55s ease;
+      object-position: center center;
+      background: #050505;
+      border-radius: 12px;
+      filter: none;
+      transition: transform 0.45s ease;
    }
 
    .galaxy-showcase-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-         linear-gradient(180deg, rgba(5, 5, 5, 0.06), rgba(5, 5, 5, 0.72) 76%),
-         linear-gradient(0deg, rgba(5, 5, 5, 0.88), transparent 38%);
+      content: none;
    }
 
    .galaxy-showcase-card__content {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 2;
-      padding: 18px 18px 20px;
+      display: none;
    }
 
    .galaxy-showcase-card__meta {
@@ -1757,49 +1970,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    }
 
    .galaxy-showcase-card:hover img {
-      transform: scale(1.08);
-      filter: saturate(1.12) contrast(1.05);
+      transform: translateY(-3px);
    }
 
    .galaxy-showcase-cta {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 26px;
+      align-items: center;
+      justify-content: center;
+      height: 360px;
+      padding: 30px;
+      border: 1px solid rgba(255, 116, 37, 0.7);
       background:
-         linear-gradient(180deg, rgba(255, 90, 43, 0.12), transparent 38%),
-         linear-gradient(180deg, #141414 0%, #090909 100%);
+         linear-gradient(180deg, rgba(255, 116, 37, 0.06), rgba(255,255,255,0.01)),
+         #050505;
+      text-decoration: none;
    }
 
    .galaxy-showcase-cta::before,
    .galaxy-showcase-cta::after {
       content: "";
       position: absolute;
-      width: 120px;
-      height: 120px;
-      opacity: 0.18;
+      width: 74px;
+      height: 74px;
+      opacity: 0.2;
       background-image: radial-gradient(rgba(255, 255, 255, 0.92) 1px, transparent 1px);
-      background-size: 12px 12px;
+      background-size: 11px 11px;
       pointer-events: none;
    }
 
    .galaxy-showcase-cta::before {
-      top: 28px;
-      right: 28px;
+      top: 42px;
+      right: 52px;
    }
 
    .galaxy-showcase-cta::after {
-      left: 22px;
-      bottom: 110px;
+      left: 52px;
+      bottom: 42px;
    }
 
    .galaxy-showcase-cta__eyebrow {
-      margin-bottom: 12px;
-      color: var(--showcase-orange);
-      font-size: 12px;
-      font-weight: 1000;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      display: none;
    }
 
    .galaxy-showcase-cta h3 {
@@ -1807,34 +2017,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       z-index: 1;
       margin: 0;
       color: #fff;
-      font-size: 34px;
-      line-height: 0.96;
-      font-weight: 1000;
-      letter-spacing: -0.05em;
+      font-size: 22px;
+      line-height: 1.12;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-align: center;
       text-transform: uppercase;
-      max-width: 260px;
+      max-width: none;
    }
 
    .galaxy-showcase-cta__list {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      gap: 10px;
-      margin: 18px 0 24px;
+      display: none;
    }
 
    .galaxy-showcase-cta__list li {
-      color: rgba(255, 255, 255, 0.68);
-      font-size: 14px;
-      line-height: 1.5;
-      font-weight: 700;
+      display: none;
    }
 
    .galaxy-showcase-cta__list li::before {
-      content: "+";
-      margin-right: 8px;
-      color: var(--showcase-orange);
-      font-weight: 1000;
+      content: none;
+   }
+
+   .galaxy-showcase-cta .galaxy-showcase__btn {
+      display: none;
    }
 
    .galaxy-rollout {
@@ -2521,9 +2726,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
    .galaxy-services__grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
       perspective: 1400px;
+      align-items: stretch;
    }
 
    .galaxy-service-card {
@@ -3055,7 +3261,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    }
 
    .galaxy-contact.section {
-      padding: 78px 0 86px !important;
+      padding: 42px 0 72px !important;
       background:
          radial-gradient(circle at 7% 10%, rgba(255,116,37,0.14), transparent 24%),
          radial-gradient(circle at 92% 18%, rgba(11,11,11,0.08), transparent 26%),
@@ -3063,8 +3269,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    }
 
    .galaxy-contact__intro {
-      align-items: center;
-      margin-bottom: 26px;
+      display: none;
    }
 
    .galaxy-contact__intro h2 {
@@ -3079,7 +3284,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
    .galaxy-contact__wrap {
       display: grid;
-      grid-template-columns: minmax(300px, 0.82fr) minmax(380px, 1.18fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 26px;
       align-items: stretch;
    }
@@ -3102,6 +3307,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          linear-gradient(135deg, rgba(255,116,37,0.94), rgba(255,90,43,0.45) 34%, rgba(7,7,7,0.96) 35%),
          #090909;
       box-shadow: 0 34px 80px rgba(35,25,13,0.18);
+   }
+
+   .galaxy-contact__panel--map {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      padding: 18px;
+      background:
+         linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)),
+         #0b0b0b;
+   }
+
+   .galaxy-contact__panel--map::before,
+   .galaxy-contact__panel--map::after {
+      content: none;
    }
 
    .galaxy-contact__panel::before,
@@ -3129,6 +3349,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       box-shadow: 80px -30px 0 rgba(255,255,255,0.18), 150px 20px 0 rgba(255,116,37,0.38);
    }
 
+   .galaxy-contact__panel--map::before,
+   .galaxy-contact__panel--map::after {
+      content: none;
+      display: none;
+   }
+
    .galaxy-contact__panel h3 {
       position: relative;
       color: #fff;
@@ -3146,6 +3372,66 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       font-size: 16px;
       line-height: 1.65;
       font-weight: 600;
+   }
+
+   .galaxy-contact__map {
+      position: relative;
+      overflow: hidden;
+      min-height: 100%;
+      height: 100%;
+      flex: 1 1 auto;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      background: #111;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+   }
+
+   .galaxy-contact__map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      border: 0;
+      filter: grayscale(0.04) contrast(1.02);
+   }
+
+   .galaxy-contact__address {
+      position: relative;
+      display: grid;
+      gap: 14px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      background: rgba(255,255,255,0.06);
+   }
+
+   .galaxy-contact__address-label {
+      color: #ff7425;
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 1000;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-contact__address p,
+   .galaxy-contact__address a {
+      margin: 0;
+      color: rgba(255,255,255,0.86);
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: 700;
+   }
+
+   .galaxy-contact__address a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      color: #fff;
+   }
+
+   .galaxy-contact__address a:hover {
+      color: #ff7425;
    }
 
    .galaxy-contact__panel ul {
@@ -3213,6 +3499,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       box-shadow: 0 30px 72px rgba(35,25,13,0.12);
    }
 
+   .galaxy-contact__form form {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+   }
+
    .galaxy-contact__form::before {
       content: "";
       position: absolute;
@@ -3268,6 +3560,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
    .galaxy-contact__form .field {
       margin-bottom: 14px;
+   }
+
+   .galaxy-contact__form .field:last-of-type {
+      flex: 1 1 auto;
    }
 
    .galaxy-contact__form input,
@@ -3493,6 +3789,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       .galaxy-showcase__grid {
          grid-template-columns: repeat(2, minmax(0, 1fr));
+         gap: 18px;
+      }
+
+      .galaxy-showcase-card--poster {
+         height: 300px;
+      }
+
+      .galaxy-showcase-card--tall {
+         height: 300px;
+      }
+
+      .galaxy-showcase-card--wide,
+      .galaxy-showcase-cta {
+         height: 300px;
       }
 
       .galaxy-rollout {
@@ -3544,16 +3854,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       .galaxy-showcase__grid {
          grid-template-columns: 1fr;
+         gap: 16px;
       }
 
       .galaxy-showcase-card,
-      .galaxy-showcase-card img,
       .galaxy-showcase-cta {
-         min-height: 320px;
+         height: auto;
+      }
+
+      .galaxy-showcase-card {
+         min-height: 300px;
+         padding: 14px;
+      }
+
+      .galaxy-showcase-card img {
+         height: 100%;
+      }
+
+      .galaxy-showcase-cta {
+         min-height: 220px;
       }
 
       .galaxy-showcase-cta h3 {
-         font-size: 28px;
+         font-size: 20px;
       }
 
       .galaxy-rollout::before {
@@ -4001,7 +4324,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       --media-drift: 0px;
       position: relative;
       overflow: hidden;
-      padding: 54px 0 66px !important;
+      padding: 34px 0 66px !important;
       color: #fff;
       background:
          radial-gradient(circle at 12% 10%, rgba(255, 61, 31, 0.2), transparent 20%),
@@ -4045,7 +4368,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       grid-template-columns: minmax(0, 1.32fr) minmax(300px, 0.68fr);
       gap: 44px;
       align-items: end;
-      margin-bottom: 30px;
+      margin-bottom: 22px;
    }
 
    .galaxy-impact__eyebrow {
@@ -4075,7 +4398,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    }
 
    .galaxy-impact__intro h2 {
-      margin: 24px 0 0 !important;
+      margin: 14px 0 0 !important;
       color: #fff !important;
       font-size: clamp(2.2rem, 3.8vw, 4rem) !important;
       line-height: 0.92 !important;
@@ -4190,11 +4513,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    }
 
    .galaxy-impact-card:nth-child(even) {
-      flex-basis: min(62vw, 540px);
+      flex-basis: min(74vw, 650px);
    }
 
    .galaxy-impact-card:nth-child(3n) {
-      flex-basis: min(68vw, 590px);
+      flex-basis: min(74vw, 650px);
    }
 
    .galaxy-impact-card::before {
@@ -4350,153 +4673,157 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       overflow: hidden;
       padding: 44px 0 0 !important;
       background:
-         radial-gradient(circle at 8% 10%, rgba(255,116,37,0.13), transparent 24%),
-         linear-gradient(135deg, #050505 0%, #0b0b0b 54%, #120905 100%) !important;
+         radial-gradient(circle at 8% 10%, rgba(255,116,37,0.12), transparent 22%),
+         linear-gradient(180deg, #050505 0%, #0a0a0a 100%) !important;
    }
 
    .footer-two.footer-cmn.section::before {
-      content: "GALAXY";
-      position: absolute;
-      right: -24px;
-      bottom: 18px;
-      color: rgba(255,255,255,0.035);
-      font-size: clamp(5rem, 14vw, 12rem);
-      line-height: 0.8;
-      font-weight: 1000;
-      letter-spacing: -0.08em;
-      pointer-events: none;
+      content: none;
    }
 
-   .footer-two .gaper {
+   .footer-two__layout {
       position: relative;
       z-index: 1;
-      align-items: center;
-      row-gap: 20px;
+      display: grid;
+      grid-template-columns: minmax(220px, 0.9fr) minmax(220px, 0.8fr) minmax(260px, 0.9fr);
+      gap: 42px;
+      align-items: start;
    }
 
-   .footer-two__left {
+   .footer-two__intro,
+   .footer-two__card,
+   .footer-two__contact-card {
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      backdrop-filter: none;
+      box-shadow: none;
+   }
+
+   .footer-two__intro {
       display: grid;
       gap: 14px;
    }
 
-   .footer-two__left .logo img {
-      width: 118px !important;
+   .footer-two__intro .logo img {
+      width: 126px !important;
    }
 
-   .footer-two__left .paragraph p {
-      max-width: 520px;
-      color: rgba(255,255,255,0.66) !important;
+   .footer-two__eyebrow,
+   .footer-service-tags,
+   .footer-two__mail {
+      display: none !important;
+   }
+
+   .footer-two__intro h3 {
+      display: none;
+   }
+
+   .footer-two__intro p {
+      margin: 0;
+      color: rgba(255,255,255,0.68) !important;
       font-size: 15px;
-      line-height: 1.55;
+      line-height: 1.8;
+      max-width: 320px;
    }
 
-   .footer-service-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+   .footer-two__grid {
+      display: contents;
    }
 
-   .footer-service-tags span {
-      display: inline-flex;
-      align-items: center;
-      min-height: 30px;
-      padding: 0 12px;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 999px;
-      color: #ff7425;
-      background: rgba(255,255,255,0.04);
-      font-size: 11px;
-      line-height: 1;
-      font-weight: 900;
-      letter-spacing: 0.06em;
+   .footer-two__card h4,
+   .footer-two__contact-card h4 {
+      margin: 0 0 18px;
+      color: #fff;
+      font-size: 17px;
+      line-height: 1.1;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
    }
 
-   .footer-two .section__content-cta,
-   .footer-two .footer__single-meta.section__content-cta {
-      margin-top: 0 !important;
-   }
-
-   .footer-two .folks-text {
-      color: #fff !important;
-      font-size: clamp(1.05rem, 1.65vw, 1.55rem);
-      line-height: 1.15;
-      word-break: break-word;
-   }
-
-   .footer-two__right {
+   .footer-two__links,
+   .footer-two__contact-list {
       display: grid;
-      gap: 16px;
-      justify-items: start;
-      padding: 22px;
-      border: 1px solid rgba(255,255,255,0.09);
-      border-radius: 24px;
-      background: rgba(255,255,255,0.035);
-      backdrop-filter: blur(14px);
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
    }
 
-   .footer-two .social {
-      gap: 10px;
+   .footer-two__links a,
+   .footer-two__contact-list li {
+      color: rgba(255,255,255,0.72);
+      font-size: 15px;
+      line-height: 1.6;
+      font-weight: 600;
    }
 
-   .footer-two .social a {
-      width: auto;
-      min-width: 0;
-      height: 38px;
-      padding: 0 14px;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 999px;
-      color: #fff;
-      background: rgba(255,255,255,0.05);
-      font-size: 13px;
-      line-height: 1;
-      font-weight: 800;
-   }
-
-   .footer-two .social a:hover {
-      color: #0b0b0b;
-      background: #ff7425;
-   }
-
-   .footer-two .footer__single-meta {
-      display: grid;
-      gap: 10px;
-   }
-
-   .footer-two .footer__single-meta a {
-      align-items: flex-start;
-      gap: 10px;
-      color: rgba(255,255,255,0.7);
-      font-size: 14px;
-      line-height: 1.45;
-   }
-
-   .footer-two .footer__single-meta i {
-      width: 28px;
-      min-width: 28px;
-      height: 28px;
-      border-radius: 50%;
+   .footer-two__links a:hover {
       color: #ff7425;
-      background: rgba(255,116,37,0.12);
+      transform: none;
+   }
+
+   .footer-two__contact-card {
+      grid-column: auto;
+      display: block;
+   }
+
+   .footer-two__contact-list a {
+      color: inherit;
+   }
+
+   .footer-two__contact-list li {
+      display: block;
+   }
+
+   .footer-two__contact-list i {
+      display: none;
+   }
+
+   .footer-two__social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+   }
+
+   .footer-two__social a {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background: rgba(255,255,255,0.04);
+      font-size: 16px;
+      line-height: 1;
+      transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+   }
+
+   .footer-two__social a:hover {
+      color: #111;
+      border-color: #ff7425;
+      background: #ff7425;
    }
 
    .footer-two .footer__copyright {
       position: relative;
       z-index: 1;
-      margin-top: 26px;
-      padding: 14px 0 !important;
+      margin-top: 28px;
+      padding: 16px 0 !important;
       border-top: 1px solid rgba(255,255,255,0.08);
       background: rgba(0,0,0,0.28);
    }
 
-   .footer-two .footer__copyright .gaper {
-      row-gap: 0;
-   }
-
    .footer-two .footer__copyright-text p {
+      margin: 0;
       color: rgba(255,255,255,0.58);
       font-size: 13px;
       line-height: 1.4;
+      text-align: center;
    }
 
    .footer-two .footer__copyright-text a {
@@ -4505,22 +4832,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       line-height: inherit;
    }
 
-   @media (max-width: 991px) {
-      .footer-two.footer-cmn.section {
-         padding-top: 34px !important;
+   @media (max-width: 1199px) {
+      .footer-two__layout {
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+         gap: 30px;
       }
 
-      .footer-two__right {
-         padding: 18px;
+      .footer-two__contact-card {
+         grid-column: 1 / -1;
       }
    }
 
    @media (max-width: 767px) {
-      .footer-two .social a {
-         width: auto;
-         min-width: 42px;
-         height: 42px;
-         padding: 0 13px;
+      .footer-two.footer-cmn.section {
+         padding-top: 40px !important;
+      }
+
+      .footer-two__intro,
+      .footer-two__card,
+      .footer-two__contact-card {
+         padding: 0;
+      }
+
+      .footer-two__layout {
+         grid-template-columns: 1fr;
+         gap: 24px;
+      }
+
+      .footer-two__contact-card {
+         grid-column: auto;
+      }
+
+      .footer-two__social {
+         margin-top: 14px;
       }
    }
 </style>
@@ -4602,6 +4946,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- ==== header start ==== -->
       <header class="header">
          <div class="primary-navbar secondary--navbar">
+            <div class="header__topbar">
+               <div class="container">
+                  <div class="header__topbar-inner">
+                     <div class="header__topbar-list">
+                        <a href="mailto:galaxyadvertisers1996@gmail.com">
+                           <i class="fa-solid fa-envelope"></i>
+                           galaxyadvertisers1996@gmail.com
+                        </a>
+                        <span>
+                           <i class="fa-solid fa-location-dot"></i>
+                           Haridwar, Uttarakhand
+                        </span>
+                     </div>
+                     <div class="header__topbar-actions">
+                        <a href="contact-us.html" class="header__topbar-btn">
+                           Visit Office
+                        </a>
+                        <a href="tel:09837241310">
+                           <i class="fa-solid fa-phone-volume"></i>
+                           09837241310
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
             <div class="container">
                <div class="row">
                   <div class="col-12">
@@ -4620,7 +4989,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                  <a href="our-story.html">About Us</a>
                               </li>
                               <li class="navbar__item navbar__item--has-children nav-fade">
-                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">OOH Advertising Services</a>
+                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label navbar__dropdown-label--stacked"><span class="nav-label-stack"><span>OOH Advertising</span><span>Services</span></span></a>
                                  <ul class="navbar__sub-menu navbar__sub-menu--lg">
                                     <li>
                                        <a href="unipole-advertisment.html">Unipole Advertising in Uttarakhand</a>
@@ -4637,7 +5006,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                  </ul>
                               </li>
                               <li class="navbar__item navbar__item--has-children nav-fade">
-                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">Retail &amp; In-Shop Branding</a>
+                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label navbar__dropdown-label--stacked"><span class="nav-label-stack"><span>Retail &amp; In-Shop</span><span>Branding</span></span></a>
                                  <ul class="navbar__sub-menu navbar__sub-menu--lg">
                                     <li>
                                        <a href="glow-sign-advertisment.html">Glow Sign Boards in Uttarakhand</a>
@@ -4650,6 +5019,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </li>
                                     <li>
                                        <a href="standee-branding-services.html">Standee Branding Services</a>
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li class="navbar__item navbar__item--has-children nav-fade">
+                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label navbar__dropdown-label--stacked"><span class="nav-label-stack"><span>City-wise</span><span>Advertising</span></span></a>
+                                 <ul class="navbar__sub-menu navbar__sub-menu--lg">
+                                    <li>
+                                       <a href="outdoor-advertising-dehradun.html">Outdoor Advertising in Dehradun</a>
+                                    </li>
+                                    <li>
+                                       <a href="outdoor-advertising-haridwar.html">Outdoor Advertising in Haridwar</a>
+                                    </li>
+                                    <li>
+                                       <a href="outdoor-advertising-rishikesh.html">Outdoor Advertising in Rishikesh</a>
+                                    </li>
+                                    <li>
+                                       <a href="outdoor-advertising-haldwani.html">Outdoor Advertising in Haldwani</a>
+                                    </li>
+                                    <li>
+                                       <a href="outdoor-advertising-roorkee.html">Outdoor Advertising in Roorkee</a>
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li class="navbar__item navbar__item--has-children nav-fade">
+                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">Pages</a>
+                                 <ul class="navbar__sub-menu">
+                                    <li>
+                                       <a href="our-story.html">Our Story</a>
+                                    </li>
+                                    <li>
+                                       <a href="outdoor-media-options.html">Outdoor Media Options</a>
+                                    </li>
+                                    <li>
+                                       <a href="contact-us.html">Contact Us</a>
                                     </li>
                                  </ul>
                               </li>
@@ -4727,6 +5130,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               </li>
                            </ul>
                         </li>
+                        <li class="navbar__item navbar__item--has-children nav-fade">
+                           <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">City-wise Advertising</a>
+                           <ul class="navbar__sub-menu navbar__sub-menu--lg"> 
+                              <li>
+                                 <a href="outdoor-advertising-dehradun.html">Outdoor Advertising in Dehradun</a>
+                              </li>
+                              <li>
+                                 <a href="outdoor-advertising-haridwar.html">Outdoor Advertising in Haridwar</a>
+                              </li>
+                              <li>
+                                 <a href="outdoor-advertising-rishikesh.html">Outdoor Advertising in Rishikesh</a>
+                              </li>
+                              <li>
+                                 <a href="outdoor-advertising-haldwani.html">Outdoor Advertising in Haldwani</a>
+                              </li>
+                              <li>
+                                 <a href="outdoor-advertising-roorkee.html">Outdoor Advertising in Roorkee</a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="navbar__item navbar__item--has-children nav-fade">
+                           <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">Pages</a>
+                           <ul class="navbar__sub-menu">
+                              <li>
+                                 <a href="our-story.html">Our Story</a>
+                              </li>
+                              <li>
+                                 <a href="outdoor-media-options.html">Outdoor Media Options</a>
+                              </li>
+                              <li>
+                                 <a href="contact-us.html">Contact Us</a>
+                              </li>
+                           </ul>
+                        </li>
                           
                      </ul>
                   </div>
@@ -4795,12 +5232,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="avista-home__service-row">
-                     <div class="avista-home__service avista-home__service--stat"><strong>25+</strong><span>Years Of Experience</span></div>
-                     <div class="avista-home__service avista-home__service--stat"><strong>500</strong><span>Completed Projects</span></div>
-                     <div class="avista-home__service avista-home__service--stat"><strong>6+</strong><span>Outdoor Media Formats</span></div>
-                     <div class="avista-home__service avista-home__service--stat"><strong>3</strong><span>Core Service Regions</span></div>
+                     <div class="avista-home__service-row">
+                        <div class="avista-home__service avista-home__service--stat">
+                           <strong>25+</strong>
+                           <span>Years Of Experience</span>
+                        </div>
+                        <div class="avista-home__service avista-home__service--stat">
+                           <strong>500</strong>
+                           <span>Completed Projects</span>
+                        </div>
+                        <div class="avista-home__service avista-home__service--stat">
+                           <strong>6+</strong>
+                           <span>Outdoor Media Formats</span>
+                        </div>
+                        <div class="avista-home__service avista-home__service--stat">
+                           <strong>3</strong>
+                           <span>Core Service Regions</span>
+                        </div>
+                     </div>
                   </div>
                </section>
                <section class="avista-works alt-surface--light">
@@ -4835,24 +5284,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            <h2 class="title-anim">Sites across key city routes.</h2>
                         </div>
                         <div class="galaxy-impact__meta">
-                           <div class="galaxy-livebar">
-                              <div class="galaxy-livebar__item">
-                                 <strong>25+</strong>
-                                 <span>Years Of Experience</span>
-                              </div>
-                              <div class="galaxy-livebar__item">
-                                 <strong>500</strong>
-                                 <span>Completed Projects</span>
-                              </div>
-                              <div class="galaxy-livebar__item">
-                                 <strong>6+</strong>
-                                 <span>Outdoor Media Formats</span>
-                              </div>
-                              <div class="galaxy-livebar__item">
-                                 <strong>3</strong>
-                                 <span>Core Service Regions</span>
-                              </div>
-                           </div>
                            <p class="primary-text">From route mapping to creative production and installation, Galaxy Advertisers builds street-level visibility for brands that need real-world attention.</p>
                         </div>
                      </div>
@@ -5026,7 +5457,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
                      </div>
                      <div class="galaxy-showcase__grid">
-                        <article class="galaxy-showcase-card">
+                        <article class="galaxy-showcase-card galaxy-showcase-card--poster">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Hero.jpg" alt="Baleno outdoor hoarding campaign">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
@@ -5036,7 +5467,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               <h3>Large-format creative built for premium frontage and quick brand recall.</h3>
                            </div>
                         </article>
-                        <article class="galaxy-showcase-card">
+                        <article class="galaxy-showcase-card galaxy-showcase-card--poster">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/123.png" alt="Motherhood University admission campaign">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
@@ -5046,7 +5477,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               <h3>Dense admission messaging organized for fast read time in traffic.</h3>
                            </div>
                         </article>
-                        <article class="galaxy-showcase-card">
+                        <article class="galaxy-showcase-card galaxy-showcase-card--poster">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/cucet.png" alt="CUCET billboard advertising creative">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
@@ -5056,7 +5487,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               <h3>High-contrast layouts that keep exam and admission offers visible at distance.</h3>
                            </div>
                         </article>
-                        <article class="galaxy-showcase-card">
+                        <article class="galaxy-showcase-card galaxy-showcase-card--poster">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/kei.jpg" alt="KEI product outdoor campaign">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
@@ -5066,7 +5497,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               <h3>Strong product-led visuals designed for fast recognition on busy routes.</h3>
                            </div>
                         </article>
-                        <article class="galaxy-showcase-card">
+                        <article class="galaxy-showcase-card galaxy-showcase-card--tall">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Picture11-1-543x472.jpg" alt="Interior wall branding for Aditya">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
@@ -5076,7 +5507,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               <h3>Interior media surfaces that carry the same brand strength inside the location.</h3>
                            </div>
                         </article>
-                        <article class="galaxy-showcase-card">
+                        <article class="galaxy-showcase-card galaxy-showcase-card--wide">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Highway unipole advertising site in Haridwar">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
@@ -5086,17 +5517,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               <h3>On-ground placements chosen for traffic flow, visibility angle and repeat exposure.</h3>
                            </div>
                         </article>
-                        <article class="galaxy-showcase-cta">
+                        <a href="contact-us.html" class="galaxy-showcase-cta" aria-label="View all Galaxy outdoor advertising work">
                            <span class="galaxy-showcase-cta__eyebrow">Media Planning</span>
-                           <h3>Need a sharper mix for your next outdoor launch?</h3>
+                           <h3>View All Work</h3>
                            <ul class="galaxy-showcase-cta__list">
                               <li>Site recommendations by route and audience</li>
                               <li>Creative formats for hoardings, glow sign and retail display</li>
                               <li>Faster rollout support across Uttarakhand, West UP and Punjab</li>
                            </ul>
-                           <a href="contact-us.html" class="galaxy-showcase__btn">Talk To Galaxy <i class="fa-solid fa-arrow-right"></i></a>
-                        </article>
-                        <article class="galaxy-showcase-card">
+                           <span class="galaxy-showcase__btn">Talk To Galaxy <i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                        <article class="galaxy-showcase-card galaxy-showcase-card--wide">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg" alt="Outdoor billboard at Shivalik Nagar Chowk">
                            <div class="galaxy-showcase-card__content">
                               <div class="galaxy-showcase-card__meta">
@@ -5500,28 +5931,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                </section>
                <section class="galaxy-contact section fade-wrapper alt-surface--light">
                   <div class="container">
-                     <div class="galaxy-contact__intro">
-                        <div>
-                           <span class="galaxy-contact__eyebrow">Form Section</span>
-                           <h2 class="title-anim">Tell us your route, city or campaign plan.</h2>
-                        </div>
-                        <p class="primary-text">Share the media type, budget or target area and Galaxy will suggest practical outdoor options.</p>
-                     </div>
                      <div class="galaxy-contact__wrap">
-                        <div class="galaxy-contact__panel">
-                           <h3>Plan the route before you print.</h3>
-                           <p>Share the city, audience and media format. Galaxy will map the practical route, size and rollout mix before production starts.</p>
-                           <ul>
-                              <li>Haridwar, Rishikesh, Roorkee and regional routes</li>
-                              <li>Unipole, hoardings, glow sign and in-shop branding</li>
-                              <li>Single-site or multi-location planning support</li>
-                           </ul>
-                           <div class="galaxy-contact__route">
-                              <span><strong>01</strong> Route fit</span>
-                              <span><strong>02</strong> Format plan</span>
-                              <span><strong>03</strong> Go-live support</span>
-                           </div>
-                        </div>
                         <div class="galaxy-contact__form">
                            <form action="https://api.web3forms.com/submit" method="POST">
                               <input type="hidden" name="access_key" value="f4143ea1-3eed-43ee-a25f-e7f593ac250a">
@@ -5552,6 +5962,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               <div class="field"><textarea name="message" placeholder="Tell us your city, route, brand or campaign idea"></textarea></div>
                               <button type="submit" class="btn btn--primary">Send Enquiry <i class="fa-solid fa-arrow-right"></i></button>
                            </form>
+                        </div>
+                        <div class="galaxy-contact__panel galaxy-contact__panel--map">
+                           <div class="galaxy-contact__map">
+                              <iframe
+                                 src="https://www.google.com/maps?q=2nd%20Floor%2C%20Galaxy%20Plaza%2C%20131%2C%20New%2C%20Opp.%20Water%20Tank%2C%20Near%20Shri%20Chandracharya%20Chowk%2C%20Govindpuri%2C%20Devpura%2C%20Haridwar%2C%20Uttarakhand%20249401&output=embed"
+                                 loading="lazy"
+                                 referrerpolicy="no-referrer-when-downgrade"
+                                 title="Galaxy Advertisers Haridwar location map"></iframe>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -6031,81 +6450,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <!-- ==== footer start ==== -->
              <footer class="footer-two footer-cmn section pb-0">
                <div class="container">
-                  <div class="row gaper">
-                     <div class="col-12 col-lg-5 col-xl-4">
-                        <div class="footer-two__left">
-                           <div class="logo">
-                              <a href="index.html">
-                                 <img src="assets/images/Logo2.png" alt="Image" width="150px">
-                              </a>
-                           </div>
-                           <div class="paragraph">
-                              <p>Welcome to top outdoor advertising agency in Uttarakhand. We specialize in helping business most like yours succeed
-                                 offline. From unipole advertisment to In Shop Branding.</p>
-                           </div>
-                           <div class="footer-service-tags" aria-label="Galaxy advertising services">
-                              <span>Unipole</span>
-                              <span>Hoardings</span>
-                              <span>Glow Sign</span>
-                              <span>In-Shop Branding</span>
-                           </div>
-                           <div class="section__content-cta">
-                              <h2>
-                                 <a href="mailto:galaxyadvertisers1996@gmail.com" class="folks-text">galaxyadvertisers1996@gmail.com</a>
-                              </h2>
-                           </div>
+                  <div class="footer-two__layout">
+                     <div class="footer-two__intro">
+                        <div class="logo">
+                           <a href="index.html">
+                              <img src="assets/images/Logo2.png" alt="Image" width="150px">
+                           </a>
                         </div>
+                        <p>Galaxy Advertisers delivers outdoor advertising, retail branding and city-wise campaigns with practical planning and fast local execution.</p>
                      </div>
-                     <div class="col-12 col-lg-7 col-xl-7 offset-xl-1 col-xxl-5 offset-xxl-3">
-                        <div class="footer-two__right">
-                           <div class="social justify-content-start justify-content-lg-start">
-                              <a href="https://www.facebook.com/galaxyadvertiserr" target="_blank">
-                                 <i class="fa-brands fa-facebook-f"></i>
-                                 <span>Facebook</span>
-                              </a>
-                              <a href="https://www.linkedin.com/company/galaxy-advertisers-ooh-company/" target="_blank">
-                                 <i class="fa-brands fa-linkedin"></i>
-                                 <span>Linkedin</span>
-                              </a> 
-                              <a href="https://www.instagram.com/galaxyadvertisers/" target="_blank">
-                                 <i class="fa-brands fa-instagram"></i>
-                                 <span>Instagram</span>
-                              </a> 
-                           </div>
-                           <div class="footer__single-meta section__content-cta">
-                              <a href="https://www.google.com/maps/d/viewer?mid=1UZ57Drfs3SGrTgh6mrYjQktu6uY&hl=en_US&ll=18.672105000000013%2C105.68673800000003&z=17"
-                                 target="_blank">
-                                 <i class="fa-sharp fa-solid fa-location-dot"></i>
-                                 2nd Floor, Galaxy Plaza, 131, New, Opp. Water Tank, Near Shri Chandracharya Chowk, Govindpuri, Devpura, Haridwar, Uttarakhand 249401
-                              </a>
-                              <a href="tel:09837241310">
-                                 <i class="fa-sharp fa-solid fa-phone-volume"></i>
-                                 09837241310
-                              </a>
-                              <a href="mailto:galaxyadvertisers1996@gmail.com">
-                                 <i class="fa-sharp fa-solid fa-envelope"></i>
-                                 galaxyadvertisers1996@gmail.com
-                              </a>
-                           </div>
+                     <div class="footer-two__card">
+                        <h4>Services</h4>
+                        <ul class="footer-two__links">
+                           <li><a href="index.html">Home</a></li>
+                           <li><a href="our-story.html">About Us</a></li>
+                           <li><a href="outdoor-media-options.html">OOH Advertising Services</a></li>
+                           <li><a href="retail-in-shop-branding.html">Retail &amp; In-Shop Branding</a></li>
+                           <li><a href="outdoor-advertising-haridwar.html">City-wise Advertising</a></li>
+                           <li><a href="contact-us.html">Pages</a></li>
+                        </ul>
+                     </div>
+                     <div class="footer-two__contact-card">
+                        <h4>Location</h4>
+                        <ul class="footer-two__contact-list">
+                           <li>2nd Floor, Galaxy Plaza, 131, New, Opp. Water Tank, Near Shri Chandracharya Chowk, Govindpuri, Devpura, Haridwar, Uttarakhand 249401</li>
+                        </ul>
+                        <div class="footer-two__social" aria-label="Galaxy Advertisers social media links">
+                           <a href="https://www.facebook.com/galaxyadvertiserr" target="_blank" rel="noopener noreferrer" aria-label="Open Galaxy Advertisers Facebook page">
+                              <i class="fa-brands fa-facebook-f"></i>
+                           </a>
+                           <a href="https://www.linkedin.com/company/galaxy-advertisers-ooh-company" target="_blank" rel="noopener noreferrer" aria-label="Open Galaxy Advertisers LinkedIn page">
+                              <i class="fa-brands fa-linkedin-in"></i>
+                           </a>
+                           <a href="https://www.instagram.com/galaxyadvertisers/" target="_blank" rel="noopener noreferrer" aria-label="Open Galaxy Advertisers Instagram page">
+                              <i class="fa-brands fa-instagram"></i>
+                           </a>
                         </div>
                      </div>
                   </div>
                </div>
                <div class="footer__copyright">
                   <div class="container">
-                     <div class="row align-items-center gaper">
-                        <div class="col-12 col-xl-12">
-                           <div class="footer__copyright-text text-center text-xl-start">
-                              <center><p>
-                                 Copyright &copy;
-                                 <span id="copyYear"></span>
-                                  by
-                                 <a href="https://www.sketchtobrand.com/" target="_blank">Sketch To Brand</a>
-                                 . All Rights Reserved
-                              </p> </center>
-                           </div>
-                        </div>
-                         
+                     <div class="footer__copyright-text">
+                        <p>
+                           Copyright &copy; <span id="copyYear"></span> by
+                           <a href="https://mindaptix.com/" target="_blank" rel="noopener noreferrer">Mindaptix</a>.
+                           All Rights Reserved
+                        </p>
+                     </div>
                   </div>
                </div>
             </footer>
@@ -6302,6 +6694,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
          if (window.ScrollTrigger) {
             gsap.registerPlugin(ScrollTrigger);
+            window.addEventListener("load", function () { ScrollTrigger.refresh(); }, { once: true });
+            window.addEventListener("pageshow", function () { ScrollTrigger.refresh(); });
          }
 
          var heading = section.querySelector(".galaxy-impact__intro h2");
@@ -6354,6 +6748,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             y: 44,
             rotateX: 6,
             autoAlpha: 0,
+            immediateRender: false,
             duration: 0.82,
             stagger: 0.1,
             ease: "power3.out",
@@ -6463,6 +6858,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
          if (window.ScrollTrigger) {
             gsap.registerPlugin(ScrollTrigger);
+            window.addEventListener("load", function () { ScrollTrigger.refresh(); }, { once: true });
+            window.addEventListener("pageshow", function () { ScrollTrigger.refresh(); });
          }
 
          var heading = section.querySelector(".galaxy-showcase__intro h2");
@@ -6494,6 +6891,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             y: 44,
             scale: 0.97,
             autoAlpha: 0,
+            immediateRender: false,
             duration: 0.82,
             stagger: 0.08,
             ease: "power3.out",
@@ -6506,10 +6904,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
          gsap.utils.toArray(".galaxy-showcase-card img").forEach(function (img) {
             gsap.fromTo(img,
-               { scale: 1.16, yPercent: -4 },
+               { scale: 1, yPercent: 0 },
                {
-                  scale: 1.04,
-                  yPercent: 6,
+                  scale: 1,
+                  yPercent: 0,
                   ease: "none",
                   scrollTrigger: window.ScrollTrigger ? {
                      trigger: img.closest(".galaxy-showcase-card"),
@@ -6583,6 +6981,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
          if (window.ScrollTrigger) {
             gsap.registerPlugin(ScrollTrigger);
+            window.addEventListener("load", function () { ScrollTrigger.refresh(); }, { once: true });
+            window.addEventListener("pageshow", function () { ScrollTrigger.refresh(); });
          }
 
          var heading = section.querySelector(".galaxy-rollout__intro h2");
@@ -6623,6 +7023,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          gsap.from(".galaxy-rollout__step", {
             x: -24,
             autoAlpha: 0,
+            immediateRender: false,
             duration: 0.72,
             stagger: 0.12,
             ease: "power3.out",
@@ -6636,6 +7037,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          gsap.from(".galaxy-rollout__visual", {
             x: 48,
             autoAlpha: 0,
+            immediateRender: false,
             duration: 0.9,
             ease: "power3.out",
             scrollTrigger: window.ScrollTrigger ? {
@@ -6648,6 +7050,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          gsap.from(".galaxy-rollout__float", {
             y: 20,
             autoAlpha: 0,
+            immediateRender: false,
             duration: 0.65,
             stagger: 0.1,
             ease: "power3.out",
@@ -6688,6 +7091,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
          if (window.ScrollTrigger) {
             gsap.registerPlugin(ScrollTrigger);
+            window.addEventListener("load", function () { ScrollTrigger.refresh(); }, { once: true });
+            window.addEventListener("pageshow", function () { ScrollTrigger.refresh(); });
          }
 
          var heading = section.querySelector(".galaxy-logos__intro h2");
@@ -6722,6 +7127,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             y: 34,
             autoAlpha: 0,
             scale: 0.96,
+            immediateRender: false,
             duration: 0.75,
             stagger: 0.05,
             ease: "power3.out",
@@ -6750,6 +7156,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
          if (window.ScrollTrigger) {
             gsap.registerPlugin(ScrollTrigger);
+            window.addEventListener("load", function () { ScrollTrigger.refresh(); }, { once: true });
+            window.addEventListener("pageshow", function () { ScrollTrigger.refresh(); });
          }
 
          [
@@ -6785,6 +7193,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gsap.from(section.querySelectorAll(config.cards), {
                y: 34,
                autoAlpha: 0,
+               immediateRender: false,
                duration: 0.74,
                stagger: 0.07,
                ease: "power3.out",

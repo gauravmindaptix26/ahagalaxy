@@ -49,8 +49,7 @@
    min-height: 82px;
    display: flex;
    align-items: center;
-   justify-content: space-between;
-   gap: 16px;
+   gap: 14px;
 }
 
 .service-page .service-nav__logo img {
@@ -61,8 +60,10 @@
 
 .service-page .service-nav__links {
    display: flex;
+   flex: 1 1 auto;
    align-items: center;
-   gap: 18px;
+   justify-content: center;
+   gap: 14px;
    margin: 0;
    padding: 0;
    list-style: none;
@@ -71,10 +72,27 @@
 .service-page .service-nav__links a,
 .service-page .service-nav__drop > span {
    color: rgba(255, 247, 232, 0.82);
-   font-size: 13px;
+   font-size: 12px;
    font-weight: 900;
-   letter-spacing: 0.08em;
+   letter-spacing: 0.035em;
    text-transform: uppercase;
+}
+
+.service-page .service-nav__links > li {
+   position: relative;
+   flex: 0 0 auto;
+}
+
+.service-page .service-nav__links > li > a,
+.service-page .service-nav__drop > span {
+   min-height: auto;
+   padding: 0 8px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   line-height: 0.96;
+   text-align: center;
+   background: transparent;
 }
 
 .service-page .service-nav__links a:hover,
@@ -84,6 +102,45 @@
 
 .service-page .service-nav__drop {
    position: relative;
+}
+
+.service-page .service-nav__drop > span {
+   position: relative;
+}
+
+.service-page .service-nav__drop > span::after {
+   content: "\f107";
+   position: absolute;
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   font-family: "Font Awesome 6 Free";
+   font-weight: 900;
+}
+
+.service-page .service-nav__label--stacked {
+   width: auto;
+   min-width: 170px;
+   gap: 0;
+   padding-top: 2px;
+   padding-right: 24px !important;
+   padding-bottom: 2px;
+   padding-left: 8px !important;
+}
+
+.service-page .service-nav__label-stack {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 2px;
+   text-align: center;
+   line-height: 1.02;
+}
+
+.service-page .service-nav__label-stack span {
+   display: block;
+   line-height: 1.02;
 }
 
 .service-page .service-nav__menu {
@@ -173,6 +230,24 @@
    letter-spacing: 0.06em;
    text-transform: uppercase;
    box-shadow: 0 18px 40px rgba(255, 138, 61, 0.26);
+}
+
+@media (max-width: 1399px) {
+   .service-page .service-nav__links {
+      gap: 10px;
+   }
+
+   .service-page .service-nav__links > li > a,
+   .service-page .service-nav__drop > span {
+      padding: 0 6px;
+      font-size: 11px;
+      letter-spacing: 0.025em;
+   }
+
+   .service-page .service-nav__label--stacked {
+      min-width: 156px;
+      padding-right: 20px !important;
+   }
 }
 
 .service-hero {

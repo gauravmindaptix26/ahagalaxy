@@ -18,7 +18,7 @@
 </head>
 
 <body class="service-page service-page--outdoor">
-   <header class="service-nav">
+      <header class="service-nav">
       <div class="container">
          <div class="service-nav__inner">
             <a class="service-nav__logo" href="index.html" aria-label="Galaxy Advertisers home">
@@ -28,7 +28,7 @@
                <li><a href="index.html">Home</a></li>
                <li><a href="our-story.html">About Us</a></li>
                <li class="service-nav__drop">
-                  <span>OOH Advertising Services</span>
+                  <span class="service-nav__label--stacked"><span class="service-nav__label-stack"><span>OOH Advertising</span><span>Services</span></span></span>
                   <ul class="service-nav__menu">
                      <li><a href="unipole-advertisment.html">Unipole Advertising in Uttarakhand</a></li>
                      <li><a href="gantry-advertising-gate-entry-branding.html">Gantry Advertising (Gate Entry Branding)</a></li>
@@ -37,7 +37,7 @@
                   </ul>
                </li>
                <li class="service-nav__drop">
-                  <span>Retail &amp; In-Shop Branding</span>
+                  <span class="service-nav__label--stacked"><span class="service-nav__label-stack"><span>Retail &amp; In-Shop</span><span>Branding</span></span></span>
                   <ul class="service-nav__menu">
                      <li><a href="glow-sign-advertisment.html">Glow Sign Boards in Uttarakhand</a></li>
                      <li><a href="flex-board-advertisment.html">Flex Boards / Dealer Boards</a></li>
@@ -45,9 +45,26 @@
                      <li><a href="standee-branding-services.html">Standee Branding Services</a></li>
                   </ul>
                </li>
-               <li><a href="contact-us.html">Contact</a></li>
+               <li class="service-nav__drop">
+                  <span class="service-nav__label--stacked"><span class="service-nav__label-stack"><span>City-wise</span><span>Advertising</span></span></span>
+                  <ul class="service-nav__menu">
+                     <li><a href="outdoor-advertising-dehradun.html">Outdoor Advertising in Dehradun</a></li>
+                     <li><a href="outdoor-advertising-haridwar.html">Outdoor Advertising in Haridwar</a></li>
+                     <li><a href="outdoor-advertising-rishikesh.html">Outdoor Advertising in Rishikesh</a></li>
+                     <li><a href="outdoor-advertising-haldwani.html">Outdoor Advertising in Haldwani</a></li>
+                     <li><a href="outdoor-advertising-roorkee.html">Outdoor Advertising in Roorkee</a></li>
+                  </ul>
+               </li>
+               <li class="service-nav__drop">
+                  <span>Pages</span>
+                  <ul class="service-nav__menu">
+                     <li><a href="our-story.html">Our Story</a></li>
+                     <li><a href="outdoor-media-options.html">Outdoor Media Options</a></li>
+                     <li><a href="contact-us.html">Contact Us</a></li>
+                  </ul>
+               </li>
             </ul>
-            <a class="service-nav__cta" href="tel:+919927010820">Call Now <i class="fa-solid fa-phone"></i></a>
+            <a class="service-nav__cta" href="contact-us.html">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
          </div>
       </div>
    </header>
@@ -310,7 +327,11 @@
          var yearNode = document.getElementById("copyYear");
          if (yearNode) yearNode.textContent = new Date().getFullYear();
          if (!window.gsap || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-         if (window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
+         if (window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+            window.addEventListener("load", function () { ScrollTrigger.refresh(); }, { once: true });
+            window.addEventListener("pageshow", function () { ScrollTrigger.refresh(); });
+         }
          var tl = gsap.timeline({ defaults: { ease: "power4.out" } });
          tl.from(".service-nav", { y: -88, autoAlpha: 0, duration: 0.72 })
             .from(".service-kicker, .service-badge-row span", { x: -26, autoAlpha: 0, duration: 0.62, stagger: 0.08 }, "-=0.28")
@@ -320,7 +341,7 @@
             .from(".service-stage__shot, .service-stage__label, .service-stage__chip", { y: 42, scale: 0.9, autoAlpha: 0, duration: 0.76, stagger: 0.1 }, "-=0.52");
          gsap.utils.toArray(".service-section").forEach(function (section) {
             gsap.from(section.querySelectorAll(".service-head, .service-card, .location-map, .location-pill, .signature-band__panel, .signature-band__aside, .signature-band__list article, .faq-intro, .faq-item"), {
-               y: 42, autoAlpha: 0, duration: 0.72, stagger: 0.08, ease: "power3.out",
+               y: 42, autoAlpha: 0, immediateRender: false, duration: 0.72, stagger: 0.08, ease: "power3.out",
                scrollTrigger: { trigger: section, start: "top 76%", once: true }
             });
          });
@@ -329,3 +350,4 @@
 </body>
 
 </html>
+
