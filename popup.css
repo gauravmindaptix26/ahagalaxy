@@ -1,12 +1,7 @@
-body{
-	font-family: sans-serif;
-	margin:0;
-	line-height: 1.5;
-}
-
-*{
+/* Popup-only styles (avoid overriding site-wide layout) */
+.login-popup,
+.login-popup * {
 	box-sizing: border-box;
-	margin:0;
 }
 
 .login-popup{

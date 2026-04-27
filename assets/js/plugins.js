@@ -680,16 +680,35 @@
 				ease: "power3.inOut",
 			});
 		});
-// 24. smooth scroll
-		if (device_width > 576) {
-			const smoother = ScrollSmoother.create({
-			  smooth: 2.2,
-			  effects: device_width < 992 ? false : true,
-			  smoothTouch: false,
-			  normalizeScroll: false,
-			  ignoreMobileResize: true,
-			});
-		  }
+// 24. smooth scroll (desktop only for performance + mobile scroll reliability)
+		const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+		const shouldUseSmoother = () => window.innerWidth > 991 && !prefersReducedMotion.matches;
+
+		function ensureSmoother() {
+			const existing = typeof ScrollSmoother !== "undefined" ? ScrollSmoother.get() : null;
+			if (shouldUseSmoother()) {
+				if (!existing && typeof ScrollSmoother !== "undefined") {
+					ScrollSmoother.create({
+						smooth: 2.2,
+						effects: true,
+						smoothTouch: false,
+						normalizeScroll: false,
+						ignoreMobileResize: true,
+					});
+				}
+				return;
+			}
+
+			if (existing) {
+				existing.kill();
+			}
+		}
+
+		ensureSmoother();
+		window.addEventListener("resize", ensureSmoother, { passive: true });
+		try {
+			prefersReducedMotion.addEventListener("change", ensureSmoother);
+		} catch {}
 
 		// 25. skill bar progress
 		$("[data-percent]").each(function() {

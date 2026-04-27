@@ -1,32 +1,48 @@
 
-
 const loginPopup = document.querySelector(".login-popup");
 const close = document.querySelector(".close");
 
+if (loginPopup && close) {
+  const POPUP_KEY = "ga_quote_popup_dismissed_v1";
 
-window.addEventListener("load",function(){
+  function isMobile() {
+    return window.matchMedia("(max-width: 767px), (pointer: coarse)").matches;
+  }
 
- showPopup();
- // setTimeout(function(){
- //   loginPopup.classList.add("show");
- // },5000)
+  function alreadyDismissed() {
+    try {
+      return window.localStorage.getItem(POPUP_KEY) === "1";
+    } catch {
+      return false;
+    }
+  }
 
-})
+  function dismissPopup() {
+    loginPopup.classList.remove("show");
+    try {
+      window.localStorage.setItem(POPUP_KEY, "1");
+    } catch {}
+  }
 
-function showPopup(){
-      const timeLimit = 2 // seconds;
-      let i=0;
-      const timer = setInterval(function(){
-       i++;
-       if(i == timeLimit){
-        clearInterval(timer);
-        loginPopup.classList.add("show");
-       } 
-       console.log(i)
-      },1000);
+  function showPopup() {
+    if (alreadyDismissed()) return;
+    if (isMobile()) return; // don't block scroll on mobile
+    loginPopup.classList.add("show");
+  }
+
+  window.addEventListener("load", function () {
+    window.setTimeout(showPopup, 2000);
+  });
+
+  close.addEventListener("click", dismissPopup);
+
+  // Click outside the box closes it
+  loginPopup.addEventListener("click", function (event) {
+    if (event.target === loginPopup) dismissPopup();
+  });
+
+  // ESC closes it
+  window.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") dismissPopup();
+  });
 }
-
-
-close.addEventListener("click",function(){
-  loginPopup.classList.remove("show");
-})

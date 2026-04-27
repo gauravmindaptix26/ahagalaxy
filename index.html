@@ -55,7 +55,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    <!-- main css -->
    <link rel="stylesheet" href="assets/css/main.min.css">
    <link rel="stylesheet" href="assets/css/galaxy-premium.css">
-<link rel="stylesheet" href="popup.css">
 <style>
    .home-hero-v2 {
       position: relative;
@@ -4875,10 +4874,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
    }
 </style>
-<style id="home-mobile-fixes">
+   <style id="home-mobile-fixes">
    @media (max-width: 767px) {
       body {
          overflow-x: hidden;
+      }
+
+      #smooth-wrapper,
+      #smooth-content {
+         height: auto !important;
+         overflow: visible !important;
       }
 
       .search-toggler {
@@ -4890,7 +4895,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          scroll-padding-left: 15px;
          scroll-padding-right: 15px;
          overscroll-behavior-x: contain;
-         touch-action: pan-x;
       }
 
       .galaxy-impact-card {
@@ -6625,6 +6629,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          var hero = document.querySelector(".avista-home");
          if (!hero || !window.gsap) return;
          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+         if (window.matchMedia("(max-width: 991.98px), (pointer: coarse)").matches) return;
 
          var tl = gsap.timeline({ defaults: { ease: "power4.out" } });
          tl.from(".avista-home__kicker", { x: -28, opacity: 0, duration: 0.65 })
@@ -6744,6 +6749,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
          var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
          if (reduceMotion) return;
+         if (window.matchMedia("(max-width: 991.98px), (pointer: coarse)").matches) return;
 
          if (window.ScrollTrigger) {
             gsap.registerPlugin(ScrollTrigger);
@@ -6908,6 +6914,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
          var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
          if (reduceMotion) return;
+         if (window.matchMedia("(max-width: 991.98px), (pointer: coarse)").matches) return;
 
          if (window.ScrollTrigger) {
             gsap.registerPlugin(ScrollTrigger);
@@ -7031,6 +7038,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
          var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
          if (reduceMotion) return;
+         if (window.matchMedia("(max-width: 991.98px), (pointer: coarse)").matches) return;
 
          if (window.ScrollTrigger) {
             gsap.registerPlugin(ScrollTrigger);
@@ -7141,6 +7149,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
          var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
          if (reduceMotion) return;
+         if (window.matchMedia("(max-width: 991.98px), (pointer: coarse)").matches) return;
 
          if (window.ScrollTrigger) {
             gsap.registerPlugin(ScrollTrigger);
@@ -7207,6 +7216,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       (function () {
          if (!window.gsap) return;
          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+         if (window.matchMedia("(max-width: 991.98px), (pointer: coarse)").matches) return;
          if (window.ScrollTrigger) {
             gsap.registerPlugin(ScrollTrigger);
             window.addEventListener("load", function () { ScrollTrigger.refresh(); }, { once: true });
@@ -7264,6 +7274,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          var section = document.querySelector(".galaxy-services");
          if (!section || !window.gsap) return;
          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+         if (window.matchMedia("(max-width: 991.98px), (pointer: coarse)").matches) return;
 
          if (window.ScrollTrigger) {
             gsap.registerPlugin(ScrollTrigger);
@@ -7347,6 +7358,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          var section = document.querySelector(".galaxy-contact");
          if (!section || !window.gsap) return;
          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+         if (window.matchMedia("(max-width: 991.98px), (pointer: coarse)").matches) return;
 
          if (window.ScrollTrigger) {
             gsap.registerPlugin(ScrollTrigger);
@@ -7409,6 +7421,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          if (!hero || !window.gsap) return;
 
          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+         if (window.matchMedia("(max-width: 991.98px), (pointer: coarse)").matches) return;
 
          var tl = gsap.timeline({ defaults: { ease: "power4.out" } });
          tl.from(".home-hero-v3__kicker", { x: -34, opacity: 0, duration: 0.75 })
@@ -7547,6 +7560,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
          var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
          if (reduceMotion) return;
+         if (window.matchMedia("(max-width: 991.98px), (pointer: coarse)").matches) return;
 
          var tl = gsap.timeline({ defaults: { ease: "power4.out" } });
          tl.from(".home-hero-v2__eyebrow", { y: 24, opacity: 0, duration: 0.7 })

@@ -13,6 +13,7 @@
     var hasGsap = typeof window.gsap !== "undefined";
     var hasScrollTrigger = typeof window.ScrollTrigger !== "undefined";
     var hasScrollSmoother = typeof window.ScrollSmoother !== "undefined";
+    var isMobile = window.matchMedia("(max-width: 991.98px), (pointer: coarse)").matches;
 
     if (hasGsap && hasScrollTrigger) {
       gsap.registerPlugin(ScrollTrigger);
@@ -24,6 +25,7 @@
       hasScrollSmoother &&
       document.querySelector("#smooth-wrapper") &&
       document.querySelector("#smooth-content") &&
+      !isMobile &&
       !window.matchMedia("(prefers-reduced-motion: reduce)").matches
     ) {
       gsap.registerPlugin(ScrollSmoother);
