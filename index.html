@@ -4471,6 +4471,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    .galaxy-impact__grid {
       position: relative;
       display: flex;
+      flex-wrap: nowrap;
+      align-items: stretch;
       gap: 18px;
       margin-top: 0 !important;
       overflow-x: auto;
@@ -4479,7 +4481,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       scroll-snap-type: x mandatory;
       scrollbar-color: var(--impact-orange) rgba(255,255,255,0.08);
       scrollbar-width: thin;
-      transform: translate3d(var(--grid-x), var(--grid-y), 0);
+      transform: translate3d(var(--grid-x, 0px), var(--grid-y, 0px), 0);
       will-change: transform;
    }
 
@@ -4500,6 +4502,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    .galaxy-impact-card {
       position: relative;
       flex: 0 0 min(74vw, 650px);
+      width: min(74vw, 650px);
       min-height: 430px;
       aspect-ratio: 1.45;
       scroll-snap-align: start;
@@ -4514,10 +4517,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
    .galaxy-impact-card:nth-child(even) {
       flex-basis: min(74vw, 650px);
+      width: min(74vw, 650px);
    }
 
    .galaxy-impact-card:nth-child(3n) {
       flex-basis: min(74vw, 650px);
+      width: min(74vw, 650px);
    }
 
    .galaxy-impact-card::before {
@@ -4626,6 +4631,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .galaxy-impact-card:nth-child(even),
       .galaxy-impact-card:nth-child(3n) {
          flex-basis: min(82vw, 560px);
+         width: min(82vw, 560px);
       }
    }
 
@@ -4654,6 +4660,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .galaxy-impact-card:nth-child(even),
       .galaxy-impact-card:nth-child(3n) {
          flex-basis: 88%;
+         width: 88%;
          aspect-ratio: auto;
       }
 
@@ -4865,6 +4872,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       .footer-two__social {
          margin-top: 14px;
+      }
+   }
+</style>
+<style id="home-mobile-fixes">
+   @media (max-width: 767px) {
+      body {
+         overflow-x: hidden;
+      }
+
+      .search-toggler {
+         display: none !important;
+      }
+
+      .galaxy-impact__grid {
+         -webkit-overflow-scrolling: touch;
+         scroll-padding-left: 15px;
+         scroll-padding-right: 15px;
+         overscroll-behavior-x: contain;
+         touch-action: pan-x;
+      }
+
+      .galaxy-impact-card {
+         scroll-snap-stop: always;
+      }
+
+      .galaxy-impact-card__content {
+         width: 100%;
+      }
+
+      .agency__thumb img.thumb-one,
+      .agency__thumb img.thumb-two {
+         width: 100% !important;
+         height: auto !important;
+         max-width: 100% !important;
+      }
+
+      .galaxy-showcase-card img {
+         width: 100%;
+         height: 100%;
+      }
+
+      .login-popup .box {
+         width: min(520px, calc(100% - 24px));
+         margin: 12px;
+         max-height: calc(100vh - 24px);
+         overflow: auto;
       }
    }
 </style>
@@ -5288,7 +5341,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </div>
                      </div>
                      <div class="galaxy-impact__grid section__content-cta">
-                        <article class="galaxy-impact-card fade-top">
+                        <article class="galaxy-impact-card">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg" alt="High traffic unipole campaign">
                            <div class="galaxy-impact-card__content">
                               <span>01 / Highways</span>
@@ -5298,7 +5351,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               </div>
                            </div>
                         </article>
-                        <article class="galaxy-impact-card fade-top">
+                        <article class="galaxy-impact-card">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/IMG_8513.jpg" alt="Retail branding display">
                            <div class="galaxy-impact-card__content">
                               <span>02 / Retail</span>
@@ -5308,7 +5361,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               </div>
                            </div>
                         </article>
-                        <article class="galaxy-impact-card fade-top">
+                        <article class="galaxy-impact-card">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Voltas.jpg" alt="Glow sign advertising">
                            <div class="galaxy-impact-card__content">
                               <span>03 / Night Recall</span>
@@ -5318,7 +5371,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               </div>
                            </div>
                         </article>
-                        <article class="galaxy-impact-card fade-top">
+                        <article class="galaxy-impact-card">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/MC-Donalds.jpg" alt="Display board advertising">
                            <div class="galaxy-impact-card__content">
                               <span>04 / Local Media</span>
@@ -5328,7 +5381,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               </div>
                            </div>
                         </article>
-                        <article class="galaxy-impact-card fade-top">
+                        <article class="galaxy-impact-card">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Rishikesh-4.jpg" alt="Roadside campaign on a city route">
                            <div class="galaxy-impact-card__content">
                               <span>05 / City Route</span>
@@ -5338,7 +5391,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               </div>
                            </div>
                         </article>
-                        <article class="galaxy-impact-card fade-top">
+                        <article class="galaxy-impact-card">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Roadside unipole branding">
                            <div class="galaxy-impact-card__content">
                               <span>06 / Arterial Roads</span>
@@ -5348,7 +5401,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               </div>
                            </div>
                         </article>
-                        <article class="galaxy-impact-card fade-top">
+                        <article class="galaxy-impact-card">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Hero.jpg" alt="Brand hoarding in a busy area">
                            <div class="galaxy-impact-card__content">
                               <span>07 / Brand Launch</span>
@@ -5358,7 +5411,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               </div>
                            </div>
                         </article>
-                        <article class="galaxy-impact-card fade-top">
+                        <article class="galaxy-impact-card">
                            <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/TimePhoto_20230711_192014.jpg" alt="Outdoor media installation on a commercial route">
                            <div class="galaxy-impact-card__content">
                               <span>08 / Market Access</span>
