@@ -24,6 +24,10 @@ body {
   background-size: 100% 100%, 100% 100%, 92px 92px, 92px 92px;
 }
 
+.my-app {
+  max-height: none !important;
+}
+
 .primary-navbar {
   transition: background-color 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
 }

@@ -1108,12 +1108,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       --av-orange: #ff7a18;
       --av-dark: #050505;
       --av-panel: #101010;
+      --header-offset: 150px;
       --mx: 70%;
       --my: 32%;
       position: relative;
       min-height: 100vh;
       overflow: hidden;
-      padding-top: 150px;
+      padding-top: var(--header-offset);
       color: #fff;
       background:
          radial-gradient(circle at var(--mx) var(--my), rgba(255,61,31,0.28), transparent 18%),
@@ -1296,6 +1297,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       box-shadow: 0 14px 34px rgba(255,61,31,0.28) !important;
    }
 
+   @media (min-width: 992px) {
+      .header .open-offcanvas-nav {
+         display: none !important;
+      }
+   }
+
    @media (max-width: 1399px) {
       .header .galaxy-desktop-menu > ul {
          gap: 10px !important;
@@ -1319,8 +1326,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          display: none;
       }
 
+      .header .galaxy-desktop-menu {
+         display: none !important;
+      }
+
+      .header .open-offcanvas-nav {
+         display: inline-flex !important;
+         width: 48px !important;
+         min-width: 48px !important;
+         height: 48px !important;
+         border-radius: 999px !important;
+         padding: 0 !important;
+         justify-content: center !important;
+         border: 1px solid rgba(255, 255, 255, 0.14) !important;
+         background: rgba(255, 255, 255, 0.1) !important;
+         color: #fff !important;
+         box-shadow: none !important;
+      }
+
+      .header .open-offcanvas-nav::before,
+      .header .open-offcanvas-nav::after {
+         content: none !important;
+      }
+
+      .nav-quote-btn {
+         height: 48px;
+      }
+
       .avista-home {
-         padding-top: 108px;
+         --header-offset: 108px;
+         padding-top: var(--header-offset);
       }
    }
 
@@ -1355,7 +1390,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    .avista-home__grid {
       position: relative;
       z-index: 2;
-      min-height: calc(100vh - 108px);
+      min-height: calc(100vh - var(--header-offset));
       display: grid;
       grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.08fr);
       align-items: center;
@@ -4024,7 +4059,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
    @media (max-width: 575px) {
       .avista-home {
-         padding-top: 92px;
+         --header-offset: 78px;
+         padding-top: var(--header-offset);
+         min-height: auto;
+      }
+
+      .header .open-offcanvas-nav {
+         width: 44px !important;
+         min-width: 44px !important;
+         height: 44px !important;
+      }
+
+      .nav-quote-btn {
+         height: 44px;
+         padding: 0 16px;
+         font-size: 13px;
+         gap: 8px;
+      }
+
+      .avista-home__grid {
+         display: flex;
+         flex-direction: column;
+         gap: 18px;
+         min-height: auto;
+         align-items: flex-start;
       }
 
       .avista-home h1 {
@@ -4033,18 +4091,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       .avista-home__copy {
          margin-left: 0;
+         padding-bottom: 10px;
       }
 
       .avista-home__stage {
-         min-height: 500px;
+         display: none;
       }
 
       .avista-home__screen {
-         inset: 46px 0 118px;
+         position: relative;
+         inset: auto;
+         height: 260px;
+         margin: 0;
+         transform: none;
       }
 
       .avista-home__poster {
-         width: 72%;
+         display: none;
+      }
+
+      .avista-home__floating {
+         display: none;
       }
 
       .avista-home__service-row {
@@ -4880,21 +4947,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          overflow-x: hidden;
       }
 
-      #smooth-wrapper,
-      #smooth-content {
-         height: auto !important;
-         overflow: visible !important;
+      .my-app {
+         max-height: none !important;
+      }
+
+      .avista-home {
+         padding-top: 78px !important;
+         min-height: auto !important;
       }
 
       .avista-home__grid {
+         display: flex !important;
+         flex-direction: column !important;
+         gap: 18px !important;
          min-height: auto !important;
-         align-items: flex-start !important;
-         padding-top: 10px;
+         padding-top: 0 !important;
       }
 
       .avista-home__copy {
-         padding-bottom: 26px !important;
+         order: 0 !important;
+         padding-bottom: 10px !important;
          margin-left: 0 !important;
+      }
+
+      .avista-home__stage {
+         order: 1 !important;
+         display: none !important;
+         min-height: auto !important;
+         margin-top: 0 !important;
+      }
+
+      .avista-home__screen {
+         position: relative !important;
+         inset: auto !important;
+         height: 260px !important;
+         margin: 0 !important;
+         transform: none !important;
+      }
+
+      .avista-home__poster,
+      .avista-home__floating {
+         display: none !important;
       }
 
       .search-toggler {
@@ -5127,6 +5220,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </ul>
                         </div>
                         <div class="navbar__options">
+                           <button class="open-offcanvas-nav" type="button" aria-label="Open menu">
+                              <i class="fa-solid fa-bars"></i>
+                           </button>
                            <button class="nav-quote-btn js-open-popup" type="button" aria-label="open quote form">
                               Get Quote <i class="fa-solid fa-arrow-right"></i>
                            </button>
