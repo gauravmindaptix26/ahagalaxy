@@ -130,30 +130,34 @@
                <h2>Every in-shop surface can carry a more premium version of your brand.</h2>
                <p>Retail branding works best when each touchpoint feels coordinated, finished and consistent from the exterior sign to the final in-store display.</p>
             </div>
-            <div class="service-grid">
-               <a class="service-card" href="glow-sign-advertisment.html">
-                  <i class="fa-solid fa-lightbulb"></i>
-                  <h3>Glow Sign Boards</h3>
-                  <p>Illuminated storefront branding for stronger recall, especially during evening traffic and busy market hours.</p>
-                  <small>Open Page</small>
+            <div class="separated-links" aria-label="Retail & in-shop branding services">
+               <a class="separated-link" href="glow-sign-advertisment.html" aria-label="Glow Sign Boards in Uttarakhand">
+                  <span>
+                     <span class="separated-link__title">Glow Sign Boards in Uttarakhand</span>
+                     <span class="separated-link__meta">Illuminated storefront identity that stays visible in evening traffic and busy market hours.</span>
+                  </span>
+                  <i class="fa-solid fa-arrow-right"></i>
                </a>
-               <a class="service-card" href="flex-board-advertisment.html">
-                  <i class="fa-solid fa-rectangle-ad"></i>
-                  <h3>Flex Boards / Dealer Boards</h3>
-                  <p>Consistent dealer network branding with dependable visibility and broad rollout adaptability.</p>
-                  <small>Open Page</small>
+               <a class="separated-link" href="flex-board-advertisment.html" aria-label="Flex Boards / Dealer Boards">
+                  <span>
+                     <span class="separated-link__title">Flex Boards / Dealer Boards</span>
+                     <span class="separated-link__meta">Dealer network branding designed for fast rollouts, consistent layouts and reliable visibility.</span>
+                  </span>
+                  <i class="fa-solid fa-arrow-right"></i>
                </a>
-               <a class="service-card" href="display-board-advertisment.html">
-                  <i class="fa-solid fa-sun"></i>
-                  <h3>Sun Boards</h3>
-                  <p>Clean, durable display surfaces for offers, walls, product zones and everyday retail messaging.</p>
-                  <small>Open Page</small>
+               <a class="separated-link" href="display-board-advertisment.html" aria-label="Sun Boards Advertising">
+                  <span>
+                     <span class="separated-link__title">Sun Boards Advertising</span>
+                     <span class="separated-link__meta">Clean, durable display boards for offers, shop walls, product zones and everyday retail messaging.</span>
+                  </span>
+                  <i class="fa-solid fa-arrow-right"></i>
                </a>
-               <a class="service-card" href="standee-branding-services.html">
-                  <i class="fa-solid fa-person-chalkboard"></i>
-                  <h3>Standies</h3>
-                  <p>Portable attention builders for launches, festive windows, counters and high-footfall store entries.</p>
-                  <small>Open Page</small>
+               <a class="separated-link" href="standee-branding-services.html" aria-label="Standee Branding Services">
+                  <span>
+                     <span class="separated-link__title">Standee Branding Services</span>
+                     <span class="separated-link__meta">Portable attention-builders for launches, counters, entrances and seasonal retail promotions.</span>
+                  </span>
+                  <i class="fa-solid fa-arrow-right"></i>
                </a>
             </div>
          </div>
@@ -415,6 +419,8 @@
 
    <script src="assets/vendor/gsap/gsap.min.js"></script>
    <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+   <script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script>
+   <script src="assets/vendor/gsap/SplitText.min.js"></script>
    <script>
       (function () {
          var yearNode = document.getElementById("copyYear");
@@ -426,6 +432,8 @@
             window.addEventListener("load", function () { ScrollTrigger.refresh(); }, { once: true });
             window.addEventListener("pageshow", function () { ScrollTrigger.refresh(); });
          }
+
+         if (window.ScrollToPlugin) gsap.registerPlugin(ScrollToPlugin);
 
          var tl = gsap.timeline({ defaults: { ease: "power4.out" } });
          tl.from(".service-nav", { y: -88, autoAlpha: 0, duration: 0.72 })
@@ -440,7 +448,7 @@
          gsap.to(".service-stage__label", { y: 10, duration: 2.6, repeat: -1, yoyo: true, ease: "sine.inOut" });
 
          gsap.utils.toArray(".service-section").forEach(function (section) {
-            gsap.from(section.querySelectorAll(".service-head, .service-card, .location-map, .location-pill, .signature-band__panel, .signature-band__aside, .signature-band__list article, .showcase-card, .campaign-rail article, .faq-intro, .faq-item"), {
+            gsap.from(section.querySelectorAll(".service-head, .service-card, .separated-link, .location-map, .location-pill, .signature-band__panel, .signature-band__aside, .signature-band__list article, .showcase-card, .campaign-rail article, .faq-intro, .faq-item"), {
                y: 42,
                autoAlpha: 0,
                immediateRender: false,
@@ -459,7 +467,7 @@
             scrollTrigger: { trigger: ".service-cta", start: "top 78%", once: true }
          });
 
-         document.querySelectorAll(".service-card").forEach(function (card) {
+         document.querySelectorAll(".service-card, .separated-link").forEach(function (card) {
             card.addEventListener("mousemove", function (event) {
                var box = card.getBoundingClientRect();
                var px = ((event.clientX - box.left) / box.width) * 100;
@@ -470,6 +478,35 @@
             });
             card.addEventListener("mouseleave", function () {
                gsap.to(card, { y: 0, rotateX: 0, rotateY: 0, duration: 0.45, ease: "power3.out" });
+            });
+         });
+
+         if (window.SplitText) {
+            try {
+               gsap.utils.toArray(".service-head h2, .signature-band__panel h3, .faq-intro h3").forEach(function (node) {
+                  var split = new SplitText(node, { type: "lines,words", linesClass: "split-line" });
+                  gsap.set(split.words, { yPercent: 120, rotate: 1, autoAlpha: 0 });
+                  gsap.to(split.words, {
+                     yPercent: 0,
+                     rotate: 0,
+                     autoAlpha: 1,
+                     duration: 0.9,
+                     stagger: 0.02,
+                     ease: "power4.out",
+                     scrollTrigger: { trigger: node, start: "top 82%", once: true }
+                  });
+               });
+            } catch (e) { }
+         }
+
+         document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+            link.addEventListener("click", function (event) {
+               var href = link.getAttribute("href");
+               if (!href || href.length < 2) return;
+               var target = document.querySelector(href);
+               if (!target || !window.ScrollToPlugin) return;
+               event.preventDefault();
+               gsap.to(window, { duration: 0.95, scrollTo: { y: target, offsetY: 90 }, ease: "power3.out" });
             });
          });
 

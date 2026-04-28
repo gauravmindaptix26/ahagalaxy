@@ -15,6 +15,70 @@
    <link rel="stylesheet" href="assets/css/main.min.css">
    <link rel="stylesheet" href="assets/css/galaxy-premium.css">
    <link rel="stylesheet" href="assets/css/service-pages.css">
+   <style>
+      .service-trust {
+         margin-top: 18px;
+         display: inline-flex;
+         align-items: center;
+         gap: 10px;
+         padding: 10px 14px;
+         border-radius: 999px;
+         border: 1px solid rgba(255, 255, 255, 0.10);
+         background: rgba(255, 255, 255, 0.04);
+         color: rgba(255, 248, 235, 0.82);
+         font-weight: 900;
+         letter-spacing: 0.02em;
+      }
+
+      .service-trust i {
+         color: var(--page-accent-strong);
+      }
+
+      .showcase-grid--two {
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .city-points {
+         margin: 12px 0 0;
+         padding: 0;
+         list-style: none;
+         display: grid;
+         gap: 8px;
+         color: rgba(255, 248, 235, 0.78);
+         line-height: 1.55;
+      }
+
+      .city-points li {
+         display: flex;
+         gap: 10px;
+         align-items: flex-start;
+      }
+
+      .city-points li i {
+         margin-top: 3px;
+         color: var(--page-accent-strong);
+      }
+
+      @media (max-width: 991.98px) {
+         .showcase-grid--two {
+            grid-template-columns: 1fr;
+         }
+      }
+
+      @media (min-width: 992px) {
+         .service-hero h1 {
+            max-width: 700px;
+            font-size: clamp(2.6rem, 4.6vw, 5.4rem);
+            line-height: 0.98;
+            letter-spacing: -0.03em;
+         }
+
+         .service-stage {
+            align-self: start;
+            margin-top: -18px;
+         }
+      }
+   </style>
 </head>
 
 <body class="service-page service-page--outdoor">
@@ -90,6 +154,7 @@
                      <a class="service-btn" href="tel:+919927010820">Contact for Details <i class="fa-solid fa-arrow-right"></i></a>
                      <a class="service-btn service-btn--ghost" href="#locations">View Corridors</a>
                   </div>
+                  <div class="service-trust"><i class="fa-solid fa-circle-check"></i> Route planning + premium highway visibility across Uttarakhand</div>
                   <div class="service-hero__stats">
                      <article><strong>Long Route</strong><span>Best for intercity travel and extended exposure windows</span></article>
                      <article><strong>Travel Recall</strong><span>Works across tourism, pilgrimage and highway commute traffic</span></article>
@@ -114,6 +179,34 @@
          </div>
       </section>
 
+      <section class="service-section" id="about-highway">
+         <div class="container">
+            <div class="service-head">
+               <span class="service-kicker">Introduction</span>
+               <h2>What are Highway Hoardings?</h2>
+               <p>Highway hoardings are outdoor billboard structures placed on <strong>intercity routes</strong>, approach roads and tourism corridors. The format performs best when the audience is in motion for long durations—drivers, passengers, tourists and pilgrims—creating repeated exposure and stronger brand recall through route repetition.</p>
+            </div>
+            <div class="campaign-rail" aria-label="Highway hoardings basics">
+               <article>
+                  <strong>Travel-Time Visibility</strong>
+                  <p>Long journeys create multiple attention reset moments for recall.</p>
+               </article>
+               <article>
+                  <strong>Broad Audience</strong>
+                  <p>Drivers, passengers, pilgrims and tourists become part of the visibility window.</p>
+               </article>
+               <article>
+                  <strong>Route Sequencing</strong>
+                  <p>Best when placements are planned as a corridor memory chain.</p>
+               </article>
+               <article>
+                  <strong>Regional Awareness</strong>
+                  <p>Ideal for brands needing coverage beyond a single city or market.</p>
+               </article>
+            </div>
+         </div>
+      </section>
+
       <section class="service-section service-section--dark">
          <div class="container">
             <div class="service-head">
@@ -121,7 +214,7 @@
                <h2>Why highway hoardings stay powerful for regional awareness campaigns.</h2>
                <p>Highway formats create broad visibility, repeated impressions and stronger route ownership for brands targeting moving audiences across longer distances.</p>
             </div>
-            <div class="service-grid">
+            <div class="service-grid service-grid--scroll" aria-label="Highway hoardings benefits">
                <article class="service-card">
                   <i class="fa-solid fa-route"></i>
                   <h3>Long Journey Exposure</h3>
@@ -146,6 +239,12 @@
                   <p>Helpful for campaigns that need quick regional visibility beyond a single city or market.</p>
                   <small>High Spread</small>
                </article>
+               <article class="service-card">
+                  <i class="fa-solid fa-layer-group"></i>
+                  <h3>Corridor Coverage</h3>
+                  <p>Multiple boards across a route create a memory chain stronger than one isolated placement.</p>
+                  <small>Route Sequence</small>
+               </article>
             </div>
          </div>
       </section>
@@ -154,29 +253,43 @@
          <div class="container">
             <div class="signature-band">
                <div class="signature-band__panel">
-                  <span class="signature-band__eyebrow">Route Planning</span>
-                  <h3>Highway campaigns work when the route sequence is planned as a memory chain.</h3>
-                  <p>Instead of treating one board as enough, we consider direction of travel, rest points, corridor significance and whether the route supports repeated brand reinforcement.</p>
+                  <span class="signature-band__eyebrow">How It Works</span>
+                  <h3>From brief to live highway campaign — route-based planning and execution.</h3>
+                  <p>Share your target corridor and campaign goal. We shortlist the best highway hoardings, guide distance-friendly creative, and execute printing + installation so the campaign goes live with consistent route recall.</p>
                   <div class="signature-band__list">
                      <article>
                         <span>01</span>
                         <div>
-                           <strong>Intercity Flow</strong>
-                           <p>We focus on corridors with meaningful travel volume rather than isolated placements.</p>
+                           <strong>Share corridor + objective</strong>
+                           <p>Tell us your route, cities, duration and awareness goal.</p>
                         </div>
                      </article>
                      <article>
                         <span>02</span>
                         <div>
-                           <strong>Destination Relevance</strong>
-                           <p>Route choice depends on whether the audience is traveling toward a market, city or tourist zone.</p>
+                           <strong>Shortlist best hoardings</strong>
+                           <p>We propose sites with traffic, approach angle and visibility context.</p>
                         </div>
                      </article>
                      <article>
                         <span>03</span>
                         <div>
-                           <strong>Large Readability</strong>
-                           <p>Creative needs distance-friendly structure because highway viewers process information at speed.</p>
+                           <strong>Finalize creative sizing</strong>
+                           <p>We help keep visuals bold, copy short and readable at speed.</p>
+                        </div>
+                     </article>
+                     <article>
+                        <span>04</span>
+                        <div>
+                           <strong>Printing &amp; installation</strong>
+                           <p>Production + on-ground execution with site coordination as needed.</p>
+                        </div>
+                     </article>
+                     <article>
+                        <span>05</span>
+                        <div>
+                           <strong>Campaign goes live</strong>
+                           <p>Your corridor starts building repeated recall through travel frequency.</p>
                         </div>
                      </article>
                   </div>
@@ -184,8 +297,8 @@
                <div class="signature-band__aside">
                   <img src="assets/images/unipole/TimePhoto_20230426_125248.jpg" alt="Highway outdoor route branding">
                   <div class="signature-band__quote">
-                     <strong>Best For</strong>
-                     <p>Tourism, institutions, hospitality, food brands, auto, finance and regional visibility campaigns targeting people on the move.</p>
+                     <strong>Execution Promise</strong>
+                     <p>End-to-end support: route selection, creative sizing, printing and installation with quick campaign execution.</p>
                   </div>
                </div>
             </div>
@@ -196,12 +309,21 @@
          <div class="container">
             <div class="service-head">
                <span class="service-kicker">Corridors</span>
-               <h2>Highway hoardings planned for road movement, pilgrim traffic and tourism flow.</h2>
-               <p>Route selection can be aligned with major destinations, travel circuits and intercity roads where audiences remain in transit for longer durations.</p>
+               <h2>Highway hoardings planned for tourism flow, pilgrimage routes and intercity movement.</h2>
+               <p>We align locations with major destinations and travel circuits so the brand appears repeatedly through the journey—building stronger corridor recall.</p>
             </div>
             <div class="location-panel">
-               <div class="location-map">
-                  <img src="assets/images/service-pages/services-available.jpeg" alt="Galaxy Advertisers service regions">
+               <div class="location-map location-map--stack" aria-label="Highway coverage preview">
+                  <div class="location-map__main">
+                     <img src="assets/images/unipole/TimePhoto_20230401_152413.jpg" alt="Highway hoarding coverage across Uttarakhand routes">
+                  </div>
+                  <div class="location-map__mini" aria-hidden="true">
+                     <img src="assets/images/unipole/TimePhoto_20230403_160422.jpg" alt="">
+                  </div>
+                  <div class="location-map__badge">
+                     <span>Coverage Snapshot</span>
+                     <strong>Highways + city approaches</strong>
+                  </div>
                </div>
                <div class="location-list">
                   <div class="location-pill"><i class="fa-solid fa-road"></i> Haridwar Corridors</div>
@@ -214,46 +336,328 @@
                   <div class="location-pill"><i class="fa-solid fa-map-location-dot"></i> Uttarakhand Network</div>
                </div>
             </div>
+
+            <div class="service-head" style="margin-top: 42px;">
+               <h2 style="font-size: clamp(1.7rem, 3.2vw, 2.6rem);">Route-wise highway hoarding highlights</h2>
+               <p>Highway campaigns perform best when placements follow the way people actually travel—tourism circuits, pilgrimage corridors and intercity approaches.</p>
+            </div>
+
+            <div class="showcase-grid showcase-grid--two" aria-label="Highway corridors by route">
+               <article class="showcase-card">
+                  <img src="assets/images/unipole/TimePhoto_20230403_160422.jpg" alt="Highway hoardings on Haridwar corridors">
+                  <div class="showcase-card__content">
+                     <span>Haridwar</span>
+                     <h3>Pilgrim + intercity corridors</h3>
+                     <p>Route planning focused on high-frequency movement and decision-point visibility.</p>
+                     <ul class="city-points" aria-label="Haridwar corridor notes">
+                        <li><i class="fa-solid fa-circle-check"></i> Strong for destination-led awareness</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Works well with gate entry + city unipoles</li>
+                     </ul>
+                  </div>
+               </article>
+               <article class="showcase-card">
+                  <img src="assets/images/unipole/TimePhoto_20230401_152413.jpg" alt="Highway advertising near city approach roads">
+                  <div class="showcase-card__content">
+                     <span>Dehradun</span>
+                     <h3>Approach roads + regional recall</h3>
+                     <p>Ideal for brands needing exposure across travel routes and city approaches.</p>
+                     <ul class="city-points" aria-label="Dehradun corridor notes">
+                        <li><i class="fa-solid fa-circle-check"></i> Great for launches and regional campaigns</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Sequence placements for higher frequency</li>
+                     </ul>
+                  </div>
+               </article>
+               <article class="showcase-card">
+                  <img src="assets/images/unipole/TimePhoto_20230426_125248.jpg" alt="Tourism corridor highway hoardings in Uttarakhand">
+                  <div class="showcase-card__content">
+                     <span>Tourism Circuits</span>
+                     <h3>Tourist movement visibility</h3>
+                     <p>Works well when seasons increase route traffic and audience variety.</p>
+                     <ul class="city-points" aria-label="Tourism corridor notes">
+                        <li><i class="fa-solid fa-circle-check"></i> Best for hospitality, retail and FMCG</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Use bold visuals and short copy</li>
+                     </ul>
+                  </div>
+               </article>
+               <article class="showcase-card">
+                  <img src="assets/images/unipole/IMG_20230601_092941.jpg" alt="Highway hoardings for intercity routes">
+                  <div class="showcase-card__content">
+                     <span>Intercity</span>
+                     <h3>Long-distance awareness</h3>
+                     <p>Ideal when the brand wants repeated exposure across multiple travel segments.</p>
+                     <ul class="city-points" aria-label="Intercity corridor notes">
+                        <li><i class="fa-solid fa-circle-check"></i> Build a corridor memory chain</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Add city formats for final conversion layer</li>
+                     </ul>
+                  </div>
+               </article>
+            </div>
          </div>
       </section>
 
-      <section class="service-section service-section--dark">
+      <section class="service-section service-section--dark" id="options">
          <div class="container">
-            <div class="faq-shell">
-               <div class="faq-intro">
-                  <span class="service-kicker">FAQ</span>
-                  <h3>Questions before choosing highway hoardings in Uttarakhand.</h3>
-                  <p>Highway formats are most effective when the audience is route-based and the campaign objective is broad awareness with repeated road exposure.</p>
+            <div class="service-head">
+               <span class="service-kicker">Options</span>
+               <h2>Highway hoarding options for Uttarakhand travel corridors</h2>
+               <p>We recommend the right mix based on route speed, viewing distance, night visibility needs and the campaign’s awareness goal.</p>
+            </div>
+            <div class="service-grid service-grid--scroll" aria-label="Highway hoarding options">
+               <article class="service-card">
+                  <i class="fa-solid fa-rectangle-ad"></i>
+                  <h3>Standard highway hoardings</h3>
+                  <p>Strong for repeated exposure on busy intercity routes and approach roads.</p>
+                  <small>Core Format</small>
+               </article>
+               <article class="service-card">
+                  <i class="fa-solid fa-arrows-left-right"></i>
+                  <h3>Two-side visibility</h3>
+                  <p>Best when both travel directions matter for campaign frequency.</p>
+                  <small>Higher Reach</small>
+               </article>
+               <article class="service-card">
+                  <i class="fa-solid fa-moon"></i>
+                  <h3>Illuminated visibility</h3>
+                  <p>Improves recall for long-hour movement routes and evening travel windows.</p>
+                  <small>Night Recall</small>
+               </article>
+               <article class="service-card">
+                  <i class="fa-solid fa-route"></i>
+                  <h3>Route packages</h3>
+                  <p>Multiple boards planned across a corridor to create a memory chain.</p>
+                  <small>Route Sequence</small>
+               </article>
+               <article class="service-card">
+                  <i class="fa-solid fa-ruler-combined"></i>
+                  <h3>Custom sizing &amp; tenure</h3>
+                  <p>We align size, duration and message type with budget and route behavior.</p>
+                  <small>Planned Fit</small>
+               </article>
+            </div>
+         </div>
+      </section>
+
+      <section class="service-section" id="industries">
+         <div class="container">
+            <div class="service-head">
+               <span class="service-kicker">Industries</span>
+               <h2>Ideal industries for highway hoardings in Uttarakhand</h2>
+               <p>Highway visibility works best for brands that benefit from broad travel-audience reach and repeated exposure across routes.</p>
+            </div>
+            <div class="service-grid service-grid--three" aria-label="Industries for highway hoardings">
+               <article class="service-card">
+                  <i class="fa-solid fa-hotel"></i>
+                  <h3>Tourism &amp; Hotels</h3>
+                  <p>Capture destination travel routes and seasonal movement peaks.</p>
+                  <small>Tourist Flow</small>
+               </article>
+               <article class="service-card">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <h3>Education</h3>
+                  <p>Build broad awareness beyond one city with corridor-led placements.</p>
+                  <small>Wide Reach</small>
+               </article>
+               <article class="service-card">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <h3>Retail &amp; FMCG</h3>
+                  <p>Repeated exposure helps improve brand familiarity and market recall.</p>
+                  <small>Mass Awareness</small>
+               </article>
+               <article class="service-card">
+                  <i class="fa-solid fa-car"></i>
+                  <h3>Auto &amp; Mobility</h3>
+                  <p>Perfect for road audiences and route-led campaign planning.</p>
+                  <small>On-Road Fit</small>
+               </article>
+               <article class="service-card">
+                  <i class="fa-solid fa-building"></i>
+                  <h3>Real Estate</h3>
+                  <p>Drive interest across city approaches and key corridor movement.</p>
+                  <small>High Intent</small>
+               </article>
+               <article class="service-card">
+                  <i class="fa-solid fa-store"></i>
+                  <h3>Regional Businesses</h3>
+                  <p>Compete at scale by owning the routes people travel repeatedly.</p>
+                  <small>Scale</small>
+               </article>
+            </div>
+         </div>
+      </section>
+
+      <section class="service-section service-section--dark" id="quote">
+         <div class="container">
+            <div class="pricing-cta" aria-label="Get a custom highway hoarding quote">
+               <div class="pricing-cta__left">
+                  <span class="pricing-cta__eyebrow">Fast Response</span>
+                  <h3>Get a Custom Highway Hoarding Quote</h3>
+                  <p>Call or WhatsApp to check availability, route options and the strongest corridors across Uttarakhand.</p>
+                  <ul class="pricing-cta__points" aria-label="Quote benefits">
+                     <li><i class="fa-solid fa-location-crosshairs"></i> Route + corridor recommendations</li>
+                     <li><i class="fa-solid fa-pen-ruler"></i> Distance-friendly creative support</li>
+                     <li><i class="fa-solid fa-bolt"></i> Quick execution timeline</li>
+                  </ul>
                </div>
-               <div class="faq-list">
-                  <details class="faq-item" open>
-                     <summary>What type of brand benefits most from highway hoardings? <span>+</span></summary>
-                     <p>Brands targeting large regional audiences, travelers, tourists, pilgrims and intercity commuters benefit the most from highway hoardings.</p>
-                  </details>
-                  <details class="faq-item">
-                     <summary>Are highway hoardings suitable for product launches? <span>+</span></summary>
-                     <p>Yes. They are useful when the launch needs broad regional awareness rather than only city-level exposure.</p>
-                  </details>
-                  <details class="faq-item">
-                     <summary>How should creative be designed for highway visibility? <span>+</span></summary>
-                     <p>Use big visuals, short copy and a clean hierarchy so the message can be understood quickly at speed.</p>
-                  </details>
-                  <details class="faq-item">
-                     <summary>Can highway boards be combined with city formats? <span>+</span></summary>
-                     <p>Yes. Highway hoardings often work best when combined with city entries or local formats to close the campaign memory loop.</p>
-                  </details>
+               <div class="pricing-cta__actions">
+                  <a class="pricing-cta__btn" href="tel:+919837241310">Call <i class="fa-solid fa-phone"></i></a>
+                  <a class="pricing-cta__btn pricing-cta__btn--wa" href="https://wa.me/919837241310?text=Hello%20Galaxy%20Advertisers%2C%20I%20need%20highway%20hoardings%20pricing%20and%20locations%20in%20Uttarakhand." target="_blank" rel="noopener">WhatsApp <i class="fa-brands fa-whatsapp"></i></a>
+                  <a class="pricing-cta__primary" href="contact-us.html">Get Custom Quote <i class="fa-solid fa-arrow-right"></i></a>
                </div>
             </div>
          </div>
       </section>
 
-      <section class="service-cta">
+      <section class="service-section" id="ooh-services" aria-label="OOH Advertising Services">
          <div class="container">
-            <div class="service-cta__inner">
-               <h2>Build regional travel-route visibility with premium highway hoardings in Uttarakhand.</h2>
-               <div class="service-cta__meta">
-                  <a href="https://ahagalaxy.com/"><i class="fa-solid fa-globe"></i> https://ahagalaxy.com/</a>
-                  <a href="tel:+919927010820"><i class="fa-solid fa-phone"></i> +91 9927010820</a>
+            <div class="service-head">
+               <span class="service-kicker">OOH Advertising</span>
+               <h2>Explore OOH Advertising Services</h2>
+               <p>Jump to our key outdoor formats. Open a service page, or go back to the home page anytime.</p>
+            </div>
+
+            <div class="ooh-hub" aria-label="OOH advertising service list">
+               <a class="hub-card" href="outdoor-media-options.html" aria-label="OOH Advertising Services">
+                  <div class="hub-card__icon"><i class="fa-solid fa-bullhorn"></i></div>
+                  <h3>OOH Advertising Services</h3>
+                  <p>Explore all outdoor advertising formats and media options available.</p>
+                  <div class="hub-card__meta"><span>View Service</span><i class="fa-solid fa-arrow-right"></i></div>
+               </a>
+               <a class="hub-card" href="in-shop-branding.html" aria-label="Retail & In-Shop Branding">
+                  <div class="hub-card__icon"><i class="fa-solid fa-store"></i></div>
+                  <h3>Retail &amp; In-Shop Branding</h3>
+                  <p>In-store displays, standees, and retail branding solutions.</p>
+                  <div class="hub-card__meta"><span>View Service</span><i class="fa-solid fa-arrow-right"></i></div>
+               </a>
+            </div>
+
+            <div class="ooh-hub__actions" aria-label="OOH service navigation">
+               <a class="pricing-cta__primary" href="index.html">Go to Home <i class="fa-solid fa-house"></i></a>
+               <a class="pricing-cta__btn" href="outdoor-media-options.html">View All Services <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+         </div>
+      </section>
+
+      <section class="service-section service-section--dark" aria-label="Internal links">
+         <div class="container">
+            <div class="service-head">
+               <span class="service-kicker">Explore</span>
+               <h2>Related services &amp; pages</h2>
+               <p>Explore formats that pair well with highway hoardings for complete route-to-city coverage.</p>
+            </div>
+            <div class="service-grid" aria-label="Related links">
+               <a class="service-card" href="unipole-advertising-uttarakhand.html" aria-label="Unipole advertising services">
+                  <i class="fa-solid fa-crown"></i>
+                  <h3>Unipole Advertising</h3>
+                  <p>Premium single-pole structures for long-distance visibility and brand authority.</p>
+                  <small>Unipoles</small>
+               </a>
+               <a class="service-card" href="gantry-advertising-gate-entry-branding.html" aria-label="Gantry entry branding services">
+                  <i class="fa-solid fa-archway"></i>
+                  <h3>Gantry Advertising</h3>
+                  <p>Own the arrival moment at city gates, market entries and corridor starts.</p>
+                  <small>Gate Entry</small>
+               </a>
+               <a class="service-card" href="large-format-billboards-uttarakhand.html" aria-label="Large billboard advertising services">
+                  <i class="fa-solid fa-border-all"></i>
+                  <h3>Large Format Billboards</h3>
+                  <p>Built for launches, mass awareness and premium outdoor presence at scale.</p>
+                  <small>Billboards</small>
+               </a>
+               <a class="service-card" href="contact-us.html" aria-label="Contact Galaxy Advertisers">
+                  <i class="fa-solid fa-headset"></i>
+                  <h3>Contact Page</h3>
+                  <p>Get a custom quote with locations, availability and execution timeline.</p>
+                  <small>Get Quote</small>
+               </a>
+            </div>
+         </div>
+      </section>
+
+      <section class="service-section service-section--dark">
+         <div class="container">
+            <div class="service-head">
+               <span class="service-kicker">Portfolio</span>
+               <h2>Highway hoarding visibility examples &amp; corridor-style recall</h2>
+               <p>A few examples of outdoor placements that match the long-view visibility and repeated exposure behavior of highway hoardings.</p>
+            </div>
+            <div class="showcase-grid" aria-label="Highway hoardings portfolio showcase">
+               <article class="showcase-card">
+                  <img src="assets/images/unipole/TimePhoto_20230401_152413.jpg" alt="Highway hoarding placement on a major route">
+                  <div class="showcase-card__content">
+                     <span>Highway</span>
+                     <h3>Long-view visibility</h3>
+                     <p>Ideal for routes where the audience sees the brand early and repeatedly.</p>
+                  </div>
+               </article>
+               <article class="showcase-card">
+                  <img src="assets/images/unipole/TimePhoto_20230403_160422.jpg" alt="Roadside highway advertising structure visibility">
+                  <div class="showcase-card__content">
+                     <span>Corridor</span>
+                     <h3>Route-based recall</h3>
+                     <p>Best when placements are sequenced to build a memory chain.</p>
+                  </div>
+               </article>
+               <article class="showcase-card">
+                  <img src="assets/images/unipole/TimePhoto_20230426_125248.jpg" alt="Highway outdoor route branding example">
+                  <div class="showcase-card__content">
+                     <span>Travel</span>
+                     <h3>Tourist + commuter reach</h3>
+                     <p>Strong for destinations where travel movement stays high.</p>
+                  </div>
+               </article>
+               <article class="showcase-card">
+                  <img src="assets/images/unipole/IMG_20230601_092941.jpg" alt="Outdoor hoarding placement on a busy route">
+                  <div class="showcase-card__content">
+                     <span>Approach</span>
+                     <h3>City approach dominance</h3>
+                     <p>Works well near approach roads and destination entry corridors.</p>
+                  </div>
+               </article>
+               <article class="showcase-card">
+                  <img src="assets/images/unipole/Shivalik Nagar Chowk (2).jpg" alt="Outdoor placement at a prominent junction">
+                  <div class="showcase-card__content">
+                     <span>Junction</span>
+                     <h3>Decision-point visibility</h3>
+                     <p>Useful where traffic slows and readability time increases.</p>
+                  </div>
+               </article>
+               <article class="showcase-card">
+                  <img src="assets/images/unipole/IMG_7235.JPG" alt="Large outdoor visibility example on a route">
+                  <div class="showcase-card__content">
+                     <span>Scale</span>
+                     <h3>Mass awareness presence</h3>
+                     <p>Built for campaigns needing broad, repeated exposure at scale.</p>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </section>
+
+      <section class="service-section">
+         <div class="container">
+            <div class="faq-shell">
+               <div class="faq-intro">
+                  <span class="service-kicker">FAQ</span>
+                  <h3>FAQs about highway hoardings in Uttarakhand</h3>
+                  <p>Quick answers about pricing, routes, creative guidelines and campaign planning.</p>
+               </div>
+               <div class="faq-list">
+                  <details class="faq-item" open>
+                     <summary>Which routes are best for highway hoardings? <span>+</span></summary>
+                     <p>The best route depends on your audience—tourism, pilgrimage or intercity commuters. We recommend corridors where travel time, approach angle and traffic volume match your campaign goal.</p>
+                  </details>
+                  <details class="faq-item">
+                     <summary>How should creative be designed for highway visibility? <span>+</span></summary>
+                     <p>Use big visuals, short copy and high contrast. Highway viewers process information quickly, so a clean hierarchy performs best.</p>
+                  </details>
+                  <details class="faq-item">
+                     <summary>Is a single board enough for a highway campaign? <span>+</span></summary>
+                     <p>One board can work, but multiple boards spaced along a route create much stronger recall through repeated exposure.</p>
+                  </details>
+                  <details class="faq-item">
+                     <summary>Can highway hoardings be combined with city formats? <span>+</span></summary>
+                     <p>Yes. Highway visibility becomes stronger when paired with gantry branding at entry points and unipoles inside the city to complete the memory loop.</p>
+                  </details>
                </div>
             </div>
          </div>
@@ -266,8 +670,8 @@
             <div class="col-12 col-lg-5 col-xl-4">
                <div class="footer-two__left">
                   <div class="logo"><a href="index.html"><img src="assets/images/Logo2.png" alt="Galaxy Advertisers" width="150"></a></div>
-                  <div class="paragraph"><p>Welcome to top outdoor advertising agency in Uttarakhand. We specialize in helping business most like yours succeed offline. From unipole advertisment to In Shop Branding.</p></div>
-                  <div class="footer-service-tags" aria-label="Galaxy advertising services"><span>Unipole</span><span>Hoardings</span><span>Glow Sign</span><span>In-Shop Branding</span></div>
+                  <div class="paragraph"><p>Galaxy Advertisers plans premium highway hoardings, corridor-led outdoor campaigns and route-based visibility across Uttarakhand.</p></div>
+                  <div class="footer-service-tags" aria-label="Galaxy advertising services"><span>Highway Hoardings</span><span>Unipole</span><span>Gantry</span><span>In-Shop Branding</span></div>
                   <div class="section__content-cta"><h2><a href="mailto:galaxyadvertisers1996@gmail.com" class="folks-text">galaxyadvertisers1996@gmail.com</a></h2></div>
                </div>
             </div>
@@ -301,12 +705,68 @@
          var yearNode = document.getElementById("copyYear");
          if (yearNode) yearNode.textContent = new Date().getFullYear();
          if (!window.gsap || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-         if (window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
+         if (window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+            window.addEventListener("load", function () { ScrollTrigger.refresh(); }, { once: true });
+            window.addEventListener("pageshow", function () { ScrollTrigger.refresh(); });
+         }
          var tl = gsap.timeline({ defaults: { ease: "power4.out" } });
          tl.from(".service-nav", { y: -88, autoAlpha: 0, duration: 0.72 })
             .from(".service-kicker, .service-badge-row span", { x: -26, autoAlpha: 0, duration: 0.62, stagger: 0.08 }, "-=0.28")
             .from(".service-hero h1 span > span", { yPercent: 108, rotate: 4, duration: 0.92, stagger: 0.09 }, "-=0.2")
-            .from(".service-hero__copy p, .service-actions, .service-hero__stats article", { y: 28, autoAlpha: 0, duration: 0.7, stagger: 0.1 }, "-=0.48");
+            .from(".service-hero__copy p, .service-actions, .service-trust, .service-hero__stats article", { y: 28, autoAlpha: 0, duration: 0.7, stagger: 0.1 }, "-=0.48")
+            .from(".service-stage__photo", { x: 80, rotate: 4, scale: 0.94, autoAlpha: 0, duration: 0.96 }, "-=0.95")
+            .from(".service-stage__shot, .service-stage__label, .service-stage__chip", { y: 42, scale: 0.9, autoAlpha: 0, duration: 0.76, stagger: 0.1 }, "-=0.52");
+
+         gsap.to(".service-stage__photo img", { scale: 1.08, duration: 8, repeat: -1, yoyo: true, ease: "sine.inOut" });
+         gsap.to(".service-stage__shot", { y: -14, rotate: -2, duration: 3.2, repeat: -1, yoyo: true, ease: "sine.inOut" });
+         gsap.to(".service-stage__label", { y: 10, duration: 2.6, repeat: -1, yoyo: true, ease: "sine.inOut" });
+
+         gsap.utils.toArray(".service-section").forEach(function (section) {
+            gsap.from(section.querySelectorAll(".service-head, .campaign-rail article, .service-card, .hub-card, .location-map, .location-pill, .signature-band__panel, .signature-band__aside, .signature-band__list article, .showcase-card, .city-points li, .faq-intro, .faq-item"), {
+               y: 42,
+               autoAlpha: 0,
+               immediateRender: false,
+               duration: 0.72,
+               stagger: 0.08,
+               ease: "power3.out",
+               scrollTrigger: { trigger: section, start: "top 76%", once: true }
+            });
+         });
+
+         gsap.from(".footer-two .gaper > div", {
+            y: 34,
+            autoAlpha: 0,
+            immediateRender: false,
+            duration: 0.72,
+            stagger: 0.1,
+            scrollTrigger: { trigger: ".footer-two", start: "top 88%", once: true }
+         });
+
+         document.querySelectorAll(".service-card").forEach(function (card) {
+            card.addEventListener("mousemove", function (event) {
+               var box = card.getBoundingClientRect();
+               var px = ((event.clientX - box.left) / box.width) * 100;
+               var py = ((event.clientY - box.top) / box.height) * 100;
+               card.style.setProperty("--mx", px + "%");
+               card.style.setProperty("--my", py + "%");
+               if (window.innerWidth > 991) gsap.to(card, { y: -10, rotateX: (py - 50) * -0.06, rotateY: (px - 50) * 0.06, duration: 0.35 });
+            });
+            card.addEventListener("mouseleave", function () {
+               gsap.to(card, { y: 0, rotateX: 0, rotateY: 0, duration: 0.45, ease: "power3.out" });
+            });
+         });
+
+         var hero = document.querySelector(".service-hero");
+         if (!hero) return;
+
+         hero.addEventListener("mousemove", function (event) {
+            if (window.innerWidth < 992) return;
+            var box = this.getBoundingClientRect();
+            var x = (event.clientX - box.left) / box.width - 0.5;
+            var y = (event.clientY - box.top) / box.height - 0.5;
+            gsap.to(".service-stage", { x: x * 16, y: y * 10, duration: 0.45, ease: "power2.out" });
+         });
       })();
    </script>
 </body>

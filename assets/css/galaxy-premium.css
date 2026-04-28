@@ -8,6 +8,7 @@
   --galaxy-cyan: #00d6ff;
   --galaxy-green: #68f0a0;
   --galaxy-red: #ff4d6d;
+  --primary-color: #ff3d1f;
 }
 
 html {
@@ -62,7 +63,7 @@ body {
 .offcanvas-menu .logo img,
 .mobile-menu .logo img,
 .footer-two .logo img {
-  filter: drop-shadow(0 12px 26px rgba(255, 116, 37, 0.22));
+  filter: drop-shadow(0 12px 26px rgba(255, 61, 31, 0.22));
 }
 
 .secondary--navbar {
@@ -394,7 +395,7 @@ body {
 }
 
 .btn {
-  box-shadow: 0 14px 40px rgba(255, 116, 37, 0.16);
+  box-shadow: 0 14px 40px rgba(255, 61, 31, 0.16);
 }
 
 .btn--primary,
@@ -1012,7 +1013,7 @@ body {
   overflow: hidden;
   padding: 44px 0 0 !important;
   background:
-    radial-gradient(circle at 8% 10%, rgba(255, 116, 37, 0.12), transparent 22%),
+    radial-gradient(circle at 8% 10%, rgba(255, 61, 31, 0.12), transparent 22%),
     linear-gradient(180deg, #050505 0%, #0a0a0a 100%) !important;
 }
 
@@ -1099,7 +1100,7 @@ body {
 }
 
 .footer-two__links a:hover {
-  color: #ff7425;
+  color: var(--primary-color);
   transform: none;
 }
 
@@ -1144,8 +1145,8 @@ body {
 
 .footer-two__social a:hover {
   color: #111;
-  border-color: #ff7425;
-  background: #ff7425;
+  border-color: var(--primary-color);
+  background: var(--primary-color);
 }
 
 .footer-two .footer__copyright {
@@ -1166,7 +1167,7 @@ body {
 }
 
 .footer-two .footer__copyright-text a {
-  color: #ff7425;
+  color: var(--primary-color);
   font-size: inherit;
   line-height: inherit;
 }
