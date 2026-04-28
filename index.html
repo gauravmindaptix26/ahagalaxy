@@ -1276,6 +1276,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-left: 0;
    }
 
+   .header .galaxy-desktop-menu > ul > li > .navbar__dropdown-label::after {
+      content: "\f078" !important;
+      font-family: "Font Awesome 6 Pro" !important;
+      font-weight: 900 !important;
+      font-size: 10px;
+      line-height: 1;
+      color: currentColor;
+      margin-left: 6px;
+   }
+
+   .header .galaxy-desktop-menu > ul > li > .navbar__dropdown-label--stacked::after {
+      margin-left: 0;
+      transform: translateY(-50%);
+   }
+
+   .header .galaxy-desktop-menu > ul > li:hover > .navbar__dropdown-label::after {
+      transform: rotate(180deg);
+   }
+
+   .header .galaxy-desktop-menu > ul > li:hover > .navbar__dropdown-label--stacked::after {
+      transform: translateY(-50%) rotate(180deg);
+   }
+
    .header .navbar__item > a:hover,
    .header .navbar__dropdown-label:hover {
       color: #ff3d1f !important;

@@ -1795,11 +1795,270 @@ a.service-card:hover {
    line-height: inherit;
 }
 
+/* City-wise advertising pages */
+.service-page--city {
+   --city-accent: #ff4d27;
+   --city-accent-soft: rgba(255, 77, 39, 0.16);
+   --city-accent-strong: rgba(255, 77, 39, 0.34);
+   --city-ink: #f7f4ef;
+   --city-muted: rgba(255, 255, 255, 0.68);
+   background: #070909;
+}
+
+.service-page--dehradun {
+   --city-accent: #63e39f;
+   --city-accent-soft: rgba(99, 227, 159, 0.16);
+   --city-accent-strong: rgba(99, 227, 159, 0.34);
+}
+
+.service-page--haridwar {
+   --city-accent: #ffb84d;
+   --city-accent-soft: rgba(255, 184, 77, 0.16);
+   --city-accent-strong: rgba(255, 184, 77, 0.32);
+}
+
+.service-page--rishikesh {
+   --city-accent: #55d6ff;
+   --city-accent-soft: rgba(85, 214, 255, 0.15);
+   --city-accent-strong: rgba(85, 214, 255, 0.3);
+}
+
+.service-page--haldwani {
+   --city-accent: #9beb5b;
+   --city-accent-soft: rgba(155, 235, 91, 0.14);
+   --city-accent-strong: rgba(155, 235, 91, 0.28);
+}
+
+.service-page--roorkee {
+   --city-accent: #ff684a;
+   --city-accent-soft: rgba(255, 104, 74, 0.16);
+   --city-accent-strong: rgba(255, 104, 74, 0.32);
+}
+
+.city-hero .service-badge-row span {
+   border-color: var(--city-accent-strong);
+   background: var(--city-accent-soft);
+}
+
+.city-hero .service-hero__stats article {
+   border-color: var(--city-accent-strong);
+}
+
+.city-hero .service-hero__stats strong,
+.city-section .service-kicker,
+.city-zone-card i,
+.city-checklist i {
+   color: var(--city-accent);
+}
+
+.city-hero__media {
+   overflow: hidden;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   border-radius: 30px;
+   background:
+      radial-gradient(circle at 20% 20%, var(--city-accent-soft), transparent 32%),
+      linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.015));
+}
+
+.city-hero-card {
+   position: absolute;
+   margin: 0;
+   overflow: hidden;
+   border: 1px solid rgba(255, 255, 255, 0.12);
+   border-radius: 26px;
+   background: #111;
+   box-shadow: 0 26px 70px rgba(0, 0, 0, 0.42);
+}
+
+.city-hero-card img,
+.city-image-stack img {
+   width: 100%;
+   height: 100%;
+   display: block;
+   object-fit: cover;
+}
+
+.city-hero-card--primary {
+   inset: 54px 42px 122px 42px;
+}
+
+.city-hero-card--secondary {
+   right: 26px;
+   bottom: 34px;
+   width: 46%;
+   aspect-ratio: 4 / 3;
+}
+
+.city-hero-card figcaption {
+   position: absolute;
+   left: 16px;
+   right: 16px;
+   bottom: 14px;
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+   width: fit-content;
+   max-width: calc(100% - 32px);
+   padding: 10px 13px;
+   border-radius: 999px;
+   color: #fff;
+   background: rgba(0, 0, 0, 0.72);
+   backdrop-filter: blur(10px);
+   font-size: 12px;
+   font-weight: 800;
+   line-height: 1.2;
+}
+
+.city-section {
+   position: relative;
+   overflow: hidden;
+   background:
+      radial-gradient(circle at 12% 20%, var(--city-accent-soft), transparent 28%),
+      #090b0b;
+}
+
+.city-section--alt {
+   background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.035), transparent 36%),
+      #060808;
+}
+
+.city-section__head {
+   max-width: 850px;
+   margin-bottom: 34px;
+}
+
+.city-section__head h2,
+.city-split h2,
+.city-cta h2 {
+   color: var(--city-ink);
+   font-size: clamp(2rem, 4vw, 4.6rem);
+   line-height: 0.98;
+   margin-bottom: 14px;
+}
+
+.city-section__head p,
+.city-split p,
+.city-cta p {
+   color: var(--city-muted);
+   font-size: 17px;
+   line-height: 1.75;
+}
+
+.city-zone-grid {
+   display: grid;
+   grid-template-columns: repeat(4, minmax(0, 1fr));
+   gap: 18px;
+}
+
+.city-zone-card {
+   min-height: 260px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 24px;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   border-radius: 22px;
+   background: rgba(255, 255, 255, 0.045);
+}
+
+.city-zone-card i {
+   width: 46px;
+   height: 46px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 16px;
+   background: var(--city-accent-soft);
+   font-size: 20px;
+}
+
+.city-zone-card h3 {
+   color: #fff;
+   font-size: 24px;
+   line-height: 1.08;
+   margin: 26px 0 12px;
+}
+
+.city-zone-card p {
+   color: rgba(255, 255, 255, 0.66);
+   line-height: 1.65;
+   margin: 0;
+}
+
+.city-split {
+   display: grid;
+   grid-template-columns: 0.85fr 1.15fr;
+   gap: 44px;
+   align-items: center;
+}
+
+.city-checklist {
+   display: grid;
+   gap: 14px;
+   margin-top: 26px;
+}
+
+.city-checklist li {
+   display: flex;
+   align-items: flex-start;
+   gap: 12px;
+   color: rgba(255, 255, 255, 0.78);
+   line-height: 1.55;
+}
+
+.city-checklist i {
+   margin-top: 4px;
+}
+
+.city-image-stack {
+   display: grid;
+   grid-template-columns: 1.1fr 0.9fr;
+   gap: 16px;
+   min-height: 430px;
+}
+
+.city-image-stack figure {
+   position: relative;
+   overflow: hidden;
+   margin: 0;
+   border-radius: 26px;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   background: #111;
+}
+
+.city-image-stack figure:nth-child(2) {
+   margin-top: 54px;
+}
+
+.city-cta {
+   padding: 92px 0;
+   background:
+      radial-gradient(circle at 80% 0%, var(--city-accent-soft), transparent 32%),
+      #050606;
+}
+
+.city-cta__inner {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 30px;
+   padding: 36px;
+   border: 1px solid var(--city-accent-strong);
+   border-radius: 28px;
+   background: rgba(255, 255, 255, 0.045);
+}
+
+.city-cta .service-btn {
+   flex: 0 0 auto;
+}
+
 @media (max-width: 1199px) {
    .service-hero__grid,
    .location-panel,
    .signature-band,
-   .faq-shell {
+   .faq-shell,
+   .city-split {
       grid-template-columns: 1fr;
    }
 
@@ -1818,6 +2077,14 @@ a.service-card:hover {
 
    .campaign-rail {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+
+   .city-zone-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+
+   .city-hero-card--primary {
+      inset: 44px 36px 116px;
    }
 }
 
@@ -1864,7 +2131,9 @@ a.service-card:hover {
    .service-grid,
    .location-list,
    .showcase-grid,
-   .campaign-rail {
+   .campaign-rail,
+   .city-zone-grid,
+   .city-image-stack {
       grid-template-columns: 1fr;
    }
 
@@ -1921,5 +2190,67 @@ a.service-card:hover {
       min-width: 42px;
       height: 42px;
       padding: 0 13px;
+   }
+
+   .city-hero__media {
+      border-radius: 22px;
+   }
+
+   .city-hero-card--primary {
+      inset: 30px 20px 132px;
+      border-radius: 20px;
+   }
+
+   .city-hero-card--secondary {
+      right: 18px;
+      bottom: 28px;
+      width: 58%;
+      border-radius: 18px;
+   }
+
+   .city-hero-card figcaption {
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      max-width: calc(100% - 20px);
+      font-size: 10px;
+      padding: 8px 10px;
+   }
+
+   .city-zone-card {
+      min-height: auto;
+      padding: 22px;
+      border-radius: 18px;
+   }
+
+   .city-split {
+      gap: 28px;
+   }
+
+   .city-image-stack {
+      min-height: auto;
+   }
+
+   .city-image-stack figure {
+      min-height: 260px;
+      border-radius: 20px;
+   }
+
+   .city-image-stack figure:nth-child(2) {
+      margin-top: 0;
+   }
+
+   .city-cta {
+      padding: 72px 0;
+   }
+
+   .city-cta__inner {
+      display: grid;
+      padding: 24px;
+      border-radius: 20px;
+   }
+
+   .city-cta .service-btn {
+      width: 100%;
    }
 }
