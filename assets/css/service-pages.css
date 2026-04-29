@@ -601,13 +601,19 @@
    line-height: 1.75;
 }
 
-#about-unipole .service-head {
+#about-unipole .service-head,
+#about-gantry .service-head,
+#about-highway .service-head,
+#about-billboards .service-head {
    max-width: 980px;
    margin: 0 auto;
    text-align: center;
 }
 
-#about-unipole .unipole-intro-card {
+#about-unipole .unipole-intro-card,
+#about-gantry .unipole-intro-card,
+#about-highway .unipole-intro-card,
+#about-billboards .unipole-intro-card {
    position: relative;
    z-index: 1;
    max-width: 1180px;
@@ -659,7 +665,10 @@
    justify-content: center;
 }
 
-#about-unipole .service-head p {
+#about-unipole .service-head p,
+#about-gantry .service-head p,
+#about-highway .service-head p,
+#about-billboards .service-head p {
    max-width: 960px;
    margin: 26px auto 0;
    font-size: clamp(1.05rem, 1.55vw, 1.25rem);
@@ -912,7 +921,10 @@
       padding: 26px;
    }
 
-   #about-unipole .unipole-intro-card {
+   #about-unipole .unipole-intro-card,
+   #about-gantry .unipole-intro-card,
+   #about-highway .unipole-intro-card,
+   #about-billboards .unipole-intro-card {
       padding: 42px 24px 46px;
       border-radius: 28px;
    }
@@ -1052,12 +1064,18 @@
       height: 50px;
    }
 
-   #about-unipole .unipole-intro-card {
+   #about-unipole .unipole-intro-card,
+   #about-gantry .unipole-intro-card,
+   #about-highway .unipole-intro-card,
+   #about-billboards .unipole-intro-card {
       padding: 34px 18px 38px;
       border-radius: 24px;
    }
 
-   #about-unipole .service-head p {
+   #about-unipole .service-head p,
+   #about-gantry .service-head p,
+   #about-highway .service-head p,
+   #about-billboards .service-head p {
       font-size: 1rem;
       line-height: 1.72;
    }
