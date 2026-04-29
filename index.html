@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -17,7 +17,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5H69NQ75');</script>
-<!-- End GoogleÂ TagÂ ManagerÂ -->
+<!-- End Google Tag Manager -->
 
    <!-- required meta -->
    <meta charset="UTF-8">
@@ -415,7 +415,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
    .header .primary-navbar,
    .header .secondary--navbar {
-      min-height: 78px !important;
+      min-height: 66px !important;
       padding: 0 !important;
       background: rgba(255,255,255,0.92) !important;
       border-bottom: 1px solid rgba(17,17,17,0.08);
@@ -424,13 +424,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    }
 
    .header .navbar {
-      min-height: 78px !important;
+      min-height: 66px !important;
       padding: 0 !important;
    }
 
    .header .navbar__logo img {
-      width: 112px !important;
-      max-width: 112px !important;
+      width: 104px !important;
+      max-width: 104px !important;
       opacity: 1 !important;
    }
 
@@ -1108,7 +1108,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       --av-orange: #ff7a18;
       --av-dark: #050505;
       --av-panel: #101010;
-      --header-offset: 150px;
+      --header-offset: 122px;
       --mx: 70%;
       --my: 32%;
       position: relative;
@@ -1130,9 +1130,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       box-shadow: 0 18px 50px rgba(0,0,0,0.22) !important;
    }
 
+   .header .primary-navbar.galaxy-nav-hidden,
+   .header .secondary--navbar.galaxy-nav-hidden {
+      transform: translateY(0) !important;
+   }
+
    .header__topbar {
       border-bottom: 1px solid rgba(255,255,255,0.08);
       background: linear-gradient(90deg, rgba(255, 61, 31,0.92), rgba(255,122,24,0.84) 42%, rgba(16,16,16,0.96));
+      max-height: 44px;
+      overflow: hidden;
+      opacity: 1;
+      visibility: visible;
+      transition: max-height 0.25s ease, opacity 0.2s ease, visibility 0.2s ease, border-color 0.2s ease;
+   }
+
+   .header.galaxy-topbar-hidden .header__topbar {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      border-bottom-color: transparent;
    }
 
    .header__topbar-inner {
@@ -1209,7 +1226,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
-      gap: 14px !important;
+      gap: 26px !important;
       width: 100% !important;
    }
 
@@ -1221,8 +1238,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    .header .navbar__item > a,
    .header .navbar__dropdown-label {
       color: rgba(255,255,255,0.84) !important;
-      font-size: 12px !important;
+      font-size: 15px !important;
       letter-spacing: 0.035em !important;
+      font-weight: 900 !important;
+      white-space: nowrap;
    }
 
    .header .galaxy-desktop-menu > ul > li > a,
@@ -1233,7 +1252,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       align-items: center;
       justify-content: center;
       border-radius: 0;
-      line-height: 0.96 !important;
+      line-height: 1 !important;
       text-align: center;
       background: transparent;
       transition: color 0.25s ease, transform 0.25s ease;
@@ -1306,6 +1325,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
    .header .galaxy-desktop-menu > ul > li:hover > a,
    .header .galaxy-desktop-menu > ul > li:hover > .navbar__dropdown-label {
+      color: #ff3d1f !important;
       background: transparent;
       transform: none;
    }
@@ -1328,13 +1348,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
    @media (max-width: 1399px) {
       .header .galaxy-desktop-menu > ul {
-         gap: 10px !important;
+         gap: 18px !important;
       }
 
       .header .galaxy-desktop-menu > ul > li > a,
       .header .galaxy-desktop-menu > ul > li > .navbar__dropdown-label {
          padding: 0 6px !important;
-         font-size: 11px !important;
+         font-size: 13px !important;
          letter-spacing: 0.025em !important;
       }
 
@@ -1377,7 +1397,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
 
       .avista-home {
-         --header-offset: 108px;
+         --header-offset: 92px;
          padding-top: var(--header-offset);
       }
    }
@@ -1416,14 +1436,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       min-height: calc(100vh - var(--header-offset));
       display: grid;
       grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.08fr);
-      align-items: center;
+      align-items: start;
       gap: clamp(26px, 5vw, 86px);
+      padding-top: 18px;
    }
 
    .avista-home__copy {
       max-width: 720px;
       margin-left: clamp(24px, 4vw, 76px);
-      padding-bottom: 70px;
+      padding-bottom: 40px;
    }
 
    .avista-home__kicker {
@@ -2783,10 +2804,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
    .galaxy-services__grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 18px;
       perspective: 1400px;
       align-items: stretch;
+   }
+
+   .galaxy-services__category-title {
+      margin: 8px 0 28px;
+      color: #ff3d1f;
+      font-size: clamp(2rem, 4vw, 4.2rem);
+      line-height: 1;
+      font-weight: 1000;
+      text-transform: uppercase;
+   }
+
+   .galaxy-services__grid + .galaxy-services__category-title {
+      margin-top: 58px;
    }
 
    .galaxy-service-card {
@@ -2990,6 +3024,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       height: 64px;
       border-radius: 50%;
       object-fit: cover;
+      background: #151515;
+      border: 2px solid rgba(255, 61, 31, 0.32);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.28);
    }
 
    .galaxy-testimonial-card__head strong {
@@ -4157,9 +4194,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       gap: 14px;
    }
 
+   .secondary--navbar > .container {
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
+   }
+
+   .secondary--navbar .galaxy-desktop-menu .navbar__item > a,
+   .secondary--navbar .galaxy-desktop-menu .navbar__item > button {
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+   }
+
    .nav-quote-btn {
-      height: 48px;
-      padding: 0 24px;
+      height: 44px;
+      padding: 0 22px;
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 999px;
       background: linear-gradient(135deg, #ff3d1f 0%, #ff7a1f 100%);
@@ -4181,19 +4229,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    }
 
    .login-popup {
+      position: fixed !important;
+      inset: 0 !important;
+      z-index: 11000 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 18px !important;
       background: rgba(3, 3, 3, 0.74) !important;
       backdrop-filter: blur(18px);
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none;
       transition: none !important;
    }
 
    .login-popup.show {
       visibility: visible !important;
       opacity: 1 !important;
+      pointer-events: auto;
    }
 
    .login-popup .box {
+      position: relative !important;
       width: min(920px, calc(100% - 36px)) !important;
       min-height: 560px;
+      max-height: calc(100vh - 36px);
       display: grid !important;
       grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
       overflow: hidden;
@@ -4202,8 +4263,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       background: #0b0b0b !important;
       box-shadow: 0 36px 100px rgba(0, 0, 0, 0.55);
       opacity: 0;
-      margin-left: 0 !important;
-      transform: translate(-50%, -50%) scale(0.94) !important;
+      margin: 0 auto !important;
+      transform: none;
+      transform-origin: center center;
       transition: none !important;
    }
 
@@ -4963,6 +5025,283 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          margin-top: 14px;
       }
    }
+   .galaxy-areas.section {
+      --area-red: #ff3d1f;
+      --area-orange: #ff9a1f;
+      --area-green: #44ff97;
+      position: relative;
+      overflow: hidden;
+      padding: 82px 0 96px !important;
+      color: #fff;
+      background:
+         radial-gradient(circle at 16% 18%, rgba(255, 61, 31, 0.18), transparent 24%),
+         radial-gradient(circle at 86% 8%, rgba(255, 154, 31, 0.13), transparent 26%),
+         linear-gradient(90deg, rgba(0, 196, 255, 0.07), transparent 30%, rgba(255, 61, 31, 0.10)),
+         linear-gradient(180deg, #050505 0%, #090909 64%, #030303 100%) !important;
+      isolation: isolate;
+   }
+
+   .galaxy-areas.section::before {
+      content: "AREAS";
+      position: absolute;
+      top: -22px;
+      right: -12px;
+      z-index: -1;
+      color: rgba(255, 255, 255, 0.035);
+      font-size: clamp(7rem, 20vw, 18rem);
+      line-height: 0.8;
+      font-weight: 1000;
+      letter-spacing: -0.08em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-areas.section::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+         linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+         linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(180deg, transparent, #000 10%, #000 84%, transparent);
+      pointer-events: none;
+   }
+
+   .galaxy-areas__intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
+      gap: 42px;
+      align-items: end;
+      margin-bottom: 34px;
+   }
+
+   .galaxy-areas__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      color: var(--area-orange) !important;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 13px;
+      font-weight: 1000;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(16px);
+   }
+
+   .galaxy-areas__eyebrow::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--area-green);
+      box-shadow: 0 0 18px rgba(68, 255, 151, 0.72);
+   }
+
+   .galaxy-areas h2 {
+      max-width: 820px;
+      margin: 16px 0 0 !important;
+      color: #fff !important;
+      font-size: clamp(2.35rem, 4.6vw, 5.35rem) !important;
+      line-height: 0.94 !important;
+      font-weight: 1000;
+      letter-spacing: -0.055em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-areas__summary {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+   }
+
+   .galaxy-areas__summary .primary-text {
+      max-width: 560px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72) !important;
+      font-size: 18px;
+      line-height: 1.65;
+      font-weight: 650;
+   }
+
+   .galaxy-areas__btn {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 22px;
+      border: 1px solid rgba(255, 61, 31, 0.5);
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(135deg, rgba(255, 61, 31, 0.88), rgba(255, 154, 31, 0.88));
+      font-size: 14px;
+      font-weight: 900;
+      box-shadow: 0 18px 40px rgba(255, 61, 31, 0.20);
+   }
+
+   .galaxy-areas__grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch;
+   }
+
+   .galaxy-area-card {
+      --lift: 0px;
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      padding: 24px 20px 22px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 22px;
+      background:
+         linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)),
+         rgba(255, 255, 255, 0.035);
+      color: #fff;
+      transform: translateY(var(--lift));
+      transition: transform 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+   }
+
+   .galaxy-area-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 26%, rgba(255, 61, 31, 0.22), transparent 36%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+   }
+
+   .galaxy-area-card__media {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 220px);
+      aspect-ratio: 1;
+      margin: 0 auto 24px;
+      overflow: hidden;
+      border: 8px solid rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      background: #111;
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.38);
+   }
+
+   .galaxy-area-card__media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.48));
+   }
+
+   .galaxy-area-card__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.12) contrast(1.05);
+      transform: scale(1.06);
+      transition: transform 0.55s ease;
+   }
+
+   .galaxy-area-card__content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      min-height: 160px;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 22px;
+   }
+
+   .galaxy-area-card__content span {
+      color: #20dfff;
+      font-size: 12px;
+      font-weight: 1000;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+   }
+
+   .galaxy-area-card__content h3 {
+      margin: 0 0 10px;
+      color: #fff;
+      font-size: clamp(1.75rem, 2.3vw, 2.45rem);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+   }
+
+   .galaxy-area-card__content p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 15px;
+      line-height: 1.55;
+      font-weight: 650;
+   }
+
+   .galaxy-area-card:hover {
+      --lift: -10px;
+      border-color: rgba(255, 61, 31, 0.55);
+      background: rgba(255, 255, 255, 0.07);
+      color: #fff;
+   }
+
+   .galaxy-area-card:hover::before {
+      opacity: 1;
+   }
+
+   .galaxy-area-card:hover .galaxy-area-card__media img {
+      transform: scale(1.16);
+   }
+
+   @media (max-width: 1199px) {
+      .galaxy-areas__intro {
+         grid-template-columns: 1fr;
+         gap: 22px;
+      }
+
+      .galaxy-areas__grid {
+         grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .galaxy-area-card--featured {
+         grid-column: span 2;
+      }
+   }
+
+   @media (max-width: 767px) {
+      .galaxy-areas.section {
+         padding: 54px 0 64px !important;
+      }
+
+      .galaxy-areas__grid {
+         display: flex;
+         gap: 14px;
+         overflow-x: auto;
+         padding: 4px 0 18px;
+         scroll-snap-type: x mandatory;
+         scrollbar-width: thin;
+      }
+
+      .galaxy-area-card,
+      .galaxy-area-card--featured {
+         flex: 0 0 84%;
+         min-height: 390px;
+         scroll-snap-align: start;
+      }
+
+      .galaxy-area-card__media {
+         width: min(78vw, 210px);
+      }
+
+      .galaxy-areas h2 {
+         font-size: clamp(2.35rem, 12vw, 3.8rem) !important;
+      }
+   }
 </style>
    <style id="home-mobile-fixes">
    @media (max-width: 767px) {
@@ -5138,15 +5477,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            <i class="fa-solid fa-envelope"></i>
                            galaxyadvertisers1996@gmail.com
                         </a>
-                        <span>
-                           <i class="fa-solid fa-location-dot"></i>
-                           Haridwar, Uttarakhand
-                        </span>
                      </div>
                      <div class="header__topbar-actions">
-                        <a href="contact-us.html" class="header__topbar-btn">
-                           Visit Office
-                        </a>
                         <a href="tel:09837241310">
                            <i class="fa-solid fa-phone-volume"></i>
                            09837241310
@@ -5173,27 +5505,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                  <a href="our-story.html">About Us</a>
                               </li>
                               <li class="navbar__item navbar__item--has-children nav-fade">
-                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label navbar__dropdown-label--stacked"><span class="nav-label-stack"><span>OOH Advertising</span><span>Services</span></span></a>
+                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">OOH Advertising</a>
                                  <ul class="navbar__sub-menu navbar__sub-menu--lg">
                                     <li>
-                                       <a href="unipole-advertising-uttarakhand.html">Unipole Advertising in Uttarakhand</a>
+                                       <a href="unipole-advertising-uttarakhand.html">Unipole Advertising</a>
                                     </li>
                                     <li>
                                        <a href="gantry-advertising-gate-entry-branding.html">Gantry Advertising (Gate Entry Branding)</a>
                                     </li>
                                     <li>
-                                       <a href="highway-hoardings-uttarakhand.html">Highway Hoardings in Uttarakhand</a>
+                                       <a href="highway-hoardings-uttarakhand.html">Highway Hoardings</a>
                                     </li>
                                     <li>
-                                       <a href="large-format-billboards-uttarakhand.html">Large Format Billboards in Uttarakhand</a>
+                                       <a href="large-format-billboards-uttarakhand.html">Large Format Billboards</a>
                                     </li>
                                  </ul>
                               </li>
                               <li class="navbar__item navbar__item--has-children nav-fade">
-                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label navbar__dropdown-label--stacked"><span class="nav-label-stack"><span>Retail &amp; In-Shop</span><span>Branding</span></span></a>
+                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">Retail &amp; In-Shop Branding</a>
                                  <ul class="navbar__sub-menu navbar__sub-menu--lg">
                                     <li>
-                                       <a href="glow-sign-advertisment.html">Glow Sign Boards in Uttarakhand</a>
+                                       <a href="glow-sign-advertisment.html">Glow Sign Boards</a>
                                     </li>
                                     <li>
                                        <a href="flex-board-advertisment.html">Flex Boards / Dealer Boards</a>
@@ -5207,36 +5539,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                  </ul>
                               </li>
                               <li class="navbar__item navbar__item--has-children nav-fade">
-                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label navbar__dropdown-label--stacked"><span class="nav-label-stack"><span>City-wise</span><span>Advertising</span></span></a>
+                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">Location</a>
                                  <ul class="navbar__sub-menu navbar__sub-menu--lg">
                                     <li>
-                                       <a href="outdoor-advertising-dehradun.html">Outdoor Advertising in Dehradun</a>
+                                       <a href="outdoor-advertising-dehradun.html">Dehradun</a>
                                     </li>
                                     <li>
-                                       <a href="outdoor-advertising-haridwar.html">Outdoor Advertising in Haridwar</a>
+                                       <a href="outdoor-advertising-haridwar.html">Haridwar</a>
                                     </li>
                                     <li>
-                                       <a href="outdoor-advertising-rishikesh.html">Outdoor Advertising in Rishikesh</a>
+                                       <a href="outdoor-advertising-rishikesh.html">Rishikesh</a>
                                     </li>
                                     <li>
-                                       <a href="outdoor-advertising-haldwani.html">Outdoor Advertising in Haldwani</a>
+                                       <a href="outdoor-advertising-haldwani.html">Haldwani</a>
                                     </li>
                                     <li>
-                                       <a href="outdoor-advertising-roorkee.html">Outdoor Advertising in Roorkee</a>
-                                    </li>
-                                 </ul>
-                              </li>
-                              <li class="navbar__item navbar__item--has-children nav-fade">
-                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">Pages</a>
-                                 <ul class="navbar__sub-menu">
-                                    <li>
-                                       <a href="our-story.html">Our Story</a>
-                                    </li>
-                                    <li>
-                                       <a href="outdoor-media-options.html">Outdoor Media Options</a>
-                                    </li>
-                                    <li>
-                                       <a href="contact-us.html">Contact Us</a>
+                                       <a href="outdoor-advertising-roorkee.html">Roorkee</a>
                                     </li>
                                  </ul>
                               </li>
@@ -5284,19 +5602,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         </li>
                         
                         <li class="navbar__item navbar__item--has-children nav-fade">
-                           <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">OOH Advertising Services</a>
+                           <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">OOH Advertising</a>
                            <ul class="navbar__sub-menu navbar__sub-menu--lg"> 
                               <li>
-                                 <a href="unipole-advertising-uttarakhand.html">Unipole Advertising in Uttarakhand</a>
+                                 <a href="unipole-advertising-uttarakhand.html">Unipole Advertising</a>
                               </li>
                               <li>
                                  <a href="gantry-advertising-gate-entry-branding.html">Gantry Advertising (Gate Entry Branding)</a>
                               </li>
                               <li>
-                                 <a href="highway-hoardings-uttarakhand.html">Highway Hoardings in Uttarakhand</a>
+                                 <a href="highway-hoardings-uttarakhand.html">Highway Hoardings</a>
                               </li>
                               <li>
-                                 <a href="large-format-billboards-uttarakhand.html">Large Format Billboards in Uttarakhand</a>
+                                 <a href="large-format-billboards-uttarakhand.html">Large Format Billboards</a>
                               </li>
                            </ul>
                         </li>
@@ -5304,7 +5622,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">Retail &amp; In-Shop Branding</a>
                            <ul class="navbar__sub-menu navbar__sub-menu--lg"> 
                               <li>
-                                 <a href="glow-sign-advertisment.html">Glow Sign Boards in Uttarakhand</a>
+                                 <a href="glow-sign-advertisment.html">Glow Sign Boards</a>
                               </li>
                               <li>
                                  <a href="flex-board-advertisment.html">Flex Boards / Dealer Boards</a>
@@ -5318,40 +5636,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </ul>
                         </li>
                         <li class="navbar__item navbar__item--has-children nav-fade">
-                           <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">City-wise Advertising</a>
+                           <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">Location</a>
                            <ul class="navbar__sub-menu navbar__sub-menu--lg"> 
                               <li>
-                                 <a href="outdoor-advertising-dehradun.html">Outdoor Advertising in Dehradun</a>
+                                 <a href="outdoor-advertising-dehradun.html">Dehradun</a>
                               </li>
                               <li>
-                                 <a href="outdoor-advertising-haridwar.html">Outdoor Advertising in Haridwar</a>
+                                 <a href="outdoor-advertising-haridwar.html">Haridwar</a>
                               </li>
                               <li>
-                                 <a href="outdoor-advertising-rishikesh.html">Outdoor Advertising in Rishikesh</a>
+                                 <a href="outdoor-advertising-rishikesh.html">Rishikesh</a>
                               </li>
                               <li>
-                                 <a href="outdoor-advertising-haldwani.html">Outdoor Advertising in Haldwani</a>
+                                 <a href="outdoor-advertising-haldwani.html">Haldwani</a>
                               </li>
                               <li>
-                                 <a href="outdoor-advertising-roorkee.html">Outdoor Advertising in Roorkee</a>
+                                 <a href="outdoor-advertising-roorkee.html">Roorkee</a>
                               </li>
                            </ul>
                         </li>
-                        <li class="navbar__item navbar__item--has-children nav-fade">
-                           <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">Pages</a>
-                           <ul class="navbar__sub-menu">
-                              <li>
-                                 <a href="our-story.html">Our Story</a>
-                              </li>
-                              <li>
-                                 <a href="outdoor-media-options.html">Outdoor Media Options</a>
-                              </li>
-                              <li>
-                                 <a href="contact-us.html">Contact Us</a>
-                              </li>
-                           </ul>
-                        </li>
-                          
                      </ul>
                   </div>
                </div>
@@ -5439,6 +5742,162 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      </div>
                   </div>
                </section>
+               <section class="galaxy-services section fade-wrapper alt-surface--light" id="ooh-advertising">
+                  <div class="container">
+                     <div class="galaxy-services__intro">
+                        <div>
+                           <span class="galaxy-services__eyebrow">Services</span>
+                           <h2 class="title-anim">Outdoor formats built for visibility and recall.</h2>
+                        </div>
+                        <p class="primary-text">Core OOH services planned around traffic routes, retail presence and fast on-ground execution.</p>
+                     </div>
+                     <h3 class="galaxy-services__category-title">OOH Advertising</h3>
+                     <div class="galaxy-services__grid">
+                        <article class="galaxy-service-card">
+                           <div class="galaxy-service-card__top">
+                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-bullhorn"></i></span>
+                              <span class="galaxy-service-card__no">01 / Prime</span>
+                           </div>
+                           <div>
+                              <h3>Unipole Advertising</h3>
+                              <p>Large-format media for premium city roads, highway visibility and high-footfall corridors.</p>
+                              <ul>
+                                 <li>Prime route selection</li>
+                                 <li>High-visibility placement</li>
+                                 <li>Installation support</li>
+                              </ul>
+                              <a class="galaxy-service-card__cta" href="unipole-advertising-uttarakhand.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-service-card">
+                           <div class="galaxy-service-card__top">
+                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-road"></i></span>
+                              <span class="galaxy-service-card__no">02 / Entry</span>
+                           </div>
+                           <div>
+                              <h3>Gantry Advertising</h3>
+                              <p>Gate-entry and road-span branding for strong impact across busy traffic movement points.</p>
+                              <ul>
+                                 <li>Entry-point branding</li>
+                                 <li>Road-span visibility</li>
+                                 <li>Campaign rollout support</li>
+                              </ul>
+                              <a class="galaxy-service-card__cta" href="gantry-advertising-gate-entry-branding.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-service-card">
+                           <div class="galaxy-service-card__top">
+                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-route"></i></span>
+                              <span class="galaxy-service-card__no">03 / Highway</span>
+                           </div>
+                           <div>
+                              <h3>Highway Hoardings</h3>
+                              <p>Strategic hoarding sites for commuter routes, city approaches and long-distance traffic recall.</p>
+                              <ul>
+                                 <li>Highway site planning</li>
+                                 <li>Commuter attention points</li>
+                                 <li>Route-wise coverage</li>
+                              </ul>
+                              <a class="galaxy-service-card__cta" href="highway-hoardings-uttarakhand.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-service-card">
+                           <div class="galaxy-service-card__top">
+                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-panorama"></i></span>
+                              <span class="galaxy-service-card__no">04 / Billboard</span>
+                           </div>
+                           <div>
+                              <h3>Large Format Billboards</h3>
+                              <p>Bold outdoor canvases for major campaigns that need scale, distance visibility and strong recall.</p>
+                              <ul>
+                                 <li>Large billboard inventory</li>
+                                 <li>Creative adaptation</li>
+                                 <li>High-impact display</li>
+                              </ul>
+                              <a class="galaxy-service-card__cta" href="large-format-billboards-uttarakhand.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                     </div>
+                  </div>
+               </section>
+               <section class="galaxy-services section fade-wrapper alt-surface--light" id="retail-in-shop-branding">
+                  <div class="container">
+                     <div class="galaxy-services__intro">
+                        <div>
+                           <span class="galaxy-services__eyebrow">Services</span>
+                           <h2 class="title-anim">Retail formats built for storefront recall.</h2>
+                        </div>
+                        <p class="primary-text">Retail and in-shop branding planned for shopfront visibility, dealer presence and point-of-sale recall.</p>
+                     </div>
+                     <h3 class="galaxy-services__category-title">Retail &amp; In-Shop Branding</h3>
+                     <div class="galaxy-services__grid">
+                        <article class="galaxy-service-card">
+                           <div class="galaxy-service-card__top">
+                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-lightbulb"></i></span>
+                              <span class="galaxy-service-card__no">01 / Glow</span>
+                           </div>
+                           <div>
+                              <h3>Glow Sign Boards</h3>
+                              <p>Illuminated storefront branding that keeps the outlet visible after dark and improves local recall.</p>
+                              <ul>
+                                 <li>Shopfront visibility</li>
+                                 <li>Brand-led fabrication</li>
+                                 <li>Night recall support</li>
+                              </ul>
+                              <a class="galaxy-service-card__cta" href="glow-sign-advertisment.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-service-card">
+                           <div class="galaxy-service-card__top">
+                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-sign-hanging"></i></span>
+                              <span class="galaxy-service-card__no">02 / Dealer</span>
+                           </div>
+                           <div>
+                              <h3>Flex Boards / Dealer Boards</h3>
+                              <p>Fast, practical dealer-board branding for market clusters, channel outlets and local campaigns.</p>
+                              <ul>
+                                 <li>Dealer network rollout</li>
+                                 <li>Quick production</li>
+                                 <li>Market-wise execution</li>
+                              </ul>
+                              <a class="galaxy-service-card__cta" href="flex-board-advertisment.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-service-card">
+                           <div class="galaxy-service-card__top">
+                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-table-cells-large"></i></span>
+                              <span class="galaxy-service-card__no">03 / Display</span>
+                           </div>
+                           <div>
+                              <h3>Sun Boards Advertising</h3>
+                              <p>Clean display boards for retail counters, shop interiors and compact brand communication zones.</p>
+                              <ul>
+                                 <li>Indoor display systems</li>
+                                 <li>Counter and wall media</li>
+                                 <li>Retail attention points</li>
+                              </ul>
+                              <a class="galaxy-service-card__cta" href="display-board-advertisment.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                        <article class="galaxy-service-card">
+                           <div class="galaxy-service-card__top">
+                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-person-booth"></i></span>
+                              <span class="galaxy-service-card__no">04 / POS</span>
+                           </div>
+                           <div>
+                              <h3>Standee Branding Services</h3>
+                              <p>Portable point-of-sale branding for launches, offers, retail floors and activation touchpoints.</p>
+                              <ul>
+                                 <li>POS display support</li>
+                                 <li>Offer-led branding</li>
+                                 <li>Activation-ready format</li>
+                              </ul>
+                              <a class="galaxy-service-card__cta" href="standee-branding-services.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
+                           </div>
+                        </article>
+                     </div>
+                  </div>
+               </section>
                <section class="avista-works alt-surface--light">
                   <div class="avista-works__counter">12+</div>
                   <div class="container">
@@ -5463,98 +5922,79 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   </div>
                </section>
                <!-- ==== / banner end ==== -->
-               <section class="galaxy-impact section fade-wrapper alt-surface--dark">
+               <section class="galaxy-areas section fade-wrapper alt-surface--dark" id="areas-we-serve">
                   <div class="container">
-                     <div class="galaxy-impact__intro">
+                     <div class="galaxy-areas__intro">
                         <div>
-                           <span class="galaxy-impact__eyebrow">Sites We Have</span>
-                           <h2 class="title-anim">Sites across key city routes.</h2>
+                           <span class="galaxy-areas__eyebrow">Location / Areas We Serve</span>
+                           <h2 class="title-anim">Outdoor advertising across high-recall city markets.</h2>
                         </div>
-                        <div class="galaxy-impact__meta">
-                           <p class="primary-text">From route mapping to creative production and installation, Galaxy Advertisers builds street-level visibility for brands that need real-world attention.</p>
+                        <div class="galaxy-areas__summary">
+                           <p class="primary-text">Galaxy Advertisers plans hoardings, unipoles, glow signs and retail branding around local traffic routes, market pockets and brand visibility needs across Uttarakhand.</p>
+                           <a class="galaxy-areas__btn" href="contact-us.html">Plan City Campaign <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                      </div>
-                     <div class="galaxy-impact__grid section__content-cta">
-                        <article class="galaxy-impact-card">
-                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg" alt="High traffic unipole campaign">
-                           <div class="galaxy-impact-card__content">
-                              <span>01 / Highways</span>
+                     <div class="galaxy-areas__grid section__content-cta">
+                        <a class="galaxy-area-card galaxy-area-card--featured" href="outdoor-advertising-dehradun.html">
+                           <div class="galaxy-area-card__media">
+                              <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Gang-Nehar-Near-Nehru-Stadium-Naya-Pull-20x10-2.jpg" alt="Outdoor advertising in Dehradun">
+                           </div>
+                           <div class="galaxy-area-card__content">
+                              <span>01 / Capital Market</span>
                               <div>
-                                 <h3>Unipole and hoarding dominance</h3>
-                                 <p>Large-format visibility on high-recall traffic routes.</p>
+                                 <h3>Dehradun</h3>
+                                 <p>City routes, education clusters and commercial roads planned for steady daily recall.</p>
                               </div>
                            </div>
-                        </article>
-                        <article class="galaxy-impact-card">
-                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/IMG_8513.jpg" alt="Retail branding display">
-                           <div class="galaxy-impact-card__content">
-                              <span>02 / Retail</span>
+                        </a>
+                        <a class="galaxy-area-card" href="outdoor-advertising-haridwar.html">
+                           <div class="galaxy-area-card__media">
+                              <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Outdoor advertising in Haridwar">
+                           </div>
+                           <div class="galaxy-area-card__content">
+                              <span>02 / Pilgrim Route</span>
                               <div>
-                                 <h3>In-shop brand theatre</h3>
-                                 <p>Point-of-sale branding built to convert attention into walk-ins.</p>
+                                 <h3>Haridwar</h3>
+                                 <p>High-footfall road media around city entry points, markets and pilgrimage movement.</p>
                               </div>
                            </div>
-                        </article>
-                        <article class="galaxy-impact-card">
-                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Voltas.jpg" alt="Glow sign advertising">
-                           <div class="galaxy-impact-card__content">
-                              <span>03 / Night Recall</span>
+                        </a>
+                        <a class="galaxy-area-card" href="outdoor-advertising-rishikesh.html">
+                           <div class="galaxy-area-card__media">
+                              <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Rishikesh-4.jpg" alt="Outdoor advertising in Rishikesh">
+                           </div>
+                           <div class="galaxy-area-card__content">
+                              <span>03 / Tourism Flow</span>
                               <div>
-                                 <h3>Glow sign visibility</h3>
-                                 <p>Illuminated storefront and roadside brand recall after dark.</p>
+                                 <h3>Rishikesh</h3>
+                                 <p>Brand visibility across tourist traffic, roadside movement and local commercial pockets.</p>
                               </div>
                            </div>
-                        </article>
-                        <article class="galaxy-impact-card">
-                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/MC-Donalds.jpg" alt="Display board advertising">
-                           <div class="galaxy-impact-card__content">
-                              <span>04 / Local Media</span>
+                        </a>
+                        <a class="galaxy-area-card" href="outdoor-advertising-haldwani.html">
+                           <div class="galaxy-area-card__media">
+                              <img loading="lazy" decoding="async" src="assets/images/unipole/TimePhoto_20230904_141741.jpg" alt="Outdoor advertising in Haldwani">
+                           </div>
+                           <div class="galaxy-area-card__content">
+                              <span>04 / Kumaon Access</span>
                               <div>
-                                 <h3>Display and flex board rollout</h3>
-                                 <p>Fast campaign deployment with practical local production support.</p>
+                                 <h3>Haldwani</h3>
+                                 <p>Market-led outdoor options for retail visibility, highway approach and regional reach.</p>
                               </div>
                            </div>
-                        </article>
-                        <article class="galaxy-impact-card">
-                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Rishikesh-4.jpg" alt="Roadside campaign on a city route">
-                           <div class="galaxy-impact-card__content">
-                              <span>05 / City Route</span>
+                        </a>
+                        <a class="galaxy-area-card" href="outdoor-advertising-roorkee.html">
+                           <div class="galaxy-area-card__media">
+                              <img loading="lazy" decoding="async" src="assets/images/unipole/Rishikul Traffic Lights (5).jpg" alt="Outdoor advertising in Roorkee">
+                           </div>
+                           <div class="galaxy-area-card__content">
+                              <span>05 / Transit Belt</span>
                               <div>
-                                 <h3>Busy road frontage coverage</h3>
-                                 <p>Placement built for daily movement, repeat exposure and local reach.</p>
+                                 <h3>Roorkee</h3>
+                                 <p>Route-focused media for education corridors, transit traffic and busy city roads.</p>
                               </div>
                            </div>
-                        </article>
-                        <article class="galaxy-impact-card">
-                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Roadside unipole branding">
-                           <div class="galaxy-impact-card__content">
-                              <span>06 / Arterial Roads</span>
-                              <div>
-                                 <h3>High-visibility roadside formats</h3>
-                                 <p>Large-site media planned around distance viewing and route recall.</p>
-                              </div>
-                           </div>
-                        </article>
-                        <article class="galaxy-impact-card">
-                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Hero.jpg" alt="Brand hoarding in a busy area">
-                           <div class="galaxy-impact-card__content">
-                              <span>07 / Brand Launch</span>
-                              <div>
-                                 <h3>Launch-led outdoor placement</h3>
-                                 <p>Impact-focused hoardings that support product visibility at street level.</p>
-                              </div>
-                           </div>
-                        </article>
-                        <article class="galaxy-impact-card">
-                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/TimePhoto_20230711_192014.jpg" alt="Outdoor media installation on a commercial route">
-                           <div class="galaxy-impact-card__content">
-                              <span>08 / Market Access</span>
-                              <div>
-                                 <h3>Commercial zone media presence</h3>
-                                 <p>Execution tailored for market roads, dense traffic pockets and frequent views.</p>
-                              </div>
-                           </div>
-                        </article>
+                        </a>
                      </div>
                   </div>
                </section>
@@ -5833,115 +6273,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      </div>
                   </div>
                </section>
-               <section class="galaxy-services section fade-wrapper alt-surface--light">
-                  <div class="container">
-                     <div class="galaxy-services__intro">
-                        <div>
-                           <span class="galaxy-services__eyebrow">Services</span>
-                           <h2 class="title-anim">Outdoor formats built for visibility and recall.</h2>
-                        </div>
-                        <p class="primary-text">Core OOH services planned around traffic routes, retail presence and fast on-ground execution.</p>
-                     </div>
-                     <div class="galaxy-services__grid">
-                        <article class="galaxy-service-card">
-                           <div class="galaxy-service-card__top">
-                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-bullhorn"></i></span>
-                              <span class="galaxy-service-card__no">01 / Prime</span>
-                           </div>
-                           <div>
-                              <h3>Unipole & Hoardings</h3>
-                              <p>Large-format media for highways, city entries and high-footfall corridors.</p>
-                              <ul>
-                                 <li>Prime route selection</li>
-                                 <li>Creative adaptation</li>
-                                 <li>Installation support</li>
-                              </ul>
-                              <a class="galaxy-service-card__cta" href="unipole-advertising-uttarakhand.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
-                           </div>
-                        </article>
-                        <article class="galaxy-service-card">
-                           <div class="galaxy-service-card__top">
-                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-lightbulb"></i></span>
-                              <span class="galaxy-service-card__no">02 / Night</span>
-                           </div>
-                           <div>
-                              <h3>Glow Sign</h3>
-                              <p>Night recall branding for storefronts, roadsides and illuminated visibility points.</p>
-                              <ul>
-                                 <li>Brand-led fabrication</li>
-                                 <li>Retail frontage fit</li>
-                                 <li>High after-dark recall</li>
-                              </ul>
-                              <a class="galaxy-service-card__cta" href="glow-sign-advertisment.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
-                           </div>
-                        </article>
-                        <article class="galaxy-service-card">
-                           <div class="galaxy-service-card__top">
-                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-store"></i></span>
-                              <span class="galaxy-service-card__no">03 / Retail</span>
-                           </div>
-                           <div>
-                              <h3>In-Shop Branding</h3>
-                              <p>Point-of-sale media that improves store presence and customer attention inside the outlet.</p>
-                              <ul>
-                                 <li>Indoor display systems</li>
-                                 <li>Wall and counter media</li>
-                                 <li>Retail conversion support</li>
-                              </ul>
-                              <a class="galaxy-service-card__cta" href="in-shop-branding.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
-                           </div>
-                        </article>
-                        <article class="galaxy-service-card">
-                           <div class="galaxy-service-card__top">
-                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-location-dot"></i></span>
-                              <span class="galaxy-service-card__no">04 / Routes</span>
-                           </div>
-                           <div>
-                              <h3>OOH Advertising Services</h3>
-                              <p>Unipoles, gantries, highway hoardings and large-format billboards across high-traffic routes in Uttarakhand.</p>
-                              <ul>
-                                 <li>Unipole advertising</li>
-                                 <li>Gantry and highway formats</li>
-                                 <li>Large billboard inventory</li>
-                              </ul>
-                              <a class="galaxy-service-card__cta" href="outdoor-media-options.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
-                           </div>
-                        </article>
-                        <article class="galaxy-service-card">
-                           <div class="galaxy-service-card__top">
-                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-shop"></i></span>
-                              <span class="galaxy-service-card__no">05 / Store</span>
-                           </div>
-                           <div>
-                              <h3>Retail & In-Shop Branding</h3>
-                              <p>Glow sign boards, flex dealer boards, sun boards and standies for stronger retail recall.</p>
-                              <ul>
-                                 <li>Shopfront branding</li>
-                                 <li>Dealer board production</li>
-                                 <li>POS display support</li>
-                              </ul>
-                              <a class="galaxy-service-card__cta" href="retail-in-shop-branding.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
-                           </div>
-                        </article>
-                        <article class="galaxy-service-card">
-                           <div class="galaxy-service-card__top">
-                              <span class="galaxy-service-card__icon"><i class="fa-solid fa-layer-group"></i></span>
-                              <span class="galaxy-service-card__no">06 / Local</span>
-                           </div>
-                           <div>
-                              <h3>Flex & Display Boards</h3>
-                              <p>Fast local campaign formats for market clusters, activations and tactical promotions.</p>
-                              <ul>
-                                 <li>Quick production</li>
-                                 <li>Local market rollout</li>
-                                 <li>Budget-friendly formats</li>
-                              </ul>
-                              <a class="galaxy-service-card__cta" href="flex-board-advertisment.html">Explore Format <i class="fa-solid fa-arrow-right"></i></a>
-                           </div>
-                        </article>
-                     </div>
-                  </div>
-               </section>
                <section class="galaxy-testimonials section fade-wrapper alt-surface--dark">
                   <div class="container">
                      <div class="galaxy-testimonials__intro">
@@ -5954,49 +6285,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      <div class="galaxy-testimonials__grid">
                         <article class="galaxy-testimonial-card">
                            <div class="galaxy-testimonial-card__head">
-                              <img loading="lazy" decoding="async" src="assets/images/testimonial/s-thumb.png" alt="Client portrait">
+                              <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/IMG_8513.jpg" alt="Retail storefront branding campaign">
                               <div><strong>Retail Brand Team</strong><span>Storefront Campaign</span></div>
                            </div>
                            <p>Galaxy handled location planning and installation with very little back-and-forth. The rollout was faster than expected and looked clean on site.</p>
                         </article>
                         <article class="galaxy-testimonial-card">
                            <div class="galaxy-testimonial-card__head">
-                              <img loading="lazy" decoding="async" src="assets/images/testimonial/s-thumb-two.png" alt="Client portrait">
+                              <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/cucet.png" alt="Education outdoor advertising campaign">
                               <div><strong>Education Campaign</strong><span>Admission Push</span></div>
                            </div>
                            <p>Creative placement and route selection helped our messaging stay readable in traffic. The team stayed practical throughout production and go-live.</p>
                         </article>
                         <article class="galaxy-testimonial-card">
                            <div class="galaxy-testimonial-card__head">
-                              <img loading="lazy" decoding="async" src="assets/images/testimonial/s-thumb-three.png" alt="Client portrait">
+                              <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Multi-site outdoor advertising route">
                               <div><strong>Regional Marketing</strong><span>Multi-Site Outdoor</span></div>
                            </div>
                            <p>From fabrication to live proofing, the coordination felt reliable. We could track progress without chasing different vendors at every step.</p>
                         </article>
                         <article class="galaxy-testimonial-card">
                            <div class="galaxy-testimonial-card__head">
-                              <img loading="lazy" decoding="async" src="assets/images/testimonial/avatar.png" alt="Client portrait">
+                              <img loading="lazy" decoding="async" src="assets/images/sponsor/RIL-Jewels.webp" alt="Jewellery retail outdoor campaign">
                               <div><strong>Jewellery Retailer</strong><span>Market Visibility</span></div>
                            </div>
                            <p>The site suggestions were clear and practical. Our campaign got visibility in the right market areas without wasting time on weak locations.</p>
                         </article>
                         <article class="galaxy-testimonial-card">
                            <div class="galaxy-testimonial-card__head">
-                              <img loading="lazy" decoding="async" src="assets/images/testimonial/thumb.png" alt="Client portrait">
+                              <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/MC-Donalds.jpg" alt="FMCG route branding campaign">
                               <div><strong>FMCG Distributor</strong><span>Route Branding</span></div>
                            </div>
                            <p>Galaxy helped us plan around dealer routes and busy retail points. The final placements supported both brand recall and local sales teams.</p>
                         </article>
                         <article class="galaxy-testimonial-card">
                            <div class="galaxy-testimonial-card__head">
-                              <img loading="lazy" decoding="async" src="assets/images/testimonial/s-thumb.png" alt="Client portrait">
+                              <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/DHFL.jpg" alt="Finance branch promotion campaign">
                               <div><strong>Finance Brand</strong><span>Branch Promotion</span></div>
                            </div>
                            <p>Execution updates came on time, and the artwork adaptation was handled well across different outdoor sizes. That made approval easier.</p>
                         </article>
                         <article class="galaxy-testimonial-card">
                            <div class="galaxy-testimonial-card__head">
-                              <img loading="lazy" decoding="async" src="assets/images/testimonial/s-thumb-two.png" alt="Client portrait">
+                              <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg" alt="Local launch outdoor campaign">
                               <div><strong>Local Business Owner</strong><span>Launch Campaign</span></div>
                            </div>
                            <p>For a first campaign, the process was simple. We got guidance on format, location and installation instead of just a list of media options.</p>
@@ -6060,7 +6391,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      </div>
                      <div class="galaxy-blog__grid">
                         <article class="galaxy-blog-card">
-                           <img loading="lazy" decoding="async" src="assets/images/blog/one.png" alt="How to choose billboard locations">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Shivalik-Nagar-Chowk-1.jpg" alt="How to choose billboard locations">
                            <div class="galaxy-blog-card__body">
                               <span class="galaxy-blog-card__meta">Location Strategy</span>
                               <h3>How to choose outdoor sites that actually get seen.</h3>
@@ -6069,7 +6400,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </div>
                         </article>
                         <article class="galaxy-blog-card">
-                           <img loading="lazy" decoding="async" src="assets/images/blog/two.png" alt="Creative sizing for outdoor media">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/cucet.png" alt="Creative sizing for outdoor media">
                            <div class="galaxy-blog-card__body">
                               <span class="galaxy-blog-card__meta">Creative Fit</span>
                               <h3>Why message length changes with every outdoor format.</h3>
@@ -6087,7 +6418,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </div>
                         </article>
                         <article class="galaxy-blog-card">
-                           <img loading="lazy" decoding="async" src="assets/images/blog/three.png" alt="Retail branding planning">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/IMG_8513.jpg" alt="Retail branding planning">
                            <div class="galaxy-blog-card__body">
                               <span class="galaxy-blog-card__meta">Retail Branding</span>
                               <h3>How in-shop branding supports outdoor visibility.</h3>
@@ -6096,7 +6427,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </div>
                         </article>
                         <article class="galaxy-blog-card">
-                           <img loading="lazy" decoding="async" src="assets/images/blog/four.png" alt="Highway media planning">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/Haridwar-5.jpg" alt="Highway media planning">
                            <div class="galaxy-blog-card__body">
                               <span class="galaxy-blog-card__meta">Highway Media</span>
                               <h3>Why highway sites need a different creative approach.</h3>
@@ -6105,7 +6436,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                            </div>
                         </article>
                         <article class="galaxy-blog-card">
-                           <img loading="lazy" decoding="async" src="assets/images/blog/five.png" alt="Campaign proofing and reporting">
+                           <img loading="lazy" decoding="async" src="assets/images/clients/portfolio/TimePhoto_20230711_192014.jpg" alt="Campaign proofing and reporting">
                            <div class="galaxy-blog-card__body">
                               <span class="galaxy-blog-card__meta">Proofing</span>
                               <h3>What proofing adds after your campaign is installed.</h3>
@@ -6872,14 +7203,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          }
       })();
    </script>
-   <script id="galaxy-impact-gsap">
+   <script id="galaxy-areas-gsap">
       (function () {
-         var section = document.querySelector(".galaxy-impact");
+         var section = document.querySelector(".galaxy-areas");
          if (!section || !window.gsap) return;
 
          var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
          if (reduceMotion) return;
-         if (window.matchMedia("(max-width: 991.98px), (pointer: coarse)").matches) return;
 
          if (window.ScrollTrigger) {
             gsap.registerPlugin(ScrollTrigger);
@@ -6887,11 +7217,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             window.addEventListener("pageshow", function () { ScrollTrigger.refresh(); });
          }
 
-         var heading = section.querySelector(".galaxy-impact__intro h2");
+         var heading = section.querySelector(".galaxy-areas__intro h2");
          var headingTargets = heading;
 
          if (window.SplitText && heading) {
-            var split = new SplitText(heading, { type: "lines", linesClass: "impact-line" });
+            var split = new SplitText(heading, { type: "lines", linesClass: "areas-line" });
             headingTargets = split.lines;
             gsap.set(split.lines, { overflow: "hidden" });
          }
@@ -6906,122 +7236,69 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          });
 
          introTl
-            .from(".galaxy-impact__eyebrow", { y: 22, autoAlpha: 0, duration: 0.55 })
+            .from(".galaxy-areas__eyebrow", { y: 22, autoAlpha: 0, duration: 0.55 })
             .from(headingTargets, { yPercent: 105, autoAlpha: 0, duration: 0.9, stagger: 0.08 }, "-=0.18")
-            .from(".galaxy-impact__intro .primary-text", { x: 44, autoAlpha: 0, duration: 0.75 }, "-=0.55")
-            .from(".galaxy-livebar__item", { y: 42, autoAlpha: 0, duration: 0.72, stagger: 0.08 }, "-=0.32");
+            .from(".galaxy-areas__summary .primary-text", { x: 44, autoAlpha: 0, duration: 0.75 }, "-=0.55")
+            .from(".galaxy-areas__btn", { y: 18, autoAlpha: 0, duration: 0.55 }, "-=0.35");
 
-         document.querySelectorAll(".galaxy-livebar__item strong").forEach(function (item) {
-            var raw = item.textContent.trim();
-            var suffix = raw.replace(/[0-9]/g, "");
-            var end = parseInt(raw, 10);
-            if (!end) return;
-
-            var counter = { value: 0 };
-            gsap.to(counter, {
-               value: end,
-               duration: 1.6,
-               ease: "power3.out",
-               scrollTrigger: window.ScrollTrigger ? {
-                  trigger: item,
-                  start: "top 82%",
-                  once: true
-               } : null,
-               onUpdate: function () {
-                  item.textContent = Math.round(counter.value) + suffix;
-               }
-            });
-         });
-
-         gsap.from(".galaxy-impact-card", {
+         gsap.from(".galaxy-area-card", {
             y: 44,
-            rotateX: 6,
+            scale: 0.94,
             autoAlpha: 0,
             immediateRender: false,
             duration: 0.82,
             stagger: 0.1,
             ease: "power3.out",
             scrollTrigger: window.ScrollTrigger ? {
-               trigger: ".galaxy-impact__grid",
+               trigger: ".galaxy-areas__grid",
                start: "top 88%",
                once: true
             } : null
          });
 
-         gsap.fromTo(".galaxy-impact-card img",
-            { scale: 1.18, yPercent: -4 },
+         gsap.fromTo(".galaxy-area-card__media",
+            { y: 16, rotate: -4 },
             {
-               scale: 1.06,
-               yPercent: 5,
-               ease: "none",
-               scrollTrigger: window.ScrollTrigger ? {
-                  trigger: ".galaxy-impact__grid",
-                  start: "top bottom",
-                  end: "bottom top",
-                  scrub: 0.9
-               } : null
-            }
-         );
-
-         gsap.to(".galaxy-livebar__item", {
-            y: function (index) { return index % 2 ? 5 : -5; },
-            duration: 2.8,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut",
-            stagger: 0.16
-         });
-
-         gsap.to(".galaxy-livebar__item", {
-            "--shine-x": "120%",
-            duration: 1.45,
-            repeat: -1,
-            repeatDelay: 2.1,
-            ease: "power2.inOut",
-            stagger: 0.22
-         });
-
-         gsap.to(section, {
-            "--media-drift": "22px",
-            duration: 5.2,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut"
-         });
-
-         section.addEventListener("mousemove", function (event) {
-            var box = section.getBoundingClientRect();
-            var x = (event.clientX - box.left) / box.width - 0.5;
-            var y = (event.clientY - box.top) / box.height - 0.5;
-
-            gsap.to(section, {
-               "--grid-x": (x * 10) + "px",
-               "--grid-y": (y * 8) + "px",
-               duration: 0.55,
-               ease: "power2.out"
+               y: function (index) { return index % 2 ? 10 : -10; },
+               rotate: function (index) { return index % 2 ? 4 : -4; },
+               duration: 3.2,
+               repeat: -1,
+               yoyo: true,
+               ease: "sine.inOut",
+               stagger: 0.18
             });
-         });
 
-         section.querySelectorAll(".galaxy-impact-card").forEach(function (card) {
+         if (window.matchMedia("(max-width: 991.98px), (pointer: coarse)").matches) return;
+
+         section.querySelectorAll(".galaxy-area-card").forEach(function (card) {
             card.addEventListener("mousemove", function (event) {
                var box = card.getBoundingClientRect();
                var x = (event.clientX - box.left) / box.width - 0.5;
                var y = (event.clientY - box.top) / box.height - 0.5;
+               var media = card.querySelector(".galaxy-area-card__media");
+               var image = card.querySelector("img");
+               var content = card.querySelector(".galaxy-area-card__content");
 
                gsap.to(card, {
-                  rotateY: x * 7,
-                  rotateX: y * -7,
-                  y: -8,
+                  rotateY: x * 5,
+                  rotateX: y * -5,
+                  y: -10,
                   duration: 0.45,
                   ease: "power2.out"
                });
-               gsap.to(card.querySelector("img"), {
-                  x: x * 18,
-                  y: y * 14,
+               gsap.to(media, {
+                  x: x * 14,
+                  y: y * 12,
                   duration: 0.45,
                   ease: "power2.out"
                });
-               gsap.to(card.querySelector(".galaxy-impact-card__content"), {
+               gsap.to(image, {
+                  x: x * 12,
+                  y: y * 10,
+                  duration: 0.45,
+                  ease: "power2.out"
+               });
+               gsap.to(content, {
                   x: x * -10,
                   y: y * -8,
                   duration: 0.45,
@@ -7030,9 +7307,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             });
 
             card.addEventListener("mouseleave", function () {
+               var media = card.querySelector(".galaxy-area-card__media");
+               var image = card.querySelector("img");
+               var content = card.querySelector(".galaxy-area-card__content");
                gsap.to(card, { rotateY: 0, rotateX: 0, y: 0, duration: 0.55, ease: "power3.out" });
-               gsap.to(card.querySelector("img"), { x: 0, y: 0, duration: 0.55, ease: "power3.out" });
-               gsap.to(card.querySelector(".galaxy-impact-card__content"), { x: 0, y: 0, duration: 0.55, ease: "power3.out" });
+               gsap.to(media, { x: 0, y: 0, duration: 0.55, ease: "power3.out" });
+               gsap.to(image, { x: 0, y: 0, duration: 0.55, ease: "power3.out" });
+               gsap.to(content, { x: 0, y: 0, duration: 0.55, ease: "power3.out" });
             });
          });
       })();
@@ -7946,12 +8227,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       });
    })();
 </script>
+<script id="galaxy-topbar-scroll">
+   (function () {
+      var header = document.querySelector(".header");
+      var topbar = document.querySelector(".header__topbar");
+      if (!header || !topbar) return;
+
+      function updateTopbar() {
+         header.classList.toggle("galaxy-topbar-hidden", window.scrollY > 24);
+      }
+
+      updateTopbar();
+      window.addEventListener("scroll", updateTopbar, { passive: true });
+   })();
+</script>
+<script id="galaxy-home-first">
+   (function () {
+      if ("scrollRestoration" in history) {
+         history.scrollRestoration = "manual";
+      }
+
+      function showHomeFirst() {
+         if (window.location.hash && window.location.hash !== "#home") {
+            history.replaceState(null, document.title, window.location.pathname + window.location.search);
+         }
+
+         document.documentElement.scrollTop = 0;
+         document.body.scrollTop = 0;
+         window.scrollTo(0, 0);
+
+         if (window.ScrollSmoother && ScrollSmoother.get()) {
+            ScrollSmoother.get().scrollTo(0, false);
+         }
+
+         if (window.gsap && window.ScrollToPlugin) {
+            gsap.set(window, { scrollTo: 0 });
+         }
+      }
+
+      showHomeFirst();
+      document.addEventListener("DOMContentLoaded", showHomeFirst);
+      window.addEventListener("load", showHomeFirst);
+      setTimeout(showHomeFirst, 50);
+      setTimeout(showHomeFirst, 250);
+      setTimeout(showHomeFirst, 800);
+   })();
+</script>
 <script src="https://kit.fontawesome.com/47d5e28e48.js" crossorigin="anonymous" defer></script>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5H69NQ75"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag ManagerÂ (noscript)Â -->
+<!-- End Google Tag Manager (noscript) -->
 </body>
 
 </html>

@@ -88,6 +88,7 @@
       [
         ".avista-home",
         ".galaxy-services",
+        ".galaxy-areas",
         ".galaxy-logos",
         ".galaxy-impact",
         ".galaxy-showcase",
@@ -97,10 +98,9 @@
         ".galaxy-blog",
         ".galaxy-contact"
       ].forEach(function (selector) {
-        var section = main.querySelector(selector);
-        if (section) {
+        Array.prototype.slice.call(main.querySelectorAll(selector)).forEach(function (section) {
           main.appendChild(section);
-        }
+        });
       });
     }
 
