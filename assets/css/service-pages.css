@@ -415,39 +415,6 @@
    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
-.service-hero__stats {
-   display: grid;
-   grid-template-columns: repeat(3, minmax(0, 1fr));
-   gap: 14px;
-   margin-top: 34px;
-}
-
-.service-hero__stats article {
-   padding: 18px 18px 16px;
-   border: 1px solid rgba(255, 255, 255, 0.08);
-   border-radius: 22px;
-   background: rgba(255, 255, 255, 0.05);
-   backdrop-filter: blur(12px);
-}
-
-.service-hero__stats strong {
-   display: block;
-   color: var(--page-highlight);
-   font-size: clamp(1.35rem, 2vw, 2rem);
-   line-height: 1;
-   font-weight: 1000;
-}
-
-.service-hero__stats span {
-   display: block;
-   margin-top: 8px;
-   color: rgba(255, 248, 235, 0.72);
-   font-size: 12px;
-   line-height: 1.45;
-   letter-spacing: 0.06em;
-   text-transform: uppercase;
-}
-
 .service-stage {
    position: relative;
    min-height: 620px;
@@ -604,7 +571,8 @@
 #about-unipole .service-head,
 #about-gantry .service-head,
 #about-highway .service-head,
-#about-billboards .service-head {
+#about-billboards .service-head,
+#about-retail-service .service-head {
    max-width: 980px;
    margin: 0 auto;
    text-align: center;
@@ -613,7 +581,8 @@
 #about-unipole .unipole-intro-card,
 #about-gantry .unipole-intro-card,
 #about-highway .unipole-intro-card,
-#about-billboards .unipole-intro-card {
+#about-billboards .unipole-intro-card,
+.service-intro-card {
    position: relative;
    z-index: 1;
    max-width: 1180px;
@@ -631,8 +600,9 @@
    box-shadow: 0 28px 90px rgba(0, 0, 0, 0.36);
 }
 
-#about-unipole .unipole-intro-card::before {
-   content: "UNIPOLE";
+#about-unipole .unipole-intro-card::before,
+.service-intro-card::before {
+   content: attr(data-watermark);
    position: absolute;
    left: 50%;
    top: -34px;
@@ -661,14 +631,16 @@
    font-size: 28px;
 }
 
-#about-unipole .service-kicker {
+#about-unipole .service-kicker,
+#about-retail-service .service-kicker {
    justify-content: center;
 }
 
 #about-unipole .service-head p,
 #about-gantry .service-head p,
 #about-highway .service-head p,
-#about-billboards .service-head p {
+#about-billboards .service-head p,
+#about-retail-service .service-head p {
    max-width: 960px;
    margin: 26px auto 0;
    font-size: clamp(1.05rem, 1.55vw, 1.25rem);
@@ -924,12 +896,14 @@
    #about-unipole .unipole-intro-card,
    #about-gantry .unipole-intro-card,
    #about-highway .unipole-intro-card,
-   #about-billboards .unipole-intro-card {
+   #about-billboards .unipole-intro-card,
+   .service-intro-card {
       padding: 42px 24px 46px;
       border-radius: 28px;
    }
 
-   #about-unipole .unipole-intro-card::before {
+   #about-unipole .unipole-intro-card::before,
+   .service-intro-card::before {
       top: -12px;
       font-size: clamp(4rem, 20vw, 8rem);
    }
@@ -2193,7 +2167,8 @@ a.service-card:hover {
    animation: galaxyShine 0.9s ease;
 }
 
-.pricing-cta__left {
+.pricing-cta__left,
+.pricing-cta__copy {
    max-width: 640px;
 }
 
@@ -2217,7 +2192,8 @@ a.service-card:hover {
    background: linear-gradient(90deg, var(--page-accent), var(--page-accent-strong));
 }
 
-.pricing-cta__left h3 {
+.pricing-cta__left h3,
+.pricing-cta__copy h3 {
    margin: 0;
    color: var(--page-heading);
    font-size: clamp(1.6rem, 2.6vw, 2.2rem);
@@ -2226,7 +2202,8 @@ a.service-card:hover {
    letter-spacing: -0.03em;
 }
 
-.pricing-cta__left p {
+.pricing-cta__left p,
+.pricing-cta__copy p {
    margin: 12px 0 0;
    color: rgba(255, 248, 235, 0.7);
    line-height: 1.7;
@@ -2778,9 +2755,9 @@ a.service-card:hover {
 }
 
 .service-page--dehradun {
-   --city-accent: #63e39f;
-   --city-accent-soft: rgba(99, 227, 159, 0.16);
-   --city-accent-strong: rgba(99, 227, 159, 0.34);
+   --city-accent: #ff8a24;
+   --city-accent-soft: rgba(255, 138, 36, 0.16);
+   --city-accent-strong: rgba(255, 138, 36, 0.34);
 }
 
 .service-page--haridwar {
@@ -2790,15 +2767,15 @@ a.service-card:hover {
 }
 
 .service-page--rishikesh {
-   --city-accent: #55d6ff;
-   --city-accent-soft: rgba(85, 214, 255, 0.15);
-   --city-accent-strong: rgba(85, 214, 255, 0.3);
+   --city-accent: #ff7a2f;
+   --city-accent-soft: rgba(255, 122, 47, 0.15);
+   --city-accent-strong: rgba(255, 122, 47, 0.3);
 }
 
 .service-page--haldwani {
-   --city-accent: #9beb5b;
-   --city-accent-soft: rgba(155, 235, 91, 0.14);
-   --city-accent-strong: rgba(155, 235, 91, 0.28);
+   --city-accent: #ff9f2f;
+   --city-accent-soft: rgba(255, 159, 47, 0.14);
+   --city-accent-strong: rgba(255, 159, 47, 0.28);
 }
 
 .service-page--roorkee {
@@ -2812,11 +2789,6 @@ a.service-card:hover {
    background: var(--city-accent-soft);
 }
 
-.city-hero .service-hero__stats article {
-   border-color: var(--city-accent-strong);
-}
-
-.city-hero .service-hero__stats strong,
 .city-section .service-kicker,
 .city-zone-card i,
 .city-checklist i {
@@ -3025,6 +2997,233 @@ a.service-card:hover {
    flex: 0 0 auto;
 }
 
+.city-char-dham {
+   position: relative;
+   overflow: hidden;
+   background:
+      radial-gradient(circle at 82% 14%, var(--city-accent-soft), transparent 28%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015)),
+      #080909;
+}
+
+.city-char-dham__grid {
+   display: grid;
+   grid-template-columns: repeat(4, minmax(0, 1fr));
+   gap: 18px;
+}
+
+.city-char-dham__card {
+   min-height: 330px;
+   position: relative;
+   overflow: hidden;
+   border-radius: 26px;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   background: #101010;
+}
+
+.city-char-dham__card img {
+   width: 100%;
+   height: 100%;
+   display: block;
+   object-fit: cover;
+   transform: scale(1.03);
+   transition: transform 0.55s ease;
+}
+
+.city-char-dham__card::after {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.84));
+}
+
+.city-char-dham__card:hover img {
+   transform: scale(1.09);
+}
+
+.city-char-dham__content {
+   position: absolute;
+   z-index: 1;
+   left: 18px;
+   right: 18px;
+   bottom: 18px;
+   padding: 18px;
+   border-radius: 20px;
+   background: rgba(0, 0, 0, 0.58);
+   backdrop-filter: blur(14px);
+}
+
+.city-char-dham__content span {
+   display: inline-flex;
+   margin-bottom: 8px;
+   color: var(--city-accent);
+   font-size: 12px;
+   font-weight: 900;
+   letter-spacing: 0.12em;
+   text-transform: uppercase;
+}
+
+.city-char-dham__content h3 {
+   margin: 0;
+   color: #fff;
+   font-size: 24px;
+   line-height: 1.08;
+}
+
+.city-char-dham__content p {
+   margin: 10px 0 0;
+   color: rgba(255, 255, 255, 0.7);
+   line-height: 1.55;
+}
+
+.city-contact {
+   position: relative;
+   overflow: hidden;
+   background:
+      radial-gradient(circle at 10% 20%, var(--city-accent-soft), transparent 26%),
+      #050606;
+}
+
+.city-contact__wrap {
+   display: grid;
+   grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+   gap: 22px;
+   align-items: stretch;
+}
+
+.city-contact__map,
+.city-contact__form {
+   position: relative;
+   overflow: hidden;
+   border-radius: 28px;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   background:
+      radial-gradient(circle at 18% 16%, var(--city-accent-soft), transparent 32%),
+      linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.018)),
+      rgba(10, 10, 10, 0.88);
+   box-shadow: 0 28px 90px rgba(0, 0, 0, 0.32);
+}
+
+.city-contact__map {
+   min-height: 560px;
+   display: grid;
+}
+
+.city-contact__map iframe {
+   width: 100%;
+   height: 100%;
+   min-height: 560px;
+   border: 0;
+   filter: grayscale(0.28) contrast(1.08);
+}
+
+.city-contact__address {
+   position: absolute;
+   left: 20px;
+   right: 20px;
+   bottom: 20px;
+   padding: 18px;
+   border-radius: 20px;
+   background: rgba(0, 0, 0, 0.68);
+   backdrop-filter: blur(14px);
+}
+
+.city-contact__address strong {
+   display: block;
+   color: var(--city-accent);
+   font-size: 13px;
+   font-weight: 900;
+   letter-spacing: 0.12em;
+   text-transform: uppercase;
+}
+
+.city-contact__address p {
+   margin: 8px 0 0;
+   color: rgba(255, 255, 255, 0.78);
+   line-height: 1.55;
+}
+
+.city-contact__form {
+   padding: 32px;
+}
+
+.city-contact__form-head {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   gap: 18px;
+   margin-bottom: 24px;
+}
+
+.city-contact__form-head span {
+   color: var(--city-accent);
+   font-size: 12px;
+   font-weight: 900;
+   letter-spacing: 0.16em;
+   text-transform: uppercase;
+}
+
+.city-contact__form-head h3 {
+   margin: 8px 0 0;
+   color: #fff;
+   font-size: clamp(1.8rem, 3vw, 3.1rem);
+   line-height: 1.02;
+}
+
+.city-contact__form-badge {
+   width: 54px;
+   min-width: 54px;
+   height: 54px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 18px;
+   color: #080808;
+   background: var(--city-accent);
+}
+
+.city-contact__form form {
+   display: grid;
+   gap: 14px;
+}
+
+.city-contact__group {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 14px;
+}
+
+.city-contact__field input,
+.city-contact__field select,
+.city-contact__field textarea {
+   width: 100%;
+   min-height: 56px;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   border-radius: 16px;
+   padding: 0 16px;
+   color: #fff;
+   background: rgba(255, 255, 255, 0.06);
+}
+
+.city-contact__field textarea {
+   min-height: 128px;
+   padding-top: 16px;
+}
+
+.city-contact__field input::placeholder,
+.city-contact__field textarea::placeholder {
+   color: rgba(255, 255, 255, 0.5);
+}
+
+.city-contact__field select option {
+   color: #111;
+}
+
+.city-contact__form .service-btn {
+   width: fit-content;
+   margin-top: 6px;
+}
+
 @media (max-width: 1199px) {
    .service-hero__grid,
    .location-panel,
@@ -3053,6 +3252,14 @@ a.service-card:hover {
 
    .city-zone-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+
+   .city-char-dham__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+
+   .city-contact__wrap {
+      grid-template-columns: 1fr;
    }
 
    .city-hero-card--primary {
@@ -3099,12 +3306,13 @@ a.service-card:hover {
       font-size: clamp(2.35rem, 12vw, 3.9rem);
    }
 
-   .service-hero__stats,
    .service-grid,
    .location-list,
    .showcase-grid,
    .campaign-rail,
    .city-zone-grid,
+   .city-char-dham__grid,
+   .city-contact__group,
    .city-image-stack {
       grid-template-columns: 1fr;
    }
@@ -3210,6 +3418,19 @@ a.service-card:hover {
 
    .city-image-stack figure:nth-child(2) {
       margin-top: 0;
+   }
+
+   .city-contact__map,
+   .city-contact__map iframe {
+      min-height: 390px;
+   }
+
+   .city-contact__form {
+      padding: 22px;
+   }
+
+   .city-contact__form .service-btn {
+      width: 100%;
    }
 
    .city-cta {

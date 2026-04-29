@@ -5390,6 +5390,296 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          overflow: auto;
       }
    }
+
+   @media (max-width: 1199px) {
+      .header .galaxy-desktop-menu {
+         display: none !important;
+      }
+
+      .header .open-offcanvas-nav {
+         display: inline-flex !important;
+      }
+
+      .avista-home,
+      .galaxy-services,
+      .avista-works,
+      .galaxy-areas,
+      .galaxy-showcase,
+      .galaxy-rollout,
+      .galaxy-logos,
+      .galaxy-testimonials,
+      .galaxy-faq,
+      .galaxy-blog,
+      .galaxy-contact,
+      .offer {
+         overflow: hidden;
+      }
+
+      .avista-home__grid,
+      .galaxy-services__intro,
+      .avista-works__head,
+      .galaxy-showcase__intro,
+      .galaxy-rollout__layout,
+      .galaxy-logos__intro,
+      .galaxy-testimonials__intro,
+      .galaxy-faq__intro,
+      .galaxy-faq__wrap,
+      .galaxy-blog__intro,
+      .galaxy-contact__wrap {
+         grid-template-columns: 1fr !important;
+      }
+
+      .galaxy-services__grid,
+      .avista-works__grid,
+      .galaxy-showcase__grid,
+      .galaxy-logos__grid,
+      .galaxy-testimonials__grid,
+      .galaxy-blog__grid {
+         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+
+      .galaxy-services__intro,
+      .galaxy-showcase__intro,
+      .galaxy-testimonials__intro,
+      .galaxy-faq__intro,
+      .galaxy-blog__intro,
+      .galaxy-contact__wrap {
+         gap: 24px !important;
+      }
+
+      .galaxy-rollout__visual,
+      .galaxy-contact__panel,
+      .galaxy-contact__form {
+         min-width: 0;
+      }
+   }
+
+   @media (max-width: 991px) {
+      .home-hero-v2,
+      .home-hero-v3,
+      .avista-home {
+         padding-top: 112px !important;
+      }
+
+      .avista-home__grid {
+         display: grid !important;
+         grid-template-columns: 1fr !important;
+         gap: 28px !important;
+      }
+
+      .avista-home__copy {
+         max-width: 720px !important;
+      }
+
+      .avista-home h1,
+      .galaxy-services__intro h2,
+      .avista-works__head h2,
+      .galaxy-showcase__intro h2,
+      .galaxy-rollout__intro h2,
+      .galaxy-logos__intro h2,
+      .galaxy-testimonials__intro h2,
+      .galaxy-faq__intro h2,
+      .galaxy-blog__intro h2,
+      .galaxy-contact__form-head h3,
+      .offer__content h2 {
+         font-size: clamp(2.1rem, 8vw, 3.7rem) !important;
+         line-height: 1.05 !important;
+         letter-spacing: 0 !important;
+      }
+
+      .primary-text,
+      .avista-home p,
+      .galaxy-service-card p,
+      .galaxy-area-card__content p,
+      .galaxy-showcase-card p,
+      .galaxy-rollout p,
+      .galaxy-testimonial-card p,
+      .galaxy-blog-card p,
+      .offer__content p {
+         font-size: 16px !important;
+         line-height: 1.65 !important;
+      }
+
+      .avista-home__service-row,
+      .galaxy-rollout__roadmap,
+      .galaxy-contact__form .group-grid {
+         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+
+      .galaxy-service-card,
+      .galaxy-showcase-card,
+      .galaxy-testimonial-card,
+      .galaxy-blog-card,
+      .galaxy-faq__panel,
+      .accordion-item,
+      .galaxy-contact__form,
+      .galaxy-contact__panel {
+         border-radius: 18px !important;
+      }
+   }
+
+   @media (max-width: 767px) {
+      .header .nav-quote-btn {
+         display: none !important;
+      }
+
+      .header .navbar {
+         min-height: 64px !important;
+      }
+
+      .header .navbar__logo img {
+         width: 88px !important;
+         max-width: 88px !important;
+      }
+
+      .avista-home {
+         padding: 96px 0 54px !important;
+      }
+
+      .avista-home__stage {
+         display: block !important;
+         position: relative !important;
+         min-height: 310px !important;
+         width: 100% !important;
+      }
+
+      .avista-home__screen {
+         position: absolute !important;
+         inset: 0 0 42px 0 !important;
+         height: auto !important;
+         border-radius: 20px !important;
+      }
+
+      .avista-home__poster {
+         display: block !important;
+         position: absolute !important;
+         left: 16px !important;
+         bottom: 0 !important;
+         width: min(54%, 220px) !important;
+         transform: rotate(-5deg) !important;
+         border-radius: 16px !important;
+      }
+
+      .avista-home__floating {
+         display: none !important;
+      }
+
+      .avista-home__actions,
+      .galaxy-showcase__chips,
+      .galaxy-rollout__tags {
+         display: grid !important;
+         grid-template-columns: 1fr !important;
+         gap: 12px !important;
+      }
+
+      .avista-home__btn,
+      .galaxy-areas__btn,
+      .galaxy-showcase__btn,
+      .galaxy-showcase-cta,
+      .galaxy-contact__form .btn,
+      .offer .btn {
+         width: 100% !important;
+         justify-content: center !important;
+         text-align: center !important;
+      }
+
+      .avista-home__service-row,
+      .galaxy-services__grid,
+      .avista-works__grid,
+      .galaxy-showcase__grid,
+      .galaxy-rollout__roadmap,
+      .galaxy-logos__grid,
+      .galaxy-testimonials__grid,
+      .galaxy-blog__grid,
+      .galaxy-contact__form .group-grid {
+         grid-template-columns: 1fr !important;
+      }
+
+      .galaxy-services__category-title {
+         font-size: clamp(1.35rem, 7vw, 2rem) !important;
+         line-height: 1.15 !important;
+      }
+
+      .galaxy-service-card,
+      .galaxy-area-card,
+      .galaxy-showcase-card,
+      .galaxy-testimonial-card,
+      .galaxy-blog-card {
+         min-height: auto !important;
+      }
+
+      .avista-work-card,
+      .galaxy-showcase-card,
+      .galaxy-blog-card {
+         aspect-ratio: auto !important;
+      }
+
+      .avista-work-card img,
+      .galaxy-showcase-card img,
+      .galaxy-blog-card > img {
+         height: 220px !important;
+         object-fit: cover !important;
+      }
+
+      .galaxy-area-card,
+      .galaxy-area-card--featured {
+         flex-basis: 88% !important;
+      }
+
+      .galaxy-rollout__visual,
+      .galaxy-contact__panel--map,
+      .galaxy-contact__map,
+      .galaxy-contact__map iframe {
+         min-height: 330px !important;
+      }
+
+      .galaxy-contact__form-head {
+         display: flex !important;
+         align-items: flex-start !important;
+         gap: 14px !important;
+      }
+
+      .offer__cta-single h2 a {
+         align-items: flex-start !important;
+         justify-content: space-between !important;
+         gap: 12px !important;
+         font-size: clamp(1.35rem, 8vw, 2.1rem) !important;
+         line-height: 1.1 !important;
+         white-space: normal !important;
+      }
+   }
+
+   @media (max-width: 420px) {
+      .container,
+      .container-fluid {
+         padding-left: 14px !important;
+         padding-right: 14px !important;
+      }
+
+      .avista-home h1,
+      .galaxy-services__intro h2,
+      .avista-works__head h2,
+      .galaxy-areas h2,
+      .galaxy-showcase__intro h2,
+      .galaxy-rollout__intro h2,
+      .galaxy-logos__intro h2,
+      .galaxy-testimonials__intro h2,
+      .galaxy-faq__intro h2,
+      .galaxy-blog__intro h2 {
+         font-size: clamp(1.9rem, 11vw, 2.65rem) !important;
+      }
+
+      .avista-home__stage {
+         min-height: 280px !important;
+      }
+
+      .galaxy-contact__form,
+      .galaxy-faq__panel,
+      .galaxy-service-card,
+      .galaxy-blog-card__body {
+         padding: 18px !important;
+      }
+   }
 </style>
 </head>
 
