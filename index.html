@@ -17,7 +17,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5H69NQ75');</script>
-<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager -->
 
    <!-- required meta -->
    <meta charset="UTF-8">
@@ -5536,11 +5536,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          padding: 96px 0 54px !important;
       }
 
+      .avista-home .container-fluid {
+         width: 100% !important;
+         max-width: 100% !important;
+         box-sizing: border-box !important;
+         padding-left: 16px !important;
+         padding-right: 16px !important;
+         overflow: hidden !important;
+      }
+
       .avista-home__stage {
          display: block !important;
          position: relative !important;
          min-height: 310px !important;
+         width: calc(100vw - 64px) !important;
+         max-width: calc(100vw - 64px) !important;
+         min-width: 0 !important;
+      }
+
+      .avista-home__grid,
+      .avista-home__copy {
          width: 100% !important;
+         max-width: calc(100vw - 32px) !important;
+         min-width: 0 !important;
+      }
+
+      .avista-home__copy p {
+         max-width: 34ch !important;
+         overflow-wrap: normal !important;
+         word-break: normal !important;
       }
 
       .avista-home__screen {
@@ -5548,6 +5572,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          inset: 0 0 42px 0 !important;
          height: auto !important;
          border-radius: 20px !important;
+         max-width: 100% !important;
       }
 
       .avista-home__poster {
@@ -5570,6 +5595,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          display: grid !important;
          grid-template-columns: 1fr !important;
          gap: 12px !important;
+         width: calc(100vw - 64px) !important;
+         max-width: calc(100vw - 64px) !important;
       }
 
       .avista-home__btn,
@@ -5579,8 +5606,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .galaxy-contact__form .btn,
       .offer .btn {
          width: 100% !important;
+         max-width: 100% !important;
+         box-sizing: border-box !important;
          justify-content: center !important;
          text-align: center !important;
+      }
+
+      .avista-home__btn {
+         width: calc(100vw - 64px) !important;
+         max-width: calc(100vw - 64px) !important;
       }
 
       .avista-home__service-row,
@@ -5791,8 +5825,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                               <li class="navbar__item nav-fade">
                                  <a href="index.html">Home</a>
                               </li>
-                              <li class="navbar__item nav-fade">
-                                 <a href="our-story.html">About Us</a>
+                              <li class="navbar__item navbar__item--has-children nav-fade">
+                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">About</a>
+                                 <ul class="navbar__sub-menu navbar__sub-menu--lg">
+                                    <li>
+                                       <a href="about-us.html">About Us</a>
+                                    </li>
+                                    <li>
+                                       <a href="our-story.html">Our Story</a>
+                                    </li>
+                                    <li>
+                                       <a href="mission-values.html">Mission &amp; Values</a>
+                                    </li>
+                                 </ul>
                               </li>
                               <li class="navbar__item navbar__item--has-children nav-fade">
                                  <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">OOH Advertising</a>
@@ -5887,9 +5932,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <li class="navbar__item nav-fade">
                            <a href="index.html">Home</a>
                         </li>
-                        <li class="navbar__item nav-fade">
-                           <a href="our-story.html">About Us</a>
-                        </li>
+                        <li class="navbar__item navbar__item--has-children nav-fade">
+                                 <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">About</a>
+                                 <ul class="navbar__sub-menu navbar__sub-menu--lg">
+                                    <li>
+                                       <a href="about-us.html">About Us</a>
+                                    </li>
+                                    <li>
+                                       <a href="our-story.html">Our Story</a>
+                                    </li>
+                                    <li>
+                                       <a href="mission-values.html">Mission &amp; Values</a>
+                                    </li>
+                                 </ul>
+                              </li>
                         
                         <li class="navbar__item navbar__item--has-children nav-fade">
                            <a href="javascript:void(0)" aria-label="dropdown menu" class="navbar__dropdown-label">OOH Advertising</a>
@@ -8568,8 +8624,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5H69NQ75"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager (noscript) -->
 </body>
 
 </html>
+
+
+
 
