@@ -12,6 +12,30 @@
   ready(function () {
     var hasGsap = typeof window.gsap !== "undefined";
     var hasScrollTrigger = typeof window.ScrollTrigger !== "undefined";
+    var isMobileScroll = function () {
+      return window.matchMedia("(max-width: 991.98px)").matches || window.matchMedia("(pointer: coarse)").matches;
+    };
+    var enforceNativeMobileScroll = function () {
+      if (!isMobileScroll()) return;
+      document.documentElement.classList.add("native-mobile-scroll");
+      document.body.style.overflowY = "auto";
+      document.body.style.height = "auto";
+      var app = document.querySelector(".my-app");
+      var wrapper = document.querySelector("#smooth-wrapper");
+      var content = document.querySelector("#smooth-content");
+      [app, wrapper, content].forEach(function (node) {
+        if (!node) return;
+        node.style.maxHeight = "none";
+        node.style.height = "auto";
+        node.style.overflow = "visible";
+        node.style.transform = "none";
+      });
+      if (window.ScrollSmoother && ScrollSmoother.get && ScrollSmoother.get()) {
+        ScrollSmoother.get().kill();
+      }
+    };
+
+    enforceNativeMobileScroll();
 
     if (hasGsap && hasScrollTrigger) {
       gsap.registerPlugin(ScrollTrigger);
@@ -29,6 +53,24 @@
         '<a href="tel:+919837241310" aria-label="Call Galaxy Advertisers"><i class="fa-solid fa-phone"></i></a>' +
         '<a href="https://wa.me/919837241310?text=Hello%20Galaxy%20Advertisers%2C%20I%20need%20an%20outdoor%20advertising%20quotation." aria-label="WhatsApp Galaxy Advertisers" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>';
       document.body.appendChild(float);
+    }
+
+    if (!document.querySelector(".galaxy-mobile-floating-nav")) {
+      var mobileNav = document.createElement("button");
+      mobileNav.type = "button";
+      mobileNav.className = "galaxy-mobile-floating-nav";
+      mobileNav.setAttribute("aria-label", "Open menu");
+      mobileNav.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      mobileNav.addEventListener("click", function () {
+        document.querySelectorAll(".nav-fade").forEach(function (item, index) {
+          item.style.animationDelay = 1 + 0.2 * index + "s";
+        });
+        var offcanvas = document.querySelector(".offcanvas-menu");
+        var wrapper = document.querySelector(".offcanvas-menu__wrapper");
+        if (offcanvas) offcanvas.classList.add("show-offcanvas-menu");
+        if (wrapper) wrapper.classList.remove("nav-fade-active");
+      });
+      document.body.appendChild(mobileNav);
     }
 
     var nav = document.querySelector(".primary-navbar");
@@ -353,7 +395,9 @@
     }
 
     window.addEventListener("load", function () {
+      enforceNativeMobileScroll();
       if (hasScrollTrigger) ScrollTrigger.refresh();
     });
+    window.addEventListener("resize", enforceNativeMobileScroll, { passive: true });
   });
 })();

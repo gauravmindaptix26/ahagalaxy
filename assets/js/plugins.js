@@ -683,7 +683,7 @@
 				ease: "power3.inOut",
 			});
 		});
-// 24. smooth scroll (desktop + mobile)
+// 24. smooth scroll (desktop only; mobile uses native scrolling)
 		const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 		const isTouch = () => window.matchMedia("(pointer: coarse)").matches;
 		const isSmall = () => window.matchMedia("(max-width: 991.98px)").matches;
@@ -692,43 +692,37 @@
 			document.querySelector("#smooth-wrapper") &&
 			document.querySelector("#smooth-content");
 
-		function desiredSmootherMode() {
-			return isTouch() || isSmall() ? "mobile" : "desktop";
-		}
-
 		function ensureSmoother() {
 			const existing = typeof ScrollSmoother !== "undefined" ? ScrollSmoother.get() : null;
-			const wantsSmoother = !prefersReducedMotion.matches && hasSmootherDeps();
-			const mode = desiredSmootherMode();
+			const wantsSmoother = !prefersReducedMotion.matches && hasSmootherDeps() && !isTouch() && !isSmall();
 
 			if (!wantsSmoother) {
 				if (existing) existing.kill();
 				window.__galaxySmootherMode = null;
+				document.documentElement.classList.add("native-mobile-scroll");
 				return;
 			}
 
-			if (existing && window.__galaxySmootherMode && window.__galaxySmootherMode !== mode) {
-				existing.kill();
-			}
+			document.documentElement.classList.remove("native-mobile-scroll");
 
 			if (!ScrollSmoother.get()) {
 				ScrollSmoother.create({
 					wrapper: "#smooth-wrapper",
 					content: "#smooth-content",
-					smooth: mode === "mobile" ? 0.7 : 1.6,
-					smoothTouch: mode === "mobile" ? 0.12 : false,
-					normalizeScroll: mode === "mobile",
+					smooth: 1.6,
+					smoothTouch: false,
+					normalizeScroll: false,
 					ignoreMobileResize: true,
 					effects: false,
 				});
-				window.__galaxySmootherMode = mode;
+				window.__galaxySmootherMode = "desktop";
 				if (typeof ScrollTrigger !== "undefined") {
 					window.setTimeout(() => ScrollTrigger.refresh(), 200);
 				}
 				return;
 			}
 
-			window.__galaxySmootherMode = mode;
+			window.__galaxySmootherMode = "desktop";
 			try {
 				ScrollSmoother.get().refresh();
 			} catch {}

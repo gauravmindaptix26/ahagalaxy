@@ -5714,6 +5714,70 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          padding: 18px !important;
       }
    }
+
+   @media (max-width: 991.98px) {
+      .header .navbar {
+         width: 100% !important;
+         display: flex !important;
+         align-items: center !important;
+         justify-content: space-between !important;
+      }
+
+      .header .navbar__options {
+         display: inline-flex !important;
+         margin-left: auto !important;
+      }
+
+      .header .open-offcanvas-nav {
+         position: fixed !important;
+         top: 22px !important;
+         right: 18px !important;
+         z-index: 10060 !important;
+         display: inline-flex !important;
+         width: 48px !important;
+         min-width: 48px !important;
+         height: 48px !important;
+         border-radius: 999px !important;
+         align-items: center !important;
+         justify-content: center !important;
+         color: #fff !important;
+         background: #ff3d1f !important;
+         border: 1px solid rgba(255,255,255,0.18) !important;
+         box-shadow: 0 16px 38px rgba(255,61,31,0.32) !important;
+      }
+
+      .header .open-offcanvas-nav i {
+         display: inline-flex !important;
+         color: #fff !important;
+         font-size: 18px !important;
+         line-height: 1 !important;
+      }
+
+      .galaxy-mobile-floating-nav {
+         position: fixed !important;
+         top: 22px !important;
+         right: 18px !important;
+         z-index: 10070 !important;
+         display: inline-flex !important;
+         width: 48px !important;
+         min-width: 48px !important;
+         height: 48px !important;
+         border-radius: 999px !important;
+         align-items: center !important;
+         justify-content: center !important;
+         color: #fff !important;
+         background: #ff3d1f !important;
+         border: 1px solid rgba(255,255,255,0.18) !important;
+         box-shadow: 0 16px 38px rgba(255,61,31,0.32) !important;
+      }
+
+      .galaxy-mobile-floating-nav i {
+         display: inline-flex !important;
+         color: #fff !important;
+         font-size: 18px !important;
+         line-height: 1 !important;
+      }
+   }
 </style>
 </head>
 
@@ -5910,6 +5974,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
          </div>
       </header>
+      <button class="open-offcanvas-nav galaxy-mobile-floating-nav" type="button" aria-label="Open menu" style="position:fixed !important; top:22px !important; right:18px !important; z-index:2147483647 !important; display:inline-flex !important; width:48px !important; min-width:48px !important; height:48px !important; align-items:center !important; justify-content:center !important; border-radius:999px !important; background:#ff3d1f !important; color:#fff !important; box-shadow:0 16px 38px rgba(255,61,31,.32) !important;">
+         <i class="fa-solid fa-bars"></i>
+      </button>
 	<a href="/" style="cursor:pointer; position:fixed; right:0; top:40%; z-index:999;" class="search-toggler"></a><!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       <!-- ==== / header end ==== -->
       <!-- ==== offcanvas nav start ==== -->
