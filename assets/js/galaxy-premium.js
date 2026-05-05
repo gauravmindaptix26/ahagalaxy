@@ -36,6 +36,21 @@
     };
 
     enforceNativeMobileScroll();
+    window.addEventListener("orientationchange", function () {
+      window.setTimeout(enforceNativeMobileScroll, 250);
+    }, { passive: true });
+    window.addEventListener("resize", function () {
+      if (isMobileScroll()) window.requestAnimationFrame(enforceNativeMobileScroll);
+    }, { passive: true });
+
+    document.querySelectorAll("img:not([loading])").forEach(function (img, index) {
+      if (index > 1) img.setAttribute("loading", "lazy");
+      img.setAttribute("decoding", img.getAttribute("decoding") || "async");
+    });
+
+    document.querySelectorAll("iframe:not([loading])").forEach(function (frame) {
+      frame.setAttribute("loading", "lazy");
+    });
 
     if (hasGsap && hasScrollTrigger) {
       gsap.registerPlugin(ScrollTrigger);

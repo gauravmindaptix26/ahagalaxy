@@ -13,6 +13,8 @@
 
 html {
   background: var(--galaxy-bg);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -23,6 +25,9 @@ body {
     linear-gradient(180deg, rgba(255, 255, 255, 0.026) 1px, transparent 1px),
     #050607;
   background-size: 100% 100%, 100% 100%, 92px 92px, 92px 92px;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
 }
 
 .my-app {
@@ -38,6 +43,7 @@ html.native-mobile-scroll body {
   overscroll-behavior-y: auto;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
+  scroll-behavior: smooth;
 }
 
 html.native-mobile-scroll .my-app,
@@ -56,6 +62,19 @@ html.native-mobile-scroll #smooth-content {
 html.native-mobile-scroll body.body-active {
   height: auto !important;
   overflow-y: auto !important;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  html.native-mobile-scroll {
+    scroll-behavior: auto;
+  }
 }
 
 .primary-navbar {

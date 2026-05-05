@@ -3633,19 +3633,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       letter-spacing: -0.04em;
    }
 
-   .galaxy-contact__form-badge {
-      min-width: 78px;
-      min-height: 78px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      color: #fff;
-      background: #0b0b0b;
-      box-shadow: 0 18px 36px rgba(11,11,11,0.16);
-      font-size: 24px;
-   }
-
    .galaxy-contact__form .group-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4082,10 +4069,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          flex-direction: column;
       }
 
-      .galaxy-contact__form-badge {
-         min-width: 58px;
-         min-height: 58px;
-      }
    }
 
    @media (max-width: 991px) {
@@ -4393,6 +4376,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       min-height: 96px;
       padding-top: 14px;
       resize: vertical;
+   }
+
+   .form-submit-status {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      margin: 0 0 16px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(22, 163, 74, 0.72);
+      background: rgba(22, 163, 74, 0.24);
+      color: #166534;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.35;
+   }
+
+   .form-submit-status.show {
+      display: flex;
+   }
+
+   .form-submit-status.is-error {
+      border-color: rgba(239, 68, 68, 0.36);
+      background: rgba(239, 68, 68, 0.13);
+      color: #f87171;
+   }
+
+   .form-submit-status i {
+      flex: 0 0 auto;
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(22, 163, 74, 0.22);
+      font-size: 12px;
+   }
+
+   .form-submit-status.is-error i {
+      background: rgba(239, 68, 68, 0.16);
+   }
+
+   .login-popup .form-submit-status {
+      border-color: rgba(34, 197, 94, 0.64);
+      background: rgba(22, 163, 74, 0.22);
+      color: #86efac;
    }
 
    .login-popup .box .form .btn {
@@ -5806,11 +5837,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <h1 id="quote-popup-title">Contact-Us</h1>
 
       <!-- Web3Forms -->
-      <form action="https://api.web3forms.com/submit" method="POST">
+      <form action="https://api.web3forms.com/submit" method="POST" class="js-web3forms-form">
 
         <input type="hidden" name="access_key" value="f4143ea1-3eed-43ee-a25f-e7f593ac250a">
 
         <input type="hidden" name="from_name" value="Galaxy Advertisers Website">
+        <div class="form-submit-status" role="status" aria-live="polite"></div>
         <div class="form-group">
           <input type="text" name="name" placeholder="Name" class="form-control" required>
         </div>
@@ -5866,9 +5898,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                <div class="container">
                   <div class="header__topbar-inner">
                      <div class="header__topbar-list">
-                        <a href="mailto:galaxyadvertisers1996@gmail.com">
+                        <a href="mailto:galaxyadvertisers1996@yahoo.com">
                            <i class="fa-solid fa-envelope"></i>
-                           galaxyadvertisers1996@gmail.com
+                           galaxyadvertisers1996@yahoo.com
                         </a>
                      </div>
                      <div class="header__topbar-actions">
@@ -6869,15 +6901,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   <div class="container">
                      <div class="galaxy-contact__wrap">
                         <div class="galaxy-contact__form">
-                           <form action="https://api.web3forms.com/submit" method="POST">
+                           <form action="https://api.web3forms.com/submit" method="POST" class="js-web3forms-form">
                               <input type="hidden" name="access_key" value="f4143ea1-3eed-43ee-a25f-e7f593ac250a">
                               <input type="hidden" name="from_name" value="Galaxy Advertisers Website">
+                              <div class="form-submit-status" role="status" aria-live="polite"></div>
                               <div class="galaxy-contact__form-head">
                                  <div>
                                     <span>Campaign Enquiry</span>
                                     <h3>Tell us what you want people to notice.</h3>
                                  </div>
-                                 <i class="galaxy-contact__form-badge fa-solid fa-location-dot"></i>
                               </div>
                               <div class="group-grid">
                                  <div class="field"><input type="text" name="name" placeholder="Name" required></div>
@@ -8225,15 +8257,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             stagger: 0.055
          }, "-=0.48");
 
-         gsap.to(".galaxy-contact__form-badge", {
-            y: -8,
-            rotate: 8,
-            duration: 2.8,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut"
-         });
-
          section.addEventListener("mousemove", function (event) {
             if (window.innerWidth < 992) return;
             var box = section.getBoundingClientRect();
@@ -8565,6 +8588,67 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "url": "https://ahagalaxy.com/"
 }
 </script>
+<script id="web3forms-inline-submit">
+   (function () {
+      var forms = document.querySelectorAll(".js-web3forms-form");
+      if (!forms.length) return;
+
+      function setStatus(statusBox, type, message) {
+         if (!statusBox) return;
+         var icon = type === "error" ? "fa-triangle-exclamation" : "fa-check";
+         statusBox.classList.toggle("is-error", type === "error");
+         statusBox.classList.add("show");
+         statusBox.innerHTML = '<i class="fa-solid ' + icon + '"></i><span>' + message + '</span>';
+      }
+
+      forms.forEach(function (form) {
+         var statusBox = form.querySelector(".form-submit-status");
+         var submitButton = form.querySelector('button[type="submit"]');
+         var defaultButtonHtml = submitButton ? submitButton.innerHTML : "";
+
+         form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (statusBox) {
+               statusBox.classList.remove("show", "is-error");
+               statusBox.textContent = "";
+            }
+
+            if (submitButton) {
+               submitButton.disabled = true;
+               submitButton.innerHTML = 'Submitting... <i class="fa-solid fa-spinner fa-spin"></i>';
+            }
+
+            fetch(form.action, {
+               method: "POST",
+               body: new FormData(form),
+               headers: { "Accept": "application/json" }
+            })
+            .then(function (response) {
+               return response.json().then(function (data) {
+                  if (!response.ok || !data.success) {
+                     throw new Error(data.message || "Submission failed");
+                  }
+                  return data;
+               });
+            })
+            .then(function () {
+               form.reset();
+               setStatus(statusBox, "success", "Form submitted successfully!");
+            })
+            .catch(function () {
+               setStatus(statusBox, "error", "Form submit nahi hua. Please thodi der baad try karein.");
+            })
+            .finally(function () {
+               if (submitButton) {
+                  submitButton.disabled = false;
+                  submitButton.innerHTML = defaultButtonHtml;
+               }
+            });
+         });
+      });
+   })();
+</script>
 <script id="quote-popup-gsap">
    (function () {
       var popup = document.querySelector(".login-popup");
@@ -8698,6 +8782,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5H69NQ75"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+   <script defer src="assets/js/galaxy-scroll-performance.js"></script>
 </body>
 
 </html>
